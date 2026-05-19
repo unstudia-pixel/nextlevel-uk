@@ -391,9 +391,9 @@ svg{display:inline-block;vertical-align:middle}
 .fandom-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.04);position:relative;z-index:1}
 .fc{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4;background:var(--plate)}
 .fc-wide{grid-column:span 2;aspect-ratio:unset}
-.fc-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.6;transition:opacity .4s,transform .6s}
-.fc:hover .fc-bg{opacity:.82;transform:scale(1.05)}
-.fc::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.18) 65%,transparent 100%)}
+.fc-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.82;transition:opacity .4s,transform .6s}
+.fc:hover .fc-bg{opacity:1;transform:scale(1.05)}
+.fc::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.1) 55%,transparent 100%)}
 .fc-content{position:absolute;bottom:0;left:0;right:0;padding:22px 24px;z-index:2}
 .fc-name{font-family:var(--fd);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#fff;line-height:1.1;margin-bottom:3px}
 .fc-wide .fc-name{font-size:28px}
