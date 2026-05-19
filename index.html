@@ -519,6 +519,27 @@ svg{display:inline-block;vertical-align:middle}
 .soc:hover{border-color:rgba(4,168,0,.35);color:var(--green);background:rgba(4,168,0,.05)}
 .pay-icons{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .pay-ic{background:rgba(255,255,255,.05);padding:4px 10px;font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.06em;text-transform:uppercase}
+
+/* ─── UGC COMMUNITY ─── */
+.ugc-section{padding:100px 0 108px;background:var(--black);position:relative;overflow:hidden}
+.ugc-section::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(45,255,110,.025) 59px,rgba(45,255,110,.025) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(45,255,110,.025) 59px,rgba(45,255,110,.025) 60px);pointer-events:none;z-index:0}
+.ugc-inner{position:relative;z-index:1}
+.ugc-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px}
+.ugc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ugc-card{background:linear-gradient(160deg,rgba(24,28,32,.94) 0%,rgba(12,14,16,.97) 100%);border:1px solid rgba(255,255,255,.07);clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px));display:flex;flex-direction:column;transition:transform .35s,border-color .35s}
+.ugc-card:hover{transform:translateY(-5px);border-color:rgba(45,255,110,.22)}
+.ugc-img-wrap{position:relative;aspect-ratio:4/3;overflow:hidden}
+.ugc-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+.ugc-card:hover .ugc-img-wrap img{transform:scale(1.06)}
+.ugc-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,rgba(0,0,0,.1) 45%,transparent 100%);pointer-events:none}
+.ugc-handle{position:absolute;bottom:13px;left:14px;background:rgba(0,0,0,.8);color:#2dff6e;border:1px solid rgba(45,255,110,.55);font-family:var(--fm);font-size:10.5px;font-weight:700;letter-spacing:.07em;padding:5px 10px;clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);filter:drop-shadow(0 0 2px rgba(45,255,110,.9)) drop-shadow(0 0 8px rgba(45,255,110,.5)) drop-shadow(0 0 20px rgba(45,255,110,.25));z-index:1}
+.ugc-body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column;gap:11px}
+.ugc-stars{display:flex;gap:2px;color:#2dff6e;font-size:13px;letter-spacing:.05em}
+.ugc-quote{font-family:'Barlow',sans-serif;font-size:13px;line-height:1.65;color:rgba(255,255,255,.68);flex:1;position:relative;padding-left:14px}
+.ugc-quote::before{content:'';position:absolute;left:0;top:3px;bottom:3px;width:2px;background:linear-gradient(to bottom,#2dff6e,rgba(45,255,110,.1));border-radius:1px}
+.ugc-product{display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid rgba(255,255,255,.06)}
+.ugc-dot{width:5px;height:5px;background:#2dff6e;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);flex-shrink:0}
+.ugc-product-name{font-family:var(--fm);font-size:10px;font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.35);text-transform:uppercase;line-height:1.4}
 </style>
 </head>
 <body>
@@ -1164,6 +1185,97 @@ svg{display:inline-block;vertical-align:middle}
     <div class="tm-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> All Major Payment Methods</div>
   </div>
 </div>
+
+<!-- UGC COMMUNITY -->
+<section class="ugc-section">
+  <div class="wrap ugc-inner">
+    <div class="ugc-header">
+      <div>
+        <div class="sec-tag">— Community</div>
+        <h2 class="sec-title">Fans in the <span class="g">Wild</span></h2>
+      </div>
+      <a href="#" class="view-all-btn">
+        Tag Us on Instagram
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="ugc-grid">
+
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-the-force-unleashed-starkiller-cosplay-071x-1920706.jpg?v=1757774954&width=600" alt="Bastion Combat Lightsaber">
+          <div class="ugc-handle">@liam_sabers_uk</div>
+        </div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <p class="ugc-quote">The smoothswing sounds are genuinely insane. My mates couldn't believe this wasn't a movie prop.</p>
+          <div class="ugc-product"><div class="ugc-dot"></div><span class="ugc-product-name">Bastion Combat Lightsaber</span></div>
+        </div>
+      </div>
+
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/products/naruto-resin-mask-cosplay-anime-japan-tobi-uchiha-madara-1711426.jpg?v=1757776063&width=600" alt="Naruto Resin Mask">
+          <div class="ugc-handle">@cosplay_emma_x</div>
+        </div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <p class="ugc-quote">Wore this to MCM Comic Con and got stopped every few minutes. The quality blew everyone away.</p>
+          <div class="ugc-product"><div class="ugc-dot"></div><span class="ugc-product-name">Naruto Tobi Resin Mask</span></div>
+        </div>
+      </div>
+
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/files/star-wars-the-resolute-combat-lightsaber-2260447.jpg?v=1757773175&width=600" alt="Mace Windu Lightsaber">
+          <div class="ugc-handle">@sithlordjamie</div>
+        </div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <p class="ugc-quote">My 7th order from Next Level. Every single one has been perfect. Loyalty absolutely well earned.</p>
+          <div class="ugc-product"><div class="ugc-dot"></div><span class="ugc-product-name">Mace Windu Neopixel Saber</span></div>
+        </div>
+      </div>
+
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/files/one-piece-roronoa-zoro-shusui-katana-wooden-cosplay-sword-2395987.jpg?v=1757775790&width=600" alt="Zoro Shusui Katana">
+          <div class="ugc-handle">@opi_props</div>
+        </div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <p class="ugc-quote">Arrived in two days and the packaging was immaculate. The blade detailing is genuinely next level.</p>
+          <div class="ugc-product"><div class="ugc-dot"></div><span class="ugc-product-name">Zoro Shusui Katana</span></div>
+        </div>
+      </div>
+
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/files/star-wars-squadrons-imperial-tie-fighter-pilot-v2-resin-cosplay-helmet-8411967.jpg?v=1757773972&width=600" alt="TIE Fighter Helmet">
+          <div class="ugc-handle">@the_real_tyler92</div>
+        </div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <p class="ugc-quote">This sits on my desk at work now. Every single colleague has asked where I got it. Obsessed.</p>
+          <div class="ugc-product"><div class="ugc-dot"></div><span class="ugc-product-name">TIE Fighter Pilot Helmet</span></div>
+        </div>
+      </div>
+
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/files/675ddd_32d1ee00730e41a1aff858a8f.jpg?v=1771937341&width=600" alt="Kylo Ren Crossguard Saber">
+          <div class="ugc-handle">@mandalorianfan_uk</div>
+        </div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <p class="ugc-quote">Film-accurate in every detail. The weight, the finish, the crackle hum — it's just unreal for the price.</p>
+          <div class="ugc-product"><div class="ugc-dot"></div><span class="ugc-product-name">Kylo Ren Crossguard Saber</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- EMAIL CAPTURE (DARK) -->
 <section class="email-cap">
