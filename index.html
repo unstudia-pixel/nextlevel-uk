@@ -419,6 +419,11 @@ svg{display:inline-block;vertical-align:middle}
 .gc-img{height:200px;overflow:hidden;position:relative}
 .gc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .4s}
 .gc:hover .gc-img img{transform:scale(1.06);filter:brightness(1.08)}
+.gc-banner{position:absolute;top:0;left:0;right:0;padding:7px 14px;font-family:var(--fm);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;z-index:3;display:flex;align-items:center;gap:7px}
+.gc-banner svg{flex-shrink:0;opacity:.85}
+.gc-banner-1{background:rgba(45,255,110,.13);border-bottom:1px solid rgba(45,255,110,.35);color:#2dff6e}
+.gc-banner-2{background:rgba(245,193,60,.11);border-bottom:1px solid rgba(245,193,60,.32);color:#f5c13c}
+.gc-banner-3{background:rgba(255,88,65,.11);border-bottom:1px solid rgba(255,88,65,.32);color:#ff5841}
 .gc-price{
   position:absolute;bottom:12px;right:12px;
   background:rgba(0,0,0,.82);color:#2dff6e;
@@ -1072,6 +1077,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="gifts-grid">
           <div class="gc">
             <div class="gc-img">
+              <div class="gc-banner gc-banner-1"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Less than £50</div>
               <img src="https://nextleveluk.net/cdn/shop/files/demon-slayer-tanjiro-metal-katana-sword-2874768.jpg?v=1757774934&width=500" alt="Under £50">
               <div class="gc-price">Under £50</div>
             </div>
@@ -1082,6 +1088,7 @@ svg{display:inline-block;vertical-align:middle}
           </div>
           <div class="gc">
             <div class="gc-img">
+              <div class="gc-banner gc-banner-2"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Up to £100</div>
               <img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-luke-spin-cosplay-016-1x-6042965.jpg?v=1758562883&width=500" alt="£50–£100">
               <div class="gc-price">£50–£100</div>
             </div>
@@ -1092,6 +1099,7 @@ svg{display:inline-block;vertical-align:middle}
           </div>
           <div class="gc">
             <div class="gc-img">
+              <div class="gc-banner gc-banner-3"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>£100+</div>
               <img src="https://nextleveluk.net/cdn/shop/files/star-wars-bastion-combat-lightsaber-9122999.jpg?v=1757773178&width=500" alt="£100+">
               <div class="gc-price">£100+</div>
             </div>
