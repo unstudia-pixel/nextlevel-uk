@@ -452,9 +452,14 @@ svg{display:inline-block;vertical-align:middle}
   transition:all .2s}
 .budget-a:hover{color:#2dff6e;border-color:rgba(45,255,110,.5);filter:drop-shadow(0 0 4px rgba(45,255,110,.6))}
 
-/* ─── RARE FINDS ─── */
+/* ─── TRENDING NOW ─── */
 .rare{background:var(--off);padding:88px 0}
 .rare-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px}
+.trend-meta{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:8px}
+.trend-pulse{width:7px;height:7px;border-radius:50%;background:#2dff6e;box-shadow:0 0 0 0 rgba(45,255,110,.6);animation:pulse-dot 2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(45,255,110,.6)}50%{box-shadow:0 0 0 5px rgba(45,255,110,0)}}
+.badge-trend{background:rgba(255,138,0,.15);color:#ff8a00;border:1px solid rgba(255,138,0,.45);font-size:9.5px;font-family:var(--fm);font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;clip-path:polygon(6px 0,100% 0,100% calc(100%-6px),calc(100%-6px) 100%,0 100%,0 6px);filter:drop-shadow(0 0 4px rgba(255,138,0,.5))}
+.trend-rank{position:absolute;top:10px;left:10px;font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.22);z-index:3;background:rgba(0,0,0,.6);padding:2px 7px}
 .view-all{
   display:inline-flex;align-items:center;gap:10px;
   background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,.07) 100%);
@@ -577,6 +582,7 @@ svg{display:inline-block;vertical-align:middle}
 .ugc-product:hover .ugc-arrow{color:#2dff6e;transform:translateX(3px)}
 .ugc-product-name{font-family:var(--fm);font-size:10px;font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.45);text-transform:uppercase;line-height:1.4;transition:color .2s}
 .ugc-arrow{color:rgba(255,255,255,.3);flex-shrink:0;transition:color .2s,transform .2s}
+.loox-powered svg{color:#ff8a00;opacity:.5}
 </style>
 </head>
 <body>
@@ -1236,54 +1242,62 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </section>
 
-<!-- RARE FINDS -->
+<!-- TRENDING NOW -->
 <section class="rare">
   <div class="wrap">
     <div class="rare-hd reveal">
       <div>
-        <div class="sec-tag">Rare Finds</div>
-        <h2 class="sec-h2">Limited &amp; Hard to Find</h2>
+        <div class="sec-tag">What's Hot</div>
+        <h2 class="sec-h2">Trending Now</h2>
+        <div class="trend-meta">
+          <span class="trend-pulse"></span>
+          Based on recent sales — updated continuously
+        </div>
       </div>
-      <a href="#" class="view-all">
-        View All
+      <a href="https://nextleveluk.net/collections/best-sellers" class="view-all">
+        All Best Sellers
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
     <div class="prod-grid reveal">
       <div class="pc">
-        <span class="pc-badge badge-low">Low Stock</span>
-        <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-the-force-unleashed-starkiller-cosplay-071x-1920706.jpg?v=1757774954&width=600" alt="Sith Lord Saber"></div>
+        <span class="pc-badge badge-trend">#1 Trending</span>
+        <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="Aragorn Anduril Metal Sword"></div>
         <div class="pc-info">
-          <div class="pc-cat">Star Wars · Limited</div>
-          <div class="pc-name">Sith Lord Double-Bladed Neopixel Lightsaber</div>
-          <div class="pc-price">£349.99</div>
+          <div class="pc-cat">Lord of the Rings · Metal</div>
+          <div class="pc-name">Aragorn Anduril Metal Sword with Wall Plaque</div>
+          <div class="pc-price">£149.99</div>
+          <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
       </div>
       <div class="pc">
-        <span class="pc-badge badge-low">2 Left</span>
-        <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/one-piece-black-enma-metal-katana-sword-of-roronoa-zoro-3659954.jpg?v=1757774579&width=600" alt="Rare Katana"></div>
+        <span class="pc-badge badge-trend">#2 Trending</span>
+        <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/bleach-sword-zangetsu-metal-katana-sword-of-ichigo-kurosaki-9237517.jpg?width=600" alt="Zangetsu Metal Katana"></div>
         <div class="pc-info">
-          <div class="pc-cat">One Piece · Collector's</div>
-          <div class="pc-name">Enma — Zoro's Legendary Katana Premium Edition</div>
-          <div class="pc-price">£189.99</div>
+          <div class="pc-cat">Bleach · Metal Katana</div>
+          <div class="pc-name">Zangetsu Metal Katana — Sword of Ichigo Kurosaki</div>
+          <div class="pc-price">£63.99</div>
+          <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
       </div>
       <div class="pc">
-        <span class="pc-badge badge-low">3 Left</span>
-        <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/star-wars-helmet-at-at-driver-pilot-resin-cosplay-helmet-7781504.jpg?v=1757773988&width=600" alt="Vader Helmet"></div>
+        <span class="pc-badge badge-trend">#3 Trending</span>
+        <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/one-piece-purple-enma-metal-katana-sword-of-roronoa-zoro-9049507.jpg?width=600" alt="One Piece Purple Enma Katana"></div>
         <div class="pc-info">
-          <div class="pc-cat">Star Wars · Display Grade</div>
-          <div class="pc-name">Darth Vader 1:1 Scale Display Helmet with Stand</div>
-          <div class="pc-price">£279.99</div>
+          <div class="pc-cat">One Piece · Metal Katana</div>
+          <div class="pc-name">Purple Enma Metal Katana — Roronoa Zoro</div>
+          <div class="pc-price">£74.99</div>
+          <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
       </div>
       <div class="pc">
-        <span class="pc-badge badge-low">Last One</span>
-        <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/star-wars-the-resolute-combat-lightsaber-2260447.jpg?v=1757773175&width=600" alt="Mace Windu"></div>
+        <span class="pc-badge badge-trend">#4 Trending</span>
+        <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/devil-may-cry-5-katana-of-vergil-yamato-metal-sword-3642627.jpg?v=1757773728&width=600" alt="Vergil Yamato Metal Sword"></div>
         <div class="pc-info">
-          <div class="pc-cat">Star Wars · Episode III</div>
-          <div class="pc-name">Mace Windu Purple Blade Neopixel Combat Saber</div>
-          <div class="pc-price">£299.99</div>
+          <div class="pc-cat">Devil May Cry · Metal</div>
+          <div class="pc-name">Vergil Yamato Metal Katana — Devil May Cry 5</div>
+          <div class="pc-price">£63.99</div>
+          <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
       </div>
     </div>
