@@ -137,7 +137,7 @@ svg{display:inline-block;vertical-align:middle}
 .hw-scan{position:absolute;left:0;right:0;height:1px;background:linear-gradient(to right,transparent 0%,rgba(4,168,0,.55) 50%,transparent 100%);animation:hw-sweep 4.5s ease-in-out infinite;pointer-events:none}
 @keyframes hw-sweep{0%{top:0%;opacity:0}8%{opacity:1}92%{opacity:.7}100%{top:100%;opacity:0}}
 
-/* Widget 1 — SCORE: top-right & bottom-left chamfer */
+/* Widget 1  -  SCORE: top-right & bottom-left chamfer */
 .hw-score{
   clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,24px 100%,0 calc(100% - 24px));
   padding:24px 30px 20px;
@@ -146,7 +146,7 @@ svg{display:inline-block;vertical-align:middle}
 }
 .hw-score::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(4,168,0,.7),transparent)}
 
-/* Widget 2 — REVIEWS: skewed parallelogram */
+/* Widget 2  -  REVIEWS: skewed parallelogram */
 .hw-reviews{
   transform:skewX(-7deg);
   padding:16px 26px;
@@ -156,14 +156,14 @@ svg{display:inline-block;vertical-align:middle}
 }
 .hw-reviews .hw-body{transform:skewX(7deg)}
 
-/* Widget 3 — REACH: left chamfer only */
+/* Widget 3  -  REACH: left chamfer only */
 .hw-reach{
   clip-path:polygon(20px 0,100% 0,100% 100%,0 100%,0 20px);
   padding:16px 26px;
   min-width:210px;
 }
 
-/* Widget 4 — FOUNDED: light gray glass */
+/* Widget 4  -  FOUNDED: light gray glass */
 .hw-founded{background:rgba(255,255,255,.07) !important;backdrop-filter:blur(16px) brightness(1.35) saturate(.55) !important;-webkit-backdrop-filter:blur(16px) brightness(1.35) saturate(.55) !important;padding:12px 16px;min-width:170px;border:1px solid rgba(255,255,255,.12);overflow:visible;align-self:flex-end}
 .hw-founded .hw-scan{display:none}
 .hw-corner{position:absolute;width:10px;height:10px;border-color:rgba(4,168,0,.45);border-style:solid}
@@ -603,6 +603,479 @@ svg{display:inline-block;vertical-align:middle}
 .loox-powered{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:40px;font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.18)}
 .loox-powered-dot{width:5px;height:5px;border-radius:50%;background:#ff8a00;opacity:.5}
 .loox-powered svg{color:#ff8a00;opacity:.5}
+
+/* ═══════════════════════════════════════════════════════════
+   LIGHT VERSION OVERRIDES
+═══════════════════════════════════════════════════════════ */
+
+/* Reveal animations - show immediately on light version */
+.reveal { opacity:1 !important; transform:none !important; transition:none !important }
+
+/* Diagonal wave dividers */
+.divider-d2l, .divider-l2d {
+  display:block; width:100%; overflow:hidden;
+  line-height:0; padding:0; margin:0; font-size:0;
+}
+.divider-d2l svg, .divider-l2d svg {
+  display:block; width:100%; height:80px;
+}
+
+/* ── HERO WIDGETS (all match .hw-founded style) ────────── */
+.hw {
+  background: rgba(255,255,255,.07) !important;
+  backdrop-filter: blur(16px) brightness(1.35) saturate(.55) !important;
+  -webkit-backdrop-filter: blur(16px) brightness(1.35) saturate(.55) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+}
+.hw-scan { display: none !important }
+.hw-score::before {
+  background: linear-gradient(to right,transparent,rgba(4,168,0,.4),transparent);
+}
+
+/* ── STATS ─────────────────────────────────────────────── */
+.stats { background:#fff; border-top-color:rgba(4,168,0,.14); border-bottom-color:rgba(4,168,0,.14) }
+.stats::before { background-image:radial-gradient(circle,rgba(4,168,0,.18) 1.5px,transparent 1.5px); background-size:24px 24px }
+.stat-num { color:var(--text) }
+.stat { border-right-color:rgba(0,0,0,.07) }
+.stat-label { color:var(--muted) }
+
+/* ── TRUST STRIP ───────────────────────────────────────── */
+.trust-strip { background:var(--off); border-top-color:rgba(4,168,0,.09); border-bottom-color:rgba(4,168,0,.09); overflow:visible !important }
+.ti { background:#fff; border-color:rgba(4,168,0,.18) }
+.ti:hover { background:rgba(4,168,0,.04); border-color:rgba(4,168,0,.32) }
+.ti-title { color:var(--text) }
+
+/* ── COLLECTION ────────────────────────────────────────── */
+.collection .view-all-btn {
+  background:transparent; backdrop-filter:none; -webkit-backdrop-filter:none;
+  color:var(--text); border:1px solid rgba(0,0,0,.2);
+  box-shadow:none; filter:none;
+}
+.collection .view-all-btn:hover {
+  color:var(--green); border-color:rgba(4,168,0,.4);
+  background:rgba(4,168,0,.04); filter:none; transform:translateY(-2px);
+}
+.collection .view-all-btn::before { display:none }
+
+/* ── PRICE MATCH ───────────────────────────────────────── */
+.pm-section {
+  background:#fff;
+  border-top-color:rgba(4,168,0,.14);
+  border-bottom-color:rgba(4,168,0,.14);
+  overflow:visible !important;
+}
+.pm-section::before {
+  background:
+    radial-gradient(ellipse 70% 80% at 0% 50%, rgba(4,168,0,.05) 0%, transparent 60%),
+    repeating-linear-gradient(-45deg, transparent, transparent 24px, rgba(4,168,0,.03) 24px, rgba(4,168,0,.03) 25px);
+}
+.pm-title { color:var(--text) }
+.pm-title span { color:var(--green) }
+.pm-subtitle { color:var(--muted) }
+.pm-cond { color:var(--text) }
+.pm-right {
+  background:linear-gradient(145deg,#f5f5f3 0%,#ededeb 100%);
+  border-color:rgba(4,168,0,.22);
+}
+.pm-right::before { background:linear-gradient(to right,var(--green),rgba(4,168,0,.15),transparent) }
+.pm-form-title { color:var(--text) }
+.pm-form-sub { color:var(--muted) }
+.pm-label { color:var(--muted) }
+.pm-input { background:#fff; border-color:rgba(0,0,0,.13); color:var(--text) }
+.pm-input::placeholder { color:rgba(0,0,0,.3) }
+.pm-input:focus { border-color:rgba(4,168,0,.5) }
+.pm-note { color:var(--muted); border-top-color:rgba(0,0,0,.08) }
+.pm-success-title { color:var(--text) }
+.pm-success-sub { color:var(--muted) }
+
+/* ── FANDOM ────────────────────────────────────────────── */
+.fandom { background:var(--off) }
+.fandom::before {
+  background-image:repeating-linear-gradient(-45deg,transparent,transparent 18px,rgba(4,168,0,.07) 18px,rgba(4,168,0,.07) 19px);
+}
+.fandom .sec-h2-white { color:var(--text) }
+.fandom-grid { background:rgba(0,0,0,.08) }
+
+/* ── GIFTS ─────────────────────────────────────────────── */
+.gifts { background:var(--off); overflow:visible !important }
+.gifts::before {
+  background-image:radial-gradient(circle,rgba(4,168,0,.15) 1.5px,transparent 1.5px);
+  background-size:28px 28px;
+}
+.gifts .sec-h2 { color:var(--text)!important }
+.gifts-desc { color:var(--muted) }
+.gc-name { color:var(--text) }
+.gc-sub { color:var(--muted) }
+.budget-label { color:var(--green) }
+.budget-a { color:var(--muted) }
+
+/* ── TRENDING NOW ──────────────────────────────────────── */
+.trend-meta { color:var(--muted) }
+.rare .view-all {
+  color:var(--text); background:transparent;
+  backdrop-filter:none; -webkit-backdrop-filter:none;
+  border:1px solid rgba(0,0,0,.2); box-shadow:none; filter:none;
+}
+.rare .view-all:hover {
+  color:var(--green); border-color:rgba(4,168,0,.4);
+  background:rgba(4,168,0,.04); filter:none; transform:translateY(-2px);
+}
+.rare .view-all::before { display:none }
+.rare .view-all:hover { color:var(--green) }
+
+/* ── TRUST MARQUEE ─────────────────────────────────────── */
+.trust-mar { background:var(--off); border-top-color:rgba(0,0,0,.07); border-bottom-color:rgba(0,0,0,.07) }
+.tm-item { color:var(--muted) }
+
+/* ── UGC COMMUNITY ─────────────────────────────────────── */
+.ugc-section { background:#fff; overflow:visible !important }
+.ugc-section::before {
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(4,168,0,.05) 59px, rgba(4,168,0,.05) 60px),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(4,168,0,.05) 59px, rgba(4,168,0,.05) 60px);
+}
+.ugc-section .cs-title { color:var(--text) }
+.ugc-section .g { color:var(--green) }
+.ugc-card {
+  background:linear-gradient(160deg,#fafafa 0%,#f5f5f3 100%);
+  border-color:rgba(0,0,0,.09);
+}
+.ugc-card:hover { border-color:rgba(4,168,0,.22) }
+.ugc-quote { color:rgba(15,15,15,.75) }
+.ugc-quote::before { background:linear-gradient(to bottom,var(--green),rgba(4,168,0,.15)) }
+.ugc-product { background:rgba(0,0,0,.02); border-color:rgba(0,0,0,.08) }
+.ugc-product:hover { background:rgba(4,168,0,.05); border-color:rgba(4,168,0,.22) }
+.ugc-product:hover .ugc-product-name { color:var(--text) }
+.ugc-product:hover .ugc-arrow { color:var(--green); transform:translateX(3px) }
+.ugc-product-name { color:var(--muted) }
+.ugc-arrow { color:rgba(0,0,0,.25) }
+.loox-powered { color:var(--muted) }
+.ugc-section .view-all-btn {
+  background: linear-gradient(145deg, #ffffff 0%, rgba(248,248,246,.99) 50%, rgba(242,242,240,.97) 100%) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  color: var(--text) !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(210,212,208,.5)   !important;
+  border-bottom: 1px solid rgba(200,202,198,.5)   !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9),
+              inset 1px 0 0 rgba(255,255,255,.6),
+              inset 0 -1px 0 rgba(0,0,0,.04) !important;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.35))
+          drop-shadow(0 12px 32px rgba(0,0,0,.48))
+          drop-shadow(0 30px 60px rgba(0,0,0,.35)) !important;
+}
+.ugc-section .view-all-btn:hover {
+  background: linear-gradient(145deg, #ffffff 0%, rgba(252,252,250,.99) 100%) !important;
+  color: var(--green) !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(4,168,0,.22)      !important;
+  border-bottom: 1px solid rgba(4,168,0,.16)      !important;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.44))
+          drop-shadow(0 24px 56px rgba(0,0,0,.56))
+          drop-shadow(0 0 32px rgba(4,168,0,.16)) !important;
+  transform: translateY(-3px) scale(1.01);
+}
+.ugc-section .view-all-btn::before {
+  display: block !important;
+  background: linear-gradient(to right,transparent,rgba(255,255,255,.45),transparent) !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   CARD TREATMENT - glassmorphism + volumetric shadows
+   Applies to: Trust Strip · Gifts · Price Match · UGC / Loox
+══════════════════════════════════════════════════════════ */
+
+/* ── TRUST STRIP CARDS (.ti) ─────────────────────────── */
+.ti {
+  background: linear-gradient(145deg, #ffffff 0%, rgba(248,248,246,.99) 50%, rgba(242,242,240,.97) 100%) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(210,212,208,.5)   !important;
+  border-bottom: 1px solid rgba(200,202,198,.5)   !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9),
+              inset 1px 0 0 rgba(255,255,255,.6),
+              inset 0 -1px 0 rgba(0,0,0,.06) !important;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.38))
+          drop-shadow(0 12px 32px rgba(0,0,0,.52))
+          drop-shadow(0 32px 64px rgba(0,0,0,.38)) !important;
+  transition: transform .32s cubic-bezier(.25,.46,.45,.94), filter .32s ease !important;
+}
+.ti:hover {
+  background: linear-gradient(145deg, #ffffff 0%, rgba(248,248,246,.99) 50%, rgba(242,242,240,.97) 100%) !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(4,168,0,.22)      !important;
+  border-bottom: 1px solid rgba(4,168,0,.16)      !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9),
+              inset 1px 0 0 rgba(255,255,255,.6),
+              inset 0 -1px 0 rgba(0,0,0,.06) !important;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.46))
+          drop-shadow(0 24px 56px rgba(0,0,0,.58))
+          drop-shadow(0 50px 100px rgba(0,0,0,.46))
+          drop-shadow(0 0 32px rgba(4,168,0,.18)) !important;
+  transform: translateY(-6px) scale(1.015);
+}
+.ti::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg,
+    rgba(255,255,255,.72) 0%,
+    rgba(255,255,255,.32) 32%,
+    rgba(255,255,255,.06) 62%,
+    transparent 100%);
+  pointer-events: none; z-index: 3;
+}
+.ti::after {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 14px; height: 1px;
+  background: rgba(4,168,0,.55);
+  transform-origin: right top;
+  transform: rotate(45deg) translateY(-1px);
+  pointer-events: none; z-index: 4;
+  transition: background .25s, width .25s;
+}
+.ti:hover::after { background: rgba(4,168,0,1) !important; width: 18px; }
+.ti-scan { display: none !important }
+.ti-corner { border-color: rgba(4,168,0,.2) !important }
+
+/* ── GIFT CARDS (.gc) ────────────────────────────────── */
+.gc {
+  background: linear-gradient(145deg, #ffffff 0%, rgba(248,248,246,.99) 50%, rgba(242,242,240,.97) 100%) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(210,212,208,.5)   !important;
+  border-bottom: 1px solid rgba(200,202,198,.5)   !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9),
+              inset 1px 0 0 rgba(255,255,255,.6),
+              inset 0 -1px 0 rgba(0,0,0,.04) !important;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,.38))
+          drop-shadow(0 14px 36px rgba(0,0,0,.52))
+          drop-shadow(0 32px 64px rgba(0,0,0,.38)) !important;
+  transition: transform .32s cubic-bezier(.25,.46,.45,.94), filter .32s ease !important;
+}
+.gc::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(140deg,
+    rgba(255,255,255,.55) 0%,
+    rgba(255,255,255,.18) 30%,
+    transparent 55%);
+  pointer-events: none; z-index: 3;
+}
+.gc:hover {
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(4,168,0,.22)      !important;
+  border-bottom: 1px solid rgba(4,168,0,.16)      !important;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.46))
+          drop-shadow(0 26px 60px rgba(0,0,0,.58))
+          drop-shadow(0 56px 110px rgba(0,0,0,.46))
+          drop-shadow(0 0 36px rgba(4,168,0,.18)) !important;
+  transform: translateY(-8px) scale(1.015);
+}
+.gc::after { background: rgba(4,168,0,.55) !important; }
+.gc:hover::after { background: rgba(4,168,0,1) !important; width: 20px; }
+.gc-body::before {
+  background: linear-gradient(to right,rgba(4,168,0,.35),rgba(4,168,0,.06),transparent) !important;
+}
+
+/* ── BUDGET STRIP ────────────────────────────────────── */
+.budget-strip {
+  background: linear-gradient(145deg, #ffffff 0%, rgba(248,248,246,.99) 50%, rgba(242,242,240,.97) 100%) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(210,212,208,.5)   !important;
+  border-bottom: 1px solid rgba(200,202,198,.5)   !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9),
+              inset 1px 0 0 rgba(255,255,255,.6),
+              inset 0 -1px 0 rgba(0,0,0,.04) !important;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.35))
+          drop-shadow(0 12px 32px rgba(0,0,0,.48))
+          drop-shadow(0 30px 60px rgba(0,0,0,.35)) !important;
+}
+.budget-a {
+  border-color: rgba(0,0,0,.10) !important;
+  background: rgba(255,255,255,.7) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8) !important;
+}
+.budget-a:hover {
+  background: rgba(255,255,255,.95) !important;
+  border-color: rgba(4,168,0,.45) !important;
+}
+
+/* ── GIFT VIEW-ALL BUTTON ────────────────────────────── */
+.gifts .view-all-btn {
+  background: linear-gradient(145deg, #ffffff 0%, rgba(248,248,246,.99) 50%, rgba(242,242,240,.97) 100%) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  color: var(--text) !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(210,212,208,.5)   !important;
+  border-bottom: 1px solid rgba(200,202,198,.5)   !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9),
+              inset 1px 0 0 rgba(255,255,255,.6),
+              inset 0 -1px 0 rgba(0,0,0,.04) !important;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.35))
+          drop-shadow(0 12px 32px rgba(0,0,0,.48))
+          drop-shadow(0 30px 60px rgba(0,0,0,.35)) !important;
+}
+.gifts .view-all-btn:hover {
+  background: linear-gradient(145deg, #ffffff 0%, rgba(252,252,250,.99) 100%) !important;
+  color: var(--green) !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(4,168,0,.22)      !important;
+  border-bottom: 1px solid rgba(4,168,0,.16)      !important;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.44))
+          drop-shadow(0 24px 56px rgba(0,0,0,.56))
+          drop-shadow(0 0 32px rgba(4,168,0,.16)) !important;
+  transform: translateY(-3px) scale(1.01);
+}
+.gifts .view-all-btn::before {
+  display: block !important;
+  background: linear-gradient(to right,transparent,rgba(255,255,255,.45),transparent) !important;
+}
+
+/* ── PRICE MATCH PANEL (.pm-right) ──────────────────── */
+.pm-right {
+  background: linear-gradient(145deg, #ffffff 0%, rgba(248,248,246,.99) 50%, rgba(242,242,240,.97) 100%) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(210,212,208,.5)   !important;
+  border-bottom: 1px solid rgba(200,202,198,.5)   !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9),
+              inset 1px 0 0 rgba(255,255,255,.6),
+              inset 0 -1px 0 rgba(0,0,0,.04) !important;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.42))
+          drop-shadow(0 26px 60px rgba(0,0,0,.54))
+          drop-shadow(0 60px 120px rgba(0,0,0,.42)) !important;
+}
+
+/* ── UGC PHOTO REVIEW CARDS (.ugc-card) ─────────────── */
+.ugc-card {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff 0%, rgba(248,248,246,.99) 50%, rgba(242,242,240,.97) 100%) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(210,212,208,.5)   !important;
+  border-bottom: 1px solid rgba(200,202,198,.5)   !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9),
+              inset 1px 0 0 rgba(255,255,255,.6),
+              inset 0 -1px 0 rgba(0,0,0,.06) !important;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.38))
+          drop-shadow(0 12px 32px rgba(0,0,0,.52))
+          drop-shadow(0 32px 64px rgba(0,0,0,.38)) !important;
+  transition: transform .35s, filter .35s !important;
+}
+.ugc-card:hover {
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(4,168,0,.22)      !important;
+  border-bottom: 1px solid rgba(4,168,0,.16)      !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9),
+              inset 1px 0 0 rgba(255,255,255,.6),
+              inset 0 -1px 0 rgba(0,0,0,.06) !important;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.46))
+          drop-shadow(0 26px 60px rgba(0,0,0,.58))
+          drop-shadow(0 56px 110px rgba(0,0,0,.46))
+          drop-shadow(0 0 34px rgba(4,168,0,.18)) !important;
+  transform: translateY(-6px) scale(1.015);
+}
+.ugc-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(140deg,
+    rgba(255,255,255,.55) 0%,
+    rgba(255,255,255,.18) 30%,
+    transparent 55%);
+  pointer-events: none; z-index: 3;
+}
+.ugc-card::after {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 26px; height: 1px;
+  background: rgba(4,168,0,.5);
+  transform-origin: right top;
+  transform: rotate(45deg) translateY(-1px);
+  pointer-events: none; z-index: 4;
+  transition: background .25s, width .25s;
+}
+.ugc-card:hover::after { background: rgba(4,168,0,1); width: 30px; }
+.ugc-img-wrap::after { opacity: .38 }
+.ugc-handle {
+  background: rgba(10,10,10,.82) !important;
+  border-color: rgba(4,168,0,.5) !important;
+  color: var(--green) !important;
+  filter: drop-shadow(0 0 3px rgba(4,168,0,.5)) !important;
+}
+.ugc-verified {
+  color: var(--green) !important;
+  opacity: .85;
+}
+
+/* ── LOOX TEXT REVIEW CARDS (.loox-card) ────────────── */
+.loox-card {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff 0%, rgba(248,248,246,.99) 50%, rgba(242,242,240,.97) 100%) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-left:   1px solid rgba(255,255,255,.95)  !important;
+  border-right:  1px solid rgba(210,212,208,.5)   !important;
+  border-bottom: 1px solid rgba(200,202,198,.5)   !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9),
+              inset 1px 0 0 rgba(255,255,255,.6),
+              inset 0 -1px 0 rgba(0,0,0,.06) !important;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.38))
+          drop-shadow(0 12px 32px rgba(0,0,0,.52))
+          drop-shadow(0 32px 64px rgba(0,0,0,.38)) !important;
+  transition: transform .32s cubic-bezier(.25,.46,.45,.94), filter .32s ease !important;
+}
+.loox-card:hover {
+  border-top:    1px solid rgba(255,255,255,1)    !important;
+  border-right:  1px solid rgba(4,168,0,.22)      !important;
+  border-bottom: 1px solid rgba(4,168,0,.16)      !important;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.46))
+          drop-shadow(0 26px 60px rgba(0,0,0,.58))
+          drop-shadow(0 56px 110px rgba(0,0,0,.46))
+          drop-shadow(0 0 34px rgba(4,168,0,.18)) !important;
+  transform: translateY(-5px) scale(1.01);
+}
+.loox-card::after {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 22px; height: 1px;
+  background: rgba(4,168,0,.5);
+  transform-origin: right top;
+  transform: rotate(45deg) translateY(-1px);
+  pointer-events: none; z-index: 4;
+  transition: background .25s, width .25s;
+}
+.loox-card:hover::after { background: rgba(4,168,0,1); width: 26px; }
+.loox-reviewer-name { color: var(--text) }
+.loox-reviewer-meta { color: var(--muted) }
+.loox-verified { color: rgba(4,168,0,.75) }
+.loox-review-title { color: var(--text) }
+.loox-review-body { color: rgba(15,15,15,.62) }
+.loox-card-footer { border-top-color: rgba(0,0,0,.07) }
+.loox-product-label { color: var(--muted) }
+.loox-date { color: rgba(0,0,0,.3) }
+
 </style>
 </head>
 <body>
@@ -613,14 +1086,14 @@ svg{display:inline-block;vertical-align:middle}
     <span class="ann-item"><span class="ann-dot"></span>Free UK Shipping on Orders Over £100</span>
     <span class="ann-item"><span class="ann-dot"></span>30 Day Returns Policy</span>
     <span class="ann-item"><span class="ann-dot"></span>UK Family-Owned Since 2013</span>
-    <span class="ann-item"><span class="ann-dot"></span>4.9 / 5 — Over 2,400 Reviews on Loox</span>
-    <span class="ann-item"><span class="ann-dot"></span>Shipping to UK · Europe · USA Worldwide Shipping — UK · EU · US · UK · EU · US · CAamp; Canada</span>
+    <span class="ann-item"><span class="ann-dot"></span>4.9 / 5 - Over 2,400 Reviews on Loox</span>
+    <span class="ann-item"><span class="ann-dot"></span>Shipping to UK · Europe · USA Worldwide Shipping  -  UK · EU · US · UK · EU · US · CAamp; Canada</span>
     <span class="ann-item"><span class="ann-dot"></span>Secure Payments · SSL Protected</span>
     <span class="ann-item"><span class="ann-dot"></span>Free UK Shipping on Orders Over £100</span>
     <span class="ann-item"><span class="ann-dot"></span>30 Day Returns Policy</span>
     <span class="ann-item"><span class="ann-dot"></span>UK Family-Owned Since 2013</span>
-    <span class="ann-item"><span class="ann-dot"></span>4.9 / 5 — Over 2,400 Reviews on Loox</span>
-    <span class="ann-item"><span class="ann-dot"></span>Shipping to UK · Europe · USA Worldwide Shipping — UK · EU · US · UK · EU · US · CAamp; Canada</span>
+    <span class="ann-item"><span class="ann-dot"></span>4.9 / 5 - Over 2,400 Reviews on Loox</span>
+    <span class="ann-item"><span class="ann-dot"></span>Shipping to UK · Europe · USA Worldwide Shipping  -  UK · EU · US · UK · EU · US · CAamp; Canada</span>
     <span class="ann-item"><span class="ann-dot"></span>Secure Payments · SSL Protected</span>
   </div>
 </div>
@@ -677,7 +1150,7 @@ svg{display:inline-block;vertical-align:middle}
     <div class="hero-left">
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        Premium Collection — New In 2025
+        Premium Collection  -  New In 2025
       </div>
       <h1 class="hero-h1">
         Metal Swords<br>
@@ -754,6 +1227,8 @@ svg{display:inline-block;vertical-align:middle}
     </div>
   </div>
 </section>
+<!-- DIVIDER dark-to-light -->
+<div class="divider-d2l" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polygon fill="#060608" points="0,0 1440,0 1440,0 0,0"/><polygon fill="#060608" points="0,0 1440,0 0,80"/><polygon fill="#ffffff" points="1440,0 1440,80 0,80"/><line x1="1440" y1="0" x2="0" y2="80" stroke="rgba(4,168,0,0.45)" stroke-width="2"/><line x1="1440" y1="6" x2="0" y2="86" stroke="rgba(4,168,0,0.15)" stroke-width="1.5"/></svg></div>
 
 <!-- STATS STRIP (DARK) -->
 <div class="stats">
@@ -907,7 +1382,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/bleach-sword-zangetsu-metal-katana-sword-of-ichigo-kurosaki-9237517.jpg?v=1757774577&width=600" alt="Zangetsu Metal Katana"></div>
         <div class="pc-info">
           <div class="pc-cat">Bleach · Metal Katana</div>
-          <div class="pc-name">Zangetsu Metal Katana — Sword of Ichigo Kurosaki</div>
+          <div class="pc-name">Zangetsu Metal Katana - Sword of Ichigo Kurosaki</div>
           <div class="pc-price">£63.99</div>
           <div class="pc-footer">
             <div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
@@ -919,7 +1394,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/one-piece-sword-wado-ichimonji-metal-katana-sword-of-roronoa-zoro-4505248.jpg?v=1757774577&width=600" alt="Wado Ichimonji Metal Katana"></div>
         <div class="pc-info">
           <div class="pc-cat">One Piece · Metal Katana</div>
-          <div class="pc-name">Wado Ichimonji Metal Katana — Sword of Roronoa Zoro</div>
+          <div class="pc-name">Wado Ichimonji Metal Katana - Sword of Roronoa Zoro</div>
           <div class="pc-price">£69.99</div>
           <div class="pc-footer">
             <div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
@@ -931,7 +1406,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/devil-may-cry-5-katana-of-vergil-yamato-metal-sword-3642627.jpg?v=1757773728&width=600" alt="Vergil Yamato Metal Sword"></div>
         <div class="pc-info">
           <div class="pc-cat">Devil May Cry · Metal</div>
-          <div class="pc-name">Vergil Yamato Metal Katana — Devil May Cry 5</div>
+          <div class="pc-name">Vergil Yamato Metal Katana - Devil May Cry 5</div>
           <div class="pc-price">£63.99</div>
           <div class="pc-footer">
             <div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
@@ -945,7 +1420,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/products/naruto-resin-mask-cosplay-anime-japan-tobi-uchiha-madara-1711426.jpg?v=1757776063&width=600" alt="Naruto Mask"></div>
         <div class="pc-info">
           <div class="pc-cat">Naruto · Resin</div>
-          <div class="pc-name">Naruto Resin Mask — Tobi / Uchiha Madara Cosplay</div>
+          <div class="pc-name">Naruto Resin Mask  -  Tobi / Uchiha Madara Cosplay</div>
           <div class="pc-price">£29.99</div>
         </div>
       </div>
@@ -969,7 +1444,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/friday-the-13th-jason-voorhees-resin-mask-6059772.jpg?v=1757776064&width=600" alt="Ghost Mask"></div>
         <div class="pc-info">
           <div class="pc-cat">Call of Duty · Resin</div>
-          <div class="pc-name">Ghost Operator Resin Mask — Modern Warfare</div>
+          <div class="pc-name">Ghost Operator Resin Mask  -  Modern Warfare</div>
           <div class="pc-price">£44.99</div>
         </div>
       </div>
@@ -1015,7 +1490,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/s-l1600_5_825e0889-cdac-436a-8d0f-66502b32abb7.webp?v=1775747160&width=600" alt="Anbu Mask"></div>
         <div class="pc-info">
           <div class="pc-cat">Naruto · Resin</div>
-          <div class="pc-name">Anbu Black Ops Resin Mask — Naruto Cosplay</div>
+          <div class="pc-name">Anbu Black Ops Resin Mask  -  Naruto Cosplay</div>
           <div class="pc-price">£24.99</div>
         </div>
       </div>
@@ -1208,7 +1683,7 @@ svg{display:inline-block;vertical-align:middle}
       <div class="gifts-hd">
         <div class="sec-tag">Gift Ideas</div>
         <h2 class="sec-h2">Perfect Gifts<br>for Every Fan</h2>
-        <p class="gifts-desc">From beginner lightsabers to premium neopixel replicas — find the ideal gift for every budget and every fandom.</p>
+        <p class="gifts-desc">From beginner lightsabers to premium neopixel replicas  -  find the ideal gift for every budget and every fandom.</p>
         <a href="#" class="view-all-btn">Browse Gift Guide <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
       <div>
@@ -1227,8 +1702,8 @@ svg{display:inline-block;vertical-align:middle}
           <div class="gc">
             <div class="gc-img">
               <div class="gc-banner gc-banner-2"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Up to £100</div>
-              <img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-luke-spin-cosplay-016-1x-6042965.jpg?v=1758562883&width=500" alt="£50–£100">
-              <div class="gc-price">£50–£100</div>
+              <img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-luke-spin-cosplay-016-1x-6042965.jpg?v=1758562883&width=500" alt="£50 - £100">
+              <div class="gc-price">£50 - £100</div>
             </div>
             <div class="gc-body">
               <div class="gc-name">Mid-Range</div>
@@ -1251,9 +1726,9 @@ svg{display:inline-block;vertical-align:middle}
           <div class="budget-label">Quick Filter:</div>
           <div class="budget-links">
             <a href="#" class="budget-a">Under £25</a>
-            <a href="#" class="budget-a">£25–£50</a>
-            <a href="#" class="budget-a">£50–£100</a>
-            <a href="#" class="budget-a">£100–£200</a>
+            <a href="#" class="budget-a">£25 - £50</a>
+            <a href="#" class="budget-a">£50 - £100</a>
+            <a href="#" class="budget-a">£100 - £200</a>
             <a href="#" class="budget-a">£200+</a>
           </div>
         </div>
@@ -1271,7 +1746,7 @@ svg{display:inline-block;vertical-align:middle}
         <h2 class="sec-h2">Trending Now</h2>
         <div class="trend-meta">
           <span class="trend-pulse"></span>
-          Based on recent sales — updated continuously
+          Based on recent sales - updated continuously
         </div>
       </div>
       <a href="https://nextleveluk.net/collections/best-sellers" class="view-all">
@@ -1295,7 +1770,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/bleach-sword-zangetsu-metal-katana-sword-of-ichigo-kurosaki-9237517.jpg?width=600" alt="Zangetsu Metal Katana"></div>
         <div class="pc-info">
           <div class="pc-cat">Bleach · Metal Katana</div>
-          <div class="pc-name">Zangetsu Metal Katana — Sword of Ichigo Kurosaki</div>
+          <div class="pc-name">Zangetsu Metal Katana - Sword of Ichigo Kurosaki</div>
           <div class="pc-price">£63.99</div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -1305,7 +1780,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/one-piece-purple-enma-metal-katana-sword-of-roronoa-zoro-9049507.jpg?width=600" alt="One Piece Purple Enma Katana"></div>
         <div class="pc-info">
           <div class="pc-cat">One Piece · Metal Katana</div>
-          <div class="pc-name">Purple Enma Metal Katana — Roronoa Zoro</div>
+          <div class="pc-name">Purple Enma Metal Katana  -  Roronoa Zoro</div>
           <div class="pc-price">£74.99</div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -1315,7 +1790,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/devil-may-cry-5-katana-of-vergil-yamato-metal-sword-3642627.jpg?v=1757773728&width=600" alt="Vergil Yamato Metal Sword"></div>
         <div class="pc-info">
           <div class="pc-cat">Devil May Cry · Metal</div>
-          <div class="pc-name">Vergil Yamato Metal Katana — Devil May Cry 5</div>
+          <div class="pc-name">Vergil Yamato Metal Katana - Devil May Cry 5</div>
           <div class="pc-price">£63.99</div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -1347,7 +1822,7 @@ svg{display:inline-block;vertical-align:middle}
   <div class="wrap ugc-inner">
     <div class="ugc-header">
       <div>
-        <div class="sec-tag">— Community</div>
+        <div class="sec-tag">- Community</div>
         <h2 class="cs-title">Fans in the <span class="g">Wild</span></h2>
       </div>
       <a href="#" class="view-all-btn">
@@ -1443,11 +1918,13 @@ svg{display:inline-block;vertical-align:middle}
     </div>
   </div>
 </section>
+<!-- DIVIDER light-to-dark -->
+<div class="divider-l2d" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polygon fill="#ffffff" points="0,0 1440,0 1440,0 0,0"/><polygon fill="#ffffff" points="0,0 1440,80 0,80"/><polygon fill="#060608" points="1440,0 1440,80 0,80"/><line x1="0" y1="80" x2="1440" y2="0" stroke="rgba(4,168,0,0.45)" stroke-width="2"/><line x1="0" y1="86" x2="1440" y2="6" stroke="rgba(4,168,0,0.15)" stroke-width="1.5"/></svg></div>
 
 <!-- EMAIL CAPTURE (DARK) -->
 <section class="email-cap">
   <div class="email-in">
-    <div class="sec-tag sec-tag-center" style="justify-content:center">— Newsletter</div>
+    <div class="sec-tag sec-tag-center" style="justify-content:center">- Newsletter</div>
     <h2 class="email-title">Get <span class="g">Early Access</span><br>to New Arrivals</h2>
     <p class="email-sub">Exclusive drops, restocks & discount codes. No spam, just the good stuff.</p>
     <form class="email-form" onsubmit="return false">
