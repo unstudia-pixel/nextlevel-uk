@@ -524,6 +524,36 @@ svg{display:inline-block;vertical-align:middle}
 .pay-icons{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .pay-ic{background:rgba(255,255,255,.05);padding:4px 10px;font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.06em;text-transform:uppercase}
 
+/* ─── PRICE MATCH ─── */
+.pm-section{background:#050605;padding:88px 0;position:relative;overflow:hidden;border-top:1px solid rgba(4,168,0,.12);border-bottom:1px solid rgba(4,168,0,.12)}
+.pm-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 0% 50%,rgba(4,168,0,.06) 0%,transparent 60%);pointer-events:none}
+.pm-section::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--green),rgba(4,168,0,.4),transparent)}
+.pm-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.pm-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.pm-eyebrow::before{content:'';width:28px;height:1px;background:var(--green)}
+.pm-title{font-family:var(--fd);font-size:clamp(32px,3.8vw,56px);font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1.0;color:#fff;margin-bottom:8px}
+.pm-title span{color:var(--green)}
+.pm-subtitle{font-size:14px;color:rgba(255,255,255,.4);line-height:1.65;margin-bottom:32px;max-width:380px}
+.pm-conditions{display:flex;flex-direction:column;gap:10px;margin-bottom:0}
+.pm-cond{display:flex;align-items:flex-start;gap:12px;font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.5}
+.pm-cond svg{flex-shrink:0;color:var(--green);margin-top:2px}
+.pm-right{background:linear-gradient(145deg,rgba(18,22,18,.95) 0%,rgba(8,12,8,.98) 100%);border:1px solid rgba(4,168,0,.18);clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px));padding:36px 36px 32px;position:relative}
+.pm-right::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,var(--green),rgba(4,168,0,.2),transparent)}
+.pm-form-title{font-family:var(--fd);font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:6px}
+.pm-form-sub{font-family:var(--fm);font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.3);text-transform:uppercase;margin-bottom:28px}
+.pm-field{margin-bottom:16px}
+.pm-label{font-family:var(--fm);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);display:block;margin-bottom:7px}
+.pm-input{width:100%;padding:12px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);color:#fff;font-size:12.5px;font-family:var(--fb);outline:none;transition:border-color .2s;box-sizing:border-box;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
+.pm-input::placeholder{color:rgba(255,255,255,.2)}
+.pm-input:focus{border-color:rgba(4,168,0,.5)}
+.pm-submit{width:100%;margin-top:8px;padding:15px 24px;background:var(--green);color:#000;font-family:var(--fm);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));cursor:pointer;border:none}
+.pm-submit:hover{background:var(--green-hi)}
+.pm-note{font-size:10px;color:rgba(255,255,255,.2);line-height:1.6;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.06)}
+.pm-success{display:none;text-align:center;padding:20px 0}
+.pm-success-icon{color:var(--green);margin-bottom:12px}
+.pm-success-title{font-family:var(--fd);font-size:18px;font-weight:700;text-transform:uppercase;color:#fff;margin-bottom:6px}
+.pm-success-sub{font-size:12px;color:rgba(255,255,255,.4)}
+
 /* ─── UGC COMMUNITY ─── */
 .ugc-section{padding:100px 0 108px;background:var(--black);position:relative;overflow:hidden}
 .ugc-section::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(45,255,110,.025) 59px,rgba(45,255,110,.025) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(45,255,110,.025) 59px,rgba(45,255,110,.025) 60px);pointer-events:none;z-index:0}
@@ -1024,6 +1054,69 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </div>
 
+<!-- PRICE MATCH GUARANTEE -->
+<section class="pm-section">
+  <div class="wrap">
+    <div class="pm-inner">
+      <!-- Left: copy -->
+      <div>
+        <div class="pm-eyebrow">Price Match Guarantee</div>
+        <h2 class="pm-title">We Beat<br>Any Price<br>by <span>5%</span></h2>
+        <p class="pm-subtitle">Found the same product cheaper elsewhere? Show us and we'll beat their price by 5%. No competitor in the UK does this.</p>
+        <div class="pm-conditions">
+          <div class="pm-cond">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Same product, identical specification
+          </div>
+          <div class="pm-cond">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Sold by an authorised UK retailer
+          </div>
+          <div class="pm-cond">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            In stock and available to buy now
+          </div>
+          <div class="pm-cond">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            We verify and beat it by 5% - guaranteed
+          </div>
+        </div>
+      </div>
+      <!-- Right: form -->
+      <div class="pm-right">
+        <div id="pm-form-wrap">
+          <div class="pm-form-title">Submit a Price Match</div>
+          <div class="pm-form-sub">We'll review and respond within 2 hours</div>
+          <form id="pm-form" onsubmit="pmSubmit(event)">
+            <div class="pm-field">
+              <label class="pm-label">Product URL (on our site)</label>
+              <input class="pm-input" type="url" placeholder="https://nextleveluk.net/products/..." required>
+            </div>
+            <div class="pm-field">
+              <label class="pm-label">Competitor URL (where you saw it cheaper)</label>
+              <input class="pm-input" type="url" placeholder="https://competitor.com/products/..." required>
+            </div>
+            <div class="pm-field">
+              <label class="pm-label">Your Email</label>
+              <input class="pm-input" type="email" placeholder="your@email.com" required>
+            </div>
+            <button type="submit" class="pm-submit">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              Submit Price Match Request
+            </button>
+          </form>
+          <p class="pm-note">We aim to respond within 2 working hours. Price match applies to the product only and excludes shipping costs. One price match per customer per order.</p>
+        </div>
+        <div class="pm-success" id="pm-success">
+          <div class="pm-success-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <div class="pm-success-title">Request Received</div>
+          <div class="pm-success-sub">We'll review your price match and get back to you within 2 hours.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SHOP BY FANDOM (DARK) -->
 <section class="fandom" id="fandom">
   <div class="fandom-hd reveal">
@@ -1473,6 +1566,17 @@ const statObs = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 const statsSection = document.querySelector('.stats');
 if (statsSection) statObs.observe(statsSection);
+
+function pmSubmit(e) {
+  e.preventDefault();
+  document.getElementById('pm-form-wrap').style.opacity = '0';
+  setTimeout(function() {
+    document.getElementById('pm-form-wrap').style.display = 'none';
+    var s = document.getElementById('pm-success');
+    s.style.display = 'block';
+    setTimeout(function(){ s.style.opacity = '1'; }, 10);
+  }, 300);
+}
 </script>
 
 </body>
