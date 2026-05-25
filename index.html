@@ -573,7 +573,9 @@ svg{display:inline-block;vertical-align:middle}
 .ugc-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,rgba(0,0,0,.1) 45%,transparent 100%);pointer-events:none}
 .ugc-handle{position:absolute;bottom:13px;left:14px;background:rgba(0,0,0,.8);color:#2dff6e;border:1px solid rgba(45,255,110,.55);font-family:var(--fm);font-size:10.5px;font-weight:700;letter-spacing:.07em;padding:5px 10px;clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);filter:drop-shadow(0 0 2px rgba(45,255,110,.9)) drop-shadow(0 0 8px rgba(45,255,110,.5)) drop-shadow(0 0 20px rgba(45,255,110,.25));z-index:1}
 .ugc-body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column;gap:11px}
-.ugc-stars{display:flex;gap:2px;color:#2dff6e;font-size:13px;letter-spacing:.05em}
+.ugc-stars{display:flex;gap:2px;color:#ff8a00;font-size:13px;letter-spacing:.05em}
+.ugc-verified{display:flex;align-items:center;gap:5px;font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:rgba(45,255,110,.6);margin-top:-4px}
+.ugc-verified svg{flex-shrink:0}
 .ugc-quote{font-family:'Barlow',sans-serif;font-size:13px;line-height:1.65;color:rgba(255,255,255,.68);flex:1;position:relative;padding-left:14px}
 .ugc-quote::before{content:'';position:absolute;left:0;top:3px;bottom:3px;width:2px;background:linear-gradient(to bottom,#2dff6e,rgba(45,255,110,.1));border-radius:1px}
 .ugc-product{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 13px;margin-top:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));text-decoration:none;transition:background .2s,border-color .2s;cursor:pointer}
@@ -1353,143 +1355,83 @@ svg{display:inline-block;vertical-align:middle}
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
-    <div class="loox-grid">
+    <div class="ugc-grid">
 
-      <div class="loox-card">
-        <div class="loox-card-top">
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
-              <div class="loox-avatar" style="background:#1a3a1a">JT</div>
-              <div>
-                <div class="loox-reviewer-name">James T.</div>
-                <div class="loox-reviewer-meta">Leeds, UK</div>
-              </div>
-            </div>
-            <div class="loox-stars-row">★★★★★</div>
-            <div class="loox-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
-          </div>
-          <div class="loox-thumb"><img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=100" alt="Anduril"></div>
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-the-force-unleashed-starkiller-cosplay-071x-1920706.jpg?v=1757774954&width=600" alt="Bastion Combat Lightsaber">
+          <div class="ugc-handle">@liam_sabers_uk</div>
         </div>
-        <div class="loox-review-title">Exactly what I've wanted since watching Fellowship</div>
-        <div class="loox-review-body">The quality is stunning. The detail on the hilt is incredible and the plaque makes it a proper display piece. Arrived fast and packaging was immaculate.</div>
-        <div class="loox-card-footer">
-          <div class="loox-product-label">Aragorn Anduril Metal Sword</div>
-          <div class="loox-date">12 May 2025</div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <div class="ugc-verified"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          <p class="ugc-quote">The smoothswing sounds are genuinely insane. My mates couldn't believe this wasn't a movie prop.</p>
+          <a href="#" class="ugc-product"><span class="ugc-product-name">Bastion Combat Lightsaber</span><svg class="ugc-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
-      <div class="loox-card">
-        <div class="loox-card-top">
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
-              <div class="loox-avatar" style="background:#2a1a1a">SR</div>
-              <div>
-                <div class="loox-reviewer-name">Sophie R.</div>
-                <div class="loox-reviewer-meta">London, UK</div>
-              </div>
-            </div>
-            <div class="loox-stars-row">★★★★★</div>
-            <div class="loox-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
-          </div>
-          <div class="loox-thumb"><img src="https://nextleveluk.net/cdn/shop/files/bleach-sword-zangetsu-metal-katana-sword-of-ichigo-kurosaki-9237517.jpg?width=100" alt="Zangetsu"></div>
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/products/naruto-resin-mask-cosplay-anime-japan-tobi-uchiha-madara-1711426.jpg?v=1757776063&width=600" alt="Naruto Resin Mask">
+          <div class="ugc-handle">@cosplay_emma_x</div>
         </div>
-        <div class="loox-review-title">My partner was completely speechless</div>
-        <div class="loox-review-body">Bought this for a massive Bleach fan. He was speechless when he opened it. The metal blade is solid and feels premium - nothing like cheaper versions I'd seen elsewhere.</div>
-        <div class="loox-card-footer">
-          <div class="loox-product-label">Zangetsu Metal Katana</div>
-          <div class="loox-date">8 May 2025</div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <div class="ugc-verified"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          <p class="ugc-quote">Wore this to MCM Comic Con and got stopped every few minutes. The quality blew everyone away.</p>
+          <a href="#" class="ugc-product"><span class="ugc-product-name">Naruto Tobi Resin Mask</span><svg class="ugc-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
-      <div class="loox-card">
-        <div class="loox-card-top">
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
-              <div class="loox-avatar" style="background:#1a1a2e">MW</div>
-              <div>
-                <div class="loox-reviewer-name">Marcus W.</div>
-                <div class="loox-reviewer-meta">Manchester, UK</div>
-              </div>
-            </div>
-            <div class="loox-stars-row">★★★★★</div>
-            <div class="loox-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
-          </div>
-          <div class="loox-thumb"><img src="https://nextleveluk.net/cdn/shop/products/naruto-resin-mask-cosplay-anime-japan-tobi-uchiha-madara-1711426.jpg?v=1757776063&width=100" alt="Naruto Mask"></div>
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/files/star-wars-the-resolute-combat-lightsaber-2260447.jpg?v=1757773175&width=600" alt="Mace Windu Lightsaber">
+          <div class="ugc-handle">@sithlordjamie</div>
         </div>
-        <div class="loox-review-title">Stopped every few minutes at the convention</div>
-        <div class="loox-review-body">Wore this to MCM and had so many people asking where I got it. Resin quality is excellent, fits perfectly and looks exactly like in the show.</div>
-        <div class="loox-card-footer">
-          <div class="loox-product-label">Naruto Tobi Resin Mask</div>
-          <div class="loox-date">3 May 2025</div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <div class="ugc-verified"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          <p class="ugc-quote">My 7th order from Next Level. Every single one has been perfect. Loyalty absolutely well earned.</p>
+          <a href="#" class="ugc-product"><span class="ugc-product-name">Mace Windu Neopixel Saber</span><svg class="ugc-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
-      <div class="loox-card">
-        <div class="loox-card-top">
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
-              <div class="loox-avatar" style="background:#1e1a10">EK</div>
-              <div>
-                <div class="loox-reviewer-name">Emma K.</div>
-                <div class="loox-reviewer-meta">Birmingham, UK</div>
-              </div>
-            </div>
-            <div class="loox-stars-row">★★★★★</div>
-            <div class="loox-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
-          </div>
-          <div class="loox-thumb"><img src="https://nextleveluk.net/cdn/shop/products/demon-slayer-sword-tanjiro-rengoku-hilt-fire-breath-wooden-bamboo-cosplay-sword-8362613.jpg?v=1757774934&width=100" alt="Demon Slayer Sword"></div>
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/files/one-piece-roronoa-zoro-shusui-katana-wooden-cosplay-sword-2395987.jpg?v=1757775790&width=600" alt="Zoro Shusui Katana">
+          <div class="ugc-handle">@opi_props</div>
         </div>
-        <div class="loox-review-title">Great value and holds up brilliantly for cosplay</div>
-        <div class="loox-review-body">My daughter uses this for cosplay events and it's held up perfectly. Fast dispatch, well packaged and looks exactly like the photos. Will order again.</div>
-        <div class="loox-card-footer">
-          <div class="loox-product-label">Demon Slayer Tanjiro Sword</div>
-          <div class="loox-date">28 Apr 2025</div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <div class="ugc-verified"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          <p class="ugc-quote">Arrived in two days and the packaging was immaculate. The blade detailing is genuinely next level.</p>
+          <a href="#" class="ugc-product"><span class="ugc-product-name">Zoro Shusui Katana</span><svg class="ugc-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
-      <div class="loox-card">
-        <div class="loox-card-top">
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
-              <div class="loox-avatar" style="background:#1a2030">AD</div>
-              <div>
-                <div class="loox-reviewer-name">Aaron D.</div>
-                <div class="loox-reviewer-meta">Glasgow, UK</div>
-              </div>
-            </div>
-            <div class="loox-stars-row">★★★★★</div>
-            <div class="loox-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
-          </div>
-          <div class="loox-thumb"><img src="https://nextleveluk.net/cdn/shop/files/675ddd_32d1ee00730e41a1aff858a8f.jpg?v=1771937341&width=100" alt="Kylo Ren Saber"></div>
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/files/star-wars-squadrons-imperial-tie-fighter-pilot-v2-resin-cosplay-helmet-8411967.jpg?v=1757773972&width=600" alt="TIE Fighter Helmet">
+          <div class="ugc-handle">@the_real_tyler92</div>
         </div>
-        <div class="loox-review-title">Third lightsaber from Next Level - quality keeps improving</div>
-        <div class="loox-review-body">The crackle sound and blade colour are just stunning. This is my third order and every time the quality gets better. The crossguard effect is mesmerising.</div>
-        <div class="loox-card-footer">
-          <div class="loox-product-label">Kylo Ren Crossguard Saber</div>
-          <div class="loox-date">22 Apr 2025</div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <div class="ugc-verified"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          <p class="ugc-quote">This sits on my desk at work now. Every single colleague has asked where I got it. Obsessed.</p>
+          <a href="#" class="ugc-product"><span class="ugc-product-name">TIE Fighter Pilot Helmet</span><svg class="ugc-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
-      <div class="loox-card">
-        <div class="loox-card-top">
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
-              <div class="loox-avatar" style="background:#1a2a20">RP</div>
-              <div>
-                <div class="loox-reviewer-name">Rachel P.</div>
-                <div class="loox-reviewer-meta">Bristol, UK</div>
-              </div>
-            </div>
-            <div class="loox-stars-row">★★★★★</div>
-            <div class="loox-verified"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
-          </div>
-          <div class="loox-thumb"><img src="https://nextleveluk.net/cdn/shop/files/one-piece-sword-wado-ichimonji-metal-katana-sword-of-roronoa-zoro-4505248.jpg?v=1757774577&width=100" alt="Wado Ichimonji"></div>
+      <div class="ugc-card">
+        <div class="ugc-img-wrap">
+          <img src="https://nextleveluk.net/cdn/shop/files/675ddd_32d1ee00730e41a1aff858a8f.jpg?v=1771937341&width=600" alt="Kylo Ren Crossguard Saber">
+          <div class="ugc-handle">@mandalorianfan_uk</div>
         </div>
-        <div class="loox-review-title">Beautiful metalwork, arrived in 2 days</div>
-        <div class="loox-review-body">Absolutely love this katana. The metalwork is gorgeous and the sheath feels high quality. Arrived in 2 days which was impressive. Highly recommend for any One Piece fan.</div>
-        <div class="loox-card-footer">
-          <div class="loox-product-label">Wado Ichimonji Metal Katana</div>
-          <div class="loox-date">18 Apr 2025</div>
+        <div class="ugc-body">
+          <div class="ugc-stars">★★★★★</div>
+          <div class="ugc-verified"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          <p class="ugc-quote">Film-accurate in every detail. The weight, the finish, the crackle hum - it's just unreal for the price.</p>
+          <a href="#" class="ugc-product"><span class="ugc-product-name">Kylo Ren Crossguard Saber</span><svg class="ugc-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
