@@ -7,7 +7,7 @@
 <title>Next Level UK | Premium Lightsabers, Replica Masks & Cosplay Props</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ─── TOKENS ─── */
 :root {
@@ -233,7 +233,7 @@ svg{display:inline-block;vertical-align:middle}
 .tab{font-family:var(--fd);font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:10px 18px;border:1px solid transparent;background:transparent;color:var(--muted);transition:all .22s;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%)}
 .tab:hover{color:var(--text);border-color:rgba(0,0,0,.14);background:rgba(0,0,0,.03)}
 .tab.on{color:var(--green);background:var(--text);border-color:var(--text)}
-.tab.more{color:var(--faint);border-color:transparent;background:transparent}
+.tab.more{color:#111;border-color:transparent;background:transparent}
 .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;background:transparent}
 
 /* ─── GLASSMORPHISM PRODUCT CARD ─── */
@@ -503,7 +503,7 @@ svg{display:inline-block;vertical-align:middle}
 /* ─── FOOTER ─── */
 .footer{background:var(--black);border-top:1px solid rgba(255,255,255,.06);padding:72px 0 0}
 .footer-in{display:grid;grid-template-columns:240px 1fr 1fr 300px;gap:56px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.06)}
-.fl-logo img{height:56px;width:auto;display:block;margin-bottom:20px}
+.fl-logo img{height:84px;width:auto;display:block;margin-bottom:20px}
 .fl-tag{font-size:12.5px;color:rgba(255,255,255,.26);line-height:1.75;margin-bottom:16px}
 .fl-addr{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.18);line-height:2;letter-spacing:.04em}
 .fc-hd{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:20px}
@@ -617,7 +617,7 @@ svg{display:inline-block;vertical-align:middle}
   line-height:0; padding:0; margin:0; font-size:0;
 }
 .divider-d2l svg, .divider-l2d svg {
-  display:block; width:100%; height:80px;
+  display:block; width:100%; height:120px;
 }
 
 /* ── HERO WIDGETS (all match .hw-founded style) ────────── */
@@ -1076,6 +1076,297 @@ svg{display:inline-block;vertical-align:middle}
 .loox-product-label { color: var(--muted) }
 .loox-date { color: rgba(0,0,0,.3) }
 
+
+/* ══════════════════════════════════════════════════════════
+   V2 HERO - Figma redesign (replaces old 2-col hero)
+══════════════════════════════════════════════════════════ */
+.hero {
+  position: relative !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  background: #0d0e0f !important;
+}
+.hero-bg-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 70% center !important;
+  opacity: 1 !important;
+}
+.hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    linear-gradient(to right, rgba(13,14,15,.96) 0%, rgba(13,14,15,.82) 38%, rgba(13,14,15,.45) 62%, rgba(13,14,15,.08) 100%),
+    linear-gradient(to top, rgba(13,14,15,.85) 0%, transparent 30%) !important;
+  z-index: 1 !important;
+}
+
+/* Content area - single column, bottom-anchored */
+.hero-inner {
+  position: relative !important;
+  z-index: 2 !important;
+  flex: 1 !important;
+  max-width: 1440px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 120px 80px 60px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  gap: 0 !important;
+  grid-template-columns: unset !important;
+  align-items: flex-start !important;
+  min-height: unset !important;
+}
+
+/* Trustpilot badge row */
+.tp-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  font-family: var(--fb);
+  font-size: 13px;
+  color: rgba(255,255,255,.9);
+  font-weight: 400;
+  letter-spacing: .04em;
+}
+.tp-stars { color: #4ebc73; font-size: 16px; letter-spacing: 2px; line-height: 1; }
+.tp-excellent { font-weight: 700; color: #fff; font-family: var(--fb); letter-spacing: .06em; }
+.tp-logo {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-weight: 700; color: #ff6b6b; font-family: var(--fb);
+  letter-spacing: .06em;
+}
+.tp-dot { color: rgba(255,255,255,.35); margin: 0 2px; }
+
+/* Main headline */
+.hero-h1-v2 {
+  font-family: var(--fd);
+  font-size: clamp(30px, 3.8vw, 56px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: .03em;
+  color: #fff;
+  text-transform: uppercase;
+  max-width: 900px;
+  margin: 0 0 16px;
+}
+.hero-h1-v2 .g { color: #00f54e; }
+
+/* Sub-headline */
+.hero-sub-v2 {
+  font-family: var(--fd);
+  font-size: clamp(16px, 1.6vw, 22px);
+  font-weight: 700;
+  color: rgba(255,255,255,.65);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin: 0 0 40px;
+}
+
+/* CTA buttons */
+.hero-actions-v2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-primary-v2 {
+  display: inline-flex;
+  align-items: stretch;
+  background: #00f54e;
+  color: #000;
+  font-family: var(--fd);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.btn-primary-v2:hover { background: #1aff62; transform: translateY(-2px); }
+.btn-primary-v2-label { padding: 18px 28px; }
+.btn-primary-v2-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-left: 1px solid rgba(0,0,0,.2);
+  background: rgba(0,0,0,.08);
+}
+.btn-ghost-v2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+  font-family: var(--fd);
+  font-size: 9.5px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.55);
+  padding: 18px 4px 15px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: border-color .2s, color .2s;
+}
+.btn-ghost-v2:hover { border-color: #00f54e; color: #00f54e; }
+
+/* ── V2 HERO TRUST STRIP (inside hero, white bar at bottom) ── */
+.hero-trust-bar {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  border-top: 2px solid #d4edda;
+  flex-shrink: 0;
+  box-shadow: 0 -1px 0 rgba(0,0,0,.04);
+}
+.hero-trust-inner {
+  width: 100%;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+}
+.hts-item {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.hts-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f0faf3;
+  border: 1.5px solid #c8ead0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a9e3f;
+}
+.hts-text { display: flex; flex-direction: column; gap: 3px; }
+.hts-title {
+  font-family: var(--fd);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #111;
+  white-space: nowrap;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.hts-desc {
+  font-family: var(--fb);
+  font-size: 11.5px;
+  font-weight: 400;
+  color: #666;
+  white-space: nowrap;
+}
+.hts-divider {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, #d0e8d5, transparent);
+  flex-shrink: 0;
+}
+.hts-stars {
+  color: #1a9e3f;
+  font-size: 13px;
+  letter-spacing: 1px;
+  vertical-align: middle;
+}
+
+/* ── COLLECTION SECTION BG SHAPE ── */
+.collection {
+  position: relative;
+  /* NO overflow:hidden — it clips filter:drop-shadow on .pc-wrap children */
+}
+.coll-bg-shape {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden; /* clip here, not on section, to preserve shadow filters */
+}
+.coll-bg-shape svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.coll-bg-shape path {
+  fill: var(--green);
+}
+/* ensure content stays above the shape */
+.collection .coll-hd,
+.collection .coll-tabs,
+.collection .wrap,
+.collection .coll-more {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── PRODUCT CARD SHADOWS ON GREEN BG ── */
+.collection .pc-wrap {
+  filter:
+    drop-shadow(0 4px 10px rgba(0,0,0,.32))
+    drop-shadow(0 14px 36px rgba(0,0,0,.46))
+    drop-shadow(0 32px 72px rgba(0,0,0,.28)) !important;
+  transition: filter .32s ease;
+}
+.collection .pc-wrap:hover {
+  filter:
+    drop-shadow(0 8px 18px rgba(0,0,0,.38))
+    drop-shadow(0 22px 52px rgba(0,0,0,.56))
+    drop-shadow(0 44px 88px rgba(0,0,0,.36))
+    drop-shadow(0 0 28px rgba(4,168,0,.16)) !important;
+}
+
+/* ── VIEW FULL COLLECTION BUTTON - CARD GREY GLASS ── */
+.collection .view-all-btn {
+  background: linear-gradient(145deg, rgba(246,247,244,1) 0%, rgba(238,240,236,.99) 50%, rgba(228,231,226,.97) 100%) !important;
+  color: #111 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.9),
+    inset 1px 0 0 rgba(255,255,255,.6),
+    inset 0 -1px 0 rgba(0,0,0,.08),
+    inset -1px 0 0 rgba(200,202,198,.4) !important;
+  filter:
+    drop-shadow(0 4px 10px rgba(0,0,0,.32))
+    drop-shadow(0 14px 36px rgba(0,0,0,.46))
+    drop-shadow(0 32px 72px rgba(0,0,0,.28)) !important;
+  border-top: 1px solid rgba(255,255,255,1) !important;
+  border-left: 1px solid rgba(255,255,255,.95) !important;
+  border-right: 1px solid rgba(210,212,208,.5) !important;
+  border-bottom: 1px solid rgba(200,202,198,.5) !important;
+  transition: all .28s ease !important;
+}
+.collection .view-all-btn::before {
+  background: linear-gradient(to right, transparent, rgba(255,255,255,.5), transparent) !important;
+}
+.collection .view-all-btn:hover {
+  background: linear-gradient(145deg, rgba(250,251,248,1) 0%, rgba(244,245,242,.99) 100%) !important;
+  filter:
+    drop-shadow(0 8px 18px rgba(0,0,0,.38))
+    drop-shadow(0 22px 52px rgba(0,0,0,.54))
+    drop-shadow(0 44px 88px rgba(0,0,0,.34))
+    drop-shadow(0 0 28px rgba(4,168,0,.16)) !important;
+  transform: translateY(-3px) !important;
+}
 </style>
 </head>
 <body>
@@ -1140,96 +1431,122 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO V2 (Figma: node 2027-1019) -->
 <section class="hero">
-  <img class="hero-bg-img" src="https://nextleveluk.net/cdn/shop/files/411-06.jpg?v=1726566759&width=1500" alt="">
+  <img class="hero-bg-img" src="https://nextleveluk.net/cdn/shop/files/411-06.jpg?v=1726566759&width=1500" alt="Next Level UK - Premium Lightsabers, Replica Masks, Props and Collectibles">
   <div class="hero-overlay"></div>
-  <div class="hero-inner">
 
-    <!-- Left: copy -->
-    <div class="hero-left">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Premium Collection  -  New In 2025
-      </div>
-      <h1 class="hero-h1">
-        Metal Swords<br>
-        <span class="g">&amp; Katanas.</span><br>
-        Lightsabers &amp;<br>
-        Cosplay Replicas.
-      </h1>
-      <p class="hero-sub">The UK's most trusted destination for metal swords, lightsabers, and cosplay replicas. Family-owned since 2013.</p>
-      <div class="hero-keywords">
-        <span class="hk hk-accent">Metal Blade</span>
-        <span class="hk hk-accent">Battle Ready</span>
-        <span class="hk">Film Accurate</span>
-        <span class="hk">UK Stock</span>
-        <span class="hk">385+ Swords</span>
-      </div>
-      <div class="hero-actions">
-        <a href="#fandom" class="btn-primary">
-          Shop by Fandom
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#collection" class="btn-ghost">
-          See what's new
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
+  <!-- Main content: bottom-anchored single column -->
+  <div class="hero-inner">
+    <!-- Loox badge -->
+    <div class="tp-badge">
+      <span class="tp-stars">★★★★★</span>
+      <span class="tp-excellent">4.9 / 5</span>
+      <span class="tp-dot">·</span>
+      <span class="tp-logo">
+        <!-- Loox camera-aperture icon -->
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+        Loox
+      </span>
+      <span style="color:rgba(255,255,255,.45);font-size:11px;">2,400+ reviews</span>
     </div>
 
-    <!-- Right: HUD widgets -->
-    <div class="hero-widgets">
+    <!-- Headline -->
+    <h1 class="hero-h1-v2">
+      <span class="g">More</span> Premium Lightsabers.<br>
+      Replica Masks.<br>
+      Props <span class="g">&amp;</span> Collectibles.
+    </h1>
 
-      <!-- Widget 1: Score -->
-      <div class="hw-score-wrap">
-        <div class="hw hw-score">
-          <div class="hw-scan"></div>
-          <div class="hw-tag">Verified Rating</div>
-          <div class="hw-val">4.9 <span class="hw-unit">/ 5</span></div>
-          <div class="hw-stars">★★★★★</div>
-          <div class="hw-bar"><div class="hw-bar-track"><div class="hw-bar-fill"></div></div></div>
-          <div class="hw-sub">Loox · 2,400+ Reviews</div>
+    <!-- Sub-headline -->
+    <p class="hero-sub-v2">Than anywhere else.</p>
+
+    <!-- CTAs -->
+    <div class="hero-actions-v2">
+      <a href="#fandom" class="btn-primary-v2">
+        <span class="btn-primary-v2-label">Shop by Fandom</span>
+        <span class="btn-primary-v2-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+      <a href="#collection" class="btn-ghost-v2">
+        See what's new
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Trust bar anchored to bottom of hero -->
+  <div class="hero-trust-bar">
+    <div class="hero-trust-inner">
+
+      <!-- Loox rating -->
+      <div class="hts-item">
+        <div class="hts-icon" style="background:#fff5f5;border-color:#ffd0d0;color:#ff6b6b;">
+          <!-- Loox aperture icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+        </div>
+        <div class="hts-text">
+          <span class="hts-title"><span class="hts-stars">★★★★★</span> 4.9 / 5 on Loox</span>
+          <span class="hts-desc">2,400+ verified photo reviews</span>
         </div>
       </div>
 
-      <!-- Widget 2: Reviews (parallelogram) -->
-      <div class="hw hw-reviews">
-        <div class="hw-scan"></div>
-        <div class="hw-body">
-          <div class="hw-tag">Community</div>
-          <div class="hw-val"><span data-count="2400">2400</span><span class="hw-unit">+</span></div>
-          <div class="hw-sub">Five-Star Reviews</div>
+      <div class="hts-divider"></div>
+
+      <!-- Free shipping -->
+      <div class="hts-item">
+        <div class="hts-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><rect x="9" y="11" width="14" height="10" rx="1"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+        </div>
+        <div class="hts-text">
+          <span class="hts-title">Free UK Shipping</span>
+          <span class="hts-desc">On all orders over £100</span>
         </div>
       </div>
 
-      <!-- Widget 3: Reach (left chamfer) -->
-      <div class="hw-reach-wrap">
-        <div class="hw hw-reach">
-          <div class="hw-scan"></div>
-          <div class="hw-tag">Global Reach</div>
-          <div class="hw-val" style="font-size:18px;letter-spacing:.04em">UK · EU<span class="hw-unit" style="font-size:13px"> · US · CA</span></div>
-          <div class="hw-sub">Shipping Destinations</div>
+      <div class="hts-divider"></div>
+
+      <!-- UK Family Owned -->
+      <div class="hts-item">
+        <div class="hts-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="hts-text">
+          <span class="hts-title">UK Family-Owned</span>
+          <span class="hts-desc">Est. 2013 · 12+ years experience</span>
         </div>
       </div>
 
-      <!-- Widget 4: Founded (corner brackets) -->
-      <div class="hw hw-founded">
-        <div class="hw-corner tl"></div>
-        <div class="hw-corner tr"></div>
-        <div class="hw-corner bl"></div>
-        <div class="hw-corner br"></div>
-        <div class="hw-tag">Established</div>
-        <div class="hw-year">Since 2013</div>
-        <div class="hw-founded-sub">UK Family-Owned Business</div>
+      <div class="hts-divider"></div>
+
+      <!-- 30-Day Returns -->
+      <div class="hts-item">
+        <div class="hts-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+        </div>
+        <div class="hts-text">
+          <span class="hts-title">30-Day Returns</span>
+          <span class="hts-desc">Hassle-free return policy</span>
+        </div>
+      </div>
+
+      <div class="hts-divider"></div>
+
+      <!-- Worldwide Shipping -->
+      <div class="hts-item">
+        <div class="hts-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        </div>
+        <div class="hts-text">
+          <span class="hts-title">Worldwide Shipping</span>
+          <span class="hts-desc">UK · EU · US · Canada &amp; more</span>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
-<!-- DIVIDER dark-to-light -->
-<div class="divider-d2l" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polygon fill="#060608" points="0,0 1440,0 1440,0 0,0"/><polygon fill="#060608" points="0,0 1440,0 0,80"/><polygon fill="#ffffff" points="1440,0 1440,80 0,80"/><line x1="1440" y1="0" x2="0" y2="80" stroke="rgba(4,168,0,0.45)" stroke-width="2"/><line x1="1440" y1="6" x2="0" y2="86" stroke="rgba(4,168,0,0.15)" stroke-width="1.5"/></svg></div>
-
 <!-- STATS STRIP (DARK) -->
 <div class="stats">
   <div class="stats-in">
@@ -1252,54 +1569,19 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </div>
 
-<!-- TRUST STRIP -->
-<div class="trust-strip">
-  <div class="trust-strip-in">
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <div class="ti-tag">Verified Rating</div>
-      <div class="ti-title">Excellent 4.9 / 5</div>
-      <div class="ti-sub">Loox · 2,400+ Reviews</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-      <div class="ti-tag">UK Origin</div>
-      <div class="ti-title">UK Family Run</div>
-      <div class="ti-sub">Est. 2013</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-      <div class="ti-tag">Global Reach</div>
-      <div class="ti-title">Worldwide Shipping</div>
-      <div class="ti-sub">UK · EU · US · UK · EU · US · CA</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-      <div class="ti-tag">Checkout</div>
-      <div class="ti-title">Secure Payments</div>
-      <div class="ti-sub">SSL · All Major Cards</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></div>
-      <div class="ti-tag">Hassle Free</div>
-      <div class="ti-title">Easy Returns</div>
-      <div class="ti-sub">30-Day Policy</div>
-    </div>
-  </div>
-</div>
-
 <!-- SHOP BY COLLECTION -->
 <section class="collection" id="collection">
+
+  <!-- BG SHAPE (Figma node 2027-1098, translated to green) -->
+  <div class="coll-bg-shape" aria-hidden="true">
+    <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M 0 519 L 175 445 L 234 439 L 328 328 L 398 365
+           L 439 328 L 516 376 L 604 291 L 674 371
+           L 809 206 L 937 101 L 961 137 L 1014 64
+           L 1200 0 L 1200 600 L 0 600 Z"/>
+    </svg>
+  </div>
+
   <div class="coll-hd reveal">
     <div class="sec-tag sec-tag-center">Collection</div>
     <h2 class="sec-h2 sec-h2-center">Shop by Collection</h2>
@@ -1799,6 +2081,52 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </section>
 
+<!-- TRUST STRIP (moved: now after Trending Now) -->
+<div class="trust-strip">
+  <div class="trust-strip-in">
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div class="ti-tag">Verified Rating</div>
+      <div class="ti-title">Excellent 4.9 / 5</div>
+      <div class="ti-sub">Loox · 2,400+ Reviews</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="ti-tag">UK Origin</div>
+      <div class="ti-title">UK Family Run</div>
+      <div class="ti-sub">Est. 2013</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
+      <div class="ti-tag">Global Reach</div>
+      <div class="ti-title">Worldwide Shipping</div>
+      <div class="ti-sub">UK · EU · US · UK · EU · US · CA</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+      <div class="ti-tag">Checkout</div>
+      <div class="ti-title">Secure Payments</div>
+      <div class="ti-sub">SSL · All Major Cards</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></div>
+      <div class="ti-tag">Hassle Free</div>
+      <div class="ti-title">Easy Returns</div>
+      <div class="ti-sub">30-Day Policy</div>
+    </div>
+  </div>
+</div>
+
 <!-- TRUST MARQUEE (DARK) -->
 <div class="trust-mar">
   <div class="trust-track">
@@ -1919,7 +2247,48 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </section>
 <!-- DIVIDER light-to-dark -->
-<div class="divider-l2d" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polygon fill="#ffffff" points="0,0 1440,0 1440,0 0,0"/><polygon fill="#ffffff" points="0,0 1440,80 0,80"/><polygon fill="#060608" points="1440,0 1440,80 0,80"/><line x1="0" y1="80" x2="1440" y2="0" stroke="rgba(4,168,0,0.45)" stroke-width="2"/><line x1="0" y1="86" x2="1440" y2="6" stroke="rgba(4,168,0,0.15)" stroke-width="1.5"/></svg></div>
+<div class="divider-l2d" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White (light section) fills everything above the jagged line -->
+  <rect width="1440" height="120" fill="#ffffff"/>
+  <!-- Dark fill: abstract asymmetric cuts -->
+  <path fill="#060608" d="
+    M 0 110
+    L 52 110
+    L 88 82
+    L 88 94
+    L 192 94
+    L 258 60
+    L 312 74
+    L 312 46
+    L 440 46
+    L 482 64
+    L 548 32
+    L 606 48
+    L 606 18
+    L 742 18
+    L 788 36
+    L 848 10
+    L 900 26
+    L 900 4
+    L 1068 4
+    L 1068 20
+    L 1148 2
+    L 1284 16
+    L 1388 0
+    L 1440 0
+    L 1440 120
+    L 0 120
+    Z
+  "/>
+  <!-- Green accent line tracing the cut edge -->
+  <polyline fill="none" stroke="rgba(4,168,0,0.6)" stroke-width="2" stroke-linejoin="miter" points="
+    0,110 52,110 88,82 88,94 192,94 258,60 312,74 312,46 440,46 482,64 548,32 606,48 606,18 742,18 788,36 848,10 900,26 900,4 1068,4 1068,20 1148,2 1284,16 1388,0 1440,0
+  "/>
+  <!-- Soft glow offset -->
+  <polyline fill="none" stroke="rgba(4,168,0,0.15)" stroke-width="4" stroke-linejoin="miter" points="
+    0,115 52,115 88,87 88,99 192,99 258,65 312,79 312,51 440,51 482,69 548,37 606,53 606,23 742,23 788,41 848,15 900,31 900,9 1068,9 1068,25 1148,7 1284,21 1388,5 1440,5
+  "/>
+</svg></div>
 
 <!-- EMAIL CAPTURE (DARK) -->
 <section class="email-cap">
