@@ -1286,7 +1286,7 @@ svg{display:inline-block;vertical-align:middle}
 /* ── COLLECTION SECTION BG SHAPE ── */
 .collection {
   position: relative;
-  overflow: hidden;
+  /* NO overflow:hidden — it clips filter:drop-shadow on .pc-wrap children */
 }
 .coll-bg-shape {
   position: absolute;
@@ -1295,6 +1295,7 @@ svg{display:inline-block;vertical-align:middle}
   height: 100%;
   pointer-events: none;
   z-index: 0;
+  overflow: hidden; /* clip here, not on section, to preserve shadow filters */
 }
 .coll-bg-shape svg {
   position: absolute;
@@ -1316,44 +1317,6 @@ svg{display:inline-block;vertical-align:middle}
   z-index: 1;
 }
 
-/* ── COLLECTION TABS ON GREEN BG ── */
-/* Section heading */
-.collection .sec-h2 { color: #fff !important; }
-.collection .sec-tag {
-  color: #fff !important;
-  background: rgba(255,255,255,.15) !important;
-  border-color: rgba(255,255,255,.35) !important;
-}
-/* Tab buttons */
-.collection .tab {
-  color: rgba(255,255,255,.65) !important;
-  border-color: rgba(255,255,255,.25) !important;
-}
-.collection .tab:hover {
-  color: #fff !important;
-  border-color: rgba(255,255,255,.6) !important;
-  background: rgba(255,255,255,.1) !important;
-}
-.collection .tab.on {
-  background: #fff !important;
-  color: #000 !important;
-  border-color: #fff !important;
-  clip-path: none !important;
-}
-.collection .tab.more {
-  color: rgba(255,255,255,.5) !important;
-  border-color: rgba(255,255,255,.2) !important;
-}
-/* "View full collection" button */
-.collection .coll-more a {
-  border-color: rgba(255,255,255,.5) !important;
-  color: #fff !important;
-}
-.collection .coll-more a:hover {
-  background: #fff !important;
-  color: #000 !important;
-}
-
 /* ── PRODUCT CARD SHADOWS ON GREEN BG ── */
 .collection .pc-wrap {
   filter:
@@ -1370,37 +1333,37 @@ svg{display:inline-block;vertical-align:middle}
     drop-shadow(0 0 28px rgba(4,168,0,.16)) !important;
 }
 
-/* ── VIEW FULL COLLECTION BUTTON - WHITE GLASS ── */
+/* ── VIEW FULL COLLECTION BUTTON - CARD GREY GLASS ── */
 .collection .view-all-btn {
-  background: linear-gradient(145deg, #ffffff 0%, rgba(248,248,246,.99) 50%, rgba(240,241,239,.97) 100%) !important;
-  color: #000 !important;
-  backdrop-filter: blur(24px) !important;
-  -webkit-backdrop-filter: blur(24px) !important;
+  background: linear-gradient(145deg, rgba(246,247,244,1) 0%, rgba(238,240,236,.99) 50%, rgba(228,231,226,.97) 100%) !important;
+  color: #111 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.95),
-    inset 1px 0 0 rgba(255,255,255,.65),
-    inset 0 -1px 0 rgba(0,0,0,.06),
-    inset -1px 0 0 rgba(210,212,208,.4) !important;
+    inset 0 1px 0 rgba(255,255,255,.9),
+    inset 1px 0 0 rgba(255,255,255,.6),
+    inset 0 -1px 0 rgba(0,0,0,.08),
+    inset -1px 0 0 rgba(200,202,198,.4) !important;
   filter:
-    drop-shadow(0 4px 12px rgba(0,0,0,.28))
-    drop-shadow(0 16px 40px rgba(0,0,0,.38))
-    drop-shadow(0 32px 64px rgba(0,0,0,.22)) !important;
+    drop-shadow(0 4px 10px rgba(0,0,0,.32))
+    drop-shadow(0 14px 36px rgba(0,0,0,.46))
+    drop-shadow(0 32px 72px rgba(0,0,0,.28)) !important;
   border-top: 1px solid rgba(255,255,255,1) !important;
   border-left: 1px solid rgba(255,255,255,.95) !important;
-  border-right: 1px solid rgba(210,212,208,.45) !important;
-  border-bottom: 1px solid rgba(200,202,198,.45) !important;
+  border-right: 1px solid rgba(210,212,208,.5) !important;
+  border-bottom: 1px solid rgba(200,202,198,.5) !important;
   transition: all .28s ease !important;
 }
 .collection .view-all-btn::before {
-  background: linear-gradient(to right, transparent, rgba(255,255,255,.55), transparent) !important;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,.5), transparent) !important;
 }
 .collection .view-all-btn:hover {
-  background: linear-gradient(145deg, #ffffff 0%, rgba(252,252,250,.99) 100%) !important;
+  background: linear-gradient(145deg, rgba(250,251,248,1) 0%, rgba(244,245,242,.99) 100%) !important;
   filter:
-    drop-shadow(0 8px 20px rgba(0,0,0,.34))
-    drop-shadow(0 24px 56px rgba(0,0,0,.46))
-    drop-shadow(0 44px 80px rgba(0,0,0,.26))
-    drop-shadow(0 0 24px rgba(4,168,0,.18)) !important;
+    drop-shadow(0 8px 18px rgba(0,0,0,.38))
+    drop-shadow(0 22px 52px rgba(0,0,0,.54))
+    drop-shadow(0 44px 88px rgba(0,0,0,.34))
+    drop-shadow(0 0 28px rgba(4,168,0,.16)) !important;
   transform: translateY(-3px) !important;
 }
 </style>
@@ -1600,52 +1563,6 @@ svg{display:inline-block;vertical-align:middle}
     <div class="stat">
       <div class="stat-num"><span class="g" data-count="48">48</span><span class="g">h</span></div>
       <div class="stat-label">UK Dispatch</div>
-    </div>
-  </div>
-</div>
-
-<!-- TRUST STRIP -->
-<div class="trust-strip">
-  <div class="trust-strip-in">
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <div class="ti-tag">Verified Rating</div>
-      <div class="ti-title">Excellent 4.9 / 5</div>
-      <div class="ti-sub">Loox · 2,400+ Reviews</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-      <div class="ti-tag">UK Origin</div>
-      <div class="ti-title">UK Family Run</div>
-      <div class="ti-sub">Est. 2013</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-      <div class="ti-tag">Global Reach</div>
-      <div class="ti-title">Worldwide Shipping</div>
-      <div class="ti-sub">UK · EU · US · UK · EU · US · CA</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-      <div class="ti-tag">Checkout</div>
-      <div class="ti-title">Secure Payments</div>
-      <div class="ti-sub">SSL · All Major Cards</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></div>
-      <div class="ti-tag">Hassle Free</div>
-      <div class="ti-title">Easy Returns</div>
-      <div class="ti-sub">30-Day Policy</div>
     </div>
   </div>
 </div>
@@ -2161,6 +2078,52 @@ svg{display:inline-block;vertical-align:middle}
     </div>
   </div>
 </section>
+
+<!-- TRUST STRIP (moved: now after Trending Now) -->
+<div class="trust-strip">
+  <div class="trust-strip-in">
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div class="ti-tag">Verified Rating</div>
+      <div class="ti-title">Excellent 4.9 / 5</div>
+      <div class="ti-sub">Loox · 2,400+ Reviews</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="ti-tag">UK Origin</div>
+      <div class="ti-title">UK Family Run</div>
+      <div class="ti-sub">Est. 2013</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
+      <div class="ti-tag">Global Reach</div>
+      <div class="ti-title">Worldwide Shipping</div>
+      <div class="ti-sub">UK · EU · US · UK · EU · US · CA</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+      <div class="ti-tag">Checkout</div>
+      <div class="ti-title">Secure Payments</div>
+      <div class="ti-sub">SSL · All Major Cards</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></div>
+      <div class="ti-tag">Hassle Free</div>
+      <div class="ti-title">Easy Returns</div>
+      <div class="ti-sub">30-Day Policy</div>
+    </div>
+  </div>
+</div>
 
 <!-- TRUST MARQUEE (DARK) -->
 <div class="trust-mar">
