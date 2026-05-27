@@ -2250,36 +2250,43 @@ svg{display:inline-block;vertical-align:middle}
 <div class="divider-l2d" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
   <!-- White (light section) fills everything above the jagged line -->
   <rect width="1440" height="120" fill="#ffffff"/>
-  <!-- Dark fill: jagged stock-chart path closes along the bottom -->
+  <!-- Dark fill: abstract asymmetric cuts -->
   <path fill="#060608" d="
-    M 0 105
-    L 95 88
-    L 168 96
-    L 255 72
-    L 330 83
-    L 420 58
-    L 505 70
-    L 590 46
-    L 665 60
-    L 755 34
-    L 845 50
-    L 930 24
-    L 1020 38
-    L 1110 14
-    L 1210 28
-    L 1310 8
+    M 0 110
+    L 52 110
+    L 88 82
+    L 88 94
+    L 192 94
+    L 258 60
+    L 312 74
+    L 312 46
+    L 440 46
+    L 482 64
+    L 548 32
+    L 606 48
+    L 606 18
+    L 742 18
+    L 788 36
+    L 848 10
+    L 900 26
+    L 900 4
+    L 1068 4
+    L 1068 20
+    L 1148 2
+    L 1284 16
+    L 1388 0
     L 1440 0
     L 1440 120
     L 0 120
     Z
   "/>
-  <!-- Green accent line tracing the jagged edge -->
-  <polyline fill="none" stroke="rgba(4,168,0,0.55)" stroke-width="2" stroke-linejoin="round" points="
-    0,105 95,88 168,96 255,72 330,83 420,58 505,70 590,46 665,60 755,34 845,50 930,24 1020,38 1110,14 1210,28 1310,8 1440,0
+  <!-- Green accent line tracing the cut edge -->
+  <polyline fill="none" stroke="rgba(4,168,0,0.6)" stroke-width="2" stroke-linejoin="miter" points="
+    0,110 52,110 88,82 88,94 192,94 258,60 312,74 312,46 440,46 482,64 548,32 606,48 606,18 742,18 788,36 848,10 900,26 900,4 1068,4 1068,20 1148,2 1284,16 1388,0 1440,0
   "/>
-  <!-- Soft secondary glow line offset slightly -->
-  <polyline fill="none" stroke="rgba(4,168,0,0.18)" stroke-width="3" stroke-linejoin="round" points="
-    0,110 95,93 168,101 255,77 330,88 420,63 505,75 590,51 665,65 755,39 845,55 930,29 1020,43 1110,19 1210,33 1310,13 1440,5
+  <!-- Soft glow offset -->
+  <polyline fill="none" stroke="rgba(4,168,0,0.15)" stroke-width="4" stroke-linejoin="miter" points="
+    0,115 52,115 88,87 88,99 192,99 258,65 312,79 312,51 440,51 482,69 548,37 606,53 606,23 742,23 788,41 848,15 900,31 900,9 1068,9 1068,25 1148,7 1284,21 1388,5 1440,5
   "/>
 </svg></div>
 
