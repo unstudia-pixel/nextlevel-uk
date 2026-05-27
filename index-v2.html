@@ -1140,7 +1140,8 @@ svg{display:inline-block;vertical-align:middle}
 .tp-excellent { font-weight: 700; color: #fff; font-family: var(--fb); letter-spacing: .06em; }
 .tp-logo {
   display: inline-flex; align-items: center; gap: 5px;
-  font-weight: 700; color: #fff; font-family: var(--fb);
+  font-weight: 700; color: #ff6b6b; font-family: var(--fb);
+  letter-spacing: .06em;
 }
 .tp-dot { color: rgba(255,255,255,.35); margin: 0 2px; }
 
@@ -1227,19 +1228,19 @@ svg{display:inline-block;vertical-align:middle}
   box-shadow: 0 -1px 0 rgba(0,0,0,.04);
 }
 .hero-trust-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 80px;
+  width: 100%;
+  padding: 0 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 96px;
+  height: 88px;
 }
 .hts-item {
   display: flex;
+  flex: 1;
   align-items: center;
+  justify-content: center;
   gap: 14px;
-  flex-shrink: 0;
 }
 .hts-icon {
   flex-shrink: 0;
@@ -1437,16 +1438,17 @@ svg{display:inline-block;vertical-align:middle}
 
   <!-- Main content: bottom-anchored single column -->
   <div class="hero-inner">
-    <!-- Trustpilot badge -->
+    <!-- Loox badge -->
     <div class="tp-badge">
       <span class="tp-stars">★★★★★</span>
-      <span class="tp-excellent">Excellent</span>
-      <span>4.9 out of 5</span>
+      <span class="tp-excellent">4.9 / 5</span>
       <span class="tp-dot">·</span>
       <span class="tp-logo">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="#4ebc73"><path d="M12 1l2.9 8.9H24l-7.5 5.5 2.9 8.9L12 19l-7.4 5.3 2.9-8.9L0 9.9h9.1z"/></svg>
-        Trustpilot
+        <!-- Loox camera-aperture icon -->
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+        Loox
       </span>
+      <span style="color:rgba(255,255,255,.45);font-size:11px;">2,400+ reviews</span>
     </div>
 
     <!-- Headline -->
@@ -1478,15 +1480,15 @@ svg{display:inline-block;vertical-align:middle}
   <div class="hero-trust-bar">
     <div class="hero-trust-inner">
 
-      <!-- Trustpilot rating -->
+      <!-- Loox rating -->
       <div class="hts-item">
-        <div class="hts-icon">
-          <!-- Trustpilot star mark -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.9 8.9H24l-7.5 5.5 2.9 8.9L12 19l-7.4 5.3 2.9-8.9L0 9.9h9.1z"/></svg>
+        <div class="hts-icon" style="background:#fff5f5;border-color:#ffd0d0;color:#ff6b6b;">
+          <!-- Loox aperture icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
         </div>
         <div class="hts-text">
-          <span class="hts-title"><span class="hts-stars">★★★★★</span> Excellent 4.9 / 5</span>
-          <span class="hts-desc">2,400+ verified reviews on Loox</span>
+          <span class="hts-title"><span class="hts-stars">★★★★★</span> 4.9 / 5 on Loox</span>
+          <span class="hts-desc">2,400+ verified photo reviews</span>
         </div>
       </div>
 
