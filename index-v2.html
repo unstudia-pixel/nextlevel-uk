@@ -1217,10 +1217,10 @@ svg{display:inline-block;vertical-align:middle}
 .hero-trust-bar {
   position: relative;
   z-index: 2;
-  background: #fff;
-  border-top: 1px solid #c7e1cf;
-  border-bottom: 1px solid #c7e1cf;
+  background: #ffffff;
+  border-top: 2px solid #d4edda;
   flex-shrink: 0;
+  box-shadow: 0 -1px 0 rgba(0,0,0,.04);
 }
 .hero-trust-inner {
   max-width: 1280px;
@@ -1229,20 +1229,54 @@ svg{display:inline-block;vertical-align:middle}
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 116px;
+  height: 96px;
 }
 .hts-item {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 14px;
   flex-shrink: 0;
 }
-.hts-icon { color: #4a6b58; flex-shrink: 0; }
-.hts-text { display: flex; flex-direction: column; gap: 2px; }
-.hts-title { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: #4a6b58; white-space: nowrap; }
-.hts-desc { font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 400; color: #4a6b58; opacity: .8; white-space: nowrap; }
-.hts-divider { width: 1px; height: 56px; background: #7fe0a1; flex-shrink: 0; }
-.hts-stars { color: #4ebc73; font-size: 15px; letter-spacing: 2px; }
+.hts-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f0faf3;
+  border: 1.5px solid #c8ead0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a9e3f;
+}
+.hts-text { display: flex; flex-direction: column; gap: 3px; }
+.hts-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111;
+  white-space: nowrap;
+  letter-spacing: -.01em;
+}
+.hts-desc {
+  font-family: 'Sora', sans-serif;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: #666;
+  white-space: nowrap;
+}
+.hts-divider {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, #d0e8d5, transparent);
+  flex-shrink: 0;
+}
+.hts-stars {
+  color: #1a9e3f;
+  font-size: 13px;
+  letter-spacing: 1px;
+  vertical-align: middle;
+}
 </style>
 </head>
 <body>
@@ -1355,21 +1389,24 @@ svg{display:inline-block;vertical-align:middle}
   <div class="hero-trust-bar">
     <div class="hero-trust-inner">
 
+      <!-- Trustpilot rating -->
       <div class="hts-item">
         <div class="hts-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <!-- Trustpilot star mark -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.9 8.9H24l-7.5 5.5 2.9 8.9L12 19l-7.4 5.3 2.9-8.9L0 9.9h9.1z"/></svg>
         </div>
         <div class="hts-text">
-          <span class="hts-title"><span class="hts-stars">★★★★★</span> Excellent 4.9/5</span>
-          <span class="hts-desc">Loox · 2,400+ Verified Reviews</span>
+          <span class="hts-title"><span class="hts-stars">★★★★★</span> Excellent 4.9 / 5</span>
+          <span class="hts-desc">2,400+ verified reviews on Loox</span>
         </div>
       </div>
 
       <div class="hts-divider"></div>
 
+      <!-- Free shipping -->
       <div class="hts-item">
         <div class="hts-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="3" width="22" height="18" rx="2"/><path d="M1 9h22"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><rect x="9" y="11" width="14" height="10" rx="1"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
         </div>
         <div class="hts-text">
           <span class="hts-title">Free UK Shipping</span>
@@ -1379,21 +1416,23 @@ svg{display:inline-block;vertical-align:middle}
 
       <div class="hts-divider"></div>
 
+      <!-- UK Family Owned -->
       <div class="hts-item">
         <div class="hts-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <div class="hts-text">
           <span class="hts-title">UK Family-Owned</span>
-          <span class="hts-desc">Est. 2013 · 12+ Years Experience</span>
+          <span class="hts-desc">Est. 2013 · 12+ years experience</span>
         </div>
       </div>
 
       <div class="hts-divider"></div>
 
+      <!-- 30-Day Returns -->
       <div class="hts-item">
         <div class="hts-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
         </div>
         <div class="hts-text">
           <span class="hts-title">30-Day Returns</span>
@@ -1403,9 +1442,10 @@ svg{display:inline-block;vertical-align:middle}
 
       <div class="hts-divider"></div>
 
+      <!-- Worldwide Shipping -->
       <div class="hts-item">
         <div class="hts-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
         </div>
         <div class="hts-text">
           <span class="hts-title">Worldwide Shipping</span>
