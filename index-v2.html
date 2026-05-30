@@ -1888,10 +1888,35 @@ svg{display:inline-block;vertical-align:middle}
 
 <!-- PRICE MATCH GUARANTEE -->
 <section class="pm-section" style="position:relative;">
-  <!-- Shape: right-to-left flow -->
-  <div class="sec-shape" aria-hidden="true" style="opacity:.12;">
-    <svg viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 1440 420 L 1355 395 L 1355 408 L 1230 408 L 1165 378 L 1100 392 L 1100 365 L 960 365 L 910 382 L 840 350 L 780 365 L 780 338 L 620 338 L 570 355 L 490 320 L 430 336 L 430 308 L 270 308 L 220 325 L 130 292 L 0 280 L 0 500 L 1440 500 Z"/>
+  <!-- Shape: top-down, mirrored, full opacity -->
+  <div class="sec-shape" aria-hidden="true" style="opacity:1;">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="
+        M 0 0
+        L 1440 0
+        L 1440 158
+        L 1312 130
+        L 1312 146
+        L 1176 146
+        L 1110 116
+        L 1042 133
+        L 1042 102
+        L 900 102
+        L 842 120
+        L 765 88
+        L 702 106
+        L 702 74
+        L 537 74
+        L 480 92
+        L 392 60
+        L 328 78
+        L 328 46
+        L 162 46
+        L 105 64
+        L 20 36
+        L 0 26
+        Z
+      "/>
     </svg>
   </div>
   <div class="wrap">
@@ -1956,13 +1981,7 @@ svg{display:inline-block;vertical-align:middle}
 </section>
 
 <!-- SHOP BY FANDOM (DARK) -->
-<section class="fandom" id="fandom" style="position:relative;">
-  <!-- Shape: left-to-right flow -->
-  <div class="sec-shape" aria-hidden="true" style="opacity:.14;">
-    <svg viewBox="0 0 1440 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 0 500 L 110 472 L 110 488 L 245 488 L 312 458 L 380 474 L 380 445 L 530 445 L 585 464 L 658 430 L 720 446 L 720 416 L 880 416 L 935 435 L 1010 400 L 1075 418 L 1075 388 L 1240 388 L 1295 406 L 1380 370 L 1440 355 L 1440 600 L 0 600 Z"/>
-    </svg>
-  </div>
+<section class="fandom" id="fandom">
   <div class="fandom-hd reveal">
     <div class="sec-tag sec-tag-center">Universe</div>
     <h2 class="sec-h2 sec-h2-center sec-h2-white">Shop by Fandom</h2>
@@ -2007,6 +2026,15 @@ svg{display:inline-block;vertical-align:middle}
       <div class="fc-content">
         <div class="fc-name">Star Wars</div>
         <div class="fc-count">120+ Products</div>
+        <div class="fc-arrow">Shop Now <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+    <!-- Naruto - fills 6th slot -->
+    <div class="fc reveal">
+      <div class="fc-bg" style="background-image:url('https://raw.githubusercontent.com/unstudia-pixel/nextlevel-uk/main/naruto.jpg')"></div>
+      <div class="fc-content">
+        <div class="fc-name">Naruto</div>
+        <div class="fc-count">45+ Products</div>
         <div class="fc-arrow">Shop Now <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
     </div>
