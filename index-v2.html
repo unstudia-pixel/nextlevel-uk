@@ -356,7 +356,7 @@ svg{display:inline-block;vertical-align:middle}
 .warranty{background:var(--green);padding:13px 0;text-align:center;font-family:var(--fb);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#000;display:flex;align-items:center;justify-content:center;gap:9px}
 
 /* ─── CATEGORY SPLIT ─── */
-.cat-split{display:grid;grid-template-columns:repeat(4,1fr);height:520px;position:relative}
+.cat-split{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:1040px;position:relative}
 .cs-item{position:relative;overflow:hidden;cursor:pointer}
 .cs-item::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.42);z-index:1;transition:background .4s}
 .cs-item:hover::before{background:rgba(0,0,0,.28)}
@@ -1852,12 +1852,6 @@ svg{display:inline-block;vertical-align:middle}
 
 <!-- CATEGORY SPLIT -->
 <div class="cat-split">
-  <!-- Shape: left-to-right flow (continues from collection) -->
-  <div class="sec-shape" aria-hidden="true" style="opacity:.22;z-index:3;pointer-events:none;">
-    <svg viewBox="0 0 1440 520" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 0 440 L 88 418 L 88 432 L 220 432 L 285 400 L 350 415 L 350 388 L 490 388 L 540 408 L 610 374 L 668 390 L 668 362 L 820 362 L 870 382 L 940 348 L 1000 365 L 1000 338 L 1160 338 L 1210 356 L 1290 322 L 1440 310 L 1440 520 L 0 520 Z"/>
-    </svg>
-  </div>
   <div class="cs-item">
     <img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-luke-spin-cosplay-016-1x-6042965.jpg?v=1758562883&width=900" alt="Lightsabers">
     <div class="cs-content">
