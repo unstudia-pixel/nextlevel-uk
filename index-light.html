@@ -7,7 +7,7 @@
 <title>Next Level UK | Premium Lightsabers, Replica Masks & Cosplay Props</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
 /* ─── TOKENS ─── */
 :root {
@@ -37,7 +37,7 @@ button{cursor:pointer;font-family:inherit;border:none;background:none}
 svg{display:inline-block;vertical-align:middle}
 
 /* ─── UTILS ─── */
-.wrap{max-width:1320px;margin:0 auto;padding:0 80px;position:relative;z-index:1}
+.wrap{max-width:1320px;margin:0 auto;padding:0 80px}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
 .reveal.on{opacity:1;transform:none}
 
@@ -186,7 +186,7 @@ svg{display:inline-block;vertical-align:middle}
 .hw-founded-sub{font-family:var(--fm);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:4px}
 
 /* ─── STATS STRIP (DARK) ─── */
-.stats{background:var(--black);border-top:1px solid rgba(4,168,0,.12);border-bottom:1px solid rgba(4,168,0,.12);position:relative;overflow:hidden;isolation:isolate}
+.stats{background:var(--black);border-top:1px solid rgba(4,168,0,.12);border-bottom:1px solid rgba(4,168,0,.12);position:relative;overflow:hidden}
 .stats::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(4,168,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(4,168,0,.025) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
 .stats-in{max-width:1320px;margin:0 auto;padding:0 80px;display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:1}
 .stat{padding:52px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.05)}
@@ -233,7 +233,7 @@ svg{display:inline-block;vertical-align:middle}
 .tab{font-family:var(--fd);font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:10px 18px;border:1px solid transparent;background:transparent;color:var(--muted);transition:all .22s;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%)}
 .tab:hover{color:var(--text);border-color:rgba(0,0,0,.14);background:rgba(0,0,0,.03)}
 .tab.on{color:var(--green);background:var(--text);border-color:var(--text)}
-.tab.more{color:#111;border-color:transparent;background:transparent}
+.tab.more{color:var(--faint);border-color:transparent;background:transparent}
 .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;background:transparent}
 
 /* ─── GLASSMORPHISM PRODUCT CARD ─── */
@@ -356,7 +356,7 @@ svg{display:inline-block;vertical-align:middle}
 .warranty{background:var(--green);padding:13px 0;text-align:center;font-family:var(--fb);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#000;display:flex;align-items:center;justify-content:center;gap:9px}
 
 /* ─── CATEGORY SPLIT ─── */
-.cat-split{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:1040px;position:relative}
+.cat-split{display:grid;grid-template-columns:1fr 1fr;height:520px}
 .cs-item{position:relative;overflow:hidden;cursor:pointer}
 .cs-item::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.42);z-index:1;transition:background .4s}
 .cs-item:hover::before{background:rgba(0,0,0,.28)}
@@ -387,9 +387,8 @@ svg{display:inline-block;vertical-align:middle}
 /* ─── FANDOM (DARK) ─── */
 .fandom{background:var(--void);padding:88px 0;overflow:hidden;position:relative}
 .fandom::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(4,168,0,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(4,168,0,.022) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
-.fandom-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:52px;position:relative;z-index:1;padding:0 80px;max-width:1320px;margin-left:auto;margin-right:auto;margin-bottom:52px}
+.fandom-hd{text-align:center;margin-bottom:52px;position:relative;z-index:1}
 .fandom-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;background:var(--black);position:relative;z-index:1}
-.fandom-cta{display:inline-flex;align-items:center;gap:10px;font-family:var(--fd);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;border:1.5px solid var(--green);padding:16px 36px;background:rgba(4,168,0,.15);transition:all .25s;white-space:nowrap;flex-shrink:0}
 .fc{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4;background:var(--plate)}
 .fc-wide{grid-column:span 2;aspect-ratio:unset}
 .fc-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.82;transition:opacity .4s,transform .6s}
@@ -403,7 +402,7 @@ svg{display:inline-block;vertical-align:middle}
 .fc:hover .fc-arrow{opacity:1}
 
 /* ─── GIFTS / FEATURED ─── */
-.gifts{background:var(--black);padding:88px 0;position:relative;overflow:hidden;isolation:isolate}
+.gifts{background:var(--black);padding:88px 0;position:relative;overflow:hidden}
 .gifts::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(4,168,0,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(4,168,0,.022) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
 .gifts .sec-h2{color:#fff}
 .gifts-layout{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:start;position:relative;z-index:1}
@@ -454,7 +453,7 @@ svg{display:inline-block;vertical-align:middle}
 .budget-a:hover{color:#2dff6e;border-color:rgba(45,255,110,.5);filter:drop-shadow(0 0 4px rgba(45,255,110,.6))}
 
 /* ─── TRENDING NOW ─── */
-.rare{background:var(--off);padding:88px 0;position:relative;overflow:hidden;isolation:isolate}
+.rare{background:var(--off);padding:88px 0}
 .rare-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px}
 .trend-meta{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:8px}
 .trend-pulse{width:7px;height:7px;border-radius:50%;background:#2dff6e;box-shadow:0 0 0 0 rgba(45,255,110,.6);animation:pulse-dot 2s ease-in-out infinite}
@@ -504,7 +503,7 @@ svg{display:inline-block;vertical-align:middle}
 /* ─── FOOTER ─── */
 .footer{background:var(--black);border-top:1px solid rgba(255,255,255,.06);padding:72px 0 0}
 .footer-in{display:grid;grid-template-columns:240px 1fr 1fr 300px;gap:56px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.06)}
-.fl-logo img{height:84px;width:auto;display:block;margin-bottom:20px}
+.fl-logo img{height:56px;width:auto;display:block;margin-bottom:20px}
 .fl-tag{font-size:12.5px;color:rgba(255,255,255,.26);line-height:1.75;margin-bottom:16px}
 .fl-addr{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.18);line-height:2;letter-spacing:.04em}
 .fc-hd{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:20px}
@@ -531,7 +530,7 @@ svg{display:inline-block;vertical-align:middle}
 .pay-ic{background:rgba(255,255,255,.05);padding:4px 10px;font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.06em;text-transform:uppercase}
 
 /* ─── PRICE MATCH ─── */
-.pm-section{background:#050605;padding:88px 0;position:relative;overflow:hidden;isolation:isolate;border-top:1px solid rgba(4,168,0,.12);border-bottom:1px solid rgba(4,168,0,.12)}
+.pm-section{background:#050605;padding:88px 0;position:relative;overflow:hidden;border-top:1px solid rgba(4,168,0,.12);border-bottom:1px solid rgba(4,168,0,.12)}
 .pm-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 0% 50%,rgba(4,168,0,.06) 0%,transparent 60%);pointer-events:none}
 .pm-section::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--green),rgba(4,168,0,.4),transparent)}
 .pm-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
@@ -561,7 +560,7 @@ svg{display:inline-block;vertical-align:middle}
 .pm-success-sub{font-size:12px;color:rgba(255,255,255,.4)}
 
 /* ─── UGC COMMUNITY ─── */
-.ugc-section{padding:100px 0 108px;background:var(--black);position:relative;overflow:hidden;isolation:isolate}
+.ugc-section{padding:100px 0 108px;background:var(--black);position:relative;overflow:hidden}
 .ugc-section::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(45,255,110,.025) 59px,rgba(45,255,110,.025) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(45,255,110,.025) 59px,rgba(45,255,110,.025) 60px);pointer-events:none;z-index:0}
 .ugc-inner{position:relative;z-index:1}
 .ugc-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px}
@@ -618,7 +617,7 @@ svg{display:inline-block;vertical-align:middle}
   line-height:0; padding:0; margin:0; font-size:0;
 }
 .divider-d2l svg, .divider-l2d svg {
-  display:block; width:100%; height:120px;
+  display:block; width:100%; height:80px;
 }
 
 /* ── HERO WIDGETS (all match .hw-founded style) ────────── */
@@ -639,9 +638,6 @@ svg{display:inline-block;vertical-align:middle}
 .stat-num { color:var(--text) }
 .stat { border-right-color:rgba(0,0,0,.07) }
 .stat-label { color:var(--muted) }
-/* Full-width stretch overrides */
-.stats-in { max-width: none !important; width: 100% !important; padding: 0 !important; }
-.hero-trust-inner { padding: 0 !important; }
 
 /* ── TRUST STRIP ───────────────────────────────────────── */
 .trust-strip { background:var(--off); border-top-color:rgba(4,168,0,.09); border-bottom-color:rgba(4,168,0,.09); overflow:visible !important }
@@ -699,7 +695,6 @@ svg{display:inline-block;vertical-align:middle}
 }
 .fandom .sec-h2-white { color:var(--text) }
 .fandom-grid { background:rgba(0,0,0,.08) }
-.fandom .fandom-cta { color:var(--green);background:rgba(4,168,0,.08) }
 
 /* ── GIFTS ─────────────────────────────────────────────── */
 .gifts { background:var(--off); overflow:visible !important }
@@ -708,18 +703,18 @@ svg{display:inline-block;vertical-align:middle}
   background-size:28px 28px;
 }
 .gifts .sec-h2 { color:var(--text)!important }
-.gifts-desc { color:var(--text) }
+.gifts-desc { color:var(--muted) }
 .gc-name { color:var(--text) }
 .gc-sub { color:var(--muted) }
 .budget-label { color:var(--green) }
 .budget-a { color:var(--muted) }
 
 /* ── TRENDING NOW ──────────────────────────────────────── */
-.trend-meta { color:#000 }
+.trend-meta { color:var(--muted) }
 .rare .view-all {
-  color:#fff; background:transparent;
+  color:var(--text); background:transparent;
   backdrop-filter:none; -webkit-backdrop-filter:none;
-  border:1px solid rgba(255,255,255,.4); box-shadow:none; filter:none;
+  border:1px solid rgba(0,0,0,.2); box-shadow:none; filter:none;
 }
 .rare .view-all:hover {
   color:var(--green); border-color:rgba(4,168,0,.4);
@@ -1081,321 +1076,6 @@ svg{display:inline-block;vertical-align:middle}
 .loox-product-label { color: var(--muted) }
 .loox-date { color: rgba(0,0,0,.3) }
 
-
-/* ══════════════════════════════════════════════════════════
-   V2 HERO - Figma redesign (replaces old 2-col hero)
-══════════════════════════════════════════════════════════ */
-.hero {
-  position: relative !important;
-  min-height: 100vh !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: stretch !important;
-  overflow: hidden !important;
-  background: #0d0e0f !important;
-}
-.hero-bg-img {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: 62% center !important;
-  opacity: 1 !important;
-  /* shift blue lightsaber/atmosphere → green */
-  filter: hue-rotate(240deg) saturate(1.15) brightness(0.88) !important;
-}
-.hero-overlay {
-  position: absolute !important;
-  inset: 0 !important;
-  background:
-    /* dark left panel for text */
-    linear-gradient(to right, rgba(13,14,15,.97) 0%, rgba(13,14,15,.88) 32%, rgba(13,14,15,.42) 58%, rgba(13,14,15,.05) 78%),
-    /* bottom fade */
-    linear-gradient(to top, rgba(13,14,15,.92) 0%, transparent 32%),
-    /* green atmospheric glow on right where warrior stands */
-    radial-gradient(ellipse at 72% 52%, rgba(0,245,78,.18) 0%, rgba(4,168,0,.10) 40%, transparent 72%) !important;
-  z-index: 1 !important;
-}
-
-/* Content area - single column, bottom-anchored */
-.hero-inner {
-  position: relative !important;
-  z-index: 2 !important;
-  flex: 1 !important;
-  max-width: 1440px !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  padding: 120px 80px 60px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-end !important;
-  gap: 0 !important;
-  grid-template-columns: unset !important;
-  align-items: flex-start !important;
-  min-height: unset !important;
-}
-
-/* Trustpilot badge row */
-.tp-badge {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 28px;
-  font-family: var(--fb);
-  font-size: 13px;
-  color: rgba(255,255,255,.9);
-  font-weight: 400;
-  letter-spacing: .04em;
-}
-.tp-stars { color: #4ebc73; font-size: 16px; letter-spacing: 2px; line-height: 1; }
-.tp-excellent { font-weight: 700; color: #fff; font-family: var(--fb); letter-spacing: .06em; }
-.tp-logo {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-weight: 700; color: #4ebc73; font-family: var(--fb);
-  letter-spacing: .06em;
-}
-.tp-dot { color: rgba(255,255,255,.35); margin: 0 2px; }
-
-/* Main headline */
-.hero-h1-v2 {
-  font-family: var(--fd);
-  font-size: clamp(30px, 3.8vw, 56px);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: .03em;
-  color: #fff;
-  text-transform: uppercase;
-  max-width: 900px;
-  margin: 0 0 16px;
-}
-.hero-h1-v2 .g { color: #00f54e; }
-
-/* Sub-headline */
-.hero-sub-v2 {
-  font-family: var(--fd);
-  font-size: clamp(16px, 1.6vw, 22px);
-  font-weight: 700;
-  color: rgba(255,255,255,.65);
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  margin: 0 0 40px;
-}
-
-/* CTA buttons */
-.hero-actions-v2 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.btn-primary-v2 {
-  display: inline-flex;
-  align-items: stretch;
-  background: #00f54e;
-  color: #000;
-  font-family: var(--fd);
-  font-size: 9.5px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background .2s, transform .2s;
-  overflow: hidden;
-  text-transform: uppercase;
-}
-.btn-primary-v2:hover { background: #1aff62; transform: translateY(-2px); }
-.btn-primary-v2-label { padding: 18px 28px; }
-.btn-primary-v2-arrow {
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  border-left: 1px solid rgba(0,0,0,.2);
-  background: rgba(0,0,0,.08);
-}
-.btn-ghost-v2 {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: #fff;
-  font-family: var(--fd);
-  font-size: 9.5px;
-  font-weight: 700;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,.55);
-  padding: 18px 4px 15px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  transition: border-color .2s, color .2s;
-}
-.btn-ghost-v2:hover { border-color: #00f54e; color: #00f54e; }
-
-/* ── V2 HERO TRUST STRIP (inside hero, white bar at bottom) ── */
-.hero-trust-bar {
-  position: relative;
-  z-index: 2;
-  background: #ffffff;
-  border-top: 2px solid #d4edda;
-  flex-shrink: 0;
-  box-shadow: 0 -1px 0 rgba(0,0,0,.04);
-}
-.hero-trust-inner {
-  width: 100%;
-  padding: 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  height: 88px;
-}
-.hts-item {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  padding: 0 16px;
-}
-.hts-icon {
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #f0faf3;
-  border: 1.5px solid #c8ead0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1a9e3f;
-}
-.hts-text { display: flex; flex-direction: column; gap: 3px; }
-.hts-title {
-  font-family: var(--fd);
-  font-size: 10.5px;
-  font-weight: 700;
-  color: #111;
-  white-space: nowrap;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-.hts-desc {
-  font-family: var(--fb);
-  font-size: 11.5px;
-  font-weight: 400;
-  color: #666;
-  white-space: nowrap;
-}
-.hts-divider {
-  width: 1px;
-  height: 48px;
-  background: linear-gradient(to bottom, transparent, #d0e8d5, transparent);
-  flex-shrink: 0;
-}
-.hts-stars {
-  color: #1a9e3f;
-  font-size: 13px;
-  letter-spacing: 1px;
-  vertical-align: middle;
-}
-
-/* ══════════════════════════════════════════════════════════
-   SITE-WIDE GEOMETRIC SHAPE SYSTEM
-   Green broken-path shapes flow alternating L↔R through all sections
-══════════════════════════════════════════════════════════ */
-.sec-shape {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-  overflow: hidden;
-}
-.sec-shape svg { display: block; width: 100%; height: 100%; }
-.sec-shape path { fill: var(--green); }
-
-/* ── COLLECTION SECTION BG SHAPE ── */
-.collection {
-  position: relative;
-  /* NO overflow:hidden — it clips filter:drop-shadow on .pc-wrap children */
-}
-.coll-bg-shape {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden; /* clip here, not on section, to preserve shadow filters */
-}
-.coll-bg-shape svg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
-.coll-bg-shape path {
-  fill: var(--green);
-}
-/* ensure content stays above the shape */
-.collection .coll-hd,
-.collection .coll-tabs,
-.collection .wrap,
-.collection .coll-more {
-  position: relative;
-  z-index: 1;
-}
-
-/* ── PRODUCT CARD SHADOWS ON GREEN BG ── */
-.collection .pc-wrap {
-  filter:
-    drop-shadow(0 4px 10px rgba(0,0,0,.32))
-    drop-shadow(0 14px 36px rgba(0,0,0,.46))
-    drop-shadow(0 32px 72px rgba(0,0,0,.28)) !important;
-  transition: filter .32s ease;
-}
-.collection .pc-wrap:hover {
-  filter:
-    drop-shadow(0 8px 18px rgba(0,0,0,.38))
-    drop-shadow(0 22px 52px rgba(0,0,0,.56))
-    drop-shadow(0 44px 88px rgba(0,0,0,.36))
-    drop-shadow(0 0 28px rgba(4,168,0,.16)) !important;
-}
-
-/* ── VIEW FULL COLLECTION BUTTON - CARD GREY GLASS ── */
-.collection .view-all-btn {
-  background: linear-gradient(145deg, rgba(246,247,244,1) 0%, rgba(238,240,236,.99) 50%, rgba(228,231,226,.97) 100%) !important;
-  color: #111 !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.9),
-    inset 1px 0 0 rgba(255,255,255,.6),
-    inset 0 -1px 0 rgba(0,0,0,.08),
-    inset -1px 0 0 rgba(200,202,198,.4) !important;
-  filter:
-    drop-shadow(0 4px 10px rgba(0,0,0,.32))
-    drop-shadow(0 14px 36px rgba(0,0,0,.46))
-    drop-shadow(0 32px 72px rgba(0,0,0,.28)) !important;
-  border-top: 1px solid rgba(255,255,255,1) !important;
-  border-left: 1px solid rgba(255,255,255,.95) !important;
-  border-right: 1px solid rgba(210,212,208,.5) !important;
-  border-bottom: 1px solid rgba(200,202,198,.5) !important;
-  transition: all .28s ease !important;
-}
-.collection .view-all-btn::before {
-  background: linear-gradient(to right, transparent, rgba(255,255,255,.5), transparent) !important;
-}
-.collection .view-all-btn:hover {
-  background: linear-gradient(145deg, rgba(250,251,248,1) 0%, rgba(244,245,242,.99) 100%) !important;
-  filter:
-    drop-shadow(0 8px 18px rgba(0,0,0,.38))
-    drop-shadow(0 22px 52px rgba(0,0,0,.54))
-    drop-shadow(0 44px 88px rgba(0,0,0,.34))
-    drop-shadow(0 0 28px rgba(4,168,0,.16)) !important;
-  transform: translateY(-3px) !important;
-}
 </style>
 </head>
 <body>
@@ -1460,127 +1140,101 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </nav>
 
-<!-- HERO V2 (Figma: node 2027-1019) -->
+<!-- HERO -->
 <section class="hero">
-  <img class="hero-bg-img" src="warrior-hero.jpg" alt="Next Level UK - Premium Lightsabers, Replica Masks, Props and Collectibles">
+  <img class="hero-bg-img" src="https://nextleveluk.net/cdn/shop/files/411-06.jpg?v=1726566759&width=1500" alt="">
   <div class="hero-overlay"></div>
-
-  <!-- Main content: bottom-anchored single column -->
   <div class="hero-inner">
-    <!-- Loox badge -->
-    <div class="tp-badge">
-      <span class="tp-stars">★★★★★</span>
-      <span class="tp-excellent">4.9 / 5</span>
-      <span class="tp-dot">·</span>
-      <span class="tp-logo">
-        <!-- Loox camera-aperture icon -->
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4ebc73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
-        Loox
-      </span>
-      <span style="color:rgba(255,255,255,.45);font-size:11px;">2,400+ reviews</span>
-    </div>
 
-    <!-- Headline -->
-    <h1 class="hero-h1-v2">
-      <span class="g">More</span> Premium Lightsabers.<br>
-      Replica Masks.<br>
-      Props <span class="g">&amp;</span> Collectibles.
-    </h1>
-
-    <!-- Sub-headline -->
-    <p class="hero-sub-v2">Than anywhere else.</p>
-
-    <!-- CTAs -->
-    <div class="hero-actions-v2">
-      <a href="#fandom" class="btn-primary-v2">
-        <span class="btn-primary-v2-label">Shop by Fandom</span>
-        <span class="btn-primary-v2-arrow">
+    <!-- Left: copy -->
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Premium Collection  -  New In 2025
+      </div>
+      <h1 class="hero-h1">
+        Metal Swords<br>
+        <span class="g">&amp; Katanas.</span><br>
+        Lightsabers &amp;<br>
+        Cosplay Replicas.
+      </h1>
+      <p class="hero-sub">The UK's most trusted destination for metal swords, lightsabers, and cosplay replicas. Family-owned since 2013.</p>
+      <div class="hero-keywords">
+        <span class="hk hk-accent">Metal Blade</span>
+        <span class="hk hk-accent">Battle Ready</span>
+        <span class="hk">Film Accurate</span>
+        <span class="hk">UK Stock</span>
+        <span class="hk">385+ Swords</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#fandom" class="btn-primary">
+          Shop by Fandom
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
-      </a>
-      <a href="#collection" class="btn-ghost-v2">
-        See what's new
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+        </a>
+        <a href="#collection" class="btn-ghost">
+          See what's new
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
-  </div>
 
-  <!-- Trust bar anchored to bottom of hero -->
-  <div class="hero-trust-bar">
-    <div class="hero-trust-inner">
+    <!-- Right: HUD widgets -->
+    <div class="hero-widgets">
 
-      <!-- Loox rating -->
-      <div class="hts-item">
-        <div class="hts-icon">
-          <!-- Loox aperture icon -->
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
-        </div>
-        <div class="hts-text">
-          <span class="hts-title"><span class="hts-stars">★★★★★</span> 4.9 / 5 on Loox</span>
-          <span class="hts-desc">2,400+ verified photo reviews</span>
+      <!-- Widget 1: Score -->
+      <div class="hw-score-wrap">
+        <div class="hw hw-score">
+          <div class="hw-scan"></div>
+          <div class="hw-tag">Verified Rating</div>
+          <div class="hw-val">4.9 <span class="hw-unit">/ 5</span></div>
+          <div class="hw-stars">★★★★★</div>
+          <div class="hw-bar"><div class="hw-bar-track"><div class="hw-bar-fill"></div></div></div>
+          <div class="hw-sub">Loox · 2,400+ Reviews</div>
         </div>
       </div>
 
-      <div class="hts-divider"></div>
-
-      <!-- Free shipping -->
-      <div class="hts-item">
-        <div class="hts-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><rect x="9" y="11" width="14" height="10" rx="1"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
-        </div>
-        <div class="hts-text">
-          <span class="hts-title">Free UK Shipping</span>
-          <span class="hts-desc">On all orders over £100</span>
+      <!-- Widget 2: Reviews (parallelogram) -->
+      <div class="hw hw-reviews">
+        <div class="hw-scan"></div>
+        <div class="hw-body">
+          <div class="hw-tag">Community</div>
+          <div class="hw-val"><span data-count="2400">2400</span><span class="hw-unit">+</span></div>
+          <div class="hw-sub">Five-Star Reviews</div>
         </div>
       </div>
 
-      <div class="hts-divider"></div>
-
-      <!-- UK Family Owned -->
-      <div class="hts-item">
-        <div class="hts-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="hts-text">
-          <span class="hts-title">UK Family-Owned</span>
-          <span class="hts-desc">Est. 2013 · 12+ years experience</span>
+      <!-- Widget 3: Reach (left chamfer) -->
+      <div class="hw-reach-wrap">
+        <div class="hw hw-reach">
+          <div class="hw-scan"></div>
+          <div class="hw-tag">Global Reach</div>
+          <div class="hw-val" style="font-size:18px;letter-spacing:.04em">UK · EU<span class="hw-unit" style="font-size:13px"> · US · CA</span></div>
+          <div class="hw-sub">Shipping Destinations</div>
         </div>
       </div>
 
-      <div class="hts-divider"></div>
-
-      <!-- 30-Day Returns -->
-      <div class="hts-item">
-        <div class="hts-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
-        </div>
-        <div class="hts-text">
-          <span class="hts-title">30-Day Returns</span>
-          <span class="hts-desc">Hassle-free return policy</span>
-        </div>
-      </div>
-
-      <div class="hts-divider"></div>
-
-      <!-- Worldwide Shipping -->
-      <div class="hts-item">
-        <div class="hts-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
-        </div>
-        <div class="hts-text">
-          <span class="hts-title">Worldwide Shipping</span>
-          <span class="hts-desc">UK · EU · US · Canada &amp; more</span>
-        </div>
+      <!-- Widget 4: Founded (corner brackets) -->
+      <div class="hw hw-founded">
+        <div class="hw-corner tl"></div>
+        <div class="hw-corner tr"></div>
+        <div class="hw-corner bl"></div>
+        <div class="hw-corner br"></div>
+        <div class="hw-tag">Established</div>
+        <div class="hw-year">Since 2013</div>
+        <div class="hw-founded-sub">UK Family-Owned Business</div>
       </div>
 
     </div>
   </div>
 </section>
+<!-- DIVIDER dark-to-light -->
+<div class="divider-d2l" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polygon fill="#060608" points="0,0 1440,0 1440,0 0,0"/><polygon fill="#060608" points="0,0 1440,0 0,80"/><polygon fill="#ffffff" points="1440,0 1440,80 0,80"/><line x1="1440" y1="0" x2="0" y2="80" stroke="rgba(4,168,0,0.45)" stroke-width="2"/><line x1="1440" y1="6" x2="0" y2="86" stroke="rgba(4,168,0,0.15)" stroke-width="1.5"/></svg></div>
+
 <!-- STATS STRIP (DARK) -->
-<div class="stats" style="position:relative;">
+<div class="stats">
   <div class="stats-in">
     <div class="stat">
-      <div class="stat-num"><span class="g" data-count="1400">1,400</span><span class="g">+</span></div>
+      <div class="stat-num"><span class="g" data-count="500">500</span><span class="g">+</span></div>
       <div class="stat-label">Products in Stock</div>
     </div>
     <div class="stat">
@@ -1598,19 +1252,54 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </div>
 
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-in">
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div class="ti-tag">Verified Rating</div>
+      <div class="ti-title">Excellent 4.9 / 5</div>
+      <div class="ti-sub">Loox · 2,400+ Reviews</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="ti-tag">UK Origin</div>
+      <div class="ti-title">UK Family Run</div>
+      <div class="ti-sub">Est. 2013</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
+      <div class="ti-tag">Global Reach</div>
+      <div class="ti-title">Worldwide Shipping</div>
+      <div class="ti-sub">UK · EU · US · UK · EU · US · CA</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+      <div class="ti-tag">Checkout</div>
+      <div class="ti-title">Secure Payments</div>
+      <div class="ti-sub">SSL · All Major Cards</div>
+    </div>
+    <div class="ti">
+      <div class="ti-scan"></div>
+      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
+      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></div>
+      <div class="ti-tag">Hassle Free</div>
+      <div class="ti-title">Easy Returns</div>
+      <div class="ti-sub">30-Day Policy</div>
+    </div>
+  </div>
+</div>
+
 <!-- SHOP BY COLLECTION -->
 <section class="collection" id="collection">
-
-  <!-- BG SHAPE (Figma node 2027-1098, translated to green) -->
-  <div class="coll-bg-shape" aria-hidden="true">
-    <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M 0 519 L 175 445 L 234 439 L 328 328 L 398 365
-           L 439 328 L 516 376 L 604 291 L 674 371
-           L 809 206 L 937 101 L 961 137 L 1014 64
-           L 1200 0 L 1200 600 L 0 600 Z"/>
-    </svg>
-  </div>
-
   <div class="coll-hd reveal">
     <div class="sec-tag sec-tag-center">Collection</div>
     <h2 class="sec-h2 sec-h2-center">Shop by Collection</h2>
@@ -1857,39 +1546,17 @@ svg{display:inline-block;vertical-align:middle}
     </div>
   </div>
   <div class="cs-item">
-    <img src="sword%20image%20-%20d270384f3ced4035a6458bc16e3213b9.jpeg" alt="Swords &amp; Blades">
-    <div class="cs-content">
-      <div class="cs-title">Swords</div>
-      <div class="cs-sub">Metal · Katana · Display</div>
-      <a href="#collection" class="cs-btn">Shop Swords <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-  </div>
-  <div class="cs-item">
-    <img src="mask2.avif" alt="Replica Masks">
+    <img src="https://raw.githubusercontent.com/unstudia-pixel/nextlevel-uk/main/mask2.avif" alt="Replica Masks">
     <div class="cs-content">
       <div class="cs-title">Replica Masks</div>
       <div class="cs-sub">Resin · Wearable · Display</div>
       <a href="#" class="cs-btn">Shop Masks <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
-  <div class="cs-item">
-    <img src="cosplay%20image%20-%20thumb-1920-920361.jpeg" alt="Cosplay Props">
-    <div class="cs-content">
-      <div class="cs-title">Cosplay Props</div>
-      <div class="cs-sub">Wearable · Film-Accurate · Premium</div>
-      <a href="#" class="cs-btn">Shop Cosplay <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-  </div>
 </div>
 
 <!-- PRICE MATCH GUARANTEE -->
-<section class="pm-section" style="position:relative;">
-  <!-- Shape: top-down, mirrored, full opacity -->
-  <div class="sec-shape" aria-hidden="true" style="opacity:1;">
-    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 0 0 L 1440 0 L 1440 158 L 1312 130 L 1312 146 L 1176 146 L 1110 116 L 1042 133 L 1042 102 L 900 102 L 842 120 L 765 75 L 702 60 L 702 48 L 537 36 L 480 34 L 392 24 L 328 34 L 328 20 L 162 20 L 105 26 L 20 14 L 0 10 Z"/>
-    </svg>
-  </div>
+<section class="pm-section">
   <div class="wrap">
     <div class="pm-inner">
       <!-- Left: copy -->
@@ -1920,7 +1587,7 @@ svg{display:inline-block;vertical-align:middle}
       <div class="pm-right">
         <div id="pm-form-wrap">
           <div class="pm-form-title">Submit a Price Match</div>
-          <div class="pm-form-sub">We'll review and respond within 12-24 hours</div>
+          <div class="pm-form-sub">We'll review and respond within 2 hours</div>
           <form id="pm-form" onsubmit="pmSubmit(event)">
             <div class="pm-field">
               <label class="pm-label">Product URL (on our site)</label>
@@ -1939,12 +1606,12 @@ svg{display:inline-block;vertical-align:middle}
               Submit Price Match Request
             </button>
           </form>
-          <p class="pm-note">We aim to respond within 12-24 hours. Price match applies to the product only and excludes shipping costs. One price match per customer per order.</p>
+          <p class="pm-note">We aim to respond within 2 working hours. Price match applies to the product only and excludes shipping costs. One price match per customer per order.</p>
         </div>
         <div class="pm-success" id="pm-success">
           <div class="pm-success-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
           <div class="pm-success-title">Request Received</div>
-          <div class="pm-success-sub">We'll review your price match and get back to you within 12-24 hours.</div>
+          <div class="pm-success-sub">We'll review your price match and get back to you within 2 hours.</div>
         </div>
       </div>
     </div>
@@ -1954,24 +1621,20 @@ svg{display:inline-block;vertical-align:middle}
 <!-- SHOP BY FANDOM (DARK) -->
 <section class="fandom" id="fandom">
   <div class="fandom-hd reveal">
-    <div>
-      <div class="sec-tag">Universe</div>
-      <h2 class="sec-h2 sec-h2-white">Shop by Fandom</h2>
-    </div>
-    <a href="#" class="fandom-cta">View All Fandoms <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <div class="sec-tag sec-tag-center">Universe</div>
+    <h2 class="sec-h2 sec-h2-center sec-h2-white">Shop by Fandom</h2>
   </div>
   <div class="fandom-grid">
-    <!-- Lord of the Rings (biggest seller - wide slot) -->
     <div class="fc fc-wide reveal">
-      <div class="fc-bg" style="background-image:url('lord%20of%20the%20rings.jpeg');background-position:center 30%"></div>
+      <div class="fc-bg" style="background-image:url('https://raw.githubusercontent.com/unstudia-pixel/nextlevel-uk/main/star-wars.jpg');background-position:center 55%"></div>
       <div class="fc-content">
-        <div class="fc-name">Lord of the Rings</div>
-        <div class="fc-count">200+ Products</div>
+        <div class="fc-name">Star Wars</div>
+        <div class="fc-count">120+ Products</div>
         <div class="fc-arrow">Shop Now <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
     </div>
     <div class="fc reveal">
-      <div class="fc-bg" style="background-image:url('marvel.webp')"></div>
+      <div class="fc-bg" style="background-image:url('https://raw.githubusercontent.com/unstudia-pixel/nextlevel-uk/main/marvel.webp')"></div>
       <div class="fc-content">
         <div class="fc-name">Marvel</div>
         <div class="fc-count">60+ Products</div>
@@ -1979,36 +1642,34 @@ svg{display:inline-block;vertical-align:middle}
       </div>
     </div>
     <div class="fc reveal">
-      <div class="fc-bg" style="background-image:url('demon%20slayer%20-%20tanjiro-kamado-2560x1440-18345.jpg')"></div>
+      <div class="fc-bg" style="background-image:url('https://raw.githubusercontent.com/unstudia-pixel/nextlevel-uk/main/naruto.jpg')"></div>
       <div class="fc-content">
-        <div class="fc-name">Demon Slayer</div>
-        <div class="fc-count">80+ Products</div>
+        <div class="fc-name">Naruto</div>
+        <div class="fc-count">45+ Products</div>
         <div class="fc-arrow">Shop Now <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
     </div>
     <div class="fc reveal">
-      <div class="fc-bg" style="background-image:url('one-piece.png')"></div>
+      <div class="fc-bg" style="background-image:url('https://raw.githubusercontent.com/unstudia-pixel/nextlevel-uk/main/one-piece.png')"></div>
       <div class="fc-content">
         <div class="fc-name">One Piece</div>
         <div class="fc-count">35+ Products</div>
         <div class="fc-arrow">Shop Now <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
     </div>
-    <!-- Star Wars - wide slot -->
-    <div class="fc fc-wide reveal">
-      <div class="fc-bg" style="background-image:url('star-wars.jpg');background-position:center 55%"></div>
+    <div class="fc reveal">
+      <div class="fc-bg" style="background-image:url('https://raw.githubusercontent.com/unstudia-pixel/nextlevel-uk/main/dc.jpeg')"></div>
       <div class="fc-content">
-        <div class="fc-name">Star Wars</div>
-        <div class="fc-count">120+ Products</div>
+        <div class="fc-name">DC Universe</div>
+        <div class="fc-count">28+ Products</div>
         <div class="fc-arrow">Shop Now <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
     </div>
-    <!-- Naruto - fills 6th slot -->
-    <div class="fc reveal">
-      <div class="fc-bg" style="background-image:url('naruto.jpg')"></div>
+    <div class="fc fc-wide reveal">
+      <div class="fc-bg" style="background-image:url('https://raw.githubusercontent.com/unstudia-pixel/nextlevel-uk/main/cod.png')"></div>
       <div class="fc-content">
-        <div class="fc-name">Naruto</div>
-        <div class="fc-count">45+ Products</div>
+        <div class="fc-name">Call of Duty</div>
+        <div class="fc-count">22+ Products</div>
         <div class="fc-arrow">Shop Now <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
     </div>
@@ -2016,12 +1677,7 @@ svg{display:inline-block;vertical-align:middle}
 </section>
 
 <!-- GIFTS / FEATURED -->
-<section class="gifts" id="gifts" style="position:relative;overflow:hidden;">
-  <div class="sec-shape" aria-hidden="true" style="opacity:1;">
-    <svg viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 1440 410 L 1340 382 L 1340 396 L 1210 396 L 1142 364 L 1075 380 L 1075 350 L 930 350 L 875 368 L 800 332 L 738 350 L 738 320 L 580 320 L 525 338 L 442 302 L 378 320 L 378 290 L 215 290 L 160 308 L 72 272 L 0 258 L 0 500 L 1440 500 Z"/>
-    </svg>
-  </div>
+<section class="gifts" id="gifts">
   <div class="wrap">
     <div class="gifts-layout reveal">
       <div class="gifts-hd">
@@ -2082,12 +1738,7 @@ svg{display:inline-block;vertical-align:middle}
 </section>
 
 <!-- TRENDING NOW -->
-<section class="rare" style="position:relative;overflow:hidden;">
-  <div class="sec-shape" aria-hidden="true" style="opacity:1;">
-    <svg viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 0 80 L 95 108 L 95 94 L 228 94 L 295 126 L 365 110 L 365 140 L 515 140 L 572 122 L 648 158 L 714 140 L 714 172 L 875 172 L 932 154 L 1010 190 L 1078 172 L 1078 204 L 1245 204 L 1302 186 L 1390 222 L 1440 238 L 1440 0 L 0 0 Z"/>
-    </svg>
-  </div>
+<section class="rare">
   <div class="wrap">
     <div class="rare-hd reveal">
       <div>
@@ -2148,52 +1799,6 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </section>
 
-<!-- TRUST STRIP (moved: now after Trending Now) -->
-<div class="trust-strip">
-  <div class="trust-strip-in">
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <div class="ti-tag">Verified Rating</div>
-      <div class="ti-title">Excellent 4.9 / 5</div>
-      <div class="ti-sub">Loox · 2,400+ Reviews</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-      <div class="ti-tag">UK Origin</div>
-      <div class="ti-title">UK Family Run</div>
-      <div class="ti-sub">Est. 2013</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-      <div class="ti-tag">Global Reach</div>
-      <div class="ti-title">Worldwide Shipping</div>
-      <div class="ti-sub">UK · EU · US · UK · EU · US · CA</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-      <div class="ti-tag">Checkout</div>
-      <div class="ti-title">Secure Payments</div>
-      <div class="ti-sub">SSL · All Major Cards</div>
-    </div>
-    <div class="ti">
-      <div class="ti-scan"></div>
-      <span class="ti-corner tl"></span><span class="ti-corner tr"></span><span class="ti-corner bl"></span><span class="ti-corner br"></span>
-      <div class="ti-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></div>
-      <div class="ti-tag">Hassle Free</div>
-      <div class="ti-title">Easy Returns</div>
-      <div class="ti-sub">30-Day Policy</div>
-    </div>
-  </div>
-</div>
-
 <!-- TRUST MARQUEE (DARK) -->
 <div class="trust-mar">
   <div class="trust-track">
@@ -2213,12 +1818,7 @@ svg{display:inline-block;vertical-align:middle}
 </div>
 
 <!-- UGC COMMUNITY -->
-<section class="ugc-section" style="position:relative;">
-  <div class="sec-shape" aria-hidden="true" style="opacity:1;">
-    <svg viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 1440 110 L 1345 138 L 1345 122 L 1215 122 L 1148 154 L 1080 138 L 1080 168 L 935 168 L 880 150 L 804 186 L 742 168 L 742 200 L 585 200 L 530 182 L 446 218 L 382 200 L 382 232 L 218 232 L 162 214 L 74 250 L 0 265 L 0 0 L 1440 0 Z"/>
-    </svg>
-  </div>
+<section class="ugc-section">
   <div class="wrap ugc-inner">
     <div class="ugc-header">
       <div>
@@ -2319,48 +1919,7 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </section>
 <!-- DIVIDER light-to-dark -->
-<div class="divider-l2d" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- White (light section) fills everything above the jagged line -->
-  <rect width="1440" height="120" fill="#ffffff"/>
-  <!-- Dark fill: abstract asymmetric cuts -->
-  <path fill="#060608" d="
-    M 0 110
-    L 52 110
-    L 88 82
-    L 88 94
-    L 192 94
-    L 258 60
-    L 312 74
-    L 312 46
-    L 440 46
-    L 482 64
-    L 548 32
-    L 606 48
-    L 606 18
-    L 742 18
-    L 788 36
-    L 848 10
-    L 900 26
-    L 900 4
-    L 1068 4
-    L 1068 20
-    L 1148 2
-    L 1284 16
-    L 1388 0
-    L 1440 0
-    L 1440 120
-    L 0 120
-    Z
-  "/>
-  <!-- Green accent line tracing the cut edge -->
-  <polyline fill="none" stroke="rgba(4,168,0,0.6)" stroke-width="2" stroke-linejoin="miter" points="
-    0,110 52,110 88,82 88,94 192,94 258,60 312,74 312,46 440,46 482,64 548,32 606,48 606,18 742,18 788,36 848,10 900,26 900,4 1068,4 1068,20 1148,2 1284,16 1388,0 1440,0
-  "/>
-  <!-- Soft glow offset -->
-  <polyline fill="none" stroke="rgba(4,168,0,0.15)" stroke-width="4" stroke-linejoin="miter" points="
-    0,115 52,115 88,87 88,99 192,99 258,65 312,79 312,51 440,51 482,69 548,37 606,53 606,23 742,23 788,41 848,15 900,31 900,9 1068,9 1068,25 1148,7 1284,21 1388,5 1440,5
-  "/>
-</svg></div>
+<div class="divider-l2d" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><polygon fill="#ffffff" points="0,0 1440,0 1440,0 0,0"/><polygon fill="#ffffff" points="0,0 1440,80 0,80"/><polygon fill="#060608" points="1440,0 1440,80 0,80"/><line x1="0" y1="80" x2="1440" y2="0" stroke="rgba(4,168,0,0.45)" stroke-width="2"/><line x1="0" y1="86" x2="1440" y2="6" stroke="rgba(4,168,0,0.15)" stroke-width="1.5"/></svg></div>
 
 <!-- EMAIL CAPTURE (DARK) -->
 <section class="email-cap">
