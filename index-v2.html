@@ -1123,6 +1123,7 @@ svg{display:inline-block;vertical-align:middle}
   align-items: stretch !important;
   overflow: hidden !important;
   background: transparent !important;
+  margin-top: -72px !important;
 }
 .hero-bg-img {
   position: absolute !important;
@@ -2497,7 +2498,7 @@ document.querySelectorAll('.pc').forEach(pc => {
 
 // Nav scroll state
 const nav = document.getElementById('mainNav');
-const updateNav = () => nav.classList.toggle('scrolled', window.scrollY > 10);
+const updateNav = () => nav.classList.toggle('scrolled', window.scrollY > (window.innerHeight * 0.85));
 updateNav();
 window.addEventListener('scroll', updateNav, { passive: true });
 
