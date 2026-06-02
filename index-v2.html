@@ -1081,8 +1081,15 @@ svg{display:inline-block;vertical-align:middle}
 .loox-product-label { color: var(--muted) }
 .loox-date { color: rgba(0,0,0,.3) }
 
-/* ── FOOTER ─────────────────────────────────────────────── */
-.footer { background:var(--off); border-top-color:rgba(0,0,0,.08) }
+/* ── EMAIL + FOOTER ─────────────────────────────────────── */
+.email-cap { background:#e0e0dd }
+.email-cap::before { background:radial-gradient(ellipse,rgba(4,168,0,.06) 0%,transparent 70%) }
+.email-title { color:var(--text) }
+.email-sub { color:var(--muted) }
+.email-inp { background:#fff; border-color:rgba(0,0,0,.12); color:var(--text) }
+.email-inp::placeholder { color:rgba(0,0,0,.28) }
+.email-inp:focus { border-color:rgba(4,168,0,.4) }
+.footer { background:#e0e0dd; border-top-color:rgba(0,0,0,.08) }
 .footer-in { border-bottom-color:rgba(0,0,0,.08) }
 .fl-tag { color:rgba(0,0,0,.45) }
 .fl-addr { color:rgba(0,0,0,.35) }
@@ -2341,7 +2348,7 @@ svg{display:inline-block;vertical-align:middle}
   <!-- White (light section) fills everything above the jagged line -->
   <rect width="1440" height="120" fill="#ffffff"/>
   <!-- Dark fill: abstract asymmetric cuts -->
-  <path fill="#060608" d="
+  <path fill="#e0e0dd" d="
     M 0 110
     L 52 110
     L 88 82
