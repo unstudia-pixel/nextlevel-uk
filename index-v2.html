@@ -49,26 +49,32 @@ svg{display:inline-block;vertical-align:middle}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ─── NAV ─── */
-.nav{position:sticky;top:0;z-index:200;background:var(--black);border-bottom:1px solid rgba(255,255,255,.06);transition:border-color .3s}
-.nav.scrolled{border-bottom-color:rgba(255,255,255,.1)}
+.nav{position:sticky;top:0;z-index:200;background:transparent;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+.nav.scrolled{background:#f5f5f3;border-bottom-color:rgba(0,0,0,.08)}
 .nav-in{max-width:1440px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center}
 .nav-logo{display:flex;align-items:center;flex-shrink:0;margin-right:52px}
 .nav-logo img{height:46px;width:auto;display:block}
 .nav-links{display:flex;align-items:center;flex:1}
-.nav-a{font-family:var(--fb);font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:8px 15px;color:rgba(255,255,255,.55);transition:color .2s}
+.nav-a{font-family:var(--fb);font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:8px 15px;color:rgba(255,255,255,.75);transition:color .2s}
 .nav-a:hover,.nav-a.active{color:#fff}
+.nav.scrolled .nav-a{color:rgba(0,0,0,.6)}
+.nav.scrolled .nav-a:hover{color:#000}
+.nav.scrolled .nav-ico{color:rgba(0,0,0,.5)}
+.nav.scrolled .nav-ico:hover{color:#000;background:rgba(0,0,0,.05)}
 .nav-outlet{color:var(--green)!important}
 .nav-outlet:hover{color:var(--green-hi)!important}
 .nav-right{margin-left:auto;display:flex;align-items:center;gap:6px}
-.nav-search{display:flex;align-items:center;gap:10px;padding:7px 14px;background:#fff;border:none;border-radius:3px;font-size:11.5px;font-family:var(--fb);color:rgba(0,0,0,.38);width:190px;cursor:text;letter-spacing:.03em;transition:background .2s}
-.nav-search:hover{background:#f0f0f0}
+.nav-search{display:flex;align-items:center;gap:10px;padding:7px 14px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:3px;font-size:11.5px;font-family:var(--fb);color:rgba(255,255,255,.7);width:190px;cursor:text;letter-spacing:.03em;transition:background .3s,border-color .3s,color .3s}
+.nav-search:hover{background:rgba(255,255,255,.25)}
+.nav.scrolled .nav-search{background:#fff;border-color:rgba(0,0,0,.12);color:rgba(0,0,0,.38)}
+.nav.scrolled .nav-search:hover{background:#f0f0f0}
 .nav-ico{width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:color .2s,background .2s}
 .nav-ico:hover{color:#fff;background:rgba(255,255,255,.05)}
 
 /* ─── HERO ─── */
 .hero{position:relative;min-height:92vh;background:var(--void);overflow:hidden;display:flex;align-items:center}
-.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;opacity:.48}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(6,6,8,.97) 0%,rgba(6,6,8,.85) 40%,rgba(6,6,8,.4) 68%,rgba(6,6,8,.08) 100%),linear-gradient(to top,rgba(6,6,8,.9) 0%,transparent 30%);z-index:1}
+.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;opacity:1}
+.hero-overlay{display:none}
 .hero-inner{position:relative;z-index:2;width:100%;max-width:1440px;margin:0 auto;padding:80px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px;min-height:92vh}
 .hero-left{display:flex;flex-direction:column;gap:26px}
 .hero-badge{
