@@ -19,7 +19,7 @@ const mime = {
 };
 
 http.createServer((req, res) => {
-  const decodedUrl = decodeURIComponent(req.url);
+  const decodedUrl = decodeURIComponent(req.url.split('?')[0]);
   let filePath = path.join(ROOT, decodedUrl === '/' ? 'index.html' : decodedUrl);
   const ext = path.extname(filePath).toLowerCase();
   fs.readFile(filePath, (err, data) => {

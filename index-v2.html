@@ -60,8 +60,8 @@ svg{display:inline-block;vertical-align:middle}
 .nav-outlet{color:var(--green)!important}
 .nav-outlet:hover{color:var(--green-hi)!important}
 .nav-right{margin-left:auto;display:flex;align-items:center;gap:6px}
-.nav-search{display:flex;align-items:center;gap:10px;padding:6px 2px;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.18);font-size:11.5px;font-family:var(--fb);color:rgba(255,255,255,.28);width:190px;cursor:text;letter-spacing:.03em;transition:border-color .2s}
-.nav-search:hover{border-bottom-color:rgba(255,255,255,.45)}
+.nav-search{display:flex;align-items:center;gap:10px;padding:7px 14px;background:#fff;border:none;border-radius:3px;font-size:11.5px;font-family:var(--fb);color:rgba(0,0,0,.38);width:190px;cursor:text;letter-spacing:.03em;transition:background .2s}
+.nav-search:hover{background:#f0f0f0}
 .nav-ico{width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:color .2s,background .2s}
 .nav-ico:hover{color:#fff;background:rgba(255,255,255,.05)}
 
@@ -459,7 +459,7 @@ svg{display:inline-block;vertical-align:middle}
 .trend-meta{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:8px}
 .trend-pulse{width:7px;height:7px;border-radius:50%;background:#2dff6e;box-shadow:0 0 0 0 rgba(45,255,110,.6);animation:pulse-dot 2s ease-in-out infinite}
 @keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(45,255,110,.6)}50%{box-shadow:0 0 0 5px rgba(45,255,110,0)}}
-.badge-trend{background:rgba(255,138,0,.15);color:#ff8a00;border:1px solid rgba(255,138,0,.45);font-size:9.5px;font-family:var(--fm);font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;clip-path:polygon(6px 0,100% 0,100% calc(100%-6px),calc(100%-6px) 100%,0 100%,0 6px);filter:drop-shadow(0 0 4px rgba(255,138,0,.5))}
+.badge-trend{background:rgba(4,168,0,.15);color:var(--green);border:1px solid rgba(4,168,0,.45);font-size:9.5px;font-family:var(--fm);font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;clip-path:polygon(6px 0,100% 0,100% calc(100%-6px),calc(100%-6px) 100%,0 100%,0 6px);filter:drop-shadow(0 0 4px rgba(4,168,0,.4))}
 .trend-rank{position:absolute;top:10px;left:10px;font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.22);z-index:3;background:rgba(0,0,0,.6);padding:2px 7px}
 .view-all{
   display:inline-flex;align-items:center;gap:10px;
@@ -1081,6 +1081,23 @@ svg{display:inline-block;vertical-align:middle}
 .loox-product-label { color: var(--muted) }
 .loox-date { color: rgba(0,0,0,.3) }
 
+/* ── FOOTER ─────────────────────────────────────────────── */
+.footer { background:var(--off); border-top-color:rgba(0,0,0,.08) }
+.footer-in { border-bottom-color:rgba(0,0,0,.08) }
+.fl-tag { color:rgba(0,0,0,.45) }
+.fl-addr { color:rgba(0,0,0,.35) }
+.fc-hd { color:rgba(0,0,0,.35) }
+.fc-link { color:rgba(0,0,0,.55) }
+.fc-link:hover { color:#000 }
+.fn-txt { color:rgba(0,0,0,.45) }
+.fn-inp { background:#fff; border-color:rgba(0,0,0,.12); color:var(--text) }
+.fn-inp::placeholder { color:rgba(0,0,0,.3) }
+.fn-inp:focus { border-color:rgba(4,168,0,.4) }
+.fn-consent { color:rgba(0,0,0,.35) }
+.footer-copy { color:rgba(0,0,0,.35) }
+.fbl { color:rgba(0,0,0,.35) }
+.fbl:hover { color:rgba(0,0,0,.7) }
+
 
 /* ══════════════════════════════════════════════════════════
    V2 HERO - Figma redesign (replaces old 2-col hero)
@@ -1425,10 +1442,10 @@ svg{display:inline-block;vertical-align:middle}
       <img src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=120" alt="Next Level UK">
     </a>
     <div class="nav-links">
-      <a href="#collection" class="nav-a">Shop</a>
-      <a href="#fandom" class="nav-a">Fandoms</a>
-      <a href="#" class="nav-a">New In</a>
-      <a href="#" class="nav-a">Cosplay Ready</a>
+      <a href="#collection" class="nav-a">Lightsabers</a>
+      <a href="#collection" class="nav-a">Swords</a>
+      <a href="#collection" class="nav-a">Masks/Helmets</a>
+      <a href="#collection" class="nav-a">Cosplay Props</a>
       <a href="#" class="nav-a nav-outlet">Outlet</a>
     </div>
     <div class="nav-right">
@@ -1482,9 +1499,10 @@ svg{display:inline-block;vertical-align:middle}
 
     <!-- Headline -->
     <h1 class="hero-h1-v2">
-      <span class="g">More</span> Premium Lightsabers.<br>
-      Replica Masks.<br>
-      Props <span class="g">&amp;</span> Collectibles.
+      The Ultimate<br>
+      <span class="g">Lightsabers, Swords,</span><br>
+      Helmets &amp; Replicas.<br>
+      For Every Fandom.
     </h1>
 
     <!-- Sub-headline -->
@@ -2027,7 +2045,7 @@ svg{display:inline-block;vertical-align:middle}
       <div class="gifts-hd">
         <div class="sec-tag">Gift Ideas</div>
         <h2 class="sec-h2">Perfect Gifts<br>for Every Fan</h2>
-        <p class="gifts-desc">From beginner lightsabers to premium neopixel replicas  -  find the ideal gift for every budget and every fandom.</p>
+        <p class="gifts-desc">From beginner collectibles to premium replicas - find the ideal gift for every budget and every fandom.</p>
         <a href="#" class="view-all-btn">Browse Gift Guide <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
       <div>
