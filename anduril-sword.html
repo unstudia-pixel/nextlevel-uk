@@ -102,6 +102,7 @@ svg{display:inline-block;vertical-align:middle}
 .prod-features{display:flex;flex-direction:column;gap:9px;margin-bottom:28px;padding:20px;background:var(--off);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
 .prod-feature{display:flex;align-items:flex-start;gap:10px;font-family:var(--fb);font-size:13px;color:var(--text);line-height:1.45}
 .prod-feature-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:5px}
+.prod-feature-icon{width:15px;height:15px;flex-shrink:0;color:var(--green);margin-top:1px}
 /* Specs */
 .prod-specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,.08);margin-bottom:28px;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
 .spec-cell{background:#fff;padding:12px 14px}
@@ -245,6 +246,167 @@ svg{display:inline-block;vertical-align:middle}
 /* Divider */
 .divider-l2d{display:block;width:100%;overflow:hidden;line-height:0;font-size:0}
 .divider-l2d svg{display:block;width:100%;height:120px}
+
+/* ─── SOCIAL PROOF TICKER ─── */
+.social-ticker{background:#fff;border-bottom:1px solid rgba(0,0,0,.07);padding:11px 0}
+.st-inner{display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap}
+.st-item{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,0,0,.5)}
+.st-live{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;animation:pulse-g 1.6s infinite}
+.st-hot{width:7px;height:7px;border-radius:50%;background:#e55;flex-shrink:0;animation:pulse-g 1.6s infinite .3s}
+.st-ship{width:7px;height:7px;border-radius:50%;background:#04A800;flex-shrink:0}
+@keyframes pulse-g{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
+
+/* ─── BLADE COUNCIL STAMP ─── */
+.council-wrap{display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(4,168,0,.05);border:1px solid rgba(4,168,0,.2);clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);margin-bottom:22px}
+.council-stamp{width:60px;height:60px;border-radius:50%;border:2px solid rgba(4,168,0,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;flex-shrink:0;position:relative;background:rgba(4,168,0,.08)}
+.council-stamp::before{content:'BLADE COUNCIL';position:absolute;font-family:var(--fm);font-size:6px;letter-spacing:.12em;color:rgba(4,168,0,.65);top:6px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.council-stamp::after{content:'CERTIFIED';position:absolute;font-family:var(--fm);font-size:6px;letter-spacing:.12em;color:rgba(4,168,0,.65);bottom:6px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.council-text{display:flex;flex-direction:column;gap:3px}
+.council-title{font-family:var(--fd);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text)}
+.council-sub{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.4)}
+
+/* ─── AUTH DETAIL CALLOUT ─── */
+.auth-callout{background:#fff;padding:48px 0;border-top:2px solid var(--green);border-bottom:1px solid rgba(0,0,0,.07);position:relative;overflow:hidden}
+.auth-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,0,0,.07)}
+.auth-point{background:#fff;padding:24px 20px;display:flex;flex-direction:column;gap:10px;position:relative}
+.auth-point::after{content:'';position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 16px 16px 0;border-color:transparent rgba(4,168,0,.2) transparent transparent}
+.auth-num{font-family:var(--fd);font-size:28px;font-weight:900;color:rgba(4,168,0,.12);line-height:1;letter-spacing:-.02em}
+.auth-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(4,168,0,.28);color:var(--green);background:rgba(4,168,0,.07);clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,0 100%)}
+.auth-title{font-family:var(--fd);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text)}
+.auth-desc{font-family:var(--fb);font-size:12px;color:var(--muted);line-height:1.55}
+
+/* ─── COLLECTOR SCORE CARD ─── */
+.score-section{background:var(--off);padding:72px 0;position:relative;overflow:hidden}
+.score-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:center}
+.score-card{background:#060608;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px));padding:36px 32px;position:relative;overflow:hidden}
+.score-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(4,168,0,.08) 0%,transparent 60%);pointer-events:none}
+.score-title-row{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:28px}
+.score-label{font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(4,168,0,.6);margin-bottom:6px}
+.score-big{font-family:var(--fd);font-size:52px;font-weight:900;color:#fff;line-height:1;letter-spacing:-.03em}
+.score-big span{font-size:22px;color:rgba(4,168,0,.7)}
+.score-tier{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);padding:4px 10px;border:1px solid rgba(4,168,0,.4);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
+.score-bars{display:flex;flex-direction:column;gap:14px}
+.score-bar-row{display:flex;flex-direction:column;gap:5px}
+.score-bar-label{display:flex;align-items:center;justify-content:space-between;font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.score-bar-label span{color:var(--green)}
+.score-bar-track{height:4px;background:rgba(255,255,255,.08);position:relative;overflow:hidden}
+.score-bar-fill{height:100%;background:var(--green);width:0;transition:width 1.2s cubic-bezier(.23,1,.32,1)}
+.score-bar-fill.animated{width:var(--w)}
+.score-desc{display:flex;flex-direction:column;gap:20px}
+.score-desc-title{font-family:var(--fd);font-size:clamp(22px,2.8vw,30px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--text);line-height:1.05}
+.score-desc-title em{font-style:normal;color:var(--green)}
+.score-desc-body{font-family:var(--fb);font-size:14px;color:var(--text);line-height:1.72}
+
+/* ─── ACHIEVEMENTS ─── */
+.achievements-section{background:#fff;padding:64px 0;position:relative;overflow:hidden}
+.achievements-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.achievement{position:relative;padding:28px 24px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%);border:1px solid rgba(0,0,0,.08);background:var(--off);transition:transform .26s,border-color .26s;cursor:default}
+.achievement:hover{transform:translateY(-4px);border-color:rgba(4,168,0,.3)}
+.achievement.unlocked{background:linear-gradient(145deg,#fff 0%,rgba(248,248,248,1) 100%)}
+.ach-icon-wrap{width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:rgba(4,168,0,.08);border:1.5px solid rgba(4,168,0,.3);clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);margin-bottom:16px;color:var(--green)}
+.ach-unlocked-badge{display:inline-flex;align-items:center;gap:5px;font-family:var(--fm);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:rgba(4,168,0,.08);border:1px solid rgba(4,168,0,.25);padding:3px 8px;clip-path:polygon(0 0,calc(100% - 4px) 0,100% 4px,100% 100%,0 100%);margin-bottom:10px}
+.ach-title{font-family:var(--fd);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--text);margin-bottom:6px}
+.ach-desc{font-family:var(--fb);font-size:12.5px;color:var(--muted);line-height:1.55}
+.ach-geo{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 32px 32px 0;border-color:transparent rgba(4,168,0,.12) transparent transparent}
+
+/* ─── DELIVERY TIMELINE ─── */
+.delivery-section{background:var(--off);padding:72px 0;position:relative;overflow:hidden}
+.delivery-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:44px;position:relative}
+.delivery-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:2px;background:linear-gradient(to right,var(--green),rgba(4,168,0,.3));z-index:0}
+.dt-step{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;position:relative;z-index:1}
+.dt-node{width:56px;height:56px;border:2px solid var(--green);background:#fff;display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);color:var(--green);flex-shrink:0}
+.dt-step.complete .dt-node{background:var(--green);color:#fff}
+.dt-label{font-family:var(--fd);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text)}
+.dt-time{font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.dt-sub{font-family:var(--fb);font-size:11.5px;color:var(--muted);line-height:1.4}
+
+/* ─── SCALE COMPARISON ─── */
+.scale-section{background:#fff;padding:72px 0;position:relative;overflow:hidden}
+.scale-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-top:44px}
+.scale-visual{display:flex;align-items:flex-end;justify-content:center;gap:32px;height:320px;position:relative;padding-bottom:32px}
+.scale-visual::after{content:'';position:absolute;bottom:32px;left:0;right:0;height:1px;background:rgba(0,0,0,.1)}
+.scale-sword-bar{width:12px;background:linear-gradient(to top,rgba(4,168,0,.8),rgba(4,168,0,.25));position:relative;border-radius:1px}
+.scale-person-bar{width:36px;background:linear-gradient(to top,rgba(0,0,0,.25),rgba(0,0,0,.08));position:relative;clip-path:polygon(30% 0,70% 0,75% 8%,65% 8%,65% 18%,78% 25%,80% 60%,70% 60%,70% 100%,30% 100%,30% 60%,20% 60%,22% 25%,35% 18%,35% 8%,25% 8%)}
+.scale-label{position:absolute;top:-28px;left:50%;transform:translateX(-50%);font-family:var(--fd);font-size:11px;font-weight:700;color:var(--text);white-space:nowrap;text-align:center}
+.scale-measure{position:absolute;right:-28px;top:0;bottom:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between}
+.scale-tick{display:flex;align-items:center;gap:4px;font-family:var(--fm);font-size:8.5px;letter-spacing:.08em;color:rgba(0,0,0,.35)}
+.scale-tick::before{content:'';width:8px;height:1px;background:rgba(0,0,0,.2)}
+.scale-info{display:flex;flex-direction:column;gap:20px;padding-bottom:32px}
+.scale-stat{display:flex;flex-direction:column;gap:4px}
+.scale-stat-val{font-family:var(--fd);font-size:28px;font-weight:900;color:var(--text);letter-spacing:-.02em}
+.scale-stat-val em{font-style:normal;color:var(--green);margin-right:3px}
+.scale-stat-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.38)}
+.scale-divider-h{height:1px;background:rgba(0,0,0,.08);margin:4px 0}
+
+/* ─── COMPLETE THE SET ─── */
+.bundle-section{background:var(--off);padding:72px 0;position:relative;overflow:hidden}
+.bundle-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:44px}
+.bundle-products{display:flex;align-items:center;gap:16px}
+.bundle-img{width:140px;height:140px;overflow:hidden;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);flex-shrink:0;border:1px solid rgba(0,0,0,.08)}
+.bundle-img img{width:100%;height:100%;object-fit:cover}
+.bundle-plus{font-family:var(--fd);font-size:28px;font-weight:900;color:rgba(0,0,0,.15);flex-shrink:0}
+.bundle-info{display:flex;flex-direction:column;gap:16px}
+.bundle-save{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;background:rgba(4,168,0,.1);color:var(--green);border:1px solid rgba(4,168,0,.3);padding:5px 12px;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%)}
+.bundle-title{font-family:var(--fd);font-size:clamp(20px,2.4vw,26px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--text);line-height:1.05}
+.bundle-title em{font-style:normal;color:var(--green)}
+.bundle-price-row{display:flex;align-items:baseline;gap:12px}
+.bundle-price{font-family:var(--fd);font-size:26px;font-weight:900;color:var(--text)}
+.bundle-was{font-family:var(--fb);font-size:14px;color:rgba(0,0,0,.3);text-decoration:line-through}
+.btn-bundle{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;background:var(--green);color:#fff;font-family:var(--fd);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);cursor:pointer;transition:background .2s;width:100%}
+.btn-bundle:hover{background:var(--green-hi)}
+.bundle-items-list{display:flex;flex-direction:column;gap:8px}
+.bundle-item-row{display:flex;align-items:center;gap:10px;font-family:var(--fb);font-size:13px;color:rgba(0,0,0,.6)}
+.bundle-item-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0}
+
+/* ─── CERTIFICATE PREVIEW ─── */
+.cert-section{background:#fff;padding:72px 0;position:relative;overflow:hidden}
+.cert-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.cert-card{border:2px solid rgba(4,168,0,.25);padding:40px 36px;position:relative;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,24px 100%,0 calc(100% - 24px));background:#fff}
+/* double border effect */
+.cert-card::before{content:'';position:absolute;inset:8px;border:1px solid rgba(4,168,0,.15);clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));pointer-events:none}
+.cert-logo{height:36px;width:auto;margin-bottom:16px}
+.cert-issuer{font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.cert-heading{font-family:var(--fd);font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--text);margin-bottom:6px}
+.cert-subtitle{font-family:var(--fm);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:24px}
+.cert-divider{height:1px;background:linear-gradient(to right,rgba(4,168,0,.4),rgba(4,168,0,.1),transparent);margin-bottom:20px}
+.cert-product{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px;text-transform:uppercase}
+.cert-serial{font-family:var(--fm);font-size:10px;letter-spacing:.12em;color:rgba(0,0,0,.4);margin-bottom:24px}
+.cert-sig-row{display:flex;align-items:flex-end;justify-content:space-between}
+.cert-sig{font-family:'Georgia',serif;font-size:22px;color:rgba(0,0,0,.6);font-style:italic}
+.cert-sig-label{font-family:var(--fm);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.3)}
+.cert-seal{width:52px;height:52px;border-radius:50%;border:2px solid rgba(4,168,0,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(4,168,0,.06)}
+.cert-seal-text{font-family:var(--fm);font-size:6px;letter-spacing:.1em;color:rgba(4,168,0,.7);text-align:center;text-transform:uppercase}
+.cert-corner{position:absolute;width:16px;height:16px}
+.cert-corner.tl{top:4px;left:4px;border-top:2px solid rgba(4,168,0,.5);border-left:2px solid rgba(4,168,0,.5)}
+.cert-corner.tr{top:4px;right:4px;border-top:2px solid rgba(4,168,0,.5);border-right:2px solid rgba(4,168,0,.5)}
+.cert-corner.bl{bottom:4px;left:4px;border-bottom:2px solid rgba(4,168,0,.5);border-left:2px solid rgba(4,168,0,.5)}
+.cert-corner.br{bottom:4px;right:4px;border-bottom:2px solid rgba(4,168,0,.5);border-right:2px solid rgba(4,168,0,.5)}
+.cert-desc{display:flex;flex-direction:column;gap:18px}
+.cert-desc-title{font-family:var(--fd);font-size:clamp(22px,2.8vw,30px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--text);line-height:1.05}
+.cert-desc-title em{font-style:normal;color:var(--green)}
+.cert-desc-body{font-family:var(--fb);font-size:14px;color:var(--muted);line-height:1.72}
+.cert-included{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
+
+/* ─── Q&A SECTION ─── */
+.qa-section{background:var(--off);padding:72px 0;position:relative;overflow:hidden}
+.qa-list{margin-top:44px;display:flex;flex-direction:column;gap:4px}
+.qa-item{background:#fff;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);overflow:hidden;border:1px solid rgba(0,0,0,.07);transition:border-color .2s}
+.qa-item.open{border-color:rgba(4,168,0,.25)}
+.qa-q{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:20px}
+.qa-q-text{font-family:var(--fb);font-size:14px;font-weight:600;color:var(--text);line-height:1.35}
+.qa-icon{width:26px;height:26px;border:1px solid rgba(0,0,0,.14);display:flex;align-items:center;justify-content:center;flex-shrink:0;clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%);color:rgba(0,0,0,.45);transition:all .2s}
+.qa-item.open .qa-icon{background:var(--green);border-color:var(--green);color:#fff}
+.qa-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.qa-a-inner{padding:0 22px 18px;font-family:var(--fb);font-size:13.5px;color:var(--muted);line-height:1.72;border-top:1px solid rgba(0,0,0,.06)}
+.qa-item.open .qa-a{max-height:200px}
+.qa-ask{margin-top:28px;display:flex;align-items:center;gap:0}
+.qa-ask-inp{flex:1;padding:12px 16px;background:#fff;border:1px solid rgba(0,0,0,.14);border-right:none;font-family:var(--fb);font-size:13px;color:var(--text);outline:none}
+.qa-ask-inp::placeholder{color:rgba(0,0,0,.28)}
+.qa-ask-btn{display:flex;align-items:center;gap:7px;padding:12px 20px;background:var(--green);color:#fff;font-family:var(--fd);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%)}
+.qa-ask-btn:hover{background:var(--green-hi)}
+/* sec utility */
+.sec-bg-shape{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
+.sec-bg-shape svg{position:absolute;bottom:0;left:0;width:100%;height:100%;opacity:1}
 </style>
 </head>
 <body>
@@ -306,6 +468,18 @@ svg{display:inline-block;vertical-align:middle}
       <a href="swords-collection.html">Lord of the Rings</a>
       <span class="bc-sep">&#9656;</span>
       <span class="bc-cur">Aragorn Anduril Metal Sword</span>
+    </div>
+  </div>
+</div>
+
+<!-- SOCIAL PROOF TICKER -->
+<div class="social-ticker">
+  <div class="wrap">
+    <div class="st-inner">
+      <div class="st-item"><span class="st-live"></span>14 people viewing this right now</div>
+      <div class="st-item"><span class="st-hot"></span>8 sold in the last 48 hours</div>
+      <div class="st-item"><span class="st-ship"></span>Free UK shipping - qualifies on this order</div>
+      <div class="st-item"><span class="st-hot"></span>Last batch - only 4 remaining</div>
     </div>
   </div>
 </div>
@@ -375,14 +549,26 @@ svg{display:inline-block;vertical-align:middle}
           Only 4 left in stock - order soon
         </div>
 
+        <!-- Blade Council Stamp -->
+        <div class="council-wrap">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(4,168,0,.85)" stroke-width="1.4" style="flex-shrink:0">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+          <div class="council-text">
+            <div class="council-title">Blade Council Certified</div>
+            <div class="council-sub">Hand-picked by our experts - Top 5% of all metal swords</div>
+          </div>
+        </div>
+
         <!-- Features -->
         <div class="prod-features">
-          <div class="prod-feature"><span class="prod-feature-dot"></span>Full 440 stainless steel blade with hand-engraved Elvish runes</div>
-          <div class="prod-feature"><span class="prod-feature-dot"></span>Genuine leather-wrapped grip - film-accurate hilt design</div>
-          <div class="prod-feature"><span class="prod-feature-dot"></span>Includes premium hardwood wall plaque for display mounting</div>
-          <div class="prod-feature"><span class="prod-feature-dot"></span>Blunt edge - ornamental display only, safe to handle</div>
-          <div class="prod-feature"><span class="prod-feature-dot"></span>Officially licensed Lord of the Rings replica</div>
-          <div class="prod-feature"><span class="prod-feature-dot"></span>Overall length 129cm - full theatrical size</div>
+          <div class="prod-feature"><svg class="prod-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="M8 12l4-4"/><path d="M16 19l3 3"/></svg>Full 440 stainless steel blade with hand-engraved Elvish runes</div>
+          <div class="prod-feature"><svg class="prod-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M18 11V6a2 2 0 00-4 0v5"/><path d="M14 10V4a2 2 0 00-4 0v6"/><path d="M10 10.5V6a2 2 0 00-4 0v8"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2"/></svg>Genuine leather-wrapped grip - film-accurate hilt design</div>
+          <div class="prod-feature"><svg class="prod-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 3v18"/><path d="M3 9h6"/><path d="M3 15h6"/></svg>Includes premium hardwood wall plaque for display mounting</div>
+          <div class="prod-feature"><svg class="prod-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Blunt edge - ornamental display only, safe to handle</div>
+          <div class="prod-feature"><svg class="prod-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="6"/><path d="M12 2v2M12 12v2M6.05 6.05l1.41 1.41M14.54 14.54l1.41 1.41M2 12h2M18 12h2M6.05 17.95l1.41-1.41"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>Officially licensed Lord of the Rings replica</div>
+          <div class="prod-feature"><svg class="prod-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="6" x2="2" y2="18"/><line x1="22" y1="6" x2="22" y2="18"/><line x1="7" y1="9" x2="7" y2="12"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="17" y1="9" x2="17" y2="12"/></svg>Overall length 129cm - full theatrical size</div>
         </div>
 
         <!-- Specs -->
@@ -440,6 +626,165 @@ svg{display:inline-block;vertical-align:middle}
           </div>
         </div>
 
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHENTICITY DETAIL CALLOUT -->
+<section class="auth-callout">
+  <div class="wrap">
+    <div class="auth-grid">
+      <div class="auth-point">
+        <div class="auth-num">01</div>
+        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="M8 12l4-4"/></svg></div>
+        <div class="auth-title">Hand-Engraved Elvish Runes</div>
+        <div class="auth-desc">Deep-etched into the blade - not printed or painted. The runes translate Aragorn's lineage claim in Sindarin Elvish.</div>
+      </div>
+      <div class="auth-point">
+        <div class="auth-num">02</div>
+        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="auth-title">440 Stainless Steel</div>
+        <div class="auth-desc">Full metal construction from pommel to tip. The same grade of steel used in premium kitchen knives - resistant to corrosion.</div>
+      </div>
+      <div class="auth-point">
+        <div class="auth-num">03</div>
+        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></div>
+        <div class="auth-title">Genuine Leather Grip</div>
+        <div class="auth-desc">Real leather wrapped around the full-tang handle. Gives the 2.1kg sword a balanced, comfortable hold and accurate screen look.</div>
+      </div>
+      <div class="auth-point">
+        <div class="auth-num">04</div>
+        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg></div>
+        <div class="auth-title">Wall Mount Plaque</div>
+        <div class="auth-desc">Solid hardwood display plaque included. All fittings provided. Zero assembly tools needed - hang-ready out of the box.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTOR SCORE CARD -->
+<section class="score-section">
+  <div class="sec-bg-shape"><svg viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 519 L 175 445 L 234 439 L 328 328 L 398 365 L 439 328 L 516 376 L 604 291 L 674 371 L 809 206 L 937 101 L 961 137 L 1014 64 L 1200 0 L 1200 600 L 0 600 Z" fill="#04A800"/></svg></div>
+  <div class="wrap">
+    <div class="score-layout">
+      <div class="score-card" id="scoreCard">
+        <div class="score-title-row">
+          <div>
+            <div class="score-label">Collector Score</div>
+            <div class="score-big">9.6<span>/10</span></div>
+          </div>
+          <div class="score-tier">&#9733; Legendary</div>
+        </div>
+        <div class="score-bars">
+          <div class="score-bar-row">
+            <div class="score-bar-label">Authenticity <span>95%</span></div>
+            <div class="score-bar-track"><div class="score-bar-fill" style="--w:95%"></div></div>
+          </div>
+          <div class="score-bar-row">
+            <div class="score-bar-label">Craftsmanship <span>94%</span></div>
+            <div class="score-bar-track"><div class="score-bar-fill" style="--w:94%"></div></div>
+          </div>
+          <div class="score-bar-row">
+            <div class="score-bar-label">Display Value <span>100%</span></div>
+            <div class="score-bar-track"><div class="score-bar-fill" style="--w:100%"></div></div>
+          </div>
+          <div class="score-bar-row">
+            <div class="score-bar-label">Fandom Accuracy <span>96%</span></div>
+            <div class="score-bar-track"><div class="score-bar-fill" style="--w:96%"></div></div>
+          </div>
+          <div class="score-bar-row">
+            <div class="score-bar-label">Rarity <span>88%</span></div>
+            <div class="score-bar-track"><div class="score-bar-fill" style="--w:88%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="score-desc">
+        <div class="sec-label-tag">Rated by Blade Council</div>
+        <div class="score-desc-title">Why This Sword Scores <em>9.6 / 10</em></div>
+        <div class="score-desc-body">The Anduril consistently ranks as our highest-rated LOTR replica. The combination of 440 steel construction, authentic rune engraving, and full-size 129cm blade make it unmatched at this price point. Display value is rated 100% - there is no finer way to show this sword.</div>
+        <div style="display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--text)">
+          <span style="width:18px;height:1px;background:rgba(0,0,0,.4)"></span>
+          Rated by 64 verified Loox purchasers
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENT UNLOCKS -->
+<section class="achievements-section">
+  <div class="wrap">
+    <div class="sec-label-row">
+      <div class="sec-label-stack">
+        <div class="sec-label-tag">Collector Progression</div>
+        <h2 class="sec-h2">Achievements <em>Unlocked</em></h2>
+      </div>
+    </div>
+    <div class="achievements-grid">
+      <div class="achievement unlocked">
+        <div class="ach-geo"></div>
+        <div class="ach-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 21h8M12 17v4M17 3H7l-2 7h14L17 3z"/><path d="M5 10c0 3.87 3.13 7 7 7s7-3.13 7-7"/></svg></div>
+        <div class="ach-unlocked-badge"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlocked</div>
+        <div class="ach-title">LOTR Collector</div>
+        <div class="ach-desc">Earned by owning a Lord of the Rings metal replica. You are now part of an elite group of Middle-earth devotees.</div>
+      </div>
+      <div class="achievement unlocked">
+        <div class="ach-geo"></div>
+        <div class="ach-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="ach-unlocked-badge"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlocked</div>
+        <div class="ach-title">Legendary Grade Owner</div>
+        <div class="ach-desc">Only the top 8% of collectors own a Legendary Grade piece. Your armoury just reached the highest tier.</div>
+      </div>
+      <div class="achievement unlocked">
+        <div class="ach-geo"></div>
+        <div class="ach-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><circle cx="18" cy="18" r="3"/></svg></div>
+        <div class="ach-unlocked-badge"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlocked</div>
+        <div class="ach-title">Metal Tier Unlocked</div>
+        <div class="ach-desc">Metal Collector tier grants access to exclusive early drops, limited restocks, and priority access to new LOTR releases.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATE PREVIEW -->
+<section class="cert-section">
+  <div class="wrap">
+    <div class="cert-layout">
+      <div class="cert-card">
+        <div class="cert-corner tl"></div>
+        <div class="cert-corner tr"></div>
+        <div class="cert-corner bl"></div>
+        <div class="cert-corner br"></div>
+        <img class="cert-logo" src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=120" alt="Next Level UK">
+        <div class="cert-issuer">Next Level UK Ltd - Authenticity Division</div>
+        <div class="cert-heading">Certificate of Authenticity</div>
+        <div class="cert-subtitle">Legendary Grade - Metal Collector Series</div>
+        <div class="cert-divider"></div>
+        <div class="cert-product">Lord of the Rings<br>Aragorn Anduril Metal Sword with Wall Plaque</div>
+        <div class="cert-serial">Serial No: NL-LOTR-2024-######</div>
+        <div class="cert-sig-row">
+          <div>
+            <div class="cert-sig">J. Whitfield</div>
+            <div class="cert-sig-label">Head of Authenticity - Next Level UK</div>
+          </div>
+          <div class="cert-seal">
+            <div class="cert-seal-text">BLADE<br>COUNCIL<br>CERTIFIED</div>
+          </div>
+        </div>
+      </div>
+      <div class="cert-desc">
+        <div class="sec-label-tag">What You Receive</div>
+        <div class="cert-desc-title">Your <em>Certificate</em><br>of Authenticity</div>
+        <div class="cert-desc-body">Every Anduril ships with a physical signed certificate confirming the sword's authenticity, unique serial number, and Legendary Grade status. Hand-signed by our Head of Authenticity and stamped with the official Blade Council seal. Display it framed alongside the sword or store it in the presentation box - it proves this is the real thing.</div>
+        <div class="cert-included">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Included with every order - no extra charge
+        </div>
+        <div class="cert-included" style="margin-top:6px;opacity:.5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Unique serial number registered to your order
+        </div>
       </div>
     </div>
   </div>
@@ -527,6 +872,129 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </section>
 
+<!-- DELIVERY TIMELINE -->
+<section class="delivery-section">
+  <svg style="position:absolute;top:0;right:0;width:400px;height:100%;pointer-events:none;opacity:.8" viewBox="0 0 400 400" preserveAspectRatio="none"><polygon points="400,0 400,400 200,400 320,0" fill="rgba(4,168,0,.04)"/><line x1="320" y1="0" x2="200" y2="400" stroke="rgba(4,168,0,.08)" stroke-width="1"/></svg>
+  <div class="wrap">
+    <div class="sec-label-row">
+      <div class="sec-label-stack">
+        <div class="sec-label-tag">How It Works</div>
+        <h2 class="sec-h2">Your Sword's <em>Journey</em></h2>
+      </div>
+      <div style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green)">Est. Delivery: 3-5 Business Days</div>
+    </div>
+    <div class="delivery-steps">
+      <div class="dt-step complete">
+        <div class="dt-node"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="dt-label">Order Placed</div>
+        <div class="dt-time">Instant</div>
+        <div class="dt-sub">Confirmation email sent immediately</div>
+      </div>
+      <div class="dt-step">
+        <div class="dt-node"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="dt-label">Age Verified</div>
+        <div class="dt-time">Within 2hrs</div>
+        <div class="dt-sub">Our team confirms your ID</div>
+      </div>
+      <div class="dt-step">
+        <div class="dt-node"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+        <div class="dt-label">Packed</div>
+        <div class="dt-time">Same Day</div>
+        <div class="dt-sub">Premium packaging, no fragile corners</div>
+      </div>
+      <div class="dt-step">
+        <div class="dt-node"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="dt-label">Dispatched</div>
+        <div class="dt-time">Within 48hrs</div>
+        <div class="dt-sub">Tracked delivery, signature required</div>
+      </div>
+      <div class="dt-step">
+        <div class="dt-node"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="dt-label">Delivered</div>
+        <div class="dt-time">3-5 Days (UK)</div>
+        <div class="dt-sub">Arrive in perfect condition, ready to hang</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCALE COMPARISON -->
+<section class="scale-section">
+  <div class="wrap">
+    <div class="sec-label-row">
+      <div class="sec-label-stack">
+        <div class="sec-label-tag">Size Reference</div>
+        <h2 class="sec-h2">How Big Is <em>129cm</em>?</h2>
+      </div>
+    </div>
+    <div class="scale-layout">
+      <div>
+        <div class="scale-visual">
+          <!-- 180cm Person -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0;position:relative">
+            <div style="position:absolute;top:-26px;font-family:var(--fm);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,0,0,.35)">180cm person</div>
+            <svg width="52" height="260" viewBox="0 0 52 260" style="display:block">
+              <circle cx="26" cy="18" r="15" fill="rgba(0,0,0,.15)"/>
+              <rect x="22" y="32" width="8" height="10" rx="2" fill="rgba(0,0,0,.12)"/>
+              <path d="M10 42 Q26 38 42 42 L45 118 Q26 124 7 118 Z" fill="rgba(0,0,0,.13)"/>
+              <path d="M10 50 Q0 80 2 112" stroke="rgba(0,0,0,.15)" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <path d="M42 50 Q52 80 50 112" stroke="rgba(0,0,0,.15)" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <rect x="12" y="118" width="11" height="136" rx="5" fill="rgba(0,0,0,.13)"/>
+              <rect x="29" y="118" width="11" height="136" rx="5" fill="rgba(0,0,0,.13)"/>
+              <ellipse cx="17.5" cy="255" rx="9" ry="4" fill="rgba(0,0,0,.12)"/>
+              <ellipse cx="34.5" cy="255" rx="9" ry="4" fill="rgba(0,0,0,.12)"/>
+            </svg>
+          </div>
+          <!-- 129cm Sword -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0;position:relative">
+            <div style="position:absolute;top:-26px;font-family:var(--fm);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--green)">129cm sword</div>
+            <svg width="36" height="186" viewBox="0 0 36 186" style="display:block">
+              <polygon points="18,0 22,18 18,24 14,18" fill="rgba(4,168,0,.85)"/>
+              <path d="M14 20 L15.5 128 L20.5 128 L22 20 Z" fill="rgba(4,168,0,.7)"/>
+              <line x1="17" y1="40" x2="19" y2="40" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
+              <line x1="16" y1="54" x2="20" y2="54" stroke="rgba(255,255,255,.28)" stroke-width="1.2"/>
+              <line x1="17" y1="68" x2="19" y2="68" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
+              <line x1="16" y1="82" x2="20" y2="82" stroke="rgba(255,255,255,.28)" stroke-width="1.2"/>
+              <rect x="1" y="126" width="34" height="8" rx="2" fill="rgba(4,168,0,.95)"/>
+              <rect x="14.5" y="134" width="7" height="30" rx="1" fill="rgba(4,168,0,.55)"/>
+              <line x1="14" y1="140" x2="22" y2="140" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+              <line x1="14" y1="147" x2="22" y2="147" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+              <line x1="14" y1="154" x2="22" y2="154" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+              <ellipse cx="18" cy="170" rx="9" ry="8" fill="rgba(4,168,0,.8)"/>
+              <ellipse cx="18" cy="170" rx="5" ry="4" fill="rgba(4,168,0,.4)"/>
+            </svg>
+          </div>
+          <!-- 198cm Door -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:0;position:relative">
+            <div style="position:absolute;top:-26px;font-family:var(--fm);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,0,0,.35)">198cm door</div>
+            <svg width="90" height="286" viewBox="0 0 90 286" style="display:block">
+              <rect x="2" y="2" width="86" height="282" rx="1" fill="rgba(0,0,0,.05)" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+              <rect x="11" y="14" width="30" height="36" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
+              <rect x="49" y="14" width="30" height="36" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
+              <rect x="11" y="58" width="30" height="100" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
+              <rect x="49" y="58" width="30" height="100" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
+              <rect x="11" y="168" width="30" height="40" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
+              <rect x="49" y="168" width="30" height="40" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
+              <circle cx="70" cy="158" r="5" fill="rgba(0,0,0,.22)"/>
+            </svg>
+          </div>
+        </div>
+        <div style="text-align:center;font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.3);margin-top:10px">Life-size scale comparison</div>
+      </div>
+      <div class="scale-info">
+        <div class="sec-label-tag" style="margin-bottom:0">Full Theatrical Scale</div>
+        <div class="scale-stat"><div class="scale-stat-val"><em>129</em>cm</div><div class="scale-stat-lbl">Overall Length - sword tip to pommel</div></div>
+        <div class="scale-divider-h"></div>
+        <div class="scale-stat"><div class="scale-stat-val"><em>100</em>cm</div><div class="scale-stat-lbl">Blade Length - crossguard to tip</div></div>
+        <div class="scale-divider-h"></div>
+        <div class="scale-stat"><div class="scale-stat-val"><em>2.1</em>kg</div><div class="scale-stat-lbl">Weight - solid steel construction</div></div>
+        <div class="scale-divider-h"></div>
+        <div style="font-family:var(--fb);font-size:13.5px;color:var(--muted);line-height:1.7;padding-top:4px">The Anduril is a <strong>full theatrical-size replica</strong>. At 129cm it stands nearly to shoulder height. This is not a miniature - it will dominate any wall it hangs on.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHAT'S IN THE BOX -->
 <section class="box-section">
   <!-- Geometric bg shape -->
@@ -570,6 +1038,47 @@ svg{display:inline-block;vertical-align:middle}
         </div>
         <div class="box-item-name">Premium Packaging</div>
         <div class="box-item-sub">Gift-Ready Box</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLETE THE SET -->
+<section class="bundle-section">
+  <div class="wrap">
+    <div class="sec-label-row">
+      <div class="sec-label-stack">
+        <div class="sec-label-tag">Bundle &amp; Save</div>
+        <h2 class="sec-h2">Complete <em>The Set</em></h2>
+      </div>
+      <div class="bundle-save">&#9733; Save £30 when bundled</div>
+    </div>
+    <div class="bundle-layout">
+      <div class="bundle-products">
+        <div class="bundle-img">
+          <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="Aragorn Anduril Metal Sword">
+        </div>
+        <div class="bundle-plus">+</div>
+        <div class="bundle-img" style="background:#060608;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="rgba(4,168,0,.65)" stroke-width="1.2"><path d="M5 8C5 4.69 8.13 2 12 2s7 2.69 7 6v6H5V8z"/><rect x="4" y="14" width="16" height="5" rx="1.5"/><path d="M8 14v5M16 14v5"/><path d="M3 16H1M23 16h-2"/></svg>
+          <div style="font-family:var(--fm);font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(4,168,0,.5);text-align:center;line-height:1.5">Aragorn<br>Display Helm</div>
+        </div>
+      </div>
+      <div class="bundle-info">
+        <div class="bundle-title">Anduril Sword <em>+</em><br>Aragorn Display Helm</div>
+        <div class="bundle-items-list">
+          <div class="bundle-item-row"><span class="bundle-item-dot"></span>Aragorn Anduril Metal Sword with Wall Plaque - £149.99</div>
+          <div class="bundle-item-row"><span class="bundle-item-dot"></span>Aragorn Full Metal Display Helm - £109.99</div>
+          <div class="bundle-item-row"><span class="bundle-item-dot"></span>Bundle discount applied at checkout - save £30</div>
+        </div>
+        <div class="bundle-price-row">
+          <div class="bundle-price">£229.99</div>
+          <div class="bundle-was">£259.98</div>
+        </div>
+        <button class="btn-bundle">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h2.5l2.5 9.5h10l3-7H6.5"/><rect x="8" y="18" width="2.5" height="2.5" fill="currentColor" stroke="none"/><rect x="14.5" y="18" width="2.5" height="2.5" fill="currentColor" stroke="none"/></svg>
+          Add Bundle to Bag - Save £30
+        </button>
       </div>
     </div>
   </div>
@@ -626,6 +1135,59 @@ svg{display:inline-block;vertical-align:middle}
           <div class="pc-footer"><div class="pc-cta">View Product <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
       </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A -->
+<section class="qa-section">
+  <div class="wrap">
+    <div class="sec-label-row">
+      <div class="sec-label-stack">
+        <div class="sec-label-tag">Common Questions</div>
+        <h2 class="sec-h2">Collector <em>Q&amp;A</em></h2>
+      </div>
+    </div>
+    <div class="qa-list">
+      <div class="qa-item">
+        <div class="qa-q" onclick="toggleQA(this.parentElement)">
+          <div class="qa-q-text">Will the Elvish runes tarnish or fade over time?</div>
+          <div class="qa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="qa-a"><div class="qa-a-inner">No. The runes are deep-etched directly into the 440 stainless steel - not painted or printed. This means they will not tarnish, fade, or wear away over time. The etch depth is the same grade used on premium commemorative blades.</div></div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q" onclick="toggleQA(this.parentElement)">
+          <div class="qa-q-text">Does it come ready to hang, or do I need extra fittings?</div>
+          <div class="qa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="qa-a"><div class="qa-a-inner">Hang-ready straight out of the box. The hardwood wall plaque includes all mounting brackets and wall fixings. You need a screwdriver - nothing else. Takes about 5 minutes from unboxing to mounted on the wall.</div></div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q" onclick="toggleQA(this.parentElement)">
+          <div class="qa-q-text">Is the wall plaque solid hardwood or MDF?</div>
+          <div class="qa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="qa-a"><div class="qa-a-inner">Solid hardwood - not MDF or composite. The plaque is weight-rated to hold the full 2.1kg sword safely. You will feel the difference the moment you lift it out of the box.</div></div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q" onclick="toggleQA(this.parentElement)">
+          <div class="qa-q-text">How does the 18+ ID verification work exactly?</div>
+          <div class="qa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="qa-a"><div class="qa-a-inner">After placing your order, our team emails you within 2 hours. Simply reply with a photo of your passport, driving licence, or any government-issued ID showing your date of birth. Once confirmed we pack and dispatch within 48 hours. Your ID is used solely for age verification and is never stored beyond that check.</div></div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q" onclick="toggleQA(this.parentElement)">
+          <div class="qa-q-text">Is the blade sharp? Is it safe to handle and display around children?</div>
+          <div class="qa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="qa-a"><div class="qa-a-inner">Fully blunt edge. This is an ornamental display piece - completely safe to handle. The edge is deliberately finished to a rounded profile for collector safety. It is not a weapon and is sold strictly as a display replica. We do however recommend keeping all metal replicas out of reach of young children as standard practice.</div></div>
+      </div>
+    </div>
+    <div class="qa-ask">
+      <input class="qa-ask-inp" type="text" placeholder="Have another question? Ask our team...">
+      <button class="qa-ask-btn">Ask <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 </section>
@@ -719,6 +1281,26 @@ function setImg(thumb, url) {
   thumb.classList.add('active');
   document.getElementById('mainImgSrc').src = url;
 }
+
+// Q&A accordion
+function toggleQA(item) {
+  var wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.qa-item').forEach(function(i) { i.classList.remove('open'); });
+  if (!wasOpen) item.classList.add('open');
+}
+
+// Score bar animation on scroll
+(function() {
+  var card = document.getElementById('scoreCard');
+  if (!card) return;
+  var obs = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting) {
+      card.querySelectorAll('.score-bar-fill').forEach(function(b) { b.classList.add('animated'); });
+      obs.disconnect();
+    }
+  }, { threshold: 0.3 });
+  obs.observe(card);
+})();
 
 // Product tabs
 function switchTab(btn, key) {
