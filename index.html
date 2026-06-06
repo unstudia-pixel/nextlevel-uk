@@ -1449,7 +1449,7 @@ svg{display:inline-block;vertical-align:middle}
     </a>
     <div class="nav-links">
       <a href="#collection" class="nav-a">Lightsabers</a>
-      <a href="#collection" class="nav-a">Swords</a>
+      <a href="swords-collection.html" class="nav-a">Swords</a>
       <a href="#collection" class="nav-a">Masks/Helmets</a>
       <a href="#collection" class="nav-a">Cosplay Props</a>
       <a href="#" class="nav-a nav-outlet">Outlet</a>
@@ -1885,7 +1885,7 @@ svg{display:inline-block;vertical-align:middle}
     <div class="cs-content">
       <div class="cs-title">Swords</div>
       <div class="cs-sub">Metal · Katana · Display</div>
-      <a href="#collection" class="cs-btn">Shop Swords <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="swords-collection.html" class="cs-btn">Shop Swords <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
   <div class="cs-item">
@@ -2423,7 +2423,7 @@ svg{display:inline-block;vertical-align:middle}
           <a href="#" class="fc-link">Lightsabers</a>
           <a href="#" class="fc-link">Replica Masks</a>
           <a href="#" class="fc-link">Cosplay Props</a>
-          <a href="#" class="fc-link">Swords &amp; Weapons</a>
+          <a href="swords-collection.html" class="fc-link">Swords &amp; Weapons</a>
           <a href="#" class="fc-link">New Arrivals</a>
           <a href="#" class="fc-link">Outlet Sale</a>
         </div>
@@ -2511,6 +2511,17 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // Tab filter
+const collectionUrls = {
+  swords: 'swords-collection.html',
+  lightsabers: '#',
+  masks: '#',
+  starwars: '#',
+  cosplay: '#'
+};
+const viewAllBtn = document.querySelector('.coll-footer .view-all-btn');
+function updateViewAllBtn(key) {
+  if (viewAllBtn) viewAllBtn.href = collectionUrls[key] || '#';
+}
 document.querySelectorAll('.tab[data-tab]').forEach(tab => {
   tab.addEventListener('click', () => {
     const key = tab.dataset.tab;
@@ -2524,8 +2535,11 @@ document.querySelectorAll('.tab[data-tab]').forEach(tab => {
         el.classList.add('on');
       });
     }
+    updateViewAllBtn(key);
   });
 });
+// Set initial state (default active tab is swords)
+updateViewAllBtn('swords');
 
 // Stat counter animation
 function animateCount(el, target, duration) {
