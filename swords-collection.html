@@ -237,6 +237,167 @@ svg{display:inline-block;vertical-align:middle}
 .fbl:hover{color:rgba(0,0,0,.7)}
 .pay-icons{display:flex;gap:5px;flex-wrap:wrap}
 .pay-ic{font-family:var(--fm);font-size:8px;letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border:1px solid rgba(0,0,0,.12);color:rgba(0,0,0,.38);background:#fff}
+
+/* ─── QUEST / FIND YOUR BLADE ─── */
+.quest-section{background:#fff;padding:80px 0;position:relative;overflow:hidden}
+.quest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:44px}
+.quest-card{position:relative;padding:28px 24px 26px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%);overflow:hidden;cursor:pointer;transition:transform .26s ease;border:1px solid rgba(0,0,0,.08)}
+.quest-card:hover{transform:translateY(-5px)}
+.quest-card.q-apprentice{background:rgba(4,168,0,.04);border-color:rgba(4,168,0,.15)}
+.quest-card.q-warrior{background:rgba(4,168,0,.07);border-color:rgba(4,168,0,.22)}
+.quest-card.q-champion{background:rgba(4,168,0,.11);border-color:rgba(4,168,0,.32)}
+.quest-card.q-legendary{background:#060608;border-color:rgba(4,168,0,.6)}
+.quest-card.q-legendary .quest-tier-name,.quest-card.q-legendary .quest-price,.quest-card.q-legendary .quest-desc,.quest-card.q-legendary .quest-count{color:#fff!important}
+.quest-card.q-legendary .quest-cta{color:var(--green)!important;border-color:rgba(4,168,0,.5)!important}
+.quest-tier-label{font-family:var(--fm);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.quest-tier-name{font-family:var(--fd);font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--text);margin-bottom:14px}
+/* power bar */
+.quest-power-wrap{margin-bottom:20px}
+.quest-power-label{font-family:var(--fm);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.35);margin-bottom:5px}
+.quest-card.q-legendary .quest-power-label{color:rgba(255,255,255,.35)}
+.quest-bar{height:3px;background:rgba(0,0,0,.08);position:relative;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.quest-card.q-legendary .quest-bar{background:rgba(255,255,255,.1)}
+.quest-bar-fill{height:100%;background:var(--green);position:relative}
+.quest-bar-fill::after{content:'';position:absolute;right:0;top:-2px;width:3px;height:7px;background:var(--green);clip-path:polygon(0 0,100% 50%,0 100%)}
+.quest-price{font-family:var(--fd);font-size:22px;font-weight:900;color:var(--text);letter-spacing:-.01em;margin-bottom:6px}
+.quest-desc{font-family:var(--fb);font-size:12.5px;color:var(--muted);line-height:1.55;margin-bottom:16px}
+.quest-count{font-family:var(--fm);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.38);margin-bottom:18px}
+.quest-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,0,0,.5);border-bottom:1px solid rgba(0,0,0,.18);padding-bottom:2px;transition:color .2s,border-color .2s}
+.quest-card:hover .quest-cta{color:var(--green);border-color:rgba(4,168,0,.4)}
+/* geo accent in corner */
+.quest-card::after{content:'';position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 28px 28px 0;border-color:transparent rgba(4,168,0,.15) transparent transparent;pointer-events:none}
+.quest-card.q-legendary::after{border-color:transparent rgba(4,168,0,.5) transparent transparent}
+
+/* ─── REVIEWS STRIP ─── */
+.reviews-strip{background:var(--off);padding:72px 0;position:relative;overflow:hidden}
+.rv-top{display:flex;align-items:center;gap:48px;margin-bottom:44px}
+.rv-score{display:flex;align-items:baseline;gap:10px}
+.rv-num{font-family:var(--fd);font-size:52px;font-weight:900;color:var(--text);letter-spacing:-.03em;line-height:1}
+.rv-stars-col{display:flex;flex-direction:column;gap:4px}
+.rv-stars{color:var(--green);font-size:18px;letter-spacing:2px}
+.rv-stars-label{font-family:var(--fm);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.38)}
+.rv-divider{width:1px;height:60px;background:rgba(0,0,0,.1);flex-shrink:0}
+.rv-meta{display:flex;flex-direction:column;gap:4px}
+.rv-meta-val{font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text)}
+.rv-meta-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.38)}
+.rv-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.rv-card{background:#fff;padding:20px;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);position:relative}
+.rv-card::after{content:'';position:absolute;top:0;right:0;width:12px;height:1px;background:rgba(4,168,0,.5);transform-origin:right top;transform:rotate(45deg) translateY(-1px)}
+.rv-card-stars{color:var(--green);font-size:12px;letter-spacing:1px;margin-bottom:8px}
+.rv-card-text{font-family:var(--fb);font-size:12.5px;line-height:1.6;color:var(--text);margin-bottom:12px}
+.rv-card-by{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+.rv-card-verified{display:flex;align-items:center;gap:4px;font-family:var(--fm);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:4px}
+
+/* ─── FANDOM FILTER PILLS ─── */
+.fandom-filter{background:#fff;padding:24px 0 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.fandom-filter-in{max-width:1320px;margin:0 auto;padding:0 80px;display:flex;align-items:center;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:0}
+.fandom-filter-in::-webkit-scrollbar{display:none}
+.fandom-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.35);white-space:nowrap;flex-shrink:0;margin-right:4px}
+.fp{display:flex;align-items:center;gap:8px;padding:8px 14px 18px;cursor:pointer;border-bottom:2px solid transparent;flex-shrink:0;transition:border-color .18s;position:relative}
+.fp.active{border-bottom-color:var(--green)}
+.fp-img{width:28px;height:28px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1.5px solid rgba(0,0,0,.1);transition:border-color .18s}
+.fp.active .fp-img{border-color:var(--green)}
+.fp-img img{width:100%;height:100%;object-fit:cover}
+.fp-name{font-family:var(--fb);font-size:11px;font-weight:600;letter-spacing:.04em;color:rgba(0,0,0,.5);white-space:nowrap;transition:color .18s}
+.fp.active .fp-name{color:#000}
+.fp:hover .fp-name{color:rgba(0,0,0,.8)}
+
+/* ─── MATERIAL GUIDE ─── */
+.material-guide{background:var(--off);padding:72px 0;position:relative;overflow:hidden}
+.mat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.mat-card{background:#fff;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%);padding:28px 26px 26px;position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.07);transition:transform .26s}
+.mat-card:hover{transform:translateY(-4px)}
+.mat-top-bar{height:3px;margin:-28px -26px 24px;position:relative}
+.mat-top-bar.foam{background:linear-gradient(to right,rgba(4,168,0,.3),rgba(4,168,0,.08))}
+.mat-top-bar.wood{background:linear-gradient(to right,rgba(4,168,0,.6),rgba(4,168,0,.2))}
+.mat-top-bar.metal{background:linear-gradient(to right,var(--green),rgba(4,168,0,.4))}
+.mat-tier-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,0 100%);margin-bottom:16px}
+.mat-tier-badge.foam{background:rgba(4,168,0,.08);color:rgba(4,100,0,.65);border:1px solid rgba(4,168,0,.2)}
+.mat-tier-badge.wood{background:rgba(4,168,0,.12);color:rgba(2,120,0,.8);border:1px solid rgba(4,168,0,.3)}
+.mat-tier-badge.metal{background:rgba(4,168,0,.18);color:var(--green);border:1px solid rgba(4,168,0,.45)}
+.mat-title{font-family:var(--fd);font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--text);margin-bottom:6px}
+.mat-sub{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.mat-features{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.mat-feature{display:flex;align-items:flex-start;gap:8px;font-family:var(--fb);font-size:12.5px;color:rgba(0,0,0,.6);line-height:1.4}
+.mat-feature-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:5px}
+.mat-price-range{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--text);margin-bottom:18px}
+.mat-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:9px 18px;border:1px solid rgba(0,0,0,.18);color:var(--text);clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,0 100%);transition:all .2s;cursor:pointer}
+.mat-card:hover .mat-cta{color:var(--green);border-color:rgba(4,168,0,.4);background:rgba(4,168,0,.04)}
+.mat-card::after{content:'';position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 16px 16px 0;border-color:transparent rgba(4,168,0,.18) transparent transparent;pointer-events:none}
+
+/* ─── GAMIFICATION ON CARDS ─── */
+.badge-council{background:rgba(160,120,0,.1);color:#8a6800;border:1px solid rgba(160,120,0,.35);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
+.badge-legendary{background:#060608;color:var(--green);border:1px solid rgba(4,168,0,.5);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
+.blade-tier{display:inline-flex;align-items:center;gap:5px;font-family:var(--fm);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;margin-top:2px;clip-path:polygon(0 0,calc(100% - 4px) 0,100% 4px,100% 100%,0 100%)}
+.tier-foam{background:rgba(4,168,0,.06);color:rgba(3,110,0,.65);border:1px solid rgba(4,168,0,.18)}
+.tier-wood{background:rgba(140,90,0,.07);color:rgba(120,75,0,.75);border:1px solid rgba(140,90,0,.22)}
+.tier-metal{background:rgba(4,168,0,.13);color:var(--green);border:1px solid rgba(4,168,0,.38)}
+.pc-stock{display:flex;align-items:center;gap:5px;font-family:var(--fm);font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;color:#c44;margin-bottom:4px}
+.stock-dot{width:5px;height:5px;border-radius:50%;background:#c44;flex-shrink:0;animation:pulse-stock 1.4s infinite}
+@keyframes pulse-stock{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* ─── COMPLETE THE LOOK ─── */
+.ctl-section{background:#fff;padding:72px 0;position:relative;overflow:hidden}
+.ctl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.ctl-card{position:relative;height:310px;overflow:hidden;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));cursor:pointer;transition:transform .3s}
+.ctl-card:hover{transform:translateY(-4px)}
+.ctl-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ctl-card:hover .ctl-bg{transform:scale(1.06)}
+.ctl-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.05) 100%)}
+.ctl-geo{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 44px 44px 0;border-color:transparent rgba(4,168,0,.25) transparent transparent;z-index:2}
+.ctl-body{position:absolute;bottom:0;left:0;right:0;padding:22px 20px;z-index:3}
+.ctl-tag{font-family:var(--fm);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:6px;display:flex;align-items:center;gap:7px}
+.ctl-tag::before{content:'';width:10px;height:1px;background:var(--green)}
+.ctl-name{font-family:var(--fd);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#fff;margin-bottom:12px;line-height:1.1}
+.ctl-price{font-family:var(--fd);font-size:18px;font-weight:900;color:#fff;margin-bottom:14px}
+.ctl-add{display:inline-flex;align-items:center;gap:7px;font-family:var(--fb);font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.6);transition:color .2s}
+.ctl-card:hover .ctl-add{color:var(--green)}
+
+/* ─── PRICE MATCH ─── */
+.price-match{background:var(--off);padding:60px 0;position:relative;overflow:hidden}
+.pm-inner{display:flex;align-items:center;gap:64px;position:relative;z-index:1}
+.pm-left{flex:1}
+.pm-icon{width:52px;height:52px;background:rgba(4,168,0,.1);border:1px solid rgba(4,168,0,.3);display:flex;align-items:center;justify-content:center;color:var(--green);margin-bottom:18px;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
+.pm-title{font-family:var(--fd);font-size:clamp(22px,3vw,32px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--text);margin-bottom:10px;line-height:1.05}
+.pm-title em{font-style:normal;color:var(--green)}
+.pm-desc{font-family:var(--fb);font-size:14px;color:var(--muted);line-height:1.65;max-width:460px}
+.pm-right{flex-shrink:0;display:flex;flex-direction:column;gap:10px}
+.pm-form{display:flex;gap:0}
+.pm-input{width:280px;padding:13px 16px;background:#fff;border:1px solid rgba(0,0,0,.14);border-right:none;font-family:var(--fb);font-size:13px;color:var(--text);outline:none}
+.pm-input::placeholder{color:rgba(0,0,0,.3)}
+.pm-input:focus{border-color:rgba(4,168,0,.35)}
+.pm-btn{display:flex;align-items:center;gap:8px;padding:13px 22px;background:var(--green);color:#fff;font-family:var(--fd);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);transition:background .2s;white-space:nowrap}
+.pm-btn:hover{background:var(--green-hi)}
+.pm-note{font-family:var(--fm);font-size:9.5px;letter-spacing:.07em;color:rgba(0,0,0,.35);display:flex;align-items:center;gap:6px}
+.pm-note-dot{width:4px;height:4px;border-radius:50%;background:var(--green)}
+
+/* ─── UGC VIDEO ─── */
+.ugc-video{background:#fff;padding:80px 0;position:relative;overflow:hidden}
+.vid-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:44px}
+.vid-tile{position:relative;border-radius:0;overflow:hidden;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);aspect-ratio:9/16;background:#0a0a0c;cursor:pointer;transition:transform .3s}
+.vid-tile:hover{transform:scale(1.02)}
+.vid-thumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.vid-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.2) 50%,transparent 100%)}
+.vid-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);width:44px;height:44px;border:1.5px solid rgba(255,255,255,.6);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .25s}
+.vid-tile:hover .vid-play{background:var(--green);border-color:var(--green)}
+.vid-scan{position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(to right,transparent,rgba(4,168,0,.7),transparent)}
+.vid-body{position:absolute;bottom:0;left:0;right:0;padding:16px}
+.vid-handle{font-family:var(--fm);font-size:9.5px;letter-spacing:.08em;color:var(--green);margin-bottom:4px}
+.vid-caption{font-family:var(--fb);font-size:11.5px;font-weight:600;color:#fff;line-height:1.3;margin-bottom:8px}
+.vid-meta{display:flex;align-items:center;gap:10px;font-family:var(--fm);font-size:8.5px;letter-spacing:.07em;color:rgba(255,255,255,.35)}
+
+/* ─── FAQ ─── */
+.faq-section{background:var(--off);padding:80px 0;position:relative;overflow:hidden}
+.faq-list{margin-top:44px;display:flex;flex-direction:column;gap:4px}
+.faq-item{background:#fff;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);overflow:hidden;border:1px solid rgba(0,0,0,.07);transition:border-color .2s}
+.faq-item.open{border-color:rgba(4,168,0,.25)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;cursor:pointer;gap:20px}
+.faq-q-text{font-family:var(--fb);font-size:14.5px;font-weight:600;color:var(--text);line-height:1.35}
+.faq-icon{width:28px;height:28px;border:1px solid rgba(0,0,0,.14);display:flex;align-items:center;justify-content:center;flex-shrink:0;clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%);color:rgba(0,0,0,.45);transition:all .2s}
+.faq-item.open .faq-icon{background:var(--green);border-color:var(--green);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.faq-a-inner{padding:0 22px 20px;font-family:var(--fb);font-size:13.5px;color:var(--muted);line-height:1.72;border-top:1px solid rgba(0,0,0,.06)}
+.faq-item.open .faq-a{max-height:200px}
 </style>
 </head>
 <body>
@@ -364,6 +525,75 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </section>
 
+<!-- QUEST: FIND YOUR BLADE -->
+<section class="quest-section">
+  <svg style="position:absolute;top:0;right:0;width:420px;height:100%;pointer-events:none;opacity:.6" viewBox="0 0 420 500" preserveAspectRatio="none"><polygon points="420,0 420,500 180,500 320,0" fill="rgba(4,168,0,.04)"/><line x1="320" y1="0" x2="180" y2="500" stroke="rgba(4,168,0,.08)" stroke-width="1"/><line x1="380" y1="0" x2="260" y2="500" stroke="rgba(4,168,0,.05)" stroke-width="1"/></svg>
+  <div class="wrap">
+    <div class="sec-label-row">
+      <div class="sec-label-stack">
+        <div class="sec-label-tag">Gamified Shopping</div>
+        <h2 class="sec-h2">Quest: Find <em>Your Blade</em></h2>
+      </div>
+      <a href="#" class="sec-view-all">Browse All <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="quest-grid">
+
+      <div class="quest-card q-apprentice">
+        <div class="quest-tier-label">Tier I</div>
+        <div class="quest-tier-name">Apprentice</div>
+        <div class="quest-power-wrap">
+          <div class="quest-power-label">Blade Power &#9656; 25%</div>
+          <div class="quest-bar"><div class="quest-bar-fill" style="width:25%"></div></div>
+        </div>
+        <div class="quest-price">Under £30</div>
+        <div class="quest-desc">Foam and wooden cosplay blades. Perfect for your first collection piece or conventions.</div>
+        <div class="quest-count">124 products</div>
+        <div class="quest-cta">Enter Quest <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="quest-card q-warrior">
+        <div class="quest-tier-label">Tier II</div>
+        <div class="quest-tier-name">Warrior</div>
+        <div class="quest-power-wrap">
+          <div class="quest-power-label">Blade Power &#9656; 55%</div>
+          <div class="quest-bar"><div class="quest-bar-fill" style="width:55%"></div></div>
+        </div>
+        <div class="quest-price">£30 - £75</div>
+        <div class="quest-desc">Metal katanas and premium wooden props. Serious detail, display-ready finish.</div>
+        <div class="quest-count">148 products</div>
+        <div class="quest-cta">Enter Quest <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="quest-card q-champion">
+        <div class="quest-tier-label">Tier III</div>
+        <div class="quest-tier-name">Champion</div>
+        <div class="quest-power-wrap">
+          <div class="quest-power-label">Blade Power &#9656; 80%</div>
+          <div class="quest-bar"><div class="quest-bar-fill" style="width:80%"></div></div>
+        </div>
+        <div class="quest-price">£75 - £150</div>
+        <div class="quest-desc">Elite cosplay-grade metal replicas. Full authenticity, collector quality.</div>
+        <div class="quest-count">82 products</div>
+        <div class="quest-cta">Enter Quest <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="quest-card q-legendary">
+        <div class="quest-tier-label" style="color:rgba(4,168,0,.8)">Tier IV &#9733;</div>
+        <div class="quest-tier-name">Legendary</div>
+        <div class="quest-power-wrap">
+          <div class="quest-power-label">Blade Power &#9656; 100%</div>
+          <div class="quest-bar" style="background:rgba(255,255,255,.1)"><div class="quest-bar-fill" style="width:100%"></div></div>
+        </div>
+        <div class="quest-price">£150+</div>
+        <div class="quest-desc">Museum-grade. Wall plaques, premium sheaths, full metal construction. The ultimate piece.</div>
+        <div class="quest-count">30 products</div>
+        <div class="quest-cta">Enter Quest <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- OTHER COLLECTIONS -->
 <section class="other-cols">
   <!-- Background geometric shape -->
@@ -466,6 +696,54 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </section>
 
+<!-- REVIEWS STRIP -->
+<section class="reviews-strip">
+  <svg style="position:absolute;bottom:0;left:0;width:340px;height:100%;pointer-events:none" viewBox="0 0 340 400" preserveAspectRatio="none"><polygon points="0,400 0,0 140,0 0,400" fill="rgba(4,168,0,.04)"/><line x1="0" y1="0" x2="140" y2="400" stroke="rgba(4,168,0,.09)" stroke-width="1"/></svg>
+  <div class="wrap">
+    <div class="rv-top">
+      <div class="rv-score">
+        <span class="rv-num">4.9</span>
+        <div class="rv-stars-col">
+          <span class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="rv-stars-label">Average Rating</span>
+        </div>
+      </div>
+      <div class="rv-divider"></div>
+      <div class="rv-meta"><span class="rv-meta-val">840+</span><span class="rv-meta-lbl">Sword Reviews</span></div>
+      <div class="rv-divider"></div>
+      <div class="rv-meta"><span class="rv-meta-val">98%</span><span class="rv-meta-lbl">Recommend</span></div>
+      <div class="rv-divider"></div>
+      <div class="rv-meta"><span class="rv-meta-val">Loox</span><span class="rv-meta-lbl">Verified Platform</span></div>
+    </div>
+    <div class="rv-cards">
+      <div class="rv-card">
+        <div class="rv-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv-card-text">"The Anduril is absolutely stunning. Every detail is perfect - I've had it wall-mounted and every guest asks where I got it."</div>
+        <div class="rv-card-by">James T. - Birmingham</div>
+        <div class="rv-card-verified"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+      </div>
+      <div class="rv-card">
+        <div class="rv-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv-card-text">"Zangetsu arrived in two days, beautifully packaged. The weight and finish are exactly right. My 6th order from Next Level."</div>
+        <div class="rv-card-by">@bleach_uk_fan</div>
+        <div class="rv-card-verified"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+      </div>
+      <div class="rv-card">
+        <div class="rv-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv-card-text">"Wore the Tanjiro sword to MCM Comic Con and got stopped every 10 minutes. Quality absolutely blew people away."</div>
+        <div class="rv-card-by">Sophie R. - London</div>
+        <div class="rv-card-verified"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+      </div>
+      <div class="rv-card">
+        <div class="rv-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv-card-text">"Vergil's Yamato is film accurate. Genuinely can't believe the price for this level of detail. Already ordered the wooden version too."</div>
+        <div class="rv-card-by">Marcus D. - Manchester</div>
+        <div class="rv-card-verified"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FILTER BAR -->
 <div class="filter-wrap" id="filterBar">
   <div class="filter-in">
@@ -514,11 +792,118 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </div>
 
+<!-- FANDOM FILTER PILLS -->
+<div class="fandom-filter">
+  <div class="fandom-filter-in">
+    <span class="fandom-lbl">By Fandom</span>
+    <div class="fp active" onclick="setFandom(this)">
+      <div class="fp-img"><img src="star-wars.jpg" alt="Star Wars"></div>
+      <span class="fp-name">Star Wars</span>
+    </div>
+    <div class="fp" onclick="setFandom(this)">
+      <div class="fp-img"><img src="demon%20slayer%20-%20tanjiro-kamado-2560x1440-18345.jpg" alt="Demon Slayer"></div>
+      <span class="fp-name">Demon Slayer</span>
+    </div>
+    <div class="fp" onclick="setFandom(this)">
+      <div class="fp-img"><img src="one-piece.png" alt="One Piece"></div>
+      <span class="fp-name">One Piece</span>
+    </div>
+    <div class="fp" onclick="setFandom(this)">
+      <div class="fp-img"><img src="lord%20of%20the%20rings.jpeg" alt="LOTR"></div>
+      <span class="fp-name">LOTR</span>
+    </div>
+    <div class="fp" onclick="setFandom(this)">
+      <div class="fp-img"><img src="naruto.jpg" alt="Naruto"></div>
+      <span class="fp-name">Naruto</span>
+    </div>
+    <div class="fp" onclick="setFandom(this)">
+      <div class="fp-img" style="background:#1a1a2e;display:flex;align-items:center;justify-content:center;color:#a0a0b0;font-family:var(--fm);font-size:8px">DMC</div>
+      <span class="fp-name">Devil May Cry</span>
+    </div>
+    <div class="fp" onclick="setFandom(this)">
+      <div class="fp-img" style="background:#0a1628;display:flex;align-items:center;justify-content:center;color:#6080c0;font-family:var(--fm);font-size:7px">BLEACH</div>
+      <span class="fp-name">Bleach</span>
+    </div>
+    <div class="fp" onclick="setFandom(this)">
+      <div class="fp-img" style="background:#1a0a00;display:flex;align-items:center;justify-content:center;color:#c08040;font-family:var(--fm);font-size:7px">W</div>
+      <span class="fp-name">The Witcher</span>
+    </div>
+    <div class="fp" onclick="setFandom(this)">
+      <div class="fp-img" style="background:#0a1a10;display:flex;align-items:center;justify-content:center;color:#60a870;font-family:var(--fm);font-size:7px">FF</div>
+      <span class="fp-name">Final Fantasy</span>
+    </div>
+  </div>
+</div>
+
+<!-- MATERIAL GUIDE -->
+<section class="material-guide">
+  <svg style="position:absolute;top:0;right:0;width:500px;height:100%;pointer-events:none" viewBox="0 0 500 400" preserveAspectRatio="none"><polygon points="500,0 500,400 260,400 380,0" fill="rgba(4,168,0,.03)"/><line x1="380" y1="0" x2="260" y2="400" stroke="rgba(4,168,0,.07)" stroke-width="1"/></svg>
+  <div class="wrap">
+    <div class="sec-label-row">
+      <div class="sec-label-stack">
+        <div class="sec-label-tag">Blade Guide</div>
+        <h2 class="sec-h2">Choose Your <em>Blade Type</em></h2>
+      </div>
+    </div>
+    <div class="mat-grid">
+
+      <div class="mat-card">
+        <div class="mat-top-bar foam"></div>
+        <div class="mat-tier-badge foam">&#9650; Apprentice Grade</div>
+        <div class="mat-title">Foam LARP</div>
+        <div class="mat-sub">Lightweight - Safe - Con Ready</div>
+        <div class="mat-features">
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Ultra-lightweight, safe for events</div>
+          <div class="mat-feature"><span class="mat-feature-dot"></span>High-detail painted finish</div>
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Perfect for cosplay and LARP</div>
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Durable polyurethane core</div>
+        </div>
+        <div class="mat-price-range">£14 - £35</div>
+        <button class="mat-cta">Shop Foam Swords <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+
+      <div class="mat-card">
+        <div class="mat-top-bar wood"></div>
+        <div class="mat-tier-badge wood">&#9651; Warrior Grade</div>
+        <div class="mat-title">Wooden Cosplay</div>
+        <div class="mat-sub">Display Ready - Authentic Feel</div>
+        <div class="mat-features">
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Real wood or resin construction</div>
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Accurate weight and balance</div>
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Includes sheath or display mount</div>
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Hand-painted detailing</div>
+        </div>
+        <div class="mat-price-range">£22 - £55</div>
+        <button class="mat-cta">Shop Wooden Swords <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+
+      <div class="mat-card">
+        <div class="mat-top-bar metal"></div>
+        <div class="mat-tier-badge metal">&#9733; Legendary Grade</div>
+        <div class="mat-title">Metal Collector</div>
+        <div class="mat-sub">Museum Quality - Full Metal Build</div>
+        <div class="mat-features">
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Full stainless steel blade</div>
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Collector-grade finish and detail</div>
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Wall plaque or display stand</div>
+          <div class="mat-feature"><span class="mat-feature-dot"></span>Certificate of authenticity</div>
+        </div>
+        <div class="mat-price-range">£55 - £260</div>
+        <button class="mat-cta">Shop Metal Swords <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- PRODUCT GRID -->
 <section class="prod-section">
   <div class="wrap">
     <div class="prod-section-hd">
-      <div class="prod-section-title">Swords Collection</div>
+      <div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:6px;display:flex;align-items:center;gap:8px"><span style="width:18px;height:1px;background:var(--green);display:inline-block"></span>The Armoury</div>
+        <div class="prod-section-title">Swords Collection</div>
+      </div>
       <div class="prod-section-count">Showing 12 of 384</div>
     </div>
 
@@ -526,11 +911,13 @@ svg{display:inline-block;vertical-align:middle}
 
       <!-- 1 -->
       <div class="pc-wrap"><div class="pc">
-        <span class="pc-badge badge-best">Best Seller</span>
+        <span class="pc-badge badge-legendary">&#9733; Legendary</span>
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="Aragorn Anduril Metal Sword"></div>
         <div class="pc-info">
           <div class="pc-cat">Lord of the Rings - Metal</div>
           <div class="pc-name">Aragorn Anduril Metal Sword with Wall Plaque</div>
+          <div class="blade-tier tier-metal">&#9733; Metal Collector</div>
+          <div class="pc-stock"><span class="stock-dot"></span> Only 4 left</div>
           <div class="pc-price-row"><span class="pc-price">£149.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -538,11 +925,13 @@ svg{display:inline-block;vertical-align:middle}
 
       <!-- 2 -->
       <div class="pc-wrap"><div class="pc">
-        <span class="pc-badge badge-trend">Trending</span>
+        <span class="pc-badge badge-council">&#9670; Council Pick</span>
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/bleach-sword-zangetsu-metal-katana-sword-of-ichigo-kurosaki-9237517.jpg?width=600" alt="Zangetsu Metal Katana"></div>
         <div class="pc-info">
           <div class="pc-cat">Bleach - Metal Katana</div>
           <div class="pc-name">Zangetsu Metal Katana - Ichigo Kurosaki</div>
+          <div class="blade-tier tier-metal">&#9733; Metal Collector</div>
+          <div class="pc-stock"><span class="stock-dot"></span> Only 7 left</div>
           <div class="pc-price-row"><span class="pc-price">£63.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -555,6 +944,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-info">
           <div class="pc-cat">One Piece - Metal Katana</div>
           <div class="pc-name">Purple Enma Metal Katana - Roronoa Zoro</div>
+          <div class="blade-tier tier-metal">&#9733; Metal Collector</div>
           <div class="pc-price-row"><span class="pc-price">£74.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -567,6 +957,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-info">
           <div class="pc-cat">Devil May Cry - Metal</div>
           <div class="pc-name">Vergil Yamato Metal Katana - Devil May Cry 5</div>
+          <div class="blade-tier tier-metal">&#9733; Metal Collector</div>
           <div class="pc-price-row"><span class="pc-price">£63.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -578,6 +969,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-info">
           <div class="pc-cat">One Piece - Wooden Cosplay</div>
           <div class="pc-name">Roronoa Zoro Shusui Katana Wooden Cosplay Sword</div>
+          <div class="blade-tier tier-wood">&#9651; Warrior Grade</div>
           <div class="pc-price-row"><span class="pc-price">£27.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -585,11 +977,12 @@ svg{display:inline-block;vertical-align:middle}
 
       <!-- 6 -->
       <div class="pc-wrap"><div class="pc">
-        <span class="pc-badge badge-trend">Trending</span>
+        <span class="pc-badge badge-council">&#9670; Council Pick</span>
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/bleach-sword-zangetsu-metal-katana-sword-of-ichigo-kurosaki-9237517.jpg?width=600" alt="Demon Slayer Tanjiro Sword"></div>
         <div class="pc-info">
           <div class="pc-cat">Demon Slayer - Wooden Cosplay</div>
           <div class="pc-name">Tanjiro Rengoku Fire Breath Wooden Cosplay Sword</div>
+          <div class="blade-tier tier-wood">&#9651; Warrior Grade</div>
           <div class="pc-price-row"><span class="pc-price">£27.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -601,6 +994,8 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-info">
           <div class="pc-cat">Lord of the Rings - Metal</div>
           <div class="pc-name">Sting Metal Sword Deluxe with Sheath</div>
+          <div class="blade-tier tier-metal">&#9733; Metal Collector</div>
+          <div class="pc-stock"><span class="stock-dot"></span> Only 3 left</div>
           <div class="pc-price-row"><span class="pc-price">£64.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -612,6 +1007,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-info">
           <div class="pc-cat">Demon Slayer - Wooden Cosplay</div>
           <div class="pc-name">Tengen Uzui Dual Nichirin Cleavers with Sheath</div>
+          <div class="blade-tier tier-wood">&#9651; Warrior Grade</div>
           <div class="pc-price-row"><span class="pc-price">£44.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -624,6 +1020,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-info">
           <div class="pc-cat">One Piece - Metal Katana</div>
           <div class="pc-name">Wado Ichimonji Metal Katana - Roronoa Zoro</div>
+          <div class="blade-tier tier-metal">&#9733; Metal Collector</div>
           <div class="pc-price-row"><span class="pc-price">£69.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -636,6 +1033,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-info">
           <div class="pc-cat">The Hobbit - Foam LARP</div>
           <div class="pc-name">Sting Sword 70cm Foam Replica Cosplay - LOTR</div>
+          <div class="blade-tier tier-foam">&#9650; Apprentice Grade</div>
           <div class="pc-price-row"><span class="pc-price">£22.99</span><span class="pc-price-old">£31.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -647,6 +1045,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-info">
           <div class="pc-cat">Pirates of the Caribbean - Foam LARP</div>
           <div class="pc-name">Jack Sparrow Foam LARP Pirate Sword</div>
+          <div class="blade-tier tier-foam">&#9650; Apprentice Grade</div>
           <div class="pc-price-row"><span class="pc-price">£21.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -659,6 +1058,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="pc-info">
           <div class="pc-cat">One Piece - Wooden Cosplay</div>
           <div class="pc-name">Sandai Kitetsu V.2 Katana Wooden Cosplay Sword</div>
+          <div class="blade-tier tier-wood">&#9651; Warrior Grade</div>
           <div class="pc-price-row"><span class="pc-price">£27.99</span><span class="pc-price-old">£35.99</span></div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
         </div>
@@ -678,6 +1078,203 @@ svg{display:inline-block;vertical-align:middle}
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- COMPLETE THE LOOK -->
+<section class="ctl-section">
+  <svg style="position:absolute;top:0;right:0;width:380px;height:100%;pointer-events:none" viewBox="0 0 380 400" preserveAspectRatio="none"><polygon points="380,0 380,400 160,400 280,0" fill="rgba(4,168,0,.03)"/><line x1="280" y1="0" x2="160" y2="400" stroke="rgba(4,168,0,.07)" stroke-width="1"/></svg>
+  <div class="wrap">
+    <div class="sec-label-row">
+      <div class="sec-label-stack">
+        <div class="sec-label-tag">Complete Your Kit</div>
+        <h2 class="sec-h2">Pair With a <em>Matching Mask</em></h2>
+      </div>
+      <a href="#" class="sec-view-all">All Masks &amp; Helmets <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="ctl-grid">
+      <a href="#" class="ctl-card">
+        <img class="ctl-bg" src="mask.jpeg" alt="Replica Mask">
+        <div class="ctl-overlay"></div>
+        <div class="ctl-geo"></div>
+        <div class="ctl-body">
+          <div class="ctl-tag">Masks &amp; Helmets</div>
+          <div class="ctl-name">Star Wars Darth Vader Helmet Replica</div>
+          <div class="ctl-price">£89.99</div>
+          <div class="ctl-add">Add to Bag <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+      <a href="#" class="ctl-card">
+        <img class="ctl-bg" src="mask2.avif" alt="Cosplay Mask">
+        <div class="ctl-overlay"></div>
+        <div class="ctl-geo"></div>
+        <div class="ctl-body">
+          <div class="ctl-tag">Masks &amp; Helmets</div>
+          <div class="ctl-name">Demon Slayer Tanjiro Resin Cosplay Mask</div>
+          <div class="ctl-price">£44.99</div>
+          <div class="ctl-add">Add to Bag <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+      <a href="#" class="ctl-card">
+        <img class="ctl-bg" src="mask3.jpeg" alt="LOTR Helmet">
+        <div class="ctl-overlay"></div>
+        <div class="ctl-geo"></div>
+        <div class="ctl-body">
+          <div class="ctl-tag">Masks &amp; Helmets</div>
+          <div class="ctl-name">LOTR Aragorn Battle Helmet Metal Replica</div>
+          <div class="ctl-price">£119.99</div>
+          <div class="ctl-add">Add to Bag <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE MATCH -->
+<section class="price-match">
+  <svg style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 1440 300" preserveAspectRatio="none"><polygon points="0,0 400,0 0,300" fill="rgba(4,168,0,.05)"/><polygon points="1440,300 1040,300 1440,0" fill="rgba(4,168,0,.04)"/><line x1="0" y1="300" x2="400" y2="0" stroke="rgba(4,168,0,.1)" stroke-width="1"/><line x1="1440" y1="0" x2="1040" y2="300" stroke="rgba(4,168,0,.08)" stroke-width="1"/></svg>
+  <div class="wrap">
+    <div class="pm-inner">
+      <div class="pm-left">
+        <div class="pm-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h2 class="pm-title">We'll <em>Beat Any Price</em><br>by 5%. Guaranteed.</h2>
+        <p class="pm-desc">Found the same sword cheaper anywhere online? Share the link and we'll beat it - no questions asked. That's the Next Level promise.</p>
+      </div>
+      <div class="pm-right">
+        <div class="pm-form">
+          <input class="pm-input" type="url" placeholder="Paste competitor URL here...">
+          <button class="pm-btn">Claim Beat <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        </div>
+        <div class="pm-note"><span class="pm-note-dot"></span> Response within 2 hours on business days</div>
+        <div class="pm-note"><span class="pm-note-dot"></span> Applies to identical products only</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UGC VIDEO -->
+<section class="ugc-video">
+  <svg style="position:absolute;bottom:0;right:0;width:300px;height:100%;pointer-events:none" viewBox="0 0 300 500" preserveAspectRatio="none"><polygon points="300,500 300,0 120,500" fill="rgba(4,168,0,.03)"/><line x1="120" y1="500" x2="300" y2="0" stroke="rgba(4,168,0,.07)" stroke-width="1"/></svg>
+  <div class="wrap">
+    <div class="sec-label-row">
+      <div class="sec-label-stack">
+        <div class="sec-label-tag">Swords in the Wild</div>
+        <h2 class="sec-h2">See Them <em>In Action</em></h2>
+      </div>
+      <a href="#" class="sec-view-all">View All <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="vid-grid">
+      <div class="vid-tile">
+        <img class="vid-thumb" src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="">
+        <div class="vid-overlay"></div>
+        <div class="vid-scan"></div>
+        <div class="vid-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        <div class="vid-body">
+          <div class="vid-handle">@lotr_collector_uk</div>
+          <div class="vid-caption">Anduril unboxing - this thing is MASSIVE</div>
+          <div class="vid-meta"><span>128K views</span><span>#nextleveluk</span></div>
+        </div>
+      </div>
+      <div class="vid-tile">
+        <img class="vid-thumb" src="https://nextleveluk.net/cdn/shop/files/bleach-sword-zangetsu-metal-katana-sword-of-ichigo-kurosaki-9237517.jpg?width=600" alt="">
+        <div class="vid-overlay"></div>
+        <div class="vid-scan"></div>
+        <div class="vid-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        <div class="vid-body">
+          <div class="vid-handle">@bleach_cosplay_eu</div>
+          <div class="vid-caption">Zangetsu metal katana - full review</div>
+          <div class="vid-meta"><span>84K views</span><span>#bleachcosplay</span></div>
+        </div>
+      </div>
+      <div class="vid-tile">
+        <img class="vid-thumb" src="https://nextleveluk.net/cdn/shop/files/one-piece-purple-enma-metal-katana-sword-of-roronoa-zoro-9049507.jpg?width=600" alt="">
+        <div class="vid-overlay"></div>
+        <div class="vid-scan"></div>
+        <div class="vid-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        <div class="vid-body">
+          <div class="vid-handle">@zoro_blades_uk</div>
+          <div class="vid-caption">Enma - worth every penny at MCM</div>
+          <div class="vid-meta"><span>61K views</span><span>#onepiece</span></div>
+        </div>
+      </div>
+      <div class="vid-tile">
+        <img class="vid-thumb" src="https://nextleveluk.net/cdn/shop/files/devil-may-cry-5-katana-of-vergil-yamato-metal-sword-3642627.jpg?v=1757773728&width=600" alt="">
+        <div class="vid-overlay"></div>
+        <div class="vid-scan"></div>
+        <div class="vid-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        <div class="vid-body">
+          <div class="vid-handle">@dmc_fandom_uk</div>
+          <div class="vid-caption">Vergil Yamato - power level is REAL</div>
+          <div class="vid-meta"><span>45K views</span><span>#devilmaycry</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <svg style="position:absolute;top:0;left:0;width:280px;height:100%;pointer-events:none" viewBox="0 0 280 500" preserveAspectRatio="none"><polygon points="0,0 280,0 0,500" fill="rgba(4,168,0,.03)"/><line x1="0" y1="0" x2="280" y2="500" stroke="rgba(4,168,0,.07)" stroke-width="1"/></svg>
+  <div class="wrap">
+    <div class="sec-label-row">
+      <div class="sec-label-stack">
+        <div class="sec-label-tag">Got Questions</div>
+        <h2 class="sec-h2">Sword <em>FAQs</em></h2>
+      </div>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Are replica swords legal to own in the UK?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Replica and decorative swords are entirely legal to purchase and own in the UK as an adult. Our products are sold as collectibles and display pieces. They cannot be carried in public. If you have specific questions about a product's classification, our team is happy to help before you buy.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What's the difference between Foam, Wooden and Metal swords?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Foam LARP swords are lightweight, safe for events, and great for beginners. Wooden cosplay swords are heavier, display-ready with authentic detail. Metal collector swords are full stainless steel replicas with wall plaques and premium sheaths - the choice for serious collectors. Our Blade Guide above breaks this down in detail.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do your metal swords come sharp?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">All our metal swords are sold as decorative replicas and are blunt-edged for safety. They are not functional weapons. The finish and weight replicate the originals faithfully, but they are display and collector pieces only.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do swords come with sheaths or display stands?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Most of our wooden and metal swords include a sheath and/or display stand. Premium metal replicas often include a wall plaque for mounting. Each product listing clearly states what's included - check the product description before ordering. We never sell incomplete sets.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How quickly will my sword be dispatched?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">All in-stock orders are dispatched within 48 hours. UK orders typically arrive in 2-3 working days. European and international orders take 5-10 working days depending on destination. You'll receive full tracking information the moment your order ships.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What sword would you recommend for a first-time buyer?</span>
+          <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Start with a wooden cosplay sword in the £25-£45 range - great quality, authentic detail, without the premium price of metal. The Zoro Shusui, Tanjiro Fire Breath, and Sting Deluxe are our most popular first purchases. If you want to go straight to metal, the Zangetsu Katana at £63.99 is our best-value Legendary Grade pick.</div></div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -779,6 +1376,28 @@ const nav = document.getElementById('mainNav');
 const updateNav = () => nav.classList.toggle('scrolled', window.scrollY > 5);
 updateNav();
 window.addEventListener('scroll', updateNav, {passive:true});
+
+// Fandom pill filter
+function setFandom(el) {
+  document.querySelectorAll('.fp').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// FAQ accordion
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+  // flip icon
+  document.querySelectorAll('.faq-item .faq-icon svg').forEach(svg => {
+    svg.querySelector('path').setAttribute('d','M6 9l6 6 6-6');
+  });
+  if (!isOpen) {
+    const icon = item.querySelector('.faq-icon svg path');
+    if (icon) icon.setAttribute('d','M18 15l-6-6-6 6');
+  }
+}
 
 // Category tab filter
 function filterTab(el, key) {
