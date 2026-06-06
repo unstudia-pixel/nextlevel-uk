@@ -241,6 +241,16 @@ svg{display:inline-block;vertical-align:middle}
 /* ─── QUEST / FIND YOUR BLADE ─── */
 .quest-section{background:#fff;padding:80px 0;position:relative;overflow:hidden}
 .quest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:44px}
+/* quest icon */
+.quest-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(4,168,0,.25);margin-bottom:16px;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);color:var(--green);flex-shrink:0}
+.q-apprentice .quest-icon{background:rgba(4,168,0,.07)}
+.q-warrior .quest-icon{background:rgba(4,168,0,.11);border-color:rgba(4,168,0,.35)}
+.q-champion .quest-icon{background:rgba(4,168,0,.16);border-color:rgba(4,168,0,.45)}
+.q-legendary .quest-icon{background:rgba(4,168,0,.18);border-color:rgba(4,168,0,.6);color:var(--green)}
+/* section bg shape */
+.sec-bg-shape{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
+.sec-bg-shape svg{position:absolute;bottom:0;left:0;width:100%;height:100%;opacity:.1}
+.sec-bg-shape.mirrored svg{top:0;bottom:auto}
 .quest-card{position:relative;padding:28px 24px 26px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%);overflow:hidden;cursor:pointer;transition:transform .26s ease;border:1px solid rgba(0,0,0,.08)}
 .quest-card:hover{transform:translateY(-5px)}
 .quest-card.q-apprentice{background:rgba(4,168,0,.04);border-color:rgba(4,168,0,.15)}
@@ -916,6 +926,7 @@ svg{display:inline-block;vertical-align:middle}
     </div>
     <div class="quest-grid">
       <div class="quest-card q-apprentice">
+        <div class="quest-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="M16 19l2.5 2.5-2.5-2.5"/><circle cx="4.5" cy="19.5" r="1.5"/><path d="M8 12l4-4"/></svg></div>
         <div class="quest-tier-label">Tier I</div>
         <div class="quest-tier-name">Apprentice</div>
         <div class="quest-power-wrap">
@@ -928,6 +939,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="quest-cta">Enter Quest <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
       <div class="quest-card q-warrior">
+        <div class="quest-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M21 3 3 21"/><path d="M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg></div>
         <div class="quest-tier-label">Tier II</div>
         <div class="quest-tier-name">Warrior</div>
         <div class="quest-power-wrap">
@@ -940,6 +952,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="quest-cta">Enter Quest <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
       <div class="quest-card q-champion">
+        <div class="quest-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M10 12h4"/></svg></div>
         <div class="quest-tier-label">Tier III</div>
         <div class="quest-tier-name">Champion</div>
         <div class="quest-power-wrap">
@@ -952,6 +965,7 @@ svg{display:inline-block;vertical-align:middle}
         <div class="quest-cta">Enter Quest <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
       <div class="quest-card q-legendary">
+        <div class="quest-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
         <div class="quest-tier-label" style="color:rgba(4,168,0,.8)">Tier IV &#9733;</div>
         <div class="quest-tier-name">Legendary</div>
         <div class="quest-power-wrap">
@@ -1017,7 +1031,7 @@ svg{display:inline-block;vertical-align:middle}
 
 <!-- MATERIAL GUIDE -->
 <section class="material-guide">
-  <svg style="position:absolute;top:0;right:0;width:500px;height:100%;pointer-events:none" viewBox="0 0 500 400" preserveAspectRatio="none"><polygon points="500,0 500,400 260,400 380,0" fill="rgba(4,168,0,.03)"/><line x1="380" y1="0" x2="260" y2="400" stroke="rgba(4,168,0,.07)" stroke-width="1"/></svg>
+  <div class="sec-bg-shape"><svg viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 519 L 175 445 L 234 439 L 328 328 L 398 365 L 439 328 L 516 376 L 604 291 L 674 371 L 809 206 L 937 101 L 961 137 L 1014 64 L 1200 0 L 1200 600 L 0 600 Z" fill="#04A800"/></svg></div>
   <div class="wrap">
     <div class="sec-label-row">
       <div class="sec-label-stack">
@@ -1147,7 +1161,7 @@ svg{display:inline-block;vertical-align:middle}
 
 <!-- UGC VIDEO -->
 <section class="ugc-video">
-  <svg style="position:absolute;bottom:0;right:0;width:300px;height:100%;pointer-events:none" viewBox="0 0 300 500" preserveAspectRatio="none"><polygon points="300,500 300,0 120,500" fill="rgba(4,168,0,.03)"/><line x1="120" y1="500" x2="300" y2="0" stroke="rgba(4,168,0,.07)" stroke-width="1"/></svg>
+  <div class="sec-bg-shape"><svg viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 519 L 175 445 L 234 439 L 328 328 L 398 365 L 439 328 L 516 376 L 604 291 L 674 371 L 809 206 L 937 101 L 961 137 L 1014 64 L 1200 0 L 1200 600 L 0 600 Z" fill="#04A800"/></svg></div>
   <div class="wrap">
     <div class="sec-label-row">
       <div class="sec-label-stack">
@@ -1207,7 +1221,7 @@ svg{display:inline-block;vertical-align:middle}
 
 <!-- FAQ -->
 <section class="faq-section">
-  <svg style="position:absolute;top:0;left:0;width:280px;height:100%;pointer-events:none" viewBox="0 0 280 500" preserveAspectRatio="none"><polygon points="0,0 280,0 0,500" fill="rgba(4,168,0,.03)"/><line x1="0" y1="0" x2="280" y2="500" stroke="rgba(4,168,0,.07)" stroke-width="1"/></svg>
+  <div class="sec-bg-shape mirrored"><svg viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 81 L 175 155 L 234 161 L 328 272 L 398 235 L 439 272 L 516 224 L 604 309 L 674 229 L 809 394 L 937 499 L 961 463 L 1014 536 L 1200 600 L 1200 0 L 0 0 Z" fill="#04A800"/></svg></div>
   <div class="wrap">
     <div class="sec-label-row">
       <div class="sec-label-stack">
