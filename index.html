@@ -1856,7 +1856,7 @@ svg{display:inline-block;vertical-align:middle}
     </div>
 
     <div class="coll-footer reveal">
-      <a href="#" class="view-all-btn">
+      <a href="swords-collection.html" class="view-all-btn" id="collViewAllBtn">
         View Full Collection
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2518,10 +2518,7 @@ const collectionUrls = {
   starwars: '#',
   cosplay: '#'
 };
-const viewAllBtn = document.querySelector('.coll-footer .view-all-btn');
-function updateViewAllBtn(key) {
-  if (viewAllBtn) viewAllBtn.href = collectionUrls[key] || '#';
-}
+const viewAllBtn = document.getElementById('collViewAllBtn');
 document.querySelectorAll('.tab[data-tab]').forEach(tab => {
   tab.addEventListener('click', () => {
     const key = tab.dataset.tab;
@@ -2531,15 +2528,11 @@ document.querySelectorAll('.tab[data-tab]').forEach(tab => {
     const panel = document.getElementById('tab-' + key);
     if (panel) {
       panel.style.display = 'grid';
-      panel.querySelectorAll('.reveal').forEach(el => {
-        el.classList.add('on');
-      });
+      panel.querySelectorAll('.reveal').forEach(el => { el.classList.add('on'); });
     }
-    updateViewAllBtn(key);
+    if (viewAllBtn) viewAllBtn.href = collectionUrls[key] || '#';
   });
 });
-// Set initial state (default active tab is swords)
-updateViewAllBtn('swords');
 
 // Stat counter animation
 function animateCount(el, target, duration) {
