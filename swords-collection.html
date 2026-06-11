@@ -516,15 +516,15 @@ svg{display:inline-block;vertical-align:middle}
     <!-- Stats row -->
     <div class="col-stats">
       <div class="col-stat">
-        <span class="col-stat-val">384</span>
+        <span class="col-stat-val" data-count="384">0</span>
         <span class="col-stat-lbl">Products</span>
       </div>
       <div class="col-stat">
-        <span class="col-stat-val">£14 - £260</span>
+        <span class="col-stat-val" data-price="14" data-price-max="260">£0 - £0</span>
         <span class="col-stat-lbl">Price Range</span>
       </div>
       <div class="col-stat">
-        <span class="col-stat-val">182</span>
+        <span class="col-stat-val" data-count="182">0</span>
         <span class="col-stat-lbl">In Stock Now</span>
       </div>
       <div class="col-stat">
@@ -1403,6 +1403,37 @@ function toggleFaq(el) {
   }
 }
 
+// Stat counter animation
+function animateCount(el, target, duration) {
+  const start = performance.now();
+  const update = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(target * ease);
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+function animatePrice(el, min, max, duration) {
+  const start = performance.now();
+  const update = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = '£' + Math.round(min * ease) + ' - £' + Math.round(max * ease);
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+window.addEventListener('load', function() {
+  var statsEl = document.querySelector('.col-stats');
+  if (!statsEl) return;
+  statsEl.querySelectorAll('[data-count]').forEach(function(el) {
+    animateCount(el, parseInt(el.dataset.count), 1800);
+  });
+  statsEl.querySelectorAll('[data-price]').forEach(function(el) {
+    animatePrice(el, parseInt(el.dataset.price), parseInt(el.dataset.priceMax), 1800);
+  });
+});
 // Category tab filter
 function filterTab(el, key) {
   document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
