@@ -165,22 +165,23 @@ svg{display:inline-block;vertical-align:middle}
 .pc:hover::after{width:20px}
 .pc:hover .pc-img img{transform:scale(1.06)}
 
-.pc-badge{position:absolute;top:12px;left:12px;z-index:5;font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px}
+.pc-badge{position:absolute;top:12px;left:12px;z-index:5;font-family:var(--fm);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px}
 .badge-trend{background:var(--green);color:#fff;border:1px solid var(--green);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
 .badge-new{background:rgba(0,0,0,.07);color:var(--text);border:1px solid rgba(0,0,0,.15);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
 .badge-sale{background:rgba(212,40,40,.09);color:#d42828;border:1px solid rgba(212,40,40,.28);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
 .badge-best{background:rgba(0,0,0,.84);color:#fff;border:1px solid rgba(255,255,255,.08);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
 
-.pc-img{height:230px;overflow:hidden;position:relative;z-index:0}
-.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.pc-img{height:260px;overflow:hidden;position:relative;z-index:0;background:radial-gradient(ellipse at 50% 55%,#1d1d1d 0%,#090909 100%)}
+.pc-img::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(4,168,0,.28);pointer-events:none;z-index:2}
+.pc-img img{width:100%;height:100%;object-fit:contain;padding:14px;box-sizing:border-box;transition:transform .45s ease}
 .pc-info{padding:18px 16px 16px;display:flex;flex-direction:column;gap:7px;flex:1;position:relative;z-index:2}
-.pc-cat{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.36)}
-.pc-name{font-family:var(--fb);font-size:13px;font-weight:600;color:var(--text);line-height:1.38;flex:1}
+.pc-cat{font-family:var(--fm);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.36)}
+.pc-name{font-family:var(--fb);font-size:16.5px;font-weight:600;color:var(--text);line-height:1.38;flex:1}
 .pc-price-row{display:flex;align-items:baseline;gap:8px}
-.pc-price{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--text)}
-.pc-price-old{font-family:var(--fb);font-size:12px;color:rgba(0,0,0,.28);text-decoration:line-through}
+.pc-price{font-family:var(--fd);font-size:20px;font-weight:700;color:var(--text)}
+.pc-price-old{font-family:var(--fb);font-size:15px;color:rgba(0,0,0,.28);text-decoration:line-through}
 .pc-footer{margin-top:auto;padding-top:11px;border-top:1px solid rgba(0,0,0,.06)}
-.pc-cta{display:flex;align-items:center;justify-content:space-between;font-family:var(--fb);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(0,0,0,.5);cursor:pointer;transition:color .2s}
+.pc-cta{display:flex;align-items:center;justify-content:space-between;font-family:var(--fb);font-size:14px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(0,0,0,.5);cursor:pointer;transition:color .2s}
 .pc:hover .pc-cta{color:var(--green)}
 
 .load-more-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;margin-top:60px}
@@ -342,7 +343,7 @@ svg{display:inline-block;vertical-align:middle}
 .tier-foam{background:rgba(4,168,0,.06);color:rgba(3,110,0,.65);border:1px solid rgba(4,168,0,.18)}
 .tier-wood{background:rgba(140,90,0,.07);color:rgba(120,75,0,.75);border:1px solid rgba(140,90,0,.22)}
 .tier-metal{background:rgba(4,168,0,.13);color:var(--green);border:1px solid rgba(4,168,0,.38)}
-.pc-stock{display:flex;align-items:center;gap:5px;font-family:var(--fm);font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;color:#c44;margin-bottom:4px}
+.pc-stock{display:flex;align-items:center;gap:5px;font-family:var(--fm);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#c44;margin-bottom:4px}
 .stock-dot{width:5px;height:5px;border-radius:50%;background:#c44;flex-shrink:0;animation:pulse-stock 1.4s infinite}
 @keyframes pulse-stock{0%,100%{opacity:1}50%{opacity:.35}}
 
