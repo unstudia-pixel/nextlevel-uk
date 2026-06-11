@@ -327,13 +327,18 @@ svg{display:inline-block;vertical-align:middle}
   background:#eceae6;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;padding:0;
-  border-bottom:1px solid rgba(4,168,0,.25);
+  border-bottom:none;
   position:relative;z-index:1;
 }
-.pc-img::after{content:'';position:absolute;inset:0;border:1.5px solid rgba(4,168,0,.52);clip-path:polygon(0 16px,10px 6px,16px 0,calc(100% - 16px) 0,calc(100% - 6px) 10px,100% 16px,100% calc(100% - 16px),calc(100% - 6px) calc(100% - 10px),calc(100% - 16px) 100%,16px 100%,6px calc(100% - 10px),0 calc(100% - 16px));pointer-events:none;z-index:2}
-.badge-new~.pc-img::after{border-color:rgba(110,110,110,.45)}
-.badge-low~.pc-img::after{border-color:rgba(196,40,40,.55)}
-.badge-sold~.pc-img::after{border-color:rgba(140,140,140,.38)}
+.pc-img::before{content:'';position:absolute;left:0;right:0;height:52px;top:-52px;background:linear-gradient(to bottom,transparent,rgba(4,168,0,.18) 50%,transparent);animation:pc-scan 3.5s linear infinite;pointer-events:none;z-index:3}
+@keyframes pc-scan{to{transform:translateY(350px)}}
+.pc:hover .pc-img::before{animation-duration:1.8s}
+.pc-img::after{content:'';position:absolute;inset:0;border:1.5px solid rgba(4,168,0,.58);clip-path:polygon(0 22px,14px 8px,22px 0,calc(100% - 22px) 0,calc(100% - 8px) 14px,100% 22px,100% calc(100% - 22px),calc(100% - 8px) calc(100% - 14px),calc(100% - 22px) 100%,22px 100%,8px calc(100% - 14px),0 calc(100% - 22px));filter:drop-shadow(0 0 3px rgba(4,168,0,.5)) drop-shadow(0 0 10px rgba(4,168,0,.2));pointer-events:none;z-index:4;transition:filter .25s,border-color .25s}
+.pc:hover .pc-img::after{filter:drop-shadow(0 0 6px rgba(4,168,0,.75)) drop-shadow(0 0 18px rgba(4,168,0,.34));border-color:rgba(4,168,0,.9)}
+.badge-new~.pc-img::after{border-color:rgba(100,100,100,.46);filter:drop-shadow(0 0 2px rgba(140,140,140,.32))}
+.badge-low~.pc-img::after{border-color:rgba(196,40,40,.65);filter:drop-shadow(0 0 4px rgba(196,40,40,.55)) drop-shadow(0 0 12px rgba(196,40,40,.24))}
+.badge-low~.pc-img::before{background:linear-gradient(to bottom,transparent,rgba(196,40,40,.16) 50%,transparent)}
+.badge-sold~.pc-img::after{border-color:rgba(140,140,140,.42);filter:drop-shadow(0 0 2px rgba(140,140,140,.3))}
 .pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .4s}
 .pc:hover .pc-img img{transform:scale(1.06);filter:brightness(1.05)}
 
