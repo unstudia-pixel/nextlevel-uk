@@ -37,25 +37,25 @@ button{cursor:pointer;font-family:inherit;border:none;background:none}
 svg{display:inline-block;vertical-align:middle}
 
 /* ─── UTILS ─── */
-.wrap{max-width:1320px;margin:0 auto;padding:0 80px;position:relative;z-index:1}
+.wrap{max-width:1440px;margin:0 auto;padding:0 80px;position:relative;z-index:1}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
 .reveal.on{opacity:1;transform:none}
 
 /* ─── ANNOUNCEMENT BAR ─── */
 .ann{background:var(--green);height:34px;overflow:hidden;display:flex;align-items:center}
 .ann-track{display:flex;white-space:nowrap;animation:ticker 32s linear infinite}
-.ann-item{display:inline-flex;align-items:center;gap:9px;padding:0 52px;font-family:var(--fb);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.72)}
+.ann-item{display:inline-flex;align-items:center;gap:9px;padding:0 52px;font-family:var(--fb);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.72)}
 .ann-dot{width:3px;height:3px;background:rgba(0,0,0,.45);border-radius:50%;flex-shrink:0}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ─── NAV ─── */
 .nav{position:sticky;top:0;z-index:200;background:transparent;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
 .nav.scrolled{background:#f5f5f3;border-bottom-color:rgba(0,0,0,.08)}
-.nav-in{max-width:1440px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center}
+.nav-in{max-width:1440px;margin:0 auto;padding:0 48px;height:90px;display:flex;align-items:center}
 .nav-logo{display:flex;align-items:center;flex-shrink:0;margin-right:52px}
-.nav-logo img{height:46px;width:auto;display:block}
-.nav-links{display:flex;align-items:center;flex:1}
-.nav-a{font-family:var(--fb);font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 15px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.55);transition:color .2s}
+.nav-logo img{height:84px;width:auto;display:block}
+.nav-links{display:flex;align-items:center}
+.nav-a{font-family:var(--fb);font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.55);transition:color .2s}
 .nav-a:hover,.nav-a.active{color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.8)}
 .nav.scrolled .nav-a{color:rgba(0,0,0,.6);text-shadow:none;font-weight:500}
 .nav.scrolled .nav-a:hover{color:#000;text-shadow:none}
@@ -65,13 +65,16 @@ svg{display:inline-block;vertical-align:middle}
 .nav-outlet:hover{color:#a8f0a5!important}
 .nav.scrolled .nav-outlet{color:#1a8a18!important}
 .nav.scrolled .nav-outlet:hover{color:#0d6e0b!important}
-.nav-right{margin-left:auto;display:flex;align-items:center;gap:6px}
-.nav-search{display:flex;align-items:center;gap:10px;padding:7px 14px;background:rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.45);border-radius:3px;font-size:11.5px;font-family:var(--fb);color:rgba(255,255,255,.9);width:190px;cursor:text;letter-spacing:.03em;transition:background .3s,border-color .3s,color .3s}
-.nav-search:hover{background:rgba(0,0,0,.45)}
-.nav.scrolled .nav-search{background:#fff;border-color:rgba(0,0,0,.18);color:rgba(0,0,0,.55)}
+.nav-right{flex:1;display:flex;align-items:center;gap:8px;padding-left:24px}
+.nav-search{flex:1;display:flex;align-items:center;gap:12px;padding:13px 22px;background:rgba(0,0,0,.5);border:1.5px solid rgba(255,255,255,.75);border-radius:3px;font-size:16px;font-family:var(--fb);color:rgba(255,255,255,.95);min-width:0;cursor:text;letter-spacing:.03em;transition:background .3s,border-color .3s,color .3s}
+.nav-search:hover{background:rgba(0,0,0,.65);border-color:rgba(255,255,255,.95)}
+.nav.scrolled .nav-search{background:#fff;border-color:rgba(0,0,0,.3);color:rgba(0,0,0,.65)}
+.nav.scrolled .nav-search:hover{border-color:rgba(0,0,0,.5)}
 .nav.scrolled .nav-search:hover{background:#f0f0f0}
-.nav-ico{width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#fff;filter:drop-shadow(0 1px 4px rgba(0,0,0,.5));transition:color .2s,background .2s,filter .2s}
+.nav-ico{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#fff;filter:drop-shadow(0 1px 4px rgba(0,0,0,.5));transition:color .2s,background .2s,filter .2s}
 .nav-ico:hover{color:#fff;background:rgba(255,255,255,.05)}
+.nav-burger{display:none}
+.mobile-menu{display:none}
 
 /* ─── HERO ─── */
 .hero{position:relative;min-height:92vh;background:transparent;overflow:hidden;display:flex;align-items:center}
@@ -81,7 +84,7 @@ svg{display:inline-block;vertical-align:middle}
 .hero-left{display:flex;flex-direction:column;gap:26px}
 .hero-badge{
   display:inline-flex;align-items:center;gap:10px;
-  font-family:var(--fm);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);
+  font-family:var(--fm);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);
   background:linear-gradient(90deg,rgba(4,168,0,.12) 0%,rgba(4,168,0,.06) 100%);
   padding:7px 22px 7px 14px;
   width:fit-content;position:relative;
@@ -95,14 +98,14 @@ svg{display:inline-block;vertical-align:middle}
 .hero-h1 .g{color:var(--green)}
 .hero-sub{font-size:16px;font-weight:500;color:rgba(255,255,255,.42);line-height:1.65;max-width:420px;letter-spacing:.025em}
 .hero-keywords{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:2px}
-.hk{font-family:var(--fm);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%);line-height:1.4}
+.hk{font-family:var(--fm);font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%);line-height:1.4}
 .hk.hk-accent{border-color:rgba(4,168,0,.35);color:rgba(4,168,0,.75);background:rgba(4,168,0,.06)}
 .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:nowrap}
 .btn-primary{
   display:inline-flex;align-items:center;gap:11px;
   background:linear-gradient(160deg,#08d200 0%,#04a800 40%,#037a00 100%);
   backdrop-filter:none;-webkit-backdrop-filter:none;
-  color:#000;font-family:var(--fd);font-size:9.5px;font-weight:700;
+  color:#000;font-family:var(--fd);font-size:13px;font-weight:700;
   letter-spacing:.12em;text-transform:uppercase;
   padding:16px 36px 16px 28px;
   clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%);
@@ -120,7 +123,7 @@ svg{display:inline-block;vertical-align:middle}
   display:inline-flex;align-items:center;gap:10px;
   background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,.07) 100%);
   backdrop-filter:blur(16px) brightness(.45) saturate(.5);-webkit-backdrop-filter:blur(16px) brightness(.45) saturate(.5);
-  color:#fff;font-family:var(--fd);font-size:9.5px;font-weight:700;
+  color:#fff;font-family:var(--fd);font-size:13px;font-weight:700;
   letter-spacing:.12em;text-transform:uppercase;
   padding:16px 28px 16px 34px;
   clip-path:polygon(16px 0,100% 0,100% calc(100% - 18px),calc(100% - 0px) 100%,0 100%,0 18px);
@@ -181,17 +184,17 @@ svg{display:inline-block;vertical-align:middle}
 .hw-corner.br{bottom:0;right:0;border-width:0 1px 1px 0}
 
 /* Widget content atoms */
-.hw-tag{font-family:var(--fm);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.hw-tag{font-family:var(--fm);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px;display:flex;align-items:center;gap:7px}
 .hw-tag::before{content:'';width:12px;height:1px;background:currentColor}
 .hw-val{font-family:var(--fd);font-size:40px;font-weight:700;color:#fff;line-height:1;letter-spacing:.02em}
 .hw-unit{font-size:22px;color:var(--green)}
-.hw-stars{color:var(--green);font-size:11px;letter-spacing:3px;margin:5px 0 4px}
-.hw-sub{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:2px}
+.hw-stars{color:var(--green);font-size:15px;letter-spacing:3px;margin:5px 0 4px}
+.hw-sub{font-family:var(--fm);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:2px}
 .hw-bar{display:flex;align-items:center;gap:8px;margin-top:8px}
 .hw-bar-track{flex:1;height:2px;background:rgba(255,255,255,.08)}
 .hw-bar-fill{height:100%;background:var(--green);width:98%}
 .hw-year{font-family:var(--fd);font-size:22px;font-weight:700;color:rgba(255,255,255,.75);letter-spacing:.06em}
-.hw-founded-sub{font-family:var(--fm);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:4px}
+.hw-founded-sub{font-family:var(--fm);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:4px}
 
 /* ─── STATS STRIP (DARK) ─── */
 .stats{background:var(--black);border-top:1px solid rgba(4,168,0,.12);border-bottom:1px solid rgba(4,168,0,.12);position:relative;overflow:hidden;isolation:isolate}
@@ -204,10 +207,10 @@ svg{display:inline-block;vertical-align:middle}
 .stat-label{font-family:var(--fd);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 
 /* ─── SECTION LABELS ─── */
-.sec-tag{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:14px;display:inline-flex;align-items:center;gap:0;padding:4px 11px;background:rgba(4,168,0,.07);border:1px solid rgba(4,168,0,.22);width:fit-content}
-.sec-tag::before{content:'▸ ';opacity:.7;width:auto;height:auto;background:none;font-size:8px;margin-right:4px}
+.sec-tag{font-family:var(--fm);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:14px;display:inline-flex;align-items:center;gap:0;padding:4px 11px;background:rgba(4,168,0,.07);border:1px solid rgba(4,168,0,.22);width:fit-content}
+.sec-tag::before{content:'▸ ';opacity:.7;width:auto;height:auto;background:none;font-size:10px;margin-right:4px}
 .sec-tag::after{content:''}
-.sec-h2{font-family:var(--fd);font-size:clamp(24px,3vw,38px);font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:1.05;color:var(--text)}
+.sec-h2{font-family:var(--fd);font-size:clamp(32px,4vw,56px);font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:1.05;color:var(--text)}
 .sec-h2-white{color:#fff}
 .sec-h2-center{text-align:center}
 .sec-tag-center{margin-left:auto;margin-right:auto;display:flex;justify-content:center}
@@ -230,9 +233,9 @@ svg{display:inline-block;vertical-align:middle}
 .ti-corner.br{bottom:0;right:0;border-width:0 1px 1px 0}
 .ti-icon{color:var(--green);margin-bottom:2px;padding:8px;border:1px solid rgba(4,168,0,.18);display:inline-flex;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,0 100%);transition:all .25s}
 .ti:hover .ti-icon{border-color:rgba(4,168,0,.5);background:rgba(4,168,0,.08);box-shadow:0 0 14px rgba(4,168,0,.2)}
-.ti-tag{font-family:var(--fm);font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:rgba(4,168,0,.5);margin-bottom:2px}
-.ti-title{font-family:var(--fd);font-size:10px;font-weight:700;color:rgba(255,255,255,.9);letter-spacing:.05em;text-transform:uppercase;line-height:1.2}
-.ti-sub{font-family:var(--fm);font-size:8px;color:rgba(4,168,0,.55);letter-spacing:.1em;text-transform:uppercase}
+.ti-tag{font-family:var(--fm);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(4,168,0,.5);margin-bottom:2px}
+.ti-title{font-family:var(--fd);font-size:15px;font-weight:700;color:rgba(255,255,255,.9);letter-spacing:.05em;text-transform:uppercase;line-height:1.2}
+.ti-sub{font-family:var(--fm);font-size:13px;color:rgba(4,168,0,.55);letter-spacing:.1em;text-transform:uppercase}
 
 /* ─── SHOP BY COLLECTION ─── */
 .collection{background:var(--white);padding:88px 0 0}
@@ -295,32 +298,6 @@ svg{display:inline-block;vertical-align:middle}
 }
 .pc:hover::after{background:rgba(4,168,0,1);width:32px}
 
-.pc-badge{position:absolute;top:13px;left:13px;z-index:5;font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:4px 11px;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,0 100%)}
-.badge-new{
-  background:rgba(0,0,0,.72);
-  color:#2dff6e;
-  border:1px solid rgba(45,255,110,.55);
-  filter:
-    drop-shadow(0 0 1px rgba(45,255,110,1))
-    drop-shadow(0 0 5px rgba(45,255,110,.9))
-    drop-shadow(0 0 14px rgba(45,255,110,.65))
-    drop-shadow(0 0 30px rgba(45,255,110,.35))
-    drop-shadow(0 0 55px rgba(45,255,110,.18))}
-.badge-low{
-  background:rgba(0,0,0,.72);
-  color:#ff4040;
-  border:1px solid rgba(255,64,64,.55);
-  filter:
-    drop-shadow(0 0 1px rgba(255,64,64,1))
-    drop-shadow(0 0 5px rgba(255,64,64,.9))
-    drop-shadow(0 0 14px rgba(255,64,64,.65))
-    drop-shadow(0 0 30px rgba(255,64,64,.35))
-    drop-shadow(0 0 55px rgba(255,64,64,.18))}
-.badge-sold{
-  background:rgba(0,0,0,.72);
-  color:#aaa;
-  border:1px solid rgba(170,170,170,.4);
-  filter:drop-shadow(0 0 5px rgba(170,170,170,.5)) drop-shadow(0 0 14px rgba(170,170,170,.25))}
 
 .pc-img{
   width:100%;aspect-ratio:1;
@@ -333,27 +310,22 @@ svg{display:inline-block;vertical-align:middle}
 .pc-img::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(4,168,0,.16) 22px,transparent 22px) 0 0/22px 22px no-repeat,linear-gradient(225deg,rgba(4,168,0,.16) 22px,transparent 22px) 100% 0/22px 22px no-repeat,linear-gradient(315deg,rgba(4,168,0,.16) 22px,transparent 22px) 100% 100%/22px 22px no-repeat,linear-gradient(45deg,rgba(4,168,0,.16) 22px,transparent 22px) 0 100%/22px 22px no-repeat,linear-gradient(to right,rgba(4,168,0,.65) 7px,transparent 7px) 0 50%/7px 1px no-repeat,linear-gradient(to left,rgba(4,168,0,.65) 7px,transparent 7px) 100% 50%/7px 1px no-repeat,linear-gradient(to bottom,rgba(4,168,0,.65) 7px,transparent 7px) 50% 0/1px 7px no-repeat,linear-gradient(to top,rgba(4,168,0,.65) 7px,transparent 7px) 50% 100%/1px 7px no-repeat;pointer-events:none;z-index:2}
 .pc-img::after{content:'';position:absolute;inset:0;border:1.5px solid rgba(4,168,0,.6);clip-path:polygon(0 22px,14px 8px,22px 0,calc(50% - 8px) 0,50% 6px,calc(50% + 8px) 0,calc(100% - 22px) 0,calc(100% - 8px) 14px,100% 22px,100% calc(50% - 8px),calc(100% - 6px) 50%,100% calc(50% + 8px),100% calc(100% - 22px),calc(100% - 8px) calc(100% - 14px),calc(100% - 22px) 100%,calc(50% + 8px) 100%,50% calc(100% - 6px),calc(50% - 8px) 100%,22px 100%,8px calc(100% - 14px),0 calc(100% - 22px),0 calc(50% + 8px),6px 50%,0 calc(50% - 8px));filter:drop-shadow(0 0 3px rgba(4,168,0,.52)) drop-shadow(0 0 10px rgba(4,168,0,.22));pointer-events:none;z-index:4;transition:filter .25s,border-color .25s}
 .pc:hover .pc-img::after{filter:drop-shadow(0 0 6px rgba(4,168,0,.78)) drop-shadow(0 0 18px rgba(4,168,0,.36));border-color:rgba(4,168,0,.92)}
-.badge-new~.pc-img::after{border-color:rgba(100,100,100,.46);filter:drop-shadow(0 0 2px rgba(140,140,140,.32))}
-.badge-new~.pc-img::before{background:linear-gradient(135deg,rgba(100,100,100,.12) 22px,transparent 22px) 0 0/22px 22px no-repeat,linear-gradient(225deg,rgba(100,100,100,.12) 22px,transparent 22px) 100% 0/22px 22px no-repeat,linear-gradient(315deg,rgba(100,100,100,.12) 22px,transparent 22px) 100% 100%/22px 22px no-repeat,linear-gradient(45deg,rgba(100,100,100,.12) 22px,transparent 22px) 0 100%/22px 22px no-repeat,linear-gradient(to right,rgba(100,100,100,.55) 7px,transparent 7px) 0 50%/7px 1px no-repeat,linear-gradient(to left,rgba(100,100,100,.55) 7px,transparent 7px) 100% 50%/7px 1px no-repeat,linear-gradient(to bottom,rgba(100,100,100,.55) 7px,transparent 7px) 50% 0/1px 7px no-repeat,linear-gradient(to top,rgba(100,100,100,.55) 7px,transparent 7px) 50% 100%/1px 7px no-repeat}
-.badge-low~.pc-img::after{border-color:rgba(196,40,40,.65);filter:drop-shadow(0 0 4px rgba(196,40,40,.56)) drop-shadow(0 0 12px rgba(196,40,40,.25))}
-.badge-low~.pc-img::before{background:linear-gradient(135deg,rgba(196,40,40,.14) 22px,transparent 22px) 0 0/22px 22px no-repeat,linear-gradient(225deg,rgba(196,40,40,.14) 22px,transparent 22px) 100% 0/22px 22px no-repeat,linear-gradient(315deg,rgba(196,40,40,.14) 22px,transparent 22px) 100% 100%/22px 22px no-repeat,linear-gradient(45deg,rgba(196,40,40,.14) 22px,transparent 22px) 0 100%/22px 22px no-repeat,linear-gradient(to right,rgba(196,40,40,.62) 7px,transparent 7px) 0 50%/7px 1px no-repeat,linear-gradient(to left,rgba(196,40,40,.62) 7px,transparent 7px) 100% 50%/7px 1px no-repeat,linear-gradient(to bottom,rgba(196,40,40,.62) 7px,transparent 7px) 50% 0/1px 7px no-repeat,linear-gradient(to top,rgba(196,40,40,.62) 7px,transparent 7px) 50% 100%/1px 7px no-repeat}
-.badge-sold~.pc-img::after{border-color:rgba(140,140,140,.42);filter:drop-shadow(0 0 2px rgba(140,140,140,.3))}
 .pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .4s}
 .pc:hover .pc-img img{transform:scale(1.06);filter:brightness(1.05)}
 
 .pc-info{padding:16px 18px 20px;position:relative;z-index:2;flex:1;display:flex;flex-direction:column}
-.pc-cat{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(4,168,0,.65);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.pc-cat{font-family:var(--fm);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:rgba(4,168,0,.65);margin-bottom:8px;display:flex;align-items:center;gap:7px}
 .pc-cat::before{content:'';width:10px;height:1px;background:rgba(4,168,0,.45);flex-shrink:0}
-.pc-name{font-family:var(--fb);font-size:17px;font-weight:500;line-height:1.4;color:var(--text);margin-bottom:14px;flex:1}
-.pc-price{font-family:var(--fd);font-size:25px;font-weight:700;color:var(--text);letter-spacing:.02em}
+.pc-name{font-family:var(--fb);font-size:21px;font-weight:500;line-height:1.35;color:var(--text);margin-bottom:14px;flex:1}
+.pc-price{font-family:var(--fd);font-size:30px;font-weight:700;color:var(--text);letter-spacing:.02em}
 .pc-footer{display:flex;align-items:center;justify-content:space-between;margin-top:11px;padding-top:11px;border-top:1px solid rgba(0,0,0,.07)}
-.pc-cta{font-family:var(--fm);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:5px;opacity:1}
+.pc-cta{font-family:var(--fm);font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:5px;opacity:1}
 .coll-footer{margin-top:20px;padding:20px 0 52px;text-align:center}
 .view-all-btn{
   display:inline-flex;align-items:center;gap:10px;
   background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,.07) 100%);
   backdrop-filter:blur(16px) brightness(.45) saturate(.5);-webkit-backdrop-filter:blur(16px) brightness(.45) saturate(.5);
-  color:#fff;font-family:var(--fd);font-size:9.5px;font-weight:700;
+  color:#fff;font-family:var(--fd);font-size:13px;font-weight:700;
   letter-spacing:.12em;text-transform:uppercase;
   padding:16px 28px 16px 34px;
   clip-path:polygon(16px 0,100% 0,100% calc(100% - 18px),calc(100% - 0px) 100%,0 100%,0 18px);
@@ -369,7 +341,7 @@ svg{display:inline-block;vertical-align:middle}
   transform:translateY(-2px)}
 
 /* WARRANTY STRIP */
-.warranty{background:var(--green);padding:13px 0;text-align:center;font-family:var(--fb);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#000;display:flex;align-items:center;justify-content:center;gap:9px}
+.warranty{background:var(--green);padding:13px 0;text-align:center;font-family:var(--fb);font-size:14px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#000;display:flex;align-items:center;justify-content:center;gap:9px}
 
 /* ─── CATEGORY SPLIT ─── */
 .cat-split{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:1040px;position:relative}
@@ -380,12 +352,13 @@ svg{display:inline-block;vertical-align:middle}
 .cs-item:hover img{transform:scale(1.04)}
 .cs-content{position:absolute;bottom:0;left:0;right:0;padding:48px 52px;z-index:2}
 .cs-title{font-family:var(--fd);font-size:clamp(28px,3.2vw,48px);font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:1.05;color:#fff;margin-bottom:6px}
-.cs-sub{font-family:var(--fm);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:22px}
+.cs-sub{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+.cs-tag{font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85);background:rgba(4,168,0,.18);border:1px solid rgba(4,168,0,.45);padding:4px 10px;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,0 100%)}
 .cs-btn{
   display:inline-flex;align-items:center;gap:10px;
   background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,.07) 100%);
   backdrop-filter:blur(16px) brightness(.45) saturate(.5);-webkit-backdrop-filter:blur(16px) brightness(.45) saturate(.5);
-  color:#fff;font-family:var(--fd);font-size:9.5px;font-weight:700;
+  color:#fff;font-family:var(--fd);font-size:14px;font-weight:700;
   letter-spacing:.12em;text-transform:uppercase;
   padding:14px 26px 14px 30px;
   clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 0px) 100%,0 100%,0 16px);
@@ -405,17 +378,17 @@ svg{display:inline-block;vertical-align:middle}
 .fandom::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(4,168,0,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(4,168,0,.022) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
 .fandom-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:52px;position:relative;z-index:1;padding:0 80px;max-width:1320px;margin-left:auto;margin-right:auto;margin-bottom:52px}
 .fandom-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;background:var(--black);position:relative;z-index:1}
-.fandom-cta{display:inline-flex;align-items:center;gap:10px;font-family:var(--fd);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;border:1.5px solid var(--green);padding:16px 36px;background:rgba(4,168,0,.15);transition:all .25s;white-space:nowrap;flex-shrink:0}
+.fandom-cta{display:inline-flex;align-items:center;gap:10px;font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;border:1.5px solid var(--green);padding:16px 36px;background:rgba(4,168,0,.15);transition:all .25s;white-space:nowrap;flex-shrink:0}
 .fc{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4;background:var(--plate)}
 .fc-wide{grid-column:span 2;aspect-ratio:unset}
 .fc-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.82;transition:opacity .4s,transform .6s}
 .fc:hover .fc-bg{opacity:1;transform:scale(1.05)}
 .fc::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.1) 55%,transparent 100%)}
 .fc-content{position:absolute;bottom:0;left:0;right:0;padding:22px 24px;z-index:2}
-.fc-name{font-family:var(--fd);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#fff;line-height:1.1;margin-bottom:3px}
-.fc-wide .fc-name{font-size:28px}
-.fc-count{font-family:var(--fm);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35)}
-.fc-arrow{display:inline-flex;align-items:center;gap:5px;font-family:var(--fb);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:9px;opacity:.7;transform:none;transition:opacity .25s}
+.fc-name{font-family:var(--fd);font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#fff;line-height:1.1;margin-bottom:3px}
+.fc-wide .fc-name{font-size:34px}
+.fc-count{font-family:var(--fm);font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.fc-arrow{display:inline-flex;align-items:center;gap:5px;font-family:var(--fb);font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:9px;opacity:.7;transform:none;transition:opacity .25s}
 .fc:hover .fc-arrow{opacity:1}
 
 /* ─── GIFTS / FEATURED ─── */
@@ -423,7 +396,7 @@ svg{display:inline-block;vertical-align:middle}
 .gifts::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(4,168,0,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(4,168,0,.022) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
 .gifts .sec-h2{color:#fff}
 .gifts-layout{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:start;position:relative;z-index:1}
-.gifts-desc{font-family:var(--fb);font-size:14px;color:rgba(255,255,255,.45);line-height:1.75;margin:14px 0 28px;max-width:280px}
+.gifts-desc{font-family:var(--fb);font-size:17px;color:rgba(255,255,255,.45);line-height:1.75;margin:14px 0 28px;max-width:340px}
 .gifts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .gc{
   background:linear-gradient(145deg,#1e2226 0%,#16191c 100%);
@@ -436,7 +409,7 @@ svg{display:inline-block;vertical-align:middle}
 .gc-img{height:200px;overflow:hidden;position:relative}
 .gc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .4s}
 .gc:hover .gc-img img{transform:scale(1.06);filter:brightness(1.08)}
-.gc-banner{position:absolute;top:0;left:0;right:0;padding:7px 14px;font-family:var(--fm);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;z-index:3;display:flex;align-items:center;gap:7px}
+.gc-banner{position:absolute;top:0;left:0;right:0;padding:7px 14px;font-family:var(--fm);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;z-index:3;display:flex;align-items:center;gap:7px}
 .gc-banner svg{flex-shrink:0;opacity:.85}
 .gc-banner-1{background:#2dcc5a;color:#fff}
 .gc-banner-2{background:#1a9942;color:#fff}
@@ -444,14 +417,14 @@ svg{display:inline-block;vertical-align:middle}
 .gc-price{
   position:absolute;bottom:12px;right:12px;
   background:rgba(0,0,0,.82);color:#2dff6e;
-  font-family:var(--fm);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  font-family:var(--fm);font-size:13px;letter-spacing:.1em;text-transform:uppercase;
   padding:4px 10px;
   clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,0 100%);
   filter:drop-shadow(0 0 1px rgba(45,255,110,1)) drop-shadow(0 0 6px rgba(45,255,110,.7)) drop-shadow(0 0 16px rgba(45,255,110,.4))}
 .gc-body{padding:16px 18px 18px;position:relative}
 .gc-body::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,rgba(4,168,0,.55),rgba(4,168,0,.1),transparent)}
-.gc-name{font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;margin-bottom:5px}
-.gc-sub{font-family:var(--fm);font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.32);line-height:1.55;text-transform:uppercase}
+.gc-name{font-family:var(--fd);font-size:17px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;margin-bottom:5px}
+.gc-sub{font-family:var(--fm);font-size:13px;letter-spacing:.08em;color:rgba(255,255,255,.32);line-height:1.55;text-transform:uppercase}
 .budget-strip{
   margin-top:12px;
   background:rgba(4,168,0,.05);
@@ -459,11 +432,11 @@ svg{display:inline-block;vertical-align:middle}
   padding:13px 18px;
   display:flex;align-items:center;gap:14px;flex-wrap:wrap;
   clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
-.budget-label{font-family:var(--fm);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(4,168,0,.6);white-space:nowrap}
+.budget-label{font-family:var(--fm);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(4,168,0,.6);white-space:nowrap}
 .budget-links{display:flex;gap:6px;flex-wrap:wrap}
 .budget-a{
-  font-family:var(--fm);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);
-  padding:4px 12px;
+  font-family:var(--fm);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);
+  padding:6px 14px;
   border:1px solid rgba(255,255,255,.14);
   clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%);
   transition:all .2s}
@@ -472,16 +445,16 @@ svg{display:inline-block;vertical-align:middle}
 /* ─── TRENDING NOW ─── */
 .rare{background:var(--off);padding:88px 0;position:relative;overflow:hidden;isolation:isolate}
 .rare-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px}
-.trend-meta{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:8px}
+.trend-meta{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:8px}
 .trend-pulse{width:7px;height:7px;border-radius:50%;background:#2dff6e;box-shadow:0 0 0 0 rgba(45,255,110,.6);animation:pulse-dot 2s ease-in-out infinite}
 @keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(45,255,110,.6)}50%{box-shadow:0 0 0 5px rgba(45,255,110,0)}}
-.badge-trend{background:rgba(4,168,0,.15);color:var(--green);border:1px solid rgba(4,168,0,.45);font-size:9.5px;font-family:var(--fm);font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;clip-path:polygon(6px 0,100% 0,100% calc(100%-6px),calc(100%-6px) 100%,0 100%,0 6px);filter:drop-shadow(0 0 4px rgba(4,168,0,.4))}
-.trend-rank{position:absolute;top:10px;left:10px;font-family:var(--fm);font-size:9px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.22);z-index:3;background:rgba(0,0,0,.6);padding:2px 7px}
+.badge-trend{background:rgba(4,168,0,.15);color:var(--green);border:1px solid rgba(4,168,0,.45);font-size:12px;font-family:var(--fm);font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;clip-path:polygon(6px 0,100% 0,100% calc(100%-6px),calc(100%-6px) 100%,0 100%,0 6px);filter:drop-shadow(0 0 4px rgba(4,168,0,.4))}
+.trend-rank{position:absolute;top:10px;left:10px;font-family:var(--fm);font-size:12px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.22);z-index:3;background:rgba(0,0,0,.6);padding:2px 7px}
 .view-all{
   display:inline-flex;align-items:center;gap:10px;
   background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,.07) 100%);
   backdrop-filter:blur(16px) brightness(.45) saturate(.5);-webkit-backdrop-filter:blur(16px) brightness(.45) saturate(.5);
-  color:#fff;font-family:var(--fd);font-size:9.5px;font-weight:700;
+  color:#fff;font-family:var(--fd);font-size:12px;font-weight:700;
   letter-spacing:.12em;text-transform:uppercase;
   padding:14px 26px 14px 30px;
   clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 0px) 100%,0 100%,0 16px);
@@ -500,7 +473,7 @@ svg{display:inline-block;vertical-align:middle}
 /* ─── TRUST MARQUEE (DARK) ─── */
 .trust-mar{background:var(--black);overflow:hidden;border-top:1px solid rgba(4,168,0,.09);border-bottom:1px solid rgba(4,168,0,.09)}
 .trust-track{display:flex;white-space:nowrap;animation:ticker 26s linear infinite}
-.tm-item{display:inline-flex;align-items:center;gap:12px;padding:16px 56px;font-family:var(--fb);font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);white-space:nowrap}
+.tm-item{display:inline-flex;align-items:center;gap:12px;padding:16px 56px;font-family:var(--fb);font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);white-space:nowrap}
 .tm-item svg{color:var(--green);flex-shrink:0}
 
 /* ─── EMAIL CAPTURE (DARK) ─── */
@@ -509,72 +482,73 @@ svg{display:inline-block;vertical-align:middle}
 .email-in{position:relative;z-index:1;text-align:center}
 .email-title{font-family:var(--fd);font-size:clamp(22px,3vw,40px);font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#fff;margin-bottom:8px;line-height:1.1}
 .email-title .g{color:var(--green)}
-.email-sub{font-size:14px;color:rgba(255,255,255,.35);margin-bottom:32px;letter-spacing:.02em}
+.email-sub{font-size:16px;color:rgba(255,255,255,.35);margin-bottom:32px;letter-spacing:.02em}
 .email-form{display:flex;max-width:480px;margin:0 auto}
-.email-inp{flex:1;padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-right:none;color:#fff;font-size:13px;font-family:var(--fb);outline:none;transition:border-color .2s}
+.email-inp{flex:1;padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-right:none;color:#fff;font-size:15px;font-family:var(--fb);outline:none;transition:border-color .2s}
 .email-inp::placeholder{color:rgba(255,255,255,.2)}
 .email-inp:focus{border-color:rgba(4,168,0,.45)}
-.email-btn{padding:14px 24px;background:var(--green);color:#000;font-family:var(--fb);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:8px;transition:background .2s;white-space:nowrap}
+.email-btn{padding:14px 24px;background:var(--green);color:#000;font-family:var(--fb);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:8px;transition:background .2s;white-space:nowrap}
 .email-btn:hover{background:var(--green-hi)}
 
 /* ─── FOOTER ─── */
 .footer{background:var(--black);border-top:1px solid rgba(255,255,255,.06);padding:72px 0 0}
 .footer-in{display:grid;grid-template-columns:240px 1fr 1fr 300px;gap:56px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.06)}
-.fl-logo img{height:84px;width:auto;display:block;margin-bottom:20px}
-.fl-tag{font-size:12.5px;color:rgba(255,255,255,.26);line-height:1.75;margin-bottom:16px}
-.fl-addr{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.18);line-height:2;letter-spacing:.04em}
-.fc-hd{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:20px}
+.fl-logo img{height:420px;width:auto;display:block;margin-bottom:20px}
+.fl-tag{font-size:14px;color:rgba(255,255,255,.26);line-height:1.75;margin-bottom:16px}
+.fl-addr{font-family:var(--fm);font-size:12px;color:rgba(255,255,255,.18);line-height:2;letter-spacing:.04em}
+.fc-hd{font-family:var(--fm);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:20px}
 .fc-links{display:flex;flex-direction:column;gap:12px}
-.fc-link{font-size:13px;color:rgba(255,255,255,.45);transition:color .2s}
+.fc-link{font-size:15px;color:rgba(255,255,255,.45);transition:color .2s}
 .fc-link:hover{color:#fff}
-.fn-txt{font-size:12.5px;color:rgba(255,255,255,.28);line-height:1.65;margin-bottom:18px}
+.fn-txt{font-size:14px;color:rgba(255,255,255,.28);line-height:1.65;margin-bottom:18px}
 .fn-form{display:flex;margin-bottom:12px}
 .fn-inp{flex:1;padding:11px 15px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-right:none;color:#fff;font-size:12px;font-family:var(--fb);outline:none;transition:border-color .2s}
 .fn-inp::placeholder{color:rgba(255,255,255,.18)}
 .fn-inp:focus{border-color:rgba(4,168,0,.38)}
 .fn-btn{padding:11px 16px;background:var(--green);color:#000;font-size:16px;display:flex;align-items:center;transition:background .2s}
 .fn-btn:hover{background:var(--green-hi)}
-.fn-consent{font-size:10px;color:rgba(255,255,255,.16);line-height:1.55}
+.fn-consent{font-size:13px;color:rgba(255,255,255,.16);line-height:1.55}
 .footer-bot{display:flex;align-items:center;justify-content:space-between;padding:20px 0;gap:16px;flex-wrap:wrap}
-.footer-copy{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.16);letter-spacing:.06em}
+.footer-copy{font-family:var(--fm);font-size:12px;color:rgba(255,255,255,.16);letter-spacing:.06em}
 .footer-bot-links{display:flex;gap:22px}
-.fbl{font-size:11px;color:rgba(255,255,255,.16);transition:color .2s}
+.fbl{font-size:12px;color:rgba(255,255,255,.16);transition:color .2s}
 .fbl:hover{color:rgba(255,255,255,.42)}
 .social-row{display:flex;gap:7px}
 .soc{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.07);color:rgba(255,255,255,.3);transition:all .2s}
 .soc:hover{border-color:rgba(4,168,0,.35);color:var(--green);background:rgba(4,168,0,.05)}
-.pay-icons{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-.pay-ic{background:rgba(255,255,255,.05);padding:4px 10px;font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.06em;text-transform:uppercase}
+.pay-icons{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pay-ic{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:3px;height:30px;width:46px;overflow:hidden}
+.pay-ic img{height:24px;width:38px;object-fit:contain;opacity:.75;display:block}
 
 /* ─── PRICE MATCH ─── */
 .pm-section{background:#050605;padding:88px 0;position:relative;overflow:hidden;isolation:isolate;border-top:1px solid rgba(4,168,0,.12);border-bottom:1px solid rgba(4,168,0,.12)}
 .pm-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 0% 50%,rgba(4,168,0,.06) 0%,transparent 60%);pointer-events:none}
 .pm-section::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--green),rgba(4,168,0,.4),transparent)}
 .pm-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.pm-eyebrow{font-family:var(--fm);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.pm-eyebrow{font-family:var(--fm);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .pm-eyebrow::before{content:'';width:28px;height:1px;background:var(--green)}
 .pm-title{font-family:var(--fd);font-size:clamp(32px,3.8vw,56px);font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1.0;color:#fff;margin-bottom:8px}
 .pm-title span{color:var(--green)}
-.pm-subtitle{font-size:14px;color:rgba(255,255,255,.4);line-height:1.65;margin-bottom:32px;max-width:380px}
+.pm-subtitle{font-size:17px;color:rgba(255,255,255,.4);line-height:1.65;margin-bottom:32px;max-width:420px}
 .pm-conditions{display:flex;flex-direction:column;gap:10px;margin-bottom:0}
-.pm-cond{display:flex;align-items:flex-start;gap:12px;font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.5}
+.pm-cond{display:flex;align-items:flex-start;gap:12px;font-size:16px;color:rgba(255,255,255,.5);line-height:1.5}
 .pm-cond svg{flex-shrink:0;color:var(--green);margin-top:2px}
 .pm-right{background:linear-gradient(145deg,rgba(18,22,18,.95) 0%,rgba(8,12,8,.98) 100%);border:1px solid rgba(4,168,0,.18);clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px));padding:36px 36px 32px;position:relative}
 .pm-right::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,var(--green),rgba(4,168,0,.2),transparent)}
-.pm-form-title{font-family:var(--fd);font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:6px}
-.pm-form-sub{font-family:var(--fm);font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.3);text-transform:uppercase;margin-bottom:28px}
+.pm-form-title{font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:6px}
+.pm-form-sub{font-family:var(--fm);font-size:13px;letter-spacing:.08em;color:rgba(255,255,255,.3);text-transform:uppercase;margin-bottom:28px}
 .pm-field{margin-bottom:16px}
-.pm-label{font-family:var(--fm);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);display:block;margin-bottom:7px}
-.pm-input{width:100%;padding:12px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);color:#fff;font-size:12.5px;font-family:var(--fb);outline:none;transition:border-color .2s;box-sizing:border-box;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
+.pm-label{font-family:var(--fm);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);display:block;margin-bottom:7px}
+.pm-input{width:100%;padding:12px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);color:#fff;font-size:15px;font-family:var(--fb);outline:none;transition:border-color .2s;box-sizing:border-box;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
 .pm-input::placeholder{color:rgba(255,255,255,.2)}
 .pm-input:focus{border-color:rgba(4,168,0,.5)}
-.pm-submit{width:100%;margin-top:8px;padding:15px 24px;background:var(--green);color:#000;font-family:var(--fm);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));cursor:pointer;border:none}
+.pm-submit{width:100%;margin-top:8px;padding:15px 24px;background:var(--green);color:#000;font-family:var(--fm);font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));cursor:pointer;border:none}
 .pm-submit:hover{background:var(--green-hi)}
-.pm-note{font-size:10px;color:rgba(255,255,255,.2);line-height:1.6;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.06)}
+.pm-note{font-size:14px;color:rgba(255,255,255,.2);line-height:1.6;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.06)}
 .pm-success{display:none;text-align:center;padding:20px 0}
 .pm-success-icon{color:var(--green);margin-bottom:12px}
 .pm-success-title{font-family:var(--fd);font-size:18px;font-weight:700;text-transform:uppercase;color:#fff;margin-bottom:6px}
-.pm-success-sub{font-size:12px;color:rgba(255,255,255,.4)}
+.pm-success-sub{font-size:15px;color:rgba(255,255,255,.4)}
 
 /* ─── UGC COMMUNITY ─── */
 .ugc-section{padding:100px 0 108px;background:var(--black);position:relative;overflow:hidden;isolation:isolate}
@@ -588,18 +562,18 @@ svg{display:inline-block;vertical-align:middle}
 .ugc-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
 .ugc-card:hover .ugc-img-wrap img{transform:scale(1.06)}
 .ugc-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,rgba(0,0,0,.1) 45%,transparent 100%);pointer-events:none}
-.ugc-handle{position:absolute;bottom:13px;left:14px;background:rgba(0,0,0,.8);color:#2dff6e;border:1px solid rgba(45,255,110,.55);font-family:var(--fm);font-size:10.5px;font-weight:700;letter-spacing:.07em;padding:5px 10px;clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);filter:drop-shadow(0 0 2px rgba(45,255,110,.9)) drop-shadow(0 0 8px rgba(45,255,110,.5)) drop-shadow(0 0 20px rgba(45,255,110,.25));z-index:1}
+.ugc-handle{position:absolute;bottom:13px;left:14px;background:rgba(0,0,0,.8);color:#2dff6e;border:1px solid rgba(45,255,110,.55);font-family:var(--fm);font-size:13px;font-weight:700;letter-spacing:.07em;padding:5px 10px;clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);filter:drop-shadow(0 0 2px rgba(45,255,110,.9)) drop-shadow(0 0 8px rgba(45,255,110,.5)) drop-shadow(0 0 20px rgba(45,255,110,.25));z-index:1}
 .ugc-body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column;gap:11px}
-.ugc-stars{display:flex;gap:2px;color:#ff8a00;font-size:13px;letter-spacing:.05em}
-.ugc-verified{display:flex;align-items:center;gap:5px;font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:rgba(45,255,110,.6);margin-top:-4px}
+.ugc-stars{display:flex;gap:2px;color:#ff8a00;font-size:18px;letter-spacing:.05em}
+.ugc-verified{display:flex;align-items:center;gap:5px;font-family:var(--fm);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(45,255,110,.6);margin-top:-4px}
 .ugc-verified svg{flex-shrink:0}
-.ugc-quote{font-family:'Barlow',sans-serif;font-size:13px;line-height:1.65;color:rgba(255,255,255,.68);flex:1;position:relative;padding-left:14px}
+.ugc-quote{font-family:'Barlow',sans-serif;font-size:16px;line-height:1.65;color:rgba(255,255,255,.68);flex:1;position:relative;padding-left:14px}
 .ugc-quote::before{content:'';position:absolute;left:0;top:3px;bottom:3px;width:2px;background:linear-gradient(to bottom,#2dff6e,rgba(45,255,110,.1));border-radius:1px}
 .ugc-product{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 13px;margin-top:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));text-decoration:none;transition:background .2s,border-color .2s;cursor:pointer}
 .ugc-product:hover{background:rgba(45,255,110,.07);border-color:rgba(45,255,110,.3)}
 .ugc-product:hover .ugc-product-name{color:rgba(255,255,255,.75)}
 .ugc-product:hover .ugc-arrow{color:#2dff6e;transform:translateX(3px)}
-.ugc-product-name{font-family:var(--fm);font-size:10px;font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.45);text-transform:uppercase;line-height:1.4;transition:color .2s}
+.ugc-product-name{font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.45);text-transform:uppercase;line-height:1.4;transition:color .2s}
 .ugc-arrow{color:rgba(255,255,255,.3);flex-shrink:0;transition:color .2s,transform .2s}
 .loox-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .loox-card{background:linear-gradient(160deg,rgba(20,22,20,.96) 0%,rgba(12,13,12,.98) 100%);border:1px solid rgba(255,255,255,.07);clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));padding:22px 22px 20px;display:flex;flex-direction:column;gap:12px;transition:border-color .3s}
@@ -607,17 +581,17 @@ svg{display:inline-block;vertical-align:middle}
 .loox-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .loox-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:13px;font-weight:700;color:#fff;flex-shrink:0}
 .loox-reviewer-name{font-family:var(--fb);font-size:13px;font-weight:600;color:#fff;margin-bottom:3px}
-.loox-reviewer-meta{font-family:var(--fm);font-size:9.5px;letter-spacing:.06em;color:rgba(255,255,255,.28);text-transform:uppercase}
+.loox-reviewer-meta{font-family:var(--fm);font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.28);text-transform:uppercase}
 .loox-thumb{width:46px;height:46px;border-radius:3px;overflow:hidden;flex-shrink:0;border:1px solid rgba(255,255,255,.08)}
 .loox-thumb img{width:100%;height:100%;object-fit:cover}
-.loox-stars-row{display:flex;gap:1px;color:#ff8a00;font-size:13px}
-.loox-verified{display:flex;align-items:center;gap:4px;font-family:var(--fm);font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:rgba(45,255,110,.65);margin-top:2px}
-.loox-review-title{font-family:var(--fb);font-size:13.5px;font-weight:600;color:#fff;line-height:1.35}
-.loox-review-body{font-family:'Barlow',sans-serif;font-size:12.5px;line-height:1.65;color:rgba(255,255,255,.55);flex:1}
+.loox-stars-row{display:flex;gap:1px;color:#ff8a00;font-size:15px}
+.loox-verified{display:flex;align-items:center;gap:4px;font-family:var(--fm);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:rgba(45,255,110,.65);margin-top:2px}
+.loox-review-title{font-family:var(--fb);font-size:15px;font-weight:600;color:#fff;line-height:1.35}
+.loox-review-body{font-family:'Barlow',sans-serif;font-size:15px;line-height:1.65;color:rgba(255,255,255,.55);flex:1}
 .loox-card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid rgba(255,255,255,.06)}
-.loox-product-label{font-family:var(--fm);font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.25)}
-.loox-date{font-family:var(--fm);font-size:9px;letter-spacing:.05em;color:rgba(255,255,255,.2)}
-.loox-powered{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:40px;font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.18)}
+.loox-product-label{font-family:var(--fm);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.loox-date{font-family:var(--fm);font-size:12px;letter-spacing:.05em;color:rgba(255,255,255,.2)}
+.loox-powered{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:40px;font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.18)}
 .loox-powered-dot{width:5px;height:5px;border-radius:50%;background:#ff8a00;opacity:.5}
 .loox-powered svg{color:#ff8a00;opacity:.5}
 
@@ -650,11 +624,11 @@ svg{display:inline-block;vertical-align:middle}
 }
 
 /* ── STATS ─────────────────────────────────────────────── */
-.stats { background:#fff; border-top-color:rgba(4,168,0,.14); border-bottom-color:rgba(4,168,0,.14) }
+.stats { background:#000; border-top-color:rgba(4,168,0,.25); border-bottom-color:rgba(4,168,0,.25) }
 .stats::before { background-image:radial-gradient(circle,rgba(4,168,0,.18) 1.5px,transparent 1.5px); background-size:24px 24px }
-.stat-num { color:var(--text) }
-.stat { border-right-color:rgba(0,0,0,.07) }
-.stat-label { color:var(--muted) }
+.stat-num { color:#fff }
+.stat { border-right-color:rgba(255,255,255,.08) }
+.stat-label { color:rgba(255,255,255,.55) }
 /* Full-width stretch overrides */
 .stats-in { max-width: none !important; width: 100% !important; padding: 0 !important; }
 .hero-trust-inner { padding: 0 !important; }
@@ -689,6 +663,8 @@ svg{display:inline-block;vertical-align:middle}
     radial-gradient(ellipse 70% 80% at 0% 50%, rgba(4,168,0,.05) 0%, transparent 60%),
     repeating-linear-gradient(-45deg, transparent, transparent 24px, rgba(4,168,0,.03) 24px, rgba(4,168,0,.03) 25px);
 }
+.pm-section .pm-eyebrow { color:var(--text) }
+.pm-section .pm-eyebrow::before { background:var(--green) }
 .pm-title { color:var(--text) }
 .pm-title span { color:var(--green) }
 .pm-subtitle { color:var(--muted) }
@@ -732,6 +708,7 @@ svg{display:inline-block;vertical-align:middle}
 
 /* ── TRENDING NOW ──────────────────────────────────────── */
 .trend-meta { color:#000 }
+.rare .sec-tag { color:var(--text);background:rgba(4,168,0,.09);border-color:rgba(4,168,0,.25) }
 .rare .view-all {
   color:#000; background:#fff;
   backdrop-filter:none; -webkit-backdrop-filter:none;
@@ -756,7 +733,8 @@ svg{display:inline-block;vertical-align:middle}
     repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(4,168,0,.05) 59px, rgba(4,168,0,.05) 60px);
 }
 .ugc-section .cs-title { color:var(--text) }
-.ugc-section .g { color:var(--green) }
+.ugc-section .g { color:#fff }
+.ugc-section .sec-tag { color:#fff; background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.25) }
 .ugc-card {
   background:linear-gradient(160deg,#fafafa 0%,#f5f5f3 100%);
   border-color:rgba(0,0,0,.09);
@@ -845,8 +823,8 @@ svg{display:inline-block;vertical-align:middle}
   content: '';
   position: absolute; inset: 0;
   background: linear-gradient(135deg,
-    rgba(255,255,255,.72) 0%,
-    rgba(255,255,255,.32) 32%,
+    rgba(255,255,255,.07) 0%,
+    rgba(255,255,255,.03) 32%,
     rgba(255,255,255,.06) 62%,
     transparent 100%);
   pointer-events: none; z-index: 3;
@@ -1098,28 +1076,28 @@ svg{display:inline-block;vertical-align:middle}
 .loox-date { color: rgba(0,0,0,.3) }
 
 /* ── EMAIL + FOOTER ─────────────────────────────────────── */
-.email-cap { background:#e0e0dd }
-.email-cap::before { background:radial-gradient(ellipse,rgba(4,168,0,.06) 0%,transparent 70%) }
-.email-title { color:var(--text) }
-.email-sub { color:var(--muted) }
-.email-inp { background:#fff; border-color:rgba(0,0,0,.12); color:var(--text) }
-.email-inp::placeholder { color:rgba(0,0,0,.28) }
-.email-inp:focus { border-color:rgba(4,168,0,.4) }
-.footer { background:#e0e0dd; border-top-color:rgba(0,0,0,.08) }
-.footer-in { border-bottom-color:rgba(0,0,0,.08) }
-.fl-tag { color:rgba(0,0,0,.45) }
-.fl-addr { color:rgba(0,0,0,.35) }
-.fc-hd { color:rgba(0,0,0,.35) }
-.fc-link { color:rgba(0,0,0,.55) }
-.fc-link:hover { color:#000 }
-.fn-txt { color:rgba(0,0,0,.45) }
-.fn-inp { background:#fff; border-color:rgba(0,0,0,.12); color:var(--text) }
-.fn-inp::placeholder { color:rgba(0,0,0,.3) }
-.fn-inp:focus { border-color:rgba(4,168,0,.4) }
-.fn-consent { color:rgba(0,0,0,.35) }
-.footer-copy { color:rgba(0,0,0,.35) }
-.fbl { color:rgba(0,0,0,.35) }
-.fbl:hover { color:rgba(0,0,0,.7) }
+.email-cap { background:#000 }
+.email-cap::before { background:radial-gradient(ellipse,rgba(4,168,0,.1) 0%,transparent 70%) }
+.email-title { color:#fff }
+.email-sub { color:rgba(255,255,255,.6) }
+.email-inp { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14); color:#fff }
+.email-inp::placeholder { color:rgba(255,255,255,.32) }
+.email-inp:focus { border-color:rgba(4,168,0,.5) }
+.footer { background:#000; border-top-color:rgba(255,255,255,.06) }
+.footer-in { border-bottom-color:rgba(255,255,255,.08) }
+.fl-tag { color:rgba(255,255,255,.45) }
+.fl-addr { color:rgba(255,255,255,.3) }
+.fc-hd { color:rgba(255,255,255,.3) }
+.fc-link { color:rgba(255,255,255,.5) }
+.fc-link:hover { color:#fff }
+.fn-txt { color:rgba(255,255,255,.45) }
+.fn-inp { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.12); color:#fff }
+.fn-inp::placeholder { color:rgba(255,255,255,.3) }
+.fn-inp:focus { border-color:rgba(4,168,0,.5) }
+.fn-consent { color:rgba(255,255,255,.28) }
+.footer-copy { color:rgba(255,255,255,.28) }
+.fbl { color:rgba(255,255,255,.28) }
+.fbl:hover { color:rgba(255,255,255,.7) }
 
 
 /* ══════════════════════════════════════════════════════════
@@ -1133,7 +1111,7 @@ svg{display:inline-block;vertical-align:middle}
   align-items: stretch !important;
   overflow: hidden !important;
   background: transparent !important;
-  margin-top: -72px !important;
+  margin-top: -90px !important;
 }
 .hero-bg-img {
   position: absolute !important;
@@ -1147,6 +1125,25 @@ svg{display:inline-block;vertical-align:middle}
 }
 .hero-overlay {
   display: none !important;
+}
+
+/* Hero center logo */
+.hero-brand-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-brand-logo img {
+  width: 260px;
+  height: auto;
+  filter: drop-shadow(0 0 40px rgba(4,168,0,.25)) drop-shadow(0 0 80px rgba(4,168,0,.12));
+  opacity: 0.88;
 }
 
 /* Content area - single column, bottom-anchored */
@@ -1226,7 +1223,7 @@ svg{display:inline-block;vertical-align:middle}
   background: #00f54e;
   color: #000;
   font-family: var(--fd);
-  font-size: 9.5px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: .08em;
   text-decoration: none;
@@ -1250,7 +1247,7 @@ svg{display:inline-block;vertical-align:middle}
   gap: 7px;
   color: #fff;
   font-family: var(--fd);
-  font-size: 9.5px;
+  font-size: 13px;
   font-weight: 700;
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,.55);
@@ -1265,10 +1262,10 @@ svg{display:inline-block;vertical-align:middle}
 .hero-trust-bar {
   position: relative;
   z-index: 2;
-  background: #ffffff;
-  border-top: 2px solid #d4edda;
+  background: #000;
+  border-top: 2px solid rgba(4,168,0,.4);
   flex-shrink: 0;
-  box-shadow: 0 -1px 0 rgba(0,0,0,.04);
+  box-shadow: 0 -1px 0 rgba(4,168,0,.15);
 }
 .hero-trust-inner {
   width: 100%;
@@ -1291,38 +1288,38 @@ svg{display:inline-block;vertical-align:middle}
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #f0faf3;
-  border: 1.5px solid #c8ead0;
+  background: rgba(4,168,0,.12);
+  border: 1.5px solid rgba(4,168,0,.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1a9e3f;
+  color: #04A800;
 }
 .hts-text { display: flex; flex-direction: column; gap: 3px; }
 .hts-title {
   font-family: var(--fd);
-  font-size: 10.5px;
+  font-size: 14px;
   font-weight: 700;
-  color: #111;
+  color: #fff;
   white-space: nowrap;
   letter-spacing: .04em;
   text-transform: uppercase;
 }
 .hts-desc {
   font-family: var(--fb);
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 400;
-  color: #666;
+  color: rgba(255,255,255,.55);
   white-space: nowrap;
 }
 .hts-divider {
   width: 1px;
   height: 48px;
-  background: linear-gradient(to bottom, transparent, #d0e8d5, transparent);
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,.12), transparent);
   flex-shrink: 0;
 }
 .hts-stars {
-  color: #1a9e3f;
+  color: #04A800;
   font-size: 13px;
   letter-spacing: 1px;
   vertical-align: middle;
@@ -1427,6 +1424,217 @@ svg{display:inline-block;vertical-align:middle}
     drop-shadow(0 0 28px rgba(4,168,0,.16)) !important;
   transform: translateY(-3px) !important;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE  ≤ 768px
+═══════════════════════════════════════════════════════════ */
+@media(max-width:768px){
+
+  /* UTILS */
+  .wrap{padding:0 18px}
+
+  /* ANNOUNCEMENT */
+  .ann-item{font-size:12px;padding:0 28px}
+
+  /* NAV */
+  .nav-in{padding:0 18px;height:62px}
+  .nav-logo{margin-right:0}
+  .nav-logo img{height:56px}
+  .nav-links{display:none}
+  .nav-search{display:none}
+  .nav-right{padding-left:0;justify-content:flex-end;gap:4px;flex:unset;margin-left:auto}
+  .nav-burger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:0;margin-left:4px}
+  .nav-burger span{display:block;width:22px;height:1.5px;background:#fff;transition:transform .3s,opacity .3s}
+  .nav.scrolled .nav-burger span{background:#000}
+  .nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+  .nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+  /* MOBILE MENU OVERLAY */
+  .mobile-menu{display:flex;flex-direction:column;position:fixed;inset:0;background:rgba(6,6,8,.97);backdrop-filter:blur(20px);z-index:999;padding:80px 28px 40px;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);overflow-y:auto}
+  .mobile-menu.open{transform:translateX(0)}
+  .mobile-menu-links{display:flex;flex-direction:column;gap:4px;margin-bottom:32px}
+  .mobile-menu-a{font-family:var(--fd);font-size:22px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.75);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .2s;display:flex;align-items:center;justify-content:space-between}
+  .mobile-menu-a:hover,.mobile-menu-a.active{color:#fff}
+  .mobile-menu-outlet{color:#7dde7a!important}
+  .mobile-menu-search{display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.5);font-family:var(--fb);font-size:16px;margin-bottom:28px}
+  .mobile-menu-footer{margin-top:auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.06)}
+  .mobile-menu-trust{display:flex;flex-direction:column;gap:8px}
+  .mobile-trust-item{font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.62);display:flex;align-items:center;gap:8px}
+  .mobile-trust-item::before{content:'';width:4px;height:4px;background:var(--green);border-radius:50%;flex-shrink:0}
+
+  /* HERO */
+  .hero{min-height:100svh;min-height:100vh}
+  .hero-inner{
+    grid-template-columns:1fr;
+    padding:80px 14px 48px !important;
+    min-height:100svh;
+    min-height:100vh;
+    gap:0;
+    align-items:flex-start !important
+  }
+  .hero-h1-v2{max-width:100%}
+  .btn-primary-v2-label{white-space:nowrap;padding:16px 20px}
+  .btn-primary-v2-arrow{padding:0 14px}
+  .hero-widgets{display:none}
+  .hero-h1{font-size:clamp(30px,9.5vw,48px);line-height:1.05}
+  .hero-sub{font-size:15px;max-width:100%}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:10px;margin-top:4px}
+  .btn-primary,.btn-ghost{
+    justify-content:center;
+    padding:17px 24px;
+    font-size:13px
+  }
+  .hero-badge{font-size:11px;padding:6px 16px 6px 12px}
+  .hero-keywords{gap:5px}
+  .hk{font-size:11px;padding:3px 8px}
+  /* HERO TRUST BAR */
+  .hero-trust-bar{overflow:hidden}
+  .hero-trust-inner{height:auto;display:grid;grid-template-columns:1fr 1fr;padding:0;gap:0}
+  .hts-divider{display:none}
+  .hts-item{padding:12px 14px;gap:10px;justify-content:flex-start;border-bottom:1px solid rgba(255,255,255,.07);border-right:1px solid rgba(255,255,255,.07)}
+  .hts-item:first-child{grid-column:span 2;border-right:none;justify-content:center}
+  .hts-item:nth-child(even){border-right:none}
+  .hts-icon{width:34px;height:34px;flex-shrink:0}
+  .hts-title{font-size:11px;letter-spacing:.03em;white-space:normal;line-height:1.3}
+  .hts-desc{font-size:10px;white-space:normal;line-height:1.3}
+
+  /* STATS */
+  .stats-in{grid-template-columns:repeat(2,1fr)!important;padding:0!important;width:100%!important}
+  .stat{padding:28px 12px;border-right:1px solid rgba(255,255,255,.05)!important}
+  .stat:nth-child(even){border-right:none!important}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid rgba(255,255,255,.05)}
+  .stat-num{font-size:clamp(26px,7vw,38px)}
+  .stat-label{font-size:11px;letter-spacing:.06em}
+
+  /* TRUST STRIP */
+  .trust-strip-in{
+    grid-template-columns:repeat(2,1fr);
+    padding:16px 12px;
+    gap:8px
+  }
+  .ti{padding:14px 8px}
+  .ti:last-child{grid-column:span 2}
+  .ti-title{font-size:12px;letter-spacing:.04em}
+  .ti-tag{font-size:11px}
+  .ti-sub{font-size:11px}
+
+  /* COLLECTION */
+  .collection{padding:48px 0 0}
+  .coll-hd{margin-bottom:24px;padding:0 18px}
+  .coll-tabs{padding:0 18px;gap:5px;margin-bottom:28px;flex-wrap:wrap;justify-content:flex-start}
+  .tab{font-size:11px;padding:10px 10px;letter-spacing:.02em;white-space:nowrap}
+  .prod-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .pc-name{font-size:17px}
+  .pc-price{font-size:22px}
+  .pc-info{padding:14px 14px 16px}
+  .coll-footer{padding:14px 0 36px}
+
+  /* WARRANTY */
+  .warranty{font-size:11px;letter-spacing:.12em;padding:10px 18px;flex-wrap:wrap;gap:6px}
+
+  /* CATEGORY SPLIT */
+  .cat-split{display:flex;flex-direction:column;height:auto}
+  .cs-item{height:260px}
+  .cs-content{padding:20px 18px}
+  .cs-title{font-size:clamp(20px,6vw,32px)}
+  .cs-sub{margin-bottom:14px}
+  .cs-btn{padding:11px 18px;font-size:12px}
+
+  /* FANDOM */
+  .fandom{padding:48px 0}
+  .fandom-hd{
+    flex-direction:column;align-items:flex-start;gap:14px;
+    padding:0 18px;margin-bottom:24px
+  }
+  .fandom-cta{width:100%;justify-content:center;padding:14px 24px}
+  .fandom-grid{grid-template-columns:repeat(2,1fr)}
+  .fc-wide{grid-column:span 2;aspect-ratio:16/9}
+  .fandom-grid .fc:nth-child(4){grid-column:span 2}
+  .fc-name{font-size:16px}
+  .fc-wide .fc-name{font-size:22px}
+  .fc-count{font-size:13px}
+
+  /* GIFTS */
+  .gifts{padding:48px 0}
+  .gifts-layout{grid-template-columns:1fr;gap:28px}
+  .gifts-grid{grid-template-columns:1fr;gap:10px}
+  .gifts-desc{max-width:100%;font-size:15px;margin-bottom:20px}
+  .budget-strip{flex-direction:column;align-items:flex-start;gap:8px}
+
+  /* TRENDING */
+  .rare{padding:48px 0}
+  .rare-hd{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:20px}
+  .rare-hd .view-all{align-self:stretch;justify-content:center}
+
+  /* PRICE MATCH */
+  .pm-section{padding:48px 0}
+  .pm-inner{grid-template-columns:1fr;gap:36px}
+  .pm-subtitle{max-width:100%;font-size:16px}
+  .pm-right{padding:24px 20px}
+
+  /* TRUST MARQUEE - static grid on mobile */
+  .trust-mar{padding:4px 0}
+  .trust-track{animation:none;display:grid;grid-template-columns:1fr 1fr;white-space:normal;padding:0}
+  .trust-track .tm-item:nth-child(n+7){display:none}
+  .tm-item{white-space:nowrap;padding:10px 8px;font-size:11px;letter-spacing:.06em;gap:7px;justify-content:center;text-align:center;border-bottom:1px solid rgba(0,0,0,.06)}
+
+  /* UGC / REVIEWS */
+  .ugc-section{padding:48px 0}
+  .ugc-header{flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:24px}
+  .ugc-grid{grid-template-columns:1fr}
+  .loox-grid{grid-template-columns:1fr}
+
+  /* EMAIL */
+  .email-cap{padding:56px 0}
+  .email-in{padding:0 18px}
+  .email-form{flex-direction:column;max-width:100%;width:100%;gap:10px}
+  .email-inp{flex:none;border-right:1px solid rgba(255,255,255,.1);border-bottom:none;width:100%;box-sizing:border-box}
+  .email-btn{justify-content:center;padding:14px 24px;width:100%;box-sizing:border-box}
+
+  /* FOOTER */
+  .footer{padding:40px 0 0}
+  .footer-in{
+    grid-template-columns:1fr;
+    gap:32px;
+    padding:0 18px 36px
+  }
+  .footer-bot{
+    flex-direction:column;align-items:flex-start;
+    padding:16px 18px 28px;gap:12px
+  }
+  .footer-bot-links{flex-wrap:wrap;gap:12px}
+  .fl-logo img{height:300px}
+  .pay-icons{flex-wrap:wrap}
+}
+
+@media(min-width:1600px){
+  .wrap{max-width:1600px;padding:0 100px}
+  .sec-h2{font-size:clamp(42px,4.5vw,68px)}
+  .sec-tag{font-size:14px}
+  .ann-item{font-size:14px}
+  .nav-a{font-size:14px}
+  .cs-sub{font-size:15px}
+  .cs-title{font-size:clamp(36px,4vw,58px)}
+}
+@media(min-width:1920px){
+  .wrap{max-width:1800px;padding:0 120px}
+  .nav-in{max-width:1800px;padding:0 120px}
+  .hero-inner{max-width:1800px;padding:100px 120px}
+  .sec-h2{font-size:clamp(46px,4.5vw,72px)}
+  .sec-tag{font-size:15px}
+  .ann-item{font-size:15px}
+  .nav-a{font-size:15px}
+}
+@media(min-width:2560px){
+  .wrap{max-width:2200px;padding:0 160px}
+  .nav-in{max-width:2200px;padding:0 160px}
+  .hero-inner{max-width:2200px;padding:120px 160px}
+  .sec-h2{font-size:clamp(52px,4.5vw,80px)}
+  .sec-tag{font-size:16px}
+  .ann-item{font-size:16px}
+  .nav-a{font-size:16px}
+}
 </style>
 </head>
 <body>
@@ -1453,7 +1661,7 @@ svg{display:inline-block;vertical-align:middle}
 <nav class="nav" id="mainNav">
   <div class="nav-in">
     <a href="/" class="nav-logo">
-      <img src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=120" alt="Next Level UK">
+      <img src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=300" alt="Next Level UK">
     </a>
     <div class="nav-links">
       <a href="#collection" class="nav-a">Lightsabers</a>
@@ -1464,12 +1672,12 @@ svg{display:inline-block;vertical-align:middle}
     </div>
     <div class="nav-right">
       <div class="nav-search">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         Search products...
       </div>
       <button class="nav-ico">
         <!-- Futuristic angular cart -->
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <path d="M2 3h2.5l2.5 9.5h10l3-7H6.5"/>
           <path d="M7.5 12.5l-1.5 4h13"/>
           <rect x="8" y="18" width="2.5" height="2.5" fill="currentColor" stroke="none"/>
@@ -1478,7 +1686,7 @@ svg{display:inline-block;vertical-align:middle}
       </button>
       <button class="nav-ico">
         <!-- Futuristic crosshair user -->
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <circle cx="12" cy="8" r="3.5"/>
           <line x1="12" y1="2" x2="12" y2="4.5"/>
           <line x1="12" y1="11.5" x2="12" y2="14"/>
@@ -1487,14 +1695,45 @@ svg{display:inline-block;vertical-align:middle}
           <path d="M4 22v-2c0-2.8 3.5-4.5 8-4.5s8 1.7 8 4.5v2"/>
         </svg>
       </button>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    Search products...
+  </div>
+  <nav class="mobile-menu-links">
+    <a href="#collection" class="mobile-menu-a"><span style="display:flex;align-items:center;gap:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"><line x1="12" y1="2" x2="12" y2="16"/><line x1="7" y1="16" x2="17" y2="16"/><rect x="10" y="17" width="4" height="5" rx="1"/></svg>Lightsabers</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="swords-collection.html" class="mobile-menu-a"><span style="display:flex;align-items:center;gap:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"><path d="M14.5 17.5 3 6V3h3l11.5 11.5M13 19l2-2M3 21l3-3M14 4l6 6"/></svg>Swords</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="#collection" class="mobile-menu-a"><span style="display:flex;align-items:center;gap:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"><path d="M12 2C7 2 3 6 3 11v4a2 2 0 002 2h14a2 2 0 002-2v-4c0-5-4-9-9-9z"/><line x1="8" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="16" y2="12"/></svg>Masks / Helmets</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="#collection" class="mobile-menu-a"><span style="display:flex;align-items:center;gap:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Cosplay Props</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="#" class="mobile-menu-a mobile-menu-outlet"><span style="display:flex;align-items:center;gap:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><circle cx="7" cy="7" r="1" fill="currentColor"/></svg>Outlet</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <div class="mobile-menu-trust">
+      <span class="mobile-trust-item">Free UK Shipping Over £100</span>
+      <span class="mobile-trust-item">30-Day Returns</span>
+      <span class="mobile-trust-item">4.9 / 5 - 2,400+ Reviews</span>
+      <span class="mobile-trust-item">UK Family-Owned Since 2013</span>
+    </div>
+  </div>
+</div>
 
 <!-- HERO V2 (Figma: node 2027-1019) -->
 <section class="hero">
   <img class="hero-bg-img" src="HERO.png" alt="Next Level UK - Premium Lightsabers, Replica Masks, Props and Collectibles">
   <div class="hero-overlay"></div>
+
+  <!-- Brand logo - centered in hero empty space -->
+  <div class="hero-brand-logo">
+    <img src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=400" alt="Next Level UK">
+  </div>
 
   <!-- Main content: bottom-anchored single column -->
   <div class="hero-inner">
@@ -1518,9 +1757,6 @@ svg{display:inline-block;vertical-align:middle}
       Helmets &amp; Replicas.<br>
       For Every Fandom.
     </h1>
-
-    <!-- Sub-headline -->
-    <p class="hero-sub-v2">Than anywhere else.</p>
 
     <!-- CTAs -->
     <div class="hero-actions-v2">
@@ -1662,7 +1898,6 @@ svg{display:inline-block;vertical-align:middle}
     <!-- Lightsabers -->
     <div class="prod-grid tab-panel" id="tab-lightsabers" style="display:none">
       <div class="pc reveal">
-        <span class="pc-badge badge-new">New In</span>
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-the-force-unleashed-starkiller-cosplay-071x-1920706.jpg?v=1757774954&width=600" alt="Bastion Combat Lightsaber"></div>
         <div class="pc-info">
           <div class="pc-cat">Star Wars · Lightsabers</div>
@@ -1674,7 +1909,6 @@ svg{display:inline-block;vertical-align:middle}
         </div>
       </div>
       <div class="pc reveal">
-        <span class="pc-badge badge-low">Low Stock</span>
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-rgb-smoothswing-force-fx-episode-9-luke-skywalker-hilt-cosplay-lukeep9b-2324768.jpg?v=1757773975&width=600" alt="Luke Skywalker Lightsaber"></div>
         <div class="pc-info">
           <div class="pc-cat">Star Wars · Episode VI</div>
@@ -1711,7 +1945,6 @@ svg{display:inline-block;vertical-align:middle}
     <!-- Swords -->
     <div class="prod-grid tab-panel" id="tab-swords">
       <div class="pc reveal">
-        <span class="pc-badge badge-new">Best Seller</span>
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="Anduril Metal Sword"></div>
         <div class="pc-info">
           <div class="pc-cat">Lord of the Rings · Metal</div>
@@ -1723,7 +1956,6 @@ svg{display:inline-block;vertical-align:middle}
         </div>
       </div>
       <div class="pc reveal">
-        <span class="pc-badge badge-new">Best Seller</span>
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/bleach-sword-zangetsu-metal-katana-sword-of-ichigo-kurosaki-9237517.jpg?v=1757774577&width=600" alt="Zangetsu Metal Katana"></div>
         <div class="pc-info">
           <div class="pc-cat">Bleach · Metal Katana</div>
@@ -1735,7 +1967,6 @@ svg{display:inline-block;vertical-align:middle}
         </div>
       </div>
       <div class="pc reveal">
-        <span class="pc-badge badge-new">Best Seller</span>
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/one-piece-sword-wado-ichimonji-metal-katana-sword-of-roronoa-zoro-4505248.jpg?v=1757774577&width=600" alt="Wado Ichimonji Metal Katana"></div>
         <div class="pc-info">
           <div class="pc-cat">One Piece · Metal Katana</div>
@@ -1747,7 +1978,6 @@ svg{display:inline-block;vertical-align:middle}
         </div>
       </div>
       <div class="pc reveal">
-        <span class="pc-badge badge-new">Best Seller</span>
         <div class="pc-img"><img src="https://nextleveluk.net/cdn/shop/files/devil-may-cry-5-katana-of-vergil-yamato-metal-sword-3642627.jpg?v=1757773728&width=600" alt="Vergil Yamato Metal Sword"></div>
         <div class="pc-info">
           <div class="pc-cat">Devil May Cry · Metal</div>
@@ -1877,7 +2107,7 @@ svg{display:inline-block;vertical-align:middle}
 <!-- WARRANTY STRIP -->
 <div class="warranty">
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-  UK Manufacturer Warranty Included on All Combat Lightsabers
+  12 Month UK Manufacturer Warranty Included on All Combat Lightsabers
 </div>
 
 <!-- CATEGORY SPLIT -->
@@ -1886,7 +2116,7 @@ svg{display:inline-block;vertical-align:middle}
     <img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-luke-spin-cosplay-016-1x-6042965.jpg?v=1758562883&width=900" alt="Lightsabers">
     <div class="cs-content">
       <div class="cs-title">Lightsabers</div>
-      <div class="cs-sub">Combat · Display · Neopixel</div>
+      <div class="cs-sub"><span class="cs-tag">Combat</span><span class="cs-tag">Display</span><span class="cs-tag">Neopixel</span></div>
       <a href="#" class="cs-btn">Shop Lightsabers <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
@@ -1894,7 +2124,7 @@ svg{display:inline-block;vertical-align:middle}
     <img src="sword%20image%20-%20d270384f3ced4035a6458bc16e3213b9.jpeg" alt="Swords &amp; Blades">
     <div class="cs-content">
       <div class="cs-title">Swords</div>
-      <div class="cs-sub">Metal · Katana · Display</div>
+      <div class="cs-sub"><span class="cs-tag">Metal</span><span class="cs-tag">Katana</span><span class="cs-tag">Display</span></div>
       <a href="swords-collection.html" class="cs-btn">Shop Swords <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
@@ -1902,7 +2132,7 @@ svg{display:inline-block;vertical-align:middle}
     <img src="mask2.avif" alt="Replica Masks">
     <div class="cs-content">
       <div class="cs-title">Replica Masks</div>
-      <div class="cs-sub">Resin · Wearable · Display</div>
+      <div class="cs-sub"><span class="cs-tag">Resin</span><span class="cs-tag">Wearable</span><span class="cs-tag">Display</span></div>
       <a href="#" class="cs-btn">Shop Masks <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
@@ -1910,80 +2140,11 @@ svg{display:inline-block;vertical-align:middle}
     <img src="cosplay%20image%20-%20thumb-1920-920361.jpeg" alt="Cosplay Props">
     <div class="cs-content">
       <div class="cs-title">Cosplay Props</div>
-      <div class="cs-sub">Wearable · Film-Accurate · Premium</div>
+      <div class="cs-sub"><span class="cs-tag">Wearable</span><span class="cs-tag">Film-Accurate</span><span class="cs-tag">Premium</span></div>
       <a href="#" class="cs-btn">Shop Cosplay <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </div>
-
-<!-- PRICE MATCH GUARANTEE -->
-<section class="pm-section" style="position:relative;">
-  <!-- Shape: top-down, mirrored, full opacity -->
-  <div class="sec-shape" aria-hidden="true" style="opacity:1;">
-    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 0 0 L 1440 0 L 1440 158 L 1312 130 L 1312 146 L 1176 146 L 1110 116 L 1042 133 L 1042 102 L 900 102 L 842 120 L 765 75 L 702 60 L 702 48 L 537 36 L 480 34 L 392 24 L 328 34 L 328 20 L 162 20 L 105 26 L 20 14 L 0 10 Z"/>
-    </svg>
-  </div>
-  <div class="wrap">
-    <div class="pm-inner">
-      <!-- Left: copy -->
-      <div>
-        <div class="pm-eyebrow">Price Match Guarantee</div>
-        <h2 class="pm-title">We Beat<br>Any Price<br>by <span>5%</span></h2>
-        <p class="pm-subtitle">Found the same product cheaper elsewhere? Show us and we'll beat their price by 5%. No competitor in the UK does this.</p>
-        <div class="pm-conditions">
-          <div class="pm-cond">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
-            Same product, identical specification
-          </div>
-          <div class="pm-cond">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
-            Sold by an authorised UK retailer
-          </div>
-          <div class="pm-cond">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
-            In stock and available to buy now
-          </div>
-          <div class="pm-cond">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
-            We verify and beat it by 5% - guaranteed
-          </div>
-        </div>
-      </div>
-      <!-- Right: form -->
-      <div class="pm-right">
-        <div id="pm-form-wrap">
-          <div class="pm-form-title">Submit a Price Match</div>
-          <div class="pm-form-sub">We'll review and respond within 12-24 hours</div>
-          <form id="pm-form" onsubmit="pmSubmit(event)">
-            <div class="pm-field">
-              <label class="pm-label">Product URL (on our site)</label>
-              <input class="pm-input" type="url" placeholder="https://nextleveluk.net/products/..." required>
-            </div>
-            <div class="pm-field">
-              <label class="pm-label">Competitor URL (where you saw it cheaper)</label>
-              <input class="pm-input" type="url" placeholder="https://competitor.com/products/..." required>
-            </div>
-            <div class="pm-field">
-              <label class="pm-label">Your Email</label>
-              <input class="pm-input" type="email" placeholder="your@email.com" required>
-            </div>
-            <button type="submit" class="pm-submit">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-              Submit Price Match Request
-            </button>
-          </form>
-          <p class="pm-note">We aim to respond within 12-24 hours. Price match applies to the product only and excludes shipping costs. One price match per customer per order.</p>
-        </div>
-        <div class="pm-success" id="pm-success">
-          <div class="pm-success-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-          <div class="pm-success-title">Request Received</div>
-          <div class="pm-success-sub">We'll review your price match and get back to you within 12-24 hours.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- SHOP BY FANDOM (DARK) -->
 <section class="fandom" id="fandom">
@@ -2046,6 +2207,13 @@ svg{display:inline-block;vertical-align:middle}
         <div class="fc-arrow">Shop Now <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
     </div>
+    <!-- View All Fandoms CTA card -->
+    <div class="fc reveal" style="background:var(--green);cursor:pointer;">
+      <div class="fc-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:32px 20px;">
+        <div class="fc-name" style="color:#fff;font-size:clamp(16px,1.5vw,22px);letter-spacing:.06em;">VIEW ALL 60+ FANDOMS</div>
+        <div class="fc-arrow" style="color:rgba(255,255,255,.85);font-size:13px;display:flex;align-items:center;gap:6px;">Explore All <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2059,55 +2227,55 @@ svg{display:inline-block;vertical-align:middle}
   <div class="wrap">
     <div class="gifts-layout reveal">
       <div class="gifts-hd">
-        <div class="sec-tag">Gift Ideas</div>
-        <h2 class="sec-h2">Perfect Gifts<br>for Every Fan</h2>
-        <p class="gifts-desc">From beginner collectibles to premium replicas - find the ideal gift for every budget and every fandom.</p>
-        <a href="#" class="view-all-btn">Browse Gift Guide <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <div class="sec-tag">Gifts</div>
+        <h2 class="sec-h2">Browse<br>All Gifts</h2>
+        <p class="gifts-desc">From metal katanas to collector-grade replicas - find the perfect sword, lightsaber or mask for any fan.</p>
+        <a href="#" class="view-all-btn">View All Gifts <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
       <div>
         <div class="gifts-grid">
           <div class="gc">
             <div class="gc-img">
-              <div class="gc-banner gc-banner-1"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Less than £50</div>
-              <img src="https://nextleveluk.net/cdn/shop/files/demon-slayer-tanjiro-metal-katana-sword-2874768.jpg?v=1757774934&width=500" alt="Under £50">
-              <div class="gc-price">Under £50</div>
+              <div class="gc-banner gc-banner-1"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Metal</div>
+              <img src="https://nextleveluk.net/cdn/shop/files/demon-slayer-tanjiro-metal-katana-sword-2874768.jpg?v=1757774934&width=500" alt="Metal Katanas">
+              <div class="gc-price">Metal Katanas</div>
             </div>
             <div class="gc-body">
-              <div class="gc-name">Budget Picks</div>
-              <div class="gc-sub">Great gifts that won't break the bank</div>
+              <div class="gc-name">Metal Katanas</div>
+              <div class="gc-sub">Battle-ready swords with real steel construction</div>
             </div>
           </div>
           <div class="gc">
             <div class="gc-img">
-              <div class="gc-banner gc-banner-2"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Up to £100</div>
-              <img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-luke-spin-cosplay-016-1x-6042965.jpg?v=1758562883&width=500" alt="£50 - £100">
-              <div class="gc-price">£50 - £100</div>
+              <div class="gc-banner gc-banner-2"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Cosplay / Foam</div>
+              <img src="https://nextleveluk.net/cdn/shop/files/star-wars-lightsaber-xenopixel-xeno3-smoothswing-luke-spin-cosplay-016-1x-6042965.jpg?v=1758562883&width=500" alt="Cosplay and Foam">
+              <div class="gc-price">Cosplay / Foam</div>
             </div>
             <div class="gc-body">
-              <div class="gc-name">Mid-Range</div>
-              <div class="gc-sub">Premium quality at a great price point</div>
+              <div class="gc-name">Cosplay / Foam</div>
+              <div class="gc-sub">Lightweight replicas perfect for cosplay and display</div>
             </div>
           </div>
           <div class="gc">
             <div class="gc-img">
-              <div class="gc-banner gc-banner-3"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>£100+</div>
-              <img src="https://nextleveluk.net/cdn/shop/files/star-wars-bastion-combat-lightsaber-9122999.jpg?v=1757773178&width=500" alt="£100+">
-              <div class="gc-price">£100+</div>
+              <div class="gc-banner gc-banner-3"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Collector Grade</div>
+              <img src="https://nextleveluk.net/cdn/shop/files/star-wars-bastion-combat-lightsaber-9122999.jpg?v=1757773178&width=500" alt="Collector Grade">
+              <div class="gc-price">Collector Grade</div>
             </div>
             <div class="gc-body">
-              <div class="gc-name">Premium</div>
-              <div class="gc-sub">Collector-grade replicas &amp; neopixel sabers</div>
+              <div class="gc-name">Collector Grade</div>
+              <div class="gc-sub">Museum-quality replicas and premium neopixel sabers</div>
             </div>
           </div>
         </div>
         <div class="budget-strip">
-          <div class="budget-label">Quick Filter:</div>
+          <div class="budget-label">Shop by Type:</div>
           <div class="budget-links">
-            <a href="#" class="budget-a">Under £25</a>
-            <a href="#" class="budget-a">£25 - £50</a>
-            <a href="#" class="budget-a">£50 - £100</a>
-            <a href="#" class="budget-a">£100 - £200</a>
-            <a href="#" class="budget-a">£200+</a>
+            <a href="#" class="budget-a">Metal Katanas</a>
+            <a href="#" class="budget-a">Foam / Cosplay</a>
+            <a href="#" class="budget-a">Lightsabers</a>
+            <a href="#" class="budget-a">Collector Grade</a>
+            <a href="#" class="budget-a">Limited Edition</a>
           </div>
         </div>
       </div>
@@ -2176,6 +2344,75 @@ svg{display:inline-block;vertical-align:middle}
           <div class="pc-name">Vergil Yamato Metal Katana - Devil May Cry 5</div>
           <div class="pc-price">£63.99</div>
           <div class="pc-footer"><div class="pc-cta">Add to Bag <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE MATCH GUARANTEE -->
+<section class="pm-section" style="position:relative;">
+  <!-- Shape: top-down, mirrored, full opacity -->
+  <div class="sec-shape" aria-hidden="true" style="opacity:1;">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 0 0 L 1440 0 L 1440 158 L 1312 130 L 1312 146 L 1176 146 L 1110 116 L 1042 133 L 1042 102 L 900 102 L 842 120 L 765 75 L 702 60 L 702 48 L 537 36 L 480 34 L 392 24 L 328 34 L 328 20 L 162 20 L 105 26 L 20 14 L 0 10 Z"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="pm-inner">
+      <!-- Left: copy -->
+      <div>
+        <div class="pm-eyebrow">Price Match Guarantee</div>
+        <h2 class="pm-title">We Beat<br>Any Price<br>by <span>5%</span></h2>
+        <p class="pm-subtitle">Found the same product cheaper elsewhere? Show us and we'll beat their price by 5%. No competitor in the UK does this.</p>
+        <div class="pm-conditions">
+          <div class="pm-cond">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Same product, identical specification
+          </div>
+          <div class="pm-cond">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Sold by an authorised UK retailer
+          </div>
+          <div class="pm-cond">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            In stock and available to buy now
+          </div>
+          <div class="pm-cond">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            We verify and beat it by 5% - guaranteed
+          </div>
+        </div>
+      </div>
+      <!-- Right: form -->
+      <div class="pm-right">
+        <div id="pm-form-wrap">
+          <div class="pm-form-title">Submit a Price Match</div>
+          <div class="pm-form-sub">We'll review and respond within 12-24 hours</div>
+          <form id="pm-form" onsubmit="pmSubmit(event)">
+            <div class="pm-field">
+              <label class="pm-label">Product URL (on our site)</label>
+              <input class="pm-input" type="url" placeholder="https://nextleveluk.net/products/..." required>
+            </div>
+            <div class="pm-field">
+              <label class="pm-label">Competitor URL (where you saw it cheaper)</label>
+              <input class="pm-input" type="url" placeholder="https://competitor.com/products/..." required>
+            </div>
+            <div class="pm-field">
+              <label class="pm-label">Your Email</label>
+              <input class="pm-input" type="email" placeholder="your@email.com" required>
+            </div>
+            <button type="submit" class="pm-submit">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              Submit Price Match Request
+            </button>
+          </form>
+          <p class="pm-note">We aim to respond within 12-24 hours. Price match applies to the product only and excludes shipping costs. One price match per customer per order.</p>
+        </div>
+        <div class="pm-success" id="pm-success">
+          <div class="pm-success-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <div class="pm-success-title">Request Received</div>
+          <div class="pm-success-sub">We'll review your price match and get back to you within 12-24 hours.</div>
         </div>
       </div>
     </div>
@@ -2357,7 +2594,7 @@ svg{display:inline-block;vertical-align:middle}
   <!-- White (light section) fills everything above the jagged line -->
   <rect width="1440" height="120" fill="#ffffff"/>
   <!-- Dark fill: abstract asymmetric cuts -->
-  <path fill="#e0e0dd" d="
+  <path fill="#000000" d="
     M 0 110
     L 52 110
     L 88 82
@@ -2418,7 +2655,7 @@ svg{display:inline-block;vertical-align:middle}
     <div class="footer-in">
       <!-- Brand -->
       <div>
-        <div class="fl-logo"><img src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=120" alt="Next Level UK"></div>
+        <div class="fl-logo"><img src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=900" alt="Next Level UK"></div>
         <p class="fl-tag">The UK's premium destination for metal swords, lightsabers &amp; cosplay replicas. Family-owned since 2013.</p>
         <div class="fl-addr">
           Next Level UK Ltd<br>
@@ -2487,13 +2724,17 @@ svg{display:inline-block;vertical-align:middle}
         <a href="#" class="fbl">Accessibility</a>
       </div>
       <div class="pay-icons">
-        <div class="pay-ic">Visa</div>
-        <div class="pay-ic">Mastercard</div>
-        <div class="pay-ic">Amex</div>
-        <div class="pay-ic">PayPal</div>
-        <div class="pay-ic">Klarna</div>
-        <div class="pay-ic">Apple Pay</div>
-        <div class="pay-ic">G Pay</div>
+        <div class="pay-ic"><img src="pay-icons/visa.png" alt="Visa"></div>
+        <div class="pay-ic"><img src="pay-icons/mastercard.png" alt="Mastercard"></div>
+        <div class="pay-ic"><img src="pay-icons/amex.png" alt="American Express"></div>
+        <div class="pay-ic"><img src="pay-icons/paypal.png" alt="PayPal"></div>
+        <div class="pay-ic"><img src="pay-icons/apple-pay.png" alt="Apple Pay"></div>
+        <div class="pay-ic"><img src="pay-icons/google-pay.png" alt="Google Pay"></div>
+        <div class="pay-ic"><img src="pay-icons/shop-pay.png" alt="Shop Pay"></div>
+        <div class="pay-ic"><img src="pay-icons/discover.png" alt="Discover"></div>
+        <div class="pay-ic"><img src="pay-icons/jcb.png" alt="JCB"></div>
+        <div class="pay-ic"><img src="pay-icons/diners.png" alt="Diners Club"></div>
+        <div class="pay-ic"><img src="pay-icons/unionpay.png" alt="UnionPay"></div>
       </div>
     </div>
   </div>
@@ -2513,6 +2754,24 @@ const nav = document.getElementById('mainNav');
 const updateNav = () => nav.classList.toggle('scrolled', window.scrollY > 5);
 updateNav();
 window.addEventListener('scroll', updateNav, { passive: true });
+
+// Mobile burger menu
+const burger = document.getElementById('navBurger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (burger && mobileMenu) {
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('.mobile-menu-a').forEach(a => {
+    a.addEventListener('click', () => {
+      burger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+}
 
 // Reveal on scroll
 const observer = new IntersectionObserver(entries => {

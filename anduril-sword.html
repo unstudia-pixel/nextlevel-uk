@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aragorn Anduril Metal Sword with Wall Plaque | Next Level UK</title>
@@ -21,38 +22,41 @@ img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 button{cursor:pointer;font-family:inherit;border:none;background:none}
 svg{display:inline-block;vertical-align:middle}
-.wrap{max-width:1320px;margin:0 auto;padding:0 80px;position:relative;z-index:1}
+.wrap{max-width:1440px;margin:0 auto;padding:0 80px;position:relative;z-index:1}
 .g{color:var(--green)}
 
 /* ANNOUNCEMENT */
 .ann{background:var(--green);height:34px;overflow:hidden;display:flex;align-items:center}
 .ann-track{display:flex;white-space:nowrap;animation:ticker 32s linear infinite}
-.ann-item{display:inline-flex;align-items:center;gap:9px;padding:0 52px;font-family:var(--fb);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.72)}
+.ann-item{display:inline-flex;align-items:center;gap:9px;padding:0 52px;font-family:var(--fb);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.72)}
 .ann-dot{width:3px;height:3px;background:rgba(0,0,0,.45);border-radius:50%;flex-shrink:0}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* NAV */
 .nav{position:sticky;top:0;z-index:200;background:#f5f5f3;border-bottom:1px solid rgba(0,0,0,.08)}
-.nav-in{max-width:1440px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center}
+.nav-in{max-width:1440px;margin:0 auto;padding:0 48px;height:90px;display:flex;align-items:center}
 .nav-logo{display:flex;align-items:center;flex-shrink:0;margin-right:52px}
-.nav-logo img{height:46px;width:auto;display:block}
-.nav-links{display:flex;align-items:center;flex:1}
-.nav-a{font-family:var(--fb);font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:8px 15px;color:rgba(0,0,0,.6);transition:color .2s}
+.nav-logo img{height:84px;width:auto;display:block}
+.nav-links{display:flex;align-items:center}
+.nav-a{font-family:var(--fb);font-size:14px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;color:rgba(0,0,0,.6);transition:color .2s}
 .nav-a:hover{color:#000}
 .nav-a.active{color:#000;font-weight:700;border-bottom:2px solid var(--green)}
 .nav-outlet{color:#1a8a18!important}
 .nav-outlet:hover{color:#0d6e0b!important}
-.nav-right{margin-left:auto;display:flex;align-items:center;gap:6px}
-.nav-search{display:flex;align-items:center;gap:10px;padding:7px 14px;background:#fff;border:1px solid rgba(0,0,0,.18);border-radius:3px;font-size:11.5px;font-family:var(--fb);color:rgba(0,0,0,.55);width:190px;cursor:text;letter-spacing:.03em}
-.nav-ico{width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:rgba(0,0,0,.7);transition:color .2s,background .2s}
+.nav-right{flex:1;display:flex;align-items:center;gap:8px;padding-left:24px}
+.nav-search{flex:1;display:flex;align-items:center;gap:12px;padding:13px 22px;background:#fff;border:1.5px solid rgba(0,0,0,.3);border-radius:3px;font-size:16px;font-family:var(--fb);color:rgba(0,0,0,.65);min-width:0;cursor:text;letter-spacing:.03em;transition:border-color .2s}
+.nav-search:hover{border-color:rgba(0,0,0,.5)}
+.nav-ico{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:rgba(0,0,0,.7);transition:color .2s,background .2s}
 .nav-ico:hover{color:#000;background:rgba(0,0,0,.07)}
+.nav-burger{display:none}
+.mobile-menu{display:none}
 
 /* BREADCRUMB */
 .breadcrumb-bar{background:var(--off);border-bottom:1px solid rgba(0,0,0,.06);padding:12px 0}
-.breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,0,0,.38)}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,0,0,.38)}
 .breadcrumb a{color:rgba(0,0,0,.38);transition:color .2s}
 .breadcrumb a:hover{color:var(--green)}
-.bc-sep{color:rgba(0,0,0,.2);font-size:9px}
+.bc-sep{color:rgba(0,0,0,.2);font-size:11px}
 .bc-cur{color:var(--text)}
 
 /* PRODUCT HERO */
@@ -60,57 +64,56 @@ svg{display:inline-block;vertical-align:middle}
 .product-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
 
 /* Gallery */
-.gallery{display:flex;flex-direction:column;gap:12px;position:sticky;top:90px}
-.gallery-main{position:relative;overflow:hidden;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px));background:var(--off);aspect-ratio:1/1}
-.gallery-main img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.gallery-main:hover img{transform:scale(1.04)}
-/* Geometric corner accent on gallery */
-.gallery-main::before{content:'';position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 40px 40px 0;border-color:transparent rgba(4,168,0,.25) transparent transparent;z-index:2;pointer-events:none}
-.gallery-scan{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,rgba(4,168,0,.7),transparent);z-index:2}
-.gallery-badge-wrap{position:absolute;top:16px;left:16px;z-index:3;display:flex;flex-direction:column;gap:6px}
-.gallery-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.g-thumb{overflow:hidden;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);aspect-ratio:1/1;cursor:pointer;border:1.5px solid transparent;transition:border-color .2s}
+.gallery{display:flex;flex-direction:column;gap:10px;min-width:0;width:100%}
+.gallery-main{position:relative;overflow:hidden;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%);background:rgba(255,255,255,.04);aspect-ratio:1/1}
+.gallery-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;padding:20px;box-sizing:border-box;transition:transform .5s ease}
+.gallery-main:hover img{transform:scale(1.03)}
+.gallery-badge-wrap{position:absolute;top:14px;left:14px;z-index:3;display:flex;flex-direction:column;gap:6px}
+.gallery-scan{display:none}
+.gallery-thumbs{display:flex;flex-direction:row;gap:8px;overflow-x:auto;scrollbar-width:none;min-width:0;padding-bottom:2px}
+.gallery-thumbs::-webkit-scrollbar{display:none}
+.g-thumb{flex:0 0 72px;width:72px;height:72px;overflow:hidden;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);cursor:pointer;border:2px solid transparent;transition:border-color .2s;background:var(--off);position:relative}
 .g-thumb.active{border-color:var(--green)}
 .g-thumb:hover{border-color:rgba(4,168,0,.4)}
-.g-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.g-thumb:hover img{transform:scale(1.07)}
+.g-thumb img{width:100%;height:100%;object-fit:contain;transition:transform .4s;padding:4px;box-sizing:border-box}
+.g-thumb:hover img{transform:scale(1.06)}
 
 /* Product Info */
 .product-info{display:flex;flex-direction:column;gap:0}
-.prod-label-tag{font-family:var(--fm);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.prod-label-tag{font-family:var(--fm);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .prod-label-tag::before{content:'';width:20px;height:1px;background:var(--green)}
 .prod-title{font-family:var(--fd);font-size:clamp(20px,2.8vw,30px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--text);line-height:1.08;margin-bottom:18px}
 /* Rating */
 .prod-rating{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid rgba(0,0,0,.07)}
 .prod-stars{color:var(--green);font-size:15px;letter-spacing:2px}
 .prod-rating-num{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--text)}
-.prod-rating-count{font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.prod-loox{font-family:var(--fm);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:5px}
+.prod-rating-count{font-family:var(--fm);font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.prod-loox{font-family:var(--fm);font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:5px}
 /* Price */
 .prod-price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
 .prod-price{font-family:var(--fd);font-size:34px;font-weight:900;color:var(--text);letter-spacing:-.02em}
-.prod-shipping{font-family:var(--fm);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:5px;margin-bottom:20px}
+.prod-shipping{font-family:var(--fm);font-size:14px;letter-spacing:.09em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:5px;margin-bottom:20px}
 /* Stock */
 .prod-stock{display:flex;align-items:center;gap:8px;font-family:var(--fb);font-size:13px;font-weight:600;color:#c44;margin-bottom:24px}
 .stock-dot{width:7px;height:7px;border-radius:50%;background:#c44;animation:pulse-s 1.4s infinite;flex-shrink:0}
 @keyframes pulse-s{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
 /* Blade tier */
-.prod-blade-tier{display:inline-flex;align-items:center;gap:7px;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;background:rgba(4,168,0,.14);color:var(--green);border:1px solid rgba(4,168,0,.4);clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);margin-bottom:20px}
+.prod-blade-tier{display:inline-flex;align-items:center;gap:7px;font-family:var(--fm);font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;background:rgba(4,168,0,.14);color:var(--green);border:1px solid rgba(4,168,0,.4);clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);margin-bottom:20px}
 /* Age badge */
-.age-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;background:rgba(0,0,0,.06);color:rgba(0,0,0,.6);border:1px solid rgba(0,0,0,.14);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%);margin-left:8px}
+.age-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;background:rgba(0,0,0,.06);color:rgba(0,0,0,.6);border:1px solid rgba(0,0,0,.14);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%);margin-left:8px}
 /* Features */
 .prod-features{display:flex;flex-direction:column;gap:9px;margin-bottom:28px;padding:20px;background:var(--off);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
-.prod-feature{display:flex;align-items:flex-start;gap:10px;font-family:var(--fb);font-size:13px;color:var(--text);line-height:1.45}
+.prod-feature{display:flex;align-items:flex-start;gap:10px;font-family:var(--fb);font-size:16px;color:var(--text);line-height:1.45}
 .prod-feature-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:5px}
 .prod-feature-icon{width:15px;height:15px;flex-shrink:0;color:var(--green);margin-top:1px}
 /* Specs */
 .prod-specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,.08);margin-bottom:28px;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
 .spec-cell{background:#fff;padding:12px 14px}
-.spec-label{font-family:var(--fm);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.38);margin-bottom:4px}
-.spec-val{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--text)}
+.spec-label{font-family:var(--fm);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.38);margin-bottom:4px}
+.spec-val{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--text)}
 /* CTA */
 .prod-cta-row{display:flex;gap:10px;margin-bottom:20px}
-.btn-add{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;background:var(--green);color:#fff;font-family:var(--fd);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);cursor:pointer;transition:background .2s}
+.btn-add{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;background:var(--green);color:#fff;font-family:var(--fd);font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);cursor:pointer;transition:background .2s}
 .btn-add:hover{background:var(--green-hi)}
 .btn-wishlist{width:52px;height:52px;border:1px solid rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;color:rgba(0,0,0,.45);clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);transition:all .2s;flex-shrink:0}
 .btn-wishlist:hover{color:var(--green);border-color:rgba(4,168,0,.4)}
@@ -118,32 +121,34 @@ svg{display:inline-block;vertical-align:middle}
 .trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .trust-item{display:flex;flex-direction:column;align-items:center;gap:5px;padding:12px 8px;background:var(--off);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);text-align:center}
 .trust-item svg{color:var(--green)}
-.trust-item-label{font-family:var(--fm);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);line-height:1.4}
+.trust-item-label{font-family:var(--fm);font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);line-height:1.4}
 
 /* PRODUCT DETAILS TABS */
 .prod-tabs-section{background:var(--off);padding:64px 0}
 .prod-tabs{display:flex;gap:2px;margin-bottom:40px;border-bottom:2px solid rgba(0,0,0,.08)}
-.prod-tab{font-family:var(--fb);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:14px 22px;color:rgba(0,0,0,.45);border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all .18s}
+.prod-tab{font-family:var(--fb);font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:14px 22px;color:rgba(0,0,0,.45);border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all .18s}
 .prod-tab.active{color:#000;border-bottom-color:var(--green)}
 .prod-tab:hover:not(.active){color:rgba(0,0,0,.7)}
 .prod-tab-content{display:none}
 .prod-tab-content.active{display:block}
-.prod-desc-body{font-family:var(--fb);font-size:14px;line-height:1.78;color:rgba(0,0,0,.7);max-width:760px}
+.prod-desc-body{font-family:var(--fb);font-size:18px;line-height:1.78;color:rgba(0,0,0,.7);max-width:760px}
 .prod-desc-body p{margin-bottom:16px}
 .prod-desc-body strong{color:var(--text);font-weight:700}
+/* Inline description in hero */
+.prod-desc-inline{font-family:var(--fb);font-size:18px;line-height:1.72;color:rgba(0,0,0,.6);margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid rgba(0,0,0,.07)}
 /* Specs table */
 .specs-table{width:100%;border-collapse:collapse;max-width:600px}
 .specs-table tr{border-bottom:1px solid rgba(0,0,0,.07)}
-.specs-table td{padding:13px 16px;font-family:var(--fb);font-size:13.5px}
-.specs-table td:first-child{font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.4);width:40%}
+.specs-table td{padding:13px 16px;font-family:var(--fb);font-size:17px}
+.specs-table td:first-child{font-family:var(--fm);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.4);width:40%}
 .specs-table td:last-child{font-weight:600;color:var(--text)}
 /* Reviews tab */
 .reviews-summary{display:flex;align-items:center;gap:40px;margin-bottom:36px;padding:24px;background:#fff;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%)}
 .rev-big{font-family:var(--fd);font-size:56px;font-weight:900;color:var(--text);line-height:1}
 .rev-stars-lg{color:var(--green);font-size:22px;letter-spacing:3px;margin-bottom:4px}
-.rev-count-lbl{font-family:var(--fm);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.38)}
+.rev-count-lbl{font-family:var(--fm);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.38)}
 .rev-bars{flex:1;display:flex;flex-direction:column;gap:5px}
-.rev-bar-row{display:flex;align-items:center;gap:10px;font-family:var(--fm);font-size:9px;letter-spacing:.07em}
+.rev-bar-row{display:flex;align-items:center;gap:10px;font-family:var(--fm);font-size:13px;letter-spacing:.07em}
 .rev-bar-label{width:28px;color:rgba(0,0,0,.4)}
 .rev-bar-track{flex:1;height:4px;background:rgba(0,0,0,.08)}
 .rev-bar-fill{height:100%;background:var(--green)}
@@ -151,19 +156,19 @@ svg{display:inline-block;vertical-align:middle}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .rv-card{background:#fff;padding:20px;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);position:relative}
 .rv-card::after{content:'';position:absolute;top:0;right:0;width:12px;height:1px;background:rgba(4,168,0,.5);transform-origin:right top;transform:rotate(45deg) translateY(-1px)}
-.rv-stars{color:var(--green);font-size:12px;letter-spacing:1px;margin-bottom:8px}
-.rv-title{font-family:var(--fb);font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:8px}
-.rv-text{font-family:var(--fb);font-size:12.5px;line-height:1.62;color:rgba(0,0,0,.6);margin-bottom:12px}
-.rv-by{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.35)}
-.rv-verified{display:flex;align-items:center;gap:4px;font-family:var(--fm);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:4px}
+.rv-stars{color:var(--green);font-size:16px;letter-spacing:1px;margin-bottom:8px}
+.rv-title{font-family:var(--fb);font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px}
+.rv-text{font-family:var(--fb);font-size:15px;line-height:1.62;color:rgba(0,0,0,.6);margin-bottom:12px}
+.rv-by{font-family:var(--fm);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+.rv-verified{display:flex;align-items:center;gap:4px;font-family:var(--fm);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:4px}
 
 /* WHATS IN THE BOX */
 .box-section{background:#fff;padding:64px 0;position:relative;overflow:hidden}
 .box-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
 .box-item{display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 20px;background:var(--off);clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);text-align:center;border:1px solid rgba(0,0,0,.06)}
 .box-icon{width:48px;height:48px;border:1px solid rgba(4,168,0,.3);display:flex;align-items:center;justify-content:center;color:var(--green);background:rgba(4,168,0,.07);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%)}
-.box-item-name{font-family:var(--fd);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text)}
-.box-item-sub{font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:rgba(0,0,0,.35)}
+.box-item-name{font-family:var(--fd);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text)}
+.box-item-sub{font-family:var(--fm);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(0,0,0,.35)}
 
 /* RELATED PRODUCTS */
 .related-section{background:var(--off);padding:72px 0;position:relative;overflow:hidden}
@@ -178,71 +183,72 @@ svg{display:inline-block;vertical-align:middle}
   filter:drop-shadow(0 2px 6px rgba(0,0,0,.18)) drop-shadow(0 8px 28px rgba(0,0,0,.22)) drop-shadow(0 24px 56px rgba(0,0,0,.16));
   transition:transform .28s ease,filter .28s ease;
 }
-.pc::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.72) 0%,rgba(255,255,255,.32) 32%,rgba(255,255,255,.06) 62%,transparent 100%);pointer-events:none;z-index:3}
+.pc::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,.03) 32%,transparent 62%);pointer-events:none;z-index:3}
 .pc::after{content:'';position:absolute;top:0;right:0;width:14px;height:1px;background:rgba(4,168,0,.5);transform-origin:right top;transform:rotate(45deg) translateY(-1px);pointer-events:none;z-index:4;transition:width .25s}
 .pc:hover{transform:translateY(-5px) scale(1.015);filter:drop-shadow(0 8px 18px rgba(0,0,0,.36)) drop-shadow(0 22px 52px rgba(0,0,0,.52)) drop-shadow(0 44px 88px rgba(0,0,0,.32)) drop-shadow(0 0 28px rgba(4,168,0,.14))}
 .pc:hover::after{width:20px}
 .pc:hover .pc-img img{transform:scale(1.06)}
-.pc-badge{position:absolute;top:12px;left:12px;z-index:5;font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px}
+.pc-badge{position:absolute;top:12px;left:12px;z-index:5;font-family:var(--fm);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px}
 .badge-trend{background:var(--green);color:#fff;border:1px solid var(--green);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
 .badge-new{background:rgba(0,0,0,.07);color:var(--text);border:1px solid rgba(0,0,0,.15);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
 .pc-img{height:200px;overflow:hidden;position:relative;z-index:0}
 .pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
 .pc-info{padding:16px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1;position:relative;z-index:2}
-.pc-cat{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.36)}
-.pc-name{font-family:var(--fb);font-size:13px;font-weight:600;color:var(--text);line-height:1.38;flex:1}
-.pc-price{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--text)}
+.pc-cat{font-family:var(--fm);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.36)}
+.pc-name{font-family:var(--fb);font-size:16px;font-weight:600;color:var(--text);line-height:1.38;flex:1}
+.pc-price{font-family:var(--fd);font-size:20px;font-weight:700;color:var(--text)}
 .pc-footer{margin-top:auto;padding-top:10px;border-top:1px solid rgba(0,0,0,.06)}
-.pc-cta{display:flex;align-items:center;justify-content:space-between;font-family:var(--fb);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(0,0,0,.5);cursor:pointer;transition:color .2s}
+.pc-cta{display:flex;align-items:center;justify-content:space-between;font-family:var(--fb);font-size:14px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(0,0,0,.5);cursor:pointer;transition:color .2s}
 .pc:hover .pc-cta{color:var(--green)}
 
 /* EMAIL */
-.email-cap{background:#e0e0dd;padding:80px 0;position:relative;overflow:hidden}
-.email-cap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(4,168,0,.06) 0%,transparent 70%);pointer-events:none}
+.email-cap{background:#000;padding:80px 0;position:relative;overflow:hidden}
+.email-cap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(4,168,0,.1) 0%,transparent 70%);pointer-events:none}
 .email-in{max-width:560px;margin:0 auto;text-align:center;position:relative;z-index:1;padding:0 40px}
-.sec-tag{font-family:var(--fm);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.sec-tag{font-family:var(--fm);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:18px;display:flex;align-items:center;gap:8px}
 .sec-tag-center{justify-content:center}
-.sec-label-tag{font-family:var(--fm);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.sec-label-tag{font-family:var(--fm);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:10px;display:flex;align-items:center;gap:10px}
 .sec-label-tag::before{content:'';width:22px;height:1px;background:var(--green)}
-.sec-h2{font-family:var(--fd);font-size:clamp(26px,3.2vw,38px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--text);line-height:1}
+.sec-h2{font-family:var(--fd);font-size:clamp(32px,4vw,56px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--text);line-height:1}
 .sec-h2 em{font-style:normal;color:var(--green)}
 .sec-label-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px}
 .sec-label-stack{display:flex;flex-direction:column;gap:0}
-.email-title{font-family:var(--fd);font-size:clamp(26px,4vw,38px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--text);line-height:1.05;margin-bottom:14px}
-.email-sub{font-family:var(--fb);font-size:14px;color:var(--muted);line-height:1.62;margin-bottom:30px}
+.email-title{font-family:var(--fd);font-size:clamp(26px,4vw,38px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:#fff;line-height:1.05;margin-bottom:14px}
+.email-sub{font-family:var(--fb);font-size:16px;color:rgba(255,255,255,.6);line-height:1.62;margin-bottom:30px}
 .email-form{display:flex;gap:0;max-width:420px;margin:0 auto}
-.email-inp{flex:1;padding:13px 18px;background:#fff;border:1px solid rgba(0,0,0,.12);border-right:none;font-family:var(--fb);font-size:13px;color:var(--text);outline:none}
-.email-inp::placeholder{color:rgba(0,0,0,.28)}
-.email-btn{display:flex;align-items:center;gap:8px;padding:13px 22px;background:var(--green);color:#fff;font-family:var(--fd);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);transition:background .2s;white-space:nowrap}
+.email-inp{flex:1;padding:13px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-right:none;font-family:var(--fb);font-size:15px;color:#fff;outline:none}
+.email-inp::placeholder{color:rgba(255,255,255,.32)}
+.email-btn{display:flex;align-items:center;gap:8px;padding:13px 22px;background:var(--green);color:#fff;font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);transition:background .2s;white-space:nowrap}
 .email-btn:hover{background:var(--green-hi)}
 /* FOOTER */
-.footer{background:#e0e0dd;border-top:1px solid rgba(0,0,0,.08);padding:60px 0 0}
-.footer-in{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.4fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(0,0,0,.08)}
+.footer{background:#000;border-top:1px solid rgba(255,255,255,.06);padding:60px 0 0}
+.footer-in{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.4fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
 .fl-logo{margin-bottom:14px}
-.fl-logo img{height:38px;width:auto}
-.fl-tag{font-family:var(--fb);font-size:12.5px;line-height:1.65;color:rgba(0,0,0,.45);margin-bottom:16px}
-.fl-addr{font-family:var(--fm);font-size:10px;letter-spacing:.05em;line-height:1.8;color:rgba(0,0,0,.35)}
-.fc-hd{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(0,0,0,.35);margin-bottom:14px}
+.fl-logo img{height:420px;width:auto;display:block;margin-bottom:20px}
+.fl-tag{font-family:var(--fb);font-size:14px;line-height:1.65;color:rgba(255,255,255,.45);margin-bottom:16px}
+.fl-addr{font-family:var(--fm);font-size:12px;letter-spacing:.05em;line-height:1.8;color:rgba(255,255,255,.3)}
+.fc-hd{font-family:var(--fm);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px}
 .fc-links{display:flex;flex-direction:column;gap:9px}
-.fc-link{font-family:var(--fb);font-size:13px;color:rgba(0,0,0,.55);transition:color .2s}
-.fc-link:hover{color:#000}
-.fn-txt{font-family:var(--fb);font-size:12.5px;line-height:1.6;color:rgba(0,0,0,.45);margin-bottom:14px}
+.fc-link{font-family:var(--fb);font-size:15px;color:rgba(255,255,255,.5);transition:color .2s}
+.fc-link:hover{color:#fff}
+.fn-txt{font-family:var(--fb);font-size:14px;line-height:1.6;color:rgba(255,255,255,.45);margin-bottom:14px}
 .fn-form{display:flex;gap:0;margin-bottom:10px}
-.fn-inp{flex:1;padding:10px 14px;background:#fff;border:1px solid rgba(0,0,0,.12);border-right:none;font-family:var(--fb);font-size:12px;color:var(--text);outline:none}
-.fn-inp::placeholder{color:rgba(0,0,0,.3)}
+.fn-inp{flex:1;padding:10px 14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-right:none;font-family:var(--fb);font-size:12px;color:#fff;outline:none}
+.fn-inp::placeholder{color:rgba(255,255,255,.3)}
 .fn-btn{width:40px;background:var(--green);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
 .fn-btn:hover{background:var(--green-hi)}
-.fn-consent{font-family:var(--fb);font-size:10.5px;color:rgba(0,0,0,.35);line-height:1.5}
+.fn-consent{font-family:var(--fb);font-size:13px;color:rgba(255,255,255,.28);line-height:1.5}
 .social-row{display:flex;gap:6px}
-.soc{width:34px;height:34px;border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;color:rgba(0,0,0,.4);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%);transition:all .2s}
-.soc:hover{color:var(--green);border-color:rgba(4,168,0,.35);background:rgba(4,168,0,.06)}
+.soc{width:34px;height:34px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%);transition:all .2s}
+.soc:hover{color:var(--green);border-color:rgba(4,168,0,.5);background:rgba(4,168,0,.1)}
 .footer-bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:24px 0}
-.footer-copy{font-family:var(--fm);font-size:9.5px;letter-spacing:.06em;color:rgba(0,0,0,.35)}
+.footer-copy{font-family:var(--fm);font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.28)}
 .footer-bot-links{display:flex;gap:20px;flex-wrap:wrap}
-.fbl{font-family:var(--fm);font-size:9.5px;letter-spacing:.05em;color:rgba(0,0,0,.35);transition:color .2s}
-.fbl:hover{color:rgba(0,0,0,.7)}
-.pay-icons{display:flex;gap:5px;flex-wrap:wrap}
-.pay-ic{font-family:var(--fm);font-size:8px;letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border:1px solid rgba(0,0,0,.12);color:rgba(0,0,0,.38);background:#fff}
+.fbl{font-family:var(--fm);font-size:12px;letter-spacing:.05em;color:rgba(255,255,255,.28);transition:color .2s}
+.fbl:hover{color:rgba(255,255,255,.7)}
+.pay-icons{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pay-ic{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:3px;height:30px;width:46px;overflow:hidden}
+.pay-ic img{height:24px;width:38px;object-fit:contain;opacity:.75;display:block}
 /* Divider */
 .divider-l2d{display:block;width:100%;overflow:hidden;line-height:0;font-size:0}
 .divider-l2d svg{display:block;width:100%;height:120px}
@@ -250,7 +256,7 @@ svg{display:inline-block;vertical-align:middle}
 /* ─── SOCIAL PROOF TICKER ─── */
 .social-ticker{background:#fff;border-bottom:1px solid rgba(0,0,0,.07);padding:11px 0}
 .st-inner{display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap}
-.st-item{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,0,0,.5)}
+.st-item{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:15px;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,0,0,.5)}
 .st-live{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;animation:pulse-g 1.6s infinite}
 .st-hot{width:7px;height:7px;border-radius:50%;background:#e55;flex-shrink:0;animation:pulse-g 1.6s infinite .3s}
 .st-ship{width:7px;height:7px;border-radius:50%;background:#04A800;flex-shrink:0}
@@ -272,8 +278,8 @@ svg{display:inline-block;vertical-align:middle}
 .auth-point::after{content:'';position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 16px 16px 0;border-color:transparent rgba(4,168,0,.2) transparent transparent}
 .auth-num{font-family:var(--fd);font-size:28px;font-weight:900;color:rgba(4,168,0,.12);line-height:1;letter-spacing:-.02em}
 .auth-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(4,168,0,.28);color:var(--green);background:rgba(4,168,0,.07);clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,0 100%)}
-.auth-title{font-family:var(--fd);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text)}
-.auth-desc{font-family:var(--fb);font-size:12px;color:var(--muted);line-height:1.55}
+.auth-title{font-family:var(--fd);font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text)}
+.auth-desc{font-family:var(--fb);font-size:16px;color:var(--muted);line-height:1.55}
 
 /* ─── COLLECTOR SCORE CARD ─── */
 .score-section{background:var(--off);padding:72px 0;position:relative;overflow:hidden}
@@ -281,13 +287,13 @@ svg{display:inline-block;vertical-align:middle}
 .score-card{background:#060608;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px));padding:36px 32px;position:relative;overflow:hidden}
 .score-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(4,168,0,.08) 0%,transparent 60%);pointer-events:none}
 .score-title-row{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:28px}
-.score-label{font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(4,168,0,.6);margin-bottom:6px}
+.score-label{font-family:var(--fm);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(4,168,0,.6);margin-bottom:6px}
 .score-big{font-family:var(--fd);font-size:52px;font-weight:900;color:#fff;line-height:1;letter-spacing:-.03em}
 .score-big span{font-size:22px;color:rgba(4,168,0,.7)}
-.score-tier{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);padding:4px 10px;border:1px solid rgba(4,168,0,.4);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
+.score-tier{font-family:var(--fm);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);padding:4px 10px;border:1px solid rgba(4,168,0,.4);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
 .score-bars{display:flex;flex-direction:column;gap:14px}
 .score-bar-row{display:flex;flex-direction:column;gap:5px}
-.score-bar-label{display:flex;align-items:center;justify-content:space-between;font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.score-bar-label{display:flex;align-items:center;justify-content:space-between;font-family:var(--fm);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45)}
 .score-bar-label span{color:var(--green)}
 .score-bar-track{height:4px;background:rgba(255,255,255,.08);position:relative;overflow:hidden}
 .score-bar-fill{height:100%;background:var(--green);width:0;transition:width 1.2s cubic-bezier(.23,1,.32,1)}
@@ -295,7 +301,7 @@ svg{display:inline-block;vertical-align:middle}
 .score-desc{display:flex;flex-direction:column;gap:20px}
 .score-desc-title{font-family:var(--fd);font-size:clamp(22px,2.8vw,30px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--text);line-height:1.05}
 .score-desc-title em{font-style:normal;color:var(--green)}
-.score-desc-body{font-family:var(--fb);font-size:14px;color:var(--text);line-height:1.72}
+.score-desc-body{font-family:var(--fb);font-size:16px;color:var(--text);line-height:1.72}
 
 /* ─── ACHIEVEMENTS ─── */
 .achievements-section{background:#fff;padding:64px 0;position:relative;overflow:hidden}
@@ -304,9 +310,9 @@ svg{display:inline-block;vertical-align:middle}
 .achievement:hover{transform:translateY(-4px);border-color:rgba(4,168,0,.3)}
 .achievement.unlocked{background:linear-gradient(145deg,#fff 0%,rgba(248,248,248,1) 100%)}
 .ach-icon-wrap{width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:rgba(4,168,0,.08);border:1.5px solid rgba(4,168,0,.3);clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);margin-bottom:16px;color:var(--green)}
-.ach-unlocked-badge{display:inline-flex;align-items:center;gap:5px;font-family:var(--fm);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:rgba(4,168,0,.08);border:1px solid rgba(4,168,0,.25);padding:3px 8px;clip-path:polygon(0 0,calc(100% - 4px) 0,100% 4px,100% 100%,0 100%);margin-bottom:10px}
-.ach-title{font-family:var(--fd);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--text);margin-bottom:6px}
-.ach-desc{font-family:var(--fb);font-size:12.5px;color:var(--muted);line-height:1.55}
+.ach-unlocked-badge{display:inline-flex;align-items:center;gap:5px;font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:rgba(4,168,0,.08);border:1px solid rgba(4,168,0,.25);padding:3px 8px;clip-path:polygon(0 0,calc(100% - 4px) 0,100% 4px,100% 100%,0 100%);margin-bottom:10px}
+.ach-title{font-family:var(--fd);font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--text);margin-bottom:6px}
+.ach-desc{font-family:var(--fb);font-size:15px;color:var(--muted);line-height:1.55}
 .ach-geo{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 32px 32px 0;border-color:transparent rgba(4,168,0,.12) transparent transparent}
 
 /* ─── DELIVERY TIMELINE ─── */
@@ -316,9 +322,9 @@ svg{display:inline-block;vertical-align:middle}
 .dt-step{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;position:relative;z-index:1}
 .dt-node{width:56px;height:56px;border:2px solid var(--green);background:#fff;display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);color:var(--green);flex-shrink:0}
 .dt-step.complete .dt-node{background:var(--green);color:#fff}
-.dt-label{font-family:var(--fd);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text)}
-.dt-time{font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
-.dt-sub{font-family:var(--fb);font-size:11.5px;color:var(--muted);line-height:1.4}
+.dt-label{font-family:var(--fd);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text)}
+.dt-time{font-family:var(--fm);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.dt-sub{font-family:var(--fb);font-size:15px;color:var(--muted);line-height:1.4}
 
 /* ─── SCALE COMPARISON ─── */
 .scale-section{background:#fff;padding:72px 0;position:relative;overflow:hidden}
@@ -327,15 +333,15 @@ svg{display:inline-block;vertical-align:middle}
 .scale-visual::after{content:'';position:absolute;bottom:32px;left:0;right:0;height:1px;background:rgba(0,0,0,.1)}
 .scale-sword-bar{width:12px;background:linear-gradient(to top,rgba(4,168,0,.8),rgba(4,168,0,.25));position:relative;border-radius:1px}
 .scale-person-bar{width:36px;background:linear-gradient(to top,rgba(0,0,0,.25),rgba(0,0,0,.08));position:relative;clip-path:polygon(30% 0,70% 0,75% 8%,65% 8%,65% 18%,78% 25%,80% 60%,70% 60%,70% 100%,30% 100%,30% 60%,20% 60%,22% 25%,35% 18%,35% 8%,25% 8%)}
-.scale-label{position:absolute;top:-28px;left:50%;transform:translateX(-50%);font-family:var(--fd);font-size:11px;font-weight:700;color:var(--text);white-space:nowrap;text-align:center}
+.scale-label{position:absolute;top:-28px;left:50%;transform:translateX(-50%);font-family:var(--fd);font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;text-align:center}
 .scale-measure{position:absolute;right:-28px;top:0;bottom:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between}
-.scale-tick{display:flex;align-items:center;gap:4px;font-family:var(--fm);font-size:8.5px;letter-spacing:.08em;color:rgba(0,0,0,.35)}
+.scale-tick{display:flex;align-items:center;gap:4px;font-family:var(--fm);font-size:12px;letter-spacing:.08em;color:rgba(0,0,0,.35)}
 .scale-tick::before{content:'';width:8px;height:1px;background:rgba(0,0,0,.2)}
 .scale-info{display:flex;flex-direction:column;gap:20px;padding-bottom:32px}
 .scale-stat{display:flex;flex-direction:column;gap:4px}
 .scale-stat-val{font-family:var(--fd);font-size:28px;font-weight:900;color:var(--text);letter-spacing:-.02em}
 .scale-stat-val em{font-style:normal;color:var(--green);margin-right:3px}
-.scale-stat-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.38)}
+.scale-stat-lbl{font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.38)}
 .scale-divider-h{height:1px;background:rgba(0,0,0,.08);margin:4px 0}
 
 /* ─── COMPLETE THE SET ─── */
@@ -393,20 +399,276 @@ svg{display:inline-block;vertical-align:middle}
 .qa-item{background:#fff;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);overflow:hidden;border:1px solid rgba(0,0,0,.07);transition:border-color .2s}
 .qa-item.open{border-color:rgba(4,168,0,.25)}
 .qa-q{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:20px}
-.qa-q-text{font-family:var(--fb);font-size:14px;font-weight:600;color:var(--text);line-height:1.35}
+.qa-q-text{font-family:var(--fb);font-size:16px;font-weight:600;color:var(--text);line-height:1.35}
 .qa-icon{width:26px;height:26px;border:1px solid rgba(0,0,0,.14);display:flex;align-items:center;justify-content:center;flex-shrink:0;clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%);color:rgba(0,0,0,.45);transition:all .2s}
 .qa-item.open .qa-icon{background:var(--green);border-color:var(--green);color:#fff}
 .qa-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
-.qa-a-inner{padding:0 22px 18px;font-family:var(--fb);font-size:13.5px;color:var(--muted);line-height:1.72;border-top:1px solid rgba(0,0,0,.06)}
+.qa-a-inner{padding:0 22px 18px;font-family:var(--fb);font-size:16px;color:var(--muted);line-height:1.72;border-top:1px solid rgba(0,0,0,.06)}
 .qa-item.open .qa-a{max-height:200px}
 .qa-ask{margin-top:28px;display:flex;align-items:center;gap:0}
 .qa-ask-inp{flex:1;padding:12px 16px;background:#fff;border:1px solid rgba(0,0,0,.14);border-right:none;font-family:var(--fb);font-size:13px;color:var(--text);outline:none}
 .qa-ask-inp::placeholder{color:rgba(0,0,0,.28)}
-.qa-ask-btn{display:flex;align-items:center;gap:7px;padding:12px 20px;background:var(--green);color:#fff;font-family:var(--fd);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%)}
+.qa-ask-btn{display:flex;align-items:center;gap:7px;padding:12px 20px;background:var(--green);color:#fff;font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%)}
 .qa-ask-btn:hover{background:var(--green-hi)}
 /* sec utility */
 .sec-bg-shape{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
 .sec-bg-shape svg{position:absolute;bottom:0;left:0;width:100%;height:100%;opacity:1}
+
+/* ─── PRODUCT PAGE DARK THEME ─── */
+body{background:#060608}
+.breadcrumb-bar{background:#0d0d0f;border-bottom-color:rgba(255,255,255,.07)}
+.breadcrumb,.breadcrumb a{color:rgba(255,255,255,.35)}
+.bc-cur{color:rgba(255,255,255,.75)}
+.bc-sep{color:rgba(255,255,255,.15)}
+.social-ticker{background:#0d0d0f;border-bottom-color:rgba(255,255,255,.06)}
+.st-item{color:rgba(255,255,255,.45)}
+.product-hero{background:#060608}
+.gallery-main,.g-thumb{background:rgba(255,255,255,.05)}
+.prod-title{color:#fff}
+.prod-rating{border-bottom-color:rgba(255,255,255,.07)}
+.prod-rating-num{color:#fff}
+.prod-rating-count{color:rgba(255,255,255,.4)}
+.prod-loox{color:rgba(255,255,255,.35)}
+.prod-desc-inline{color:rgba(255,255,255,.55);border-bottom-color:rgba(255,255,255,.07)}
+.age-badge{background:rgba(255,255,255,.06);color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.12)}
+.prod-features{background:rgba(255,255,255,.04)}
+.prod-feature{color:rgba(255,255,255,.8)}
+.prod-specs{background:rgba(255,255,255,.08)}
+.spec-cell{background:#060608}
+.spec-label{color:rgba(255,255,255,.35)}
+.spec-val{color:#fff}
+.btn-wishlist{border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.45)}
+.trust-item{background:rgba(255,255,255,.04)}
+.trust-item-label{color:rgba(255,255,255,.75)}
+.auth-callout{background:#0a0a0a;border-top-color:var(--green);border-bottom-color:rgba(255,255,255,.06)}
+.auth-grid{background:rgba(255,255,255,.07)}
+.auth-point{background:#0a0a0a}
+.auth-num{color:rgba(4,168,0,.07)}
+.auth-title{color:#fff}
+.auth-desc{color:rgba(255,255,255,.5)}
+.prod-tabs-section{background:#0a0a0a}
+.prod-tabs{border-bottom-color:rgba(255,255,255,.08)}
+.prod-tab{color:rgba(255,255,255,.38)}
+.prod-tab.active{color:#fff;border-bottom-color:var(--green)}
+.prod-tab:hover:not(.active){color:rgba(255,255,255,.7)}
+.prod-desc-body{color:rgba(255,255,255,.6)}
+.prod-desc-body strong{color:#fff}
+.specs-table tr{border-bottom-color:rgba(255,255,255,.07)}
+.specs-table td:first-child{color:rgba(255,255,255,.35)}
+.specs-table td:last-child{color:#fff}
+.reviews-summary{background:rgba(255,255,255,.04)}
+.rev-big{color:#fff}
+.rev-bar-track{background:rgba(255,255,255,.08)}
+.rv-card{background:rgba(255,255,255,.04)}
+.rv-title{color:#fff}
+.rv-text{color:rgba(255,255,255,.5)}
+.rv-by{color:rgba(255,255,255,.28)}
+.delivery-section{background:#060608}
+.dt-node{background:#0d0d0f}
+.dt-step.complete .dt-node{background:var(--green)}
+.dt-label{color:#fff}
+.dt-sub{color:rgba(255,255,255,.42)}
+.related-section{background:#060608}
+.sec-h2{color:#fff}
+.pc{background:linear-gradient(145deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,.02) 100%)}
+.pc::before{background:linear-gradient(135deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.05) 32%,rgba(255,255,255,.01) 62%,transparent 100%)}
+.pc-cat{color:rgba(255,255,255,.3)}
+.pc-name{color:#fff}
+.pc-price{color:#fff}
+.pc-footer{border-top-color:rgba(255,255,255,.07)}
+.pc-cta{color:rgba(255,255,255,.4)}
+
+/* ─── REVIEWS SHOWCASE SECTION ─── */
+.reviews-section{background:#000;padding:80px 0;position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,.06)}
+.reviews-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(4,168,0,.07) 0%,transparent 65%);pointer-events:none}
+.reviews-meta{display:flex;align-items:center;gap:20px}
+.rev-score-display{font-family:var(--fd);font-size:56px;font-weight:900;color:#fff;line-height:1;letter-spacing:-.03em}
+.rev-stars-row{color:var(--green);font-size:18px;letter-spacing:3px;margin-bottom:4px}
+.rev-total-lbl{font-family:var(--fm);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.rev-powered{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(4,168,0,.6);margin-top:4px;display:flex;align-items:center;gap:5px}
+.reviews-showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rv2{background:rgba(255,255,255,.04);padding:24px;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);position:relative;border:1px solid rgba(255,255,255,.07);transition:border-color .2s}
+.rv2:hover{border-color:rgba(4,168,0,.28)}
+.rv2::after{content:'';position:absolute;top:0;right:0;width:12px;height:1px;background:rgba(4,168,0,.55);transform-origin:right top;transform:rotate(45deg) translateY(-1px)}
+.rv2-stars{color:var(--green);font-size:16px;letter-spacing:1px;margin-bottom:10px}
+.rv2-title{font-family:var(--fb);font-size:16px;font-weight:700;color:#fff;margin-bottom:8px}
+.rv2-text{font-family:var(--fb);font-size:15px;line-height:1.65;color:rgba(255,255,255,.5);margin-bottom:14px}
+.rv2-footer{display:flex;align-items:flex-end;justify-content:space-between}
+.rv2-by{font-family:var(--fm);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28)}
+.rv2-verified{display:flex;align-items:center;gap:4px;font-family:var(--fm);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-top:5px}
+.reviews-cta-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:48px}
+.btn-rev-load{display:flex;align-items:center;gap:8px;padding:14px 28px;background:transparent;color:rgba(255,255,255,.6);font-family:var(--fd);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(255,255,255,.15);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);cursor:pointer;transition:all .2s}
+.btn-rev-load:hover{color:#fff;border-color:rgba(255,255,255,.35)}
+.btn-rev-write{display:flex;align-items:center;gap:8px;padding:14px 28px;background:var(--green);color:#fff;font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);cursor:pointer;transition:background .2s}
+.btn-rev-write:hover{background:var(--green-hi)}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  /* UTILS */
+  .wrap{padding:0 18px}
+  /* NAV */
+  .nav-in{padding:0 18px;height:62px}
+  .nav-logo img{height:56px}
+  .nav-links{display:none}
+  .nav-search{display:none}
+  .nav-right{padding-left:0;justify-content:flex-end;gap:4px;flex:unset;margin-left:auto}
+  .nav-burger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:0;margin-left:4px}
+  .nav-burger span{display:block;width:22px;height:1.5px;background:#000;transition:transform .3s,opacity .3s}
+  .nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+  .nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .mobile-menu{display:flex;flex-direction:column;position:fixed;inset:0;background:rgba(6,6,8,.97);backdrop-filter:blur(20px);z-index:999;padding:80px 28px 40px;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);overflow-y:auto}
+  .mobile-menu.open{transform:translateX(0)}
+  .mobile-menu-links{display:flex;flex-direction:column;gap:4px;margin-bottom:32px}
+  .mobile-menu-a{font-family:var(--fd);font-size:22px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.75);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between}
+  .mobile-menu-a:hover{color:#fff}
+  .mobile-menu-outlet{color:#7dde7a}
+  /* BREADCRUMB */
+  .breadcrumb-bar{padding:8px 0}
+  .breadcrumb{font-size:11px;gap:5px;flex-wrap:wrap}
+  /* SOCIAL TICKER */
+  .st-inner{display:grid;grid-template-columns:1fr 1fr;gap:8px 6px;padding:4px 0}
+  .st-item{font-size:10px;letter-spacing:.05em;gap:5px}
+  /* PRODUCT HERO */
+  .product-hero{padding:28px 0 48px}
+  .product-layout{grid-template-columns:1fr;gap:32px}
+  /* GALLERY */
+  .gallery-main{aspect-ratio:1/1}
+  .g-thumb{flex:0 0 60px;width:60px;height:60px}
+  /* PRODUCT INFO */
+  .prod-title{font-size:clamp(18px,5.5vw,26px)}
+  .prod-price{font-size:28px}
+  .prod-rating{gap:7px;flex-wrap:nowrap}
+  .prod-stars{font-size:13px;letter-spacing:1px}
+  .prod-rating-num{font-size:12px}
+  .prod-rating-count{font-size:12px;letter-spacing:.05em}
+  .prod-loox{font-size:11px;letter-spacing:.06em}
+  .prod-blade-tier{font-size:13px;letter-spacing:.08em;padding:7px 12px;flex:0 0 100%}
+  .age-badge{font-size:12px;letter-spacing:.07em;padding:6px 11px;margin-left:0}
+  .prod-features{padding:16px}
+  .prod-feature{font-size:14px}
+  .prod-specs{grid-template-columns:1fr 1fr}
+  .prod-cta-row{flex-direction:column;gap:8px}
+  .btn-wishlist{width:100%;height:48px}
+  .trust-row{grid-template-columns:repeat(3,1fr);gap:6px}
+  .trust-item{padding:10px 6px}
+  .trust-item-label{font-size:10px}
+  .council-wrap{gap:12px;padding:14px 16px}
+  /* AUTH CALLOUT */
+  .auth-callout{padding:36px 0}
+  .auth-grid{grid-template-columns:repeat(2,1fr)}
+  .auth-point{padding:18px 16px}
+  .auth-title{font-size:14px}
+  .auth-desc{font-size:14px}
+  /* PRODUCT TABS */
+  .prod-tabs-section{padding:40px 0}
+  .prod-tabs{gap:0;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
+  .prod-tabs::-webkit-scrollbar{display:none}
+  .prod-tab{font-size:13px;padding:12px 16px;white-space:nowrap;flex-shrink:0}
+  .prod-desc-body{font-size:15px}
+  .reviews-grid{grid-template-columns:1fr}
+  .reviews-summary{flex-direction:column;align-items:flex-start;gap:20px;padding:18px}
+  .rev-big{font-size:44px}
+  /* BOX SECTION */
+  .box-section{padding:44px 0}
+  .box-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  /* SCORE SECTION */
+  .score-section{padding:48px 0}
+  .score-layout{grid-template-columns:1fr;gap:32px}
+  .score-big{font-size:40px}
+  /* ACHIEVEMENTS */
+  .achievements-section{padding:44px 0}
+  .achievements-grid{grid-template-columns:1fr;gap:10px}
+  /* DELIVERY TIMELINE */
+  .delivery-section{padding:44px 0}
+  .delivery-steps{grid-template-columns:repeat(2,1fr);gap:24px}
+  .delivery-steps::before{display:none}
+  .dt-step:last-child{grid-column:span 2;justify-self:center;width:50%}
+  /* SCALE SECTION */
+  .scale-section{padding:44px 0}
+  .scale-layout{grid-template-columns:1fr;gap:32px}
+  .scale-visual{height:220px}
+  /* BUNDLE */
+  .bundle-section{padding:48px 0}
+  .bundle-layout{grid-template-columns:1fr;gap:28px}
+  .bundle-products{justify-content:center}
+  .bundle-img{width:110px;height:110px}
+  /* CERT SECTION */
+  .cert-section{padding:48px 0}
+  .cert-layout{grid-template-columns:1fr;gap:32px}
+  /* Q&A */
+  .qa-section{padding:48px 0}
+  .qa-ask{flex-direction:column}
+  .qa-ask-inp{border-right:1px solid rgba(0,0,0,.14);border-bottom:none}
+  .qa-ask-btn{justify-content:center}
+  .qa-q-text{font-size:14px}
+  /* RELATED */
+  .related-section{padding:48px 0}
+  .related-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  /* REVIEWS SHOWCASE */
+  .reviews-section{padding:52px 0}
+  .reviews-showcase{grid-template-columns:1fr}
+  .reviews-meta{gap:14px}
+  .rev-score-display{font-size:44px}
+  .reviews-cta-row{flex-direction:column;align-items:stretch}
+  .btn-rev-load,.btn-rev-write{justify-content:center}
+  /* EMAIL */
+  .email-in{padding:0 18px}
+  .email-form{flex-direction:column;gap:10px}
+  .email-inp{border-right:1px solid rgba(255,255,255,.1);border-bottom:none}
+  /* FOOTER */
+  .footer-in{grid-template-columns:1fr;gap:28px;padding:0 0 32px}
+  .footer-bot{flex-direction:column;align-items:flex-start;padding:16px 0 28px;gap:12px}
+  .pay-icons{flex-wrap:wrap}
+  .fl-logo img{height:300px}
+}
+
+/* BIG SCREEN SCALE-UP */
+@media(min-width:1600px){
+  .wrap{max-width:1600px;padding:0 100px}
+  .nav-in{max-width:1600px;padding:0 100px}
+  .sec-h2{font-size:clamp(42px,4.5vw,68px)}
+  .sec-label-tag{font-size:14px}
+  .sec-tag{font-size:14px}
+  .ann-item{font-size:15px}
+  .nav-a{font-size:15px}
+  .prod-title{font-size:clamp(28px,3vw,40px)}
+  .prod-desc-inline{font-size:18px}
+  .prod-shipping{font-size:14px}
+  .prod-blade-tier{font-size:13px}
+  .age-badge{font-size:13px}
+  .spec-label{font-size:13px}
+  .trust-item-label{font-size:13px}
+  .auth-title{font-size:16px}
+  .auth-desc{font-size:16px}
+  .dt-label{font-size:15px}
+  .dt-time{font-size:13px}
+  .dt-sub{font-size:15px}
+  .rv-by{font-size:13px}
+  .prod-rating-count{font-size:15px}
+  .prod-loox{font-size:14px}
+  .pc-name{font-size:15px}
+  .pc-price{font-size:20px}
+}
+@media(min-width:1920px){
+  .wrap{max-width:1800px;padding:0 120px}
+  .nav-in{max-width:1800px;padding:0 120px}
+  .sec-h2{font-size:clamp(46px,4.5vw,72px)}
+  .sec-label-tag{font-size:15px}
+  .ann-item{font-size:15px}
+  .nav-a{font-size:15px}
+  .prod-title{font-size:clamp(32px,3vw,46px)}
+}
+@media(min-width:2560px){
+  .wrap{max-width:2200px;padding:0 160px}
+  .nav-in{max-width:2200px;padding:0 160px}
+  .sec-h2{font-size:clamp(52px,4.5vw,80px)}
+  .sec-label-tag{font-size:16px}
+  .ann-item{font-size:16px}
+  .nav-a{font-size:16px}
+  .prod-title{font-size:clamp(36px,3vw,52px)}
+}
+
 </style>
 </head>
 <body>
@@ -433,7 +695,7 @@ svg{display:inline-block;vertical-align:middle}
 <nav class="nav" id="mainNav">
   <div class="nav-in">
     <a href="index.html" class="nav-logo">
-      <img src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=120" alt="Next Level UK">
+      <img src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=300" alt="Next Level UK">
     </a>
     <div class="nav-links">
       <a href="index.html" class="nav-a">Lightsabers</a>
@@ -444,18 +706,36 @@ svg{display:inline-block;vertical-align:middle}
     </div>
     <div class="nav-right">
       <div class="nav-search">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         Search products...
       </div>
       <button class="nav-ico">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 3h2.5l2.5 9.5h10l3-7H6.5"/><path d="M7.5 12.5l-1.5 4h13"/><rect x="8" y="18" width="2.5" height="2.5" fill="currentColor" stroke="none"/><rect x="14.5" y="18" width="2.5" height="2.5" fill="currentColor" stroke="none"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 3h2.5l2.5 9.5h10l3-7H6.5"/><path d="M7.5 12.5l-1.5 4h13"/><rect x="8" y="18" width="2.5" height="2.5" fill="currentColor" stroke="none"/><rect x="14.5" y="18" width="2.5" height="2.5" fill="currentColor" stroke="none"/></svg>
       </button>
       <button class="nav-ico">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><line x1="12" y1="2" x2="12" y2="4.5"/><line x1="12" y1="11.5" x2="12" y2="14"/><line x1="5.5" y1="8" x2="8.5" y2="8"/><line x1="15.5" y1="8" x2="18.5" y2="8"/><path d="M4 22v-2c0-2.8 3.5-4.5 8-4.5s8 1.7 8 4.5v2"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><line x1="12" y1="2" x2="12" y2="4.5"/><line x1="12" y1="11.5" x2="12" y2="14"/><line x1="5.5" y1="8" x2="8.5" y2="8"/><line x1="15.5" y1="8" x2="18.5" y2="8"/><path d="M4 22v-2c0-2.8 3.5-4.5 8-4.5s8 1.7 8 4.5v2"/></svg>
+      </button>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu-links">
+    <a href="#" class="mobile-menu-a"><span style="display:flex;align-items:center;gap:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"><line x1="12" y1="2" x2="12" y2="16"/><line x1="7" y1="16" x2="17" y2="16"/><rect x="10" y="17" width="4" height="5" rx="1"/></svg>Lightsabers</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+    <a href="swords-collection.html" class="mobile-menu-a"><span style="display:flex;align-items:center;gap:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"><path d="M14.5 17.5 3 6V3h3l11.5 11.5M13 19l2-2M3 21l3-3M14 4l6 6"/></svg>Swords</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+    <a href="#" class="mobile-menu-a"><span style="display:flex;align-items:center;gap:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"><path d="M12 2C7 2 3 6 3 11v4a2 2 0 002 2h14a2 2 0 002-2v-4c0-5-4-9-9-9z"/><line x1="8" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="16" y2="12"/></svg>Masks / Helmets</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+    <a href="#" class="mobile-menu-a"><span style="display:flex;align-items:center;gap:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Cosplay Props</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+    <a href="#" class="mobile-menu-a mobile-menu-outlet"><span style="display:flex;align-items:center;gap:14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><circle cx="7" cy="7" r="1" fill="currentColor"/></svg>Outlet</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+  </nav>
+  <div style="margin-top:auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:12px">
+    <div style="font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65)">Free UK Shipping Over £100 - 30 Day Returns</div>
+    <div style="font-family:var(--fm);font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.55)">UK Family-Owned Since 2013 - 4.9 / 5 Reviews</div>
+  </div>
+</div>
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb-bar">
@@ -491,25 +771,72 @@ svg{display:inline-block;vertical-align:middle}
 
       <!-- Gallery -->
       <div class="gallery">
-        <div class="gallery-main" id="mainImg">
-          <div class="gallery-scan"></div>
-          <div class="gallery-badge-wrap">
-            <span style="display:inline-flex;align-items:center;gap:5px;font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;background:#060608;color:var(--green);border:1px solid rgba(4,168,0,.5);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)">&#9733; Legendary</span>
-          </div>
-          <img id="mainImgSrc" src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=1200" alt="Aragorn Anduril Metal Sword with Wall Plaque">
+        <!-- Main image display -->
+        <div class="gallery-main">
+          <div class="gallery-badge-wrap"><span style="display:inline-flex;align-items:center;gap:5px;font-family:var(--fm);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;background:#060608;color:var(--green);border:1px solid rgba(4,168,0,.5);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)">&#9733; Legendary</span></div>
+          <img id="mainImgSrc" src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="Anduril Sword">
         </div>
+        <!-- Horizontal thumbnail strip -->
         <div class="gallery-thumbs">
           <div class="g-thumb active" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
-            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=300" alt="View 1">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 1">
           </div>
           <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
-            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=300" alt="View 2" style="object-position:center 20%">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 2" style="object-position:center 20%">
           </div>
           <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
-            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=300" alt="View 3" style="object-position:60% center">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 3" style="object-position:60% center">
           </div>
           <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
-            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=300" alt="View 4" style="object-position:80% bottom">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 4" style="object-position:80% bottom">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 5" style="object-position:20% 30%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 6" style="object-position:40% 70%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 7" style="object-position:70% 40%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 8" style="object-position:30% 60%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 9" style="object-position:50% 10%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 10" style="object-position:10% 80%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 11" style="object-position:90% 30%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 12" style="object-position:25% 55%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 13" style="object-position:75% 15%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 14" style="object-position:45% 85%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 15" style="object-position:55% 45%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 16" style="object-position:15% 65%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 17" style="object-position:85% 50%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 18" style="object-position:35% 25%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 19" style="object-position:65% 75%">
+          </div>
+          <div class="g-thumb" onclick="setImg(this,'https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600')">
+            <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="View 20" style="object-position:95% 5%">
           </div>
         </div>
       </div>
@@ -528,8 +855,13 @@ svg{display:inline-block;vertical-align:middle}
           <span class="prod-loox"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg> Loox Verified</span>
         </div>
 
+        <!-- Description -->
+        <div class="prod-desc-inline">
+          Andúril - Flame of the West. Reforged from the shards of Narsil, this is <strong>Aragorn's iconic weapon</strong> from The Lord of the Rings, now available as a full-scale metal replica. Full 440 stainless steel construction, leather-wrapped grip, and genuine deep-etched Elvish runes. A <strong>blunt-edged display piece</strong> - completely safe to handle. Purchased as an 18+ ornamental replica.
+        </div>
+
         <!-- Blade Tier + Age -->
-        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:22px">
+        <div style="display:flex;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:22px">
           <div class="prod-blade-tier">&#9733; Metal Collector - Legendary Grade</div>
           <div class="age-badge">&#9888; 18+ Only</div>
         </div>
@@ -547,18 +879,6 @@ svg{display:inline-block;vertical-align:middle}
         <div class="prod-stock">
           <span class="stock-dot"></span>
           Only 4 left in stock - order soon
-        </div>
-
-        <!-- Blade Council Stamp -->
-        <div class="council-wrap">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(4,168,0,.85)" stroke-width="1.4" style="flex-shrink:0">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <polyline points="9 12 11 14 15 10"/>
-          </svg>
-          <div class="council-text">
-            <div class="council-title">Blade Council Certified</div>
-            <div class="council-sub">Hand-picked by our experts - Top 5% of all metal swords</div>
-          </div>
         </div>
 
         <!-- Features -->
@@ -637,154 +957,27 @@ svg{display:inline-block;vertical-align:middle}
     <div class="auth-grid">
       <div class="auth-point">
         <div class="auth-num">01</div>
-        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="M8 12l4-4"/></svg></div>
-        <div class="auth-title">Hand-Engraved Elvish Runes</div>
-        <div class="auth-desc">Deep-etched into the blade - not printed or painted. The runes translate Aragorn's lineage claim in Sindarin Elvish.</div>
+        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="auth-title">UK 48hr Dispatch</div>
+        <div class="auth-desc">All orders packed and dispatched from our UK warehouse within 48 hours of age verification being confirmed.</div>
       </div>
       <div class="auth-point">
         <div class="auth-num">02</div>
-        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="auth-title">440 Stainless Steel</div>
-        <div class="auth-desc">Full metal construction from pommel to tip. The same grade of steel used in premium kitchen knives - resistant to corrosion.</div>
+        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></div>
+        <div class="auth-title">30-Day Returns</div>
+        <div class="auth-desc">Not satisfied with your order? Return it within 30 days for a full refund - no questions asked, no hassle.</div>
       </div>
       <div class="auth-point">
         <div class="auth-num">03</div>
-        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></div>
-        <div class="auth-title">Genuine Leather Grip</div>
-        <div class="auth-desc">Real leather wrapped around the full-tang handle. Gives the 2.1kg sword a balanced, comfortable hold and accurate screen look.</div>
+        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="auth-title">4.9 / 5 Rated</div>
+        <div class="auth-desc">Over 2,400 verified Loox reviews across our full collection. Real buyers, real feedback - consistently rated 4.9 out of 5.</div>
       </div>
       <div class="auth-point">
         <div class="auth-num">04</div>
-        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg></div>
-        <div class="auth-title">Wall Mount Plaque</div>
-        <div class="auth-desc">Solid hardwood display plaque included. All fittings provided. Zero assembly tools needed - hang-ready out of the box.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COLLECTOR SCORE CARD -->
-<section class="score-section">
-  <div class="sec-bg-shape"><svg viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M 0 519 L 175 445 L 234 439 L 328 328 L 398 365 L 439 328 L 516 376 L 604 291 L 674 371 L 809 206 L 937 101 L 961 137 L 1014 64 L 1200 0 L 1200 600 L 0 600 Z" fill="#04A800"/></svg></div>
-  <div class="wrap">
-    <div class="score-layout">
-      <div class="score-card" id="scoreCard">
-        <div class="score-title-row">
-          <div>
-            <div class="score-label">Collector Score</div>
-            <div class="score-big">9.6<span>/10</span></div>
-          </div>
-          <div class="score-tier">&#9733; Legendary</div>
-        </div>
-        <div class="score-bars">
-          <div class="score-bar-row">
-            <div class="score-bar-label">Authenticity <span>95%</span></div>
-            <div class="score-bar-track"><div class="score-bar-fill" style="--w:95%"></div></div>
-          </div>
-          <div class="score-bar-row">
-            <div class="score-bar-label">Craftsmanship <span>94%</span></div>
-            <div class="score-bar-track"><div class="score-bar-fill" style="--w:94%"></div></div>
-          </div>
-          <div class="score-bar-row">
-            <div class="score-bar-label">Display Value <span>100%</span></div>
-            <div class="score-bar-track"><div class="score-bar-fill" style="--w:100%"></div></div>
-          </div>
-          <div class="score-bar-row">
-            <div class="score-bar-label">Fandom Accuracy <span>96%</span></div>
-            <div class="score-bar-track"><div class="score-bar-fill" style="--w:96%"></div></div>
-          </div>
-          <div class="score-bar-row">
-            <div class="score-bar-label">Rarity <span>88%</span></div>
-            <div class="score-bar-track"><div class="score-bar-fill" style="--w:88%"></div></div>
-          </div>
-        </div>
-      </div>
-      <div class="score-desc">
-        <div class="sec-label-tag">Rated by Blade Council</div>
-        <div class="score-desc-title">Why This Sword Scores <em>9.6 / 10</em></div>
-        <div class="score-desc-body">The Anduril consistently ranks as our highest-rated LOTR replica. The combination of 440 steel construction, authentic rune engraving, and full-size 129cm blade make it unmatched at this price point. Display value is rated 100% - there is no finer way to show this sword.</div>
-        <div style="display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--text)">
-          <span style="width:18px;height:1px;background:rgba(0,0,0,.4)"></span>
-          Rated by 64 verified Loox purchasers
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ACHIEVEMENT UNLOCKS -->
-<section class="achievements-section">
-  <div class="wrap">
-    <div class="sec-label-row">
-      <div class="sec-label-stack">
-        <div class="sec-label-tag">Collector Progression</div>
-        <h2 class="sec-h2">Achievements <em>Unlocked</em></h2>
-      </div>
-    </div>
-    <div class="achievements-grid">
-      <div class="achievement unlocked">
-        <div class="ach-geo"></div>
-        <div class="ach-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 21h8M12 17v4M17 3H7l-2 7h14L17 3z"/><path d="M5 10c0 3.87 3.13 7 7 7s7-3.13 7-7"/></svg></div>
-        <div class="ach-unlocked-badge"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlocked</div>
-        <div class="ach-title">LOTR Collector</div>
-        <div class="ach-desc">Earned by owning a Lord of the Rings metal replica. You are now part of an elite group of Middle-earth devotees.</div>
-      </div>
-      <div class="achievement unlocked">
-        <div class="ach-geo"></div>
-        <div class="ach-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div class="ach-unlocked-badge"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlocked</div>
-        <div class="ach-title">Legendary Grade Owner</div>
-        <div class="ach-desc">Only the top 8% of collectors own a Legendary Grade piece. Your armoury just reached the highest tier.</div>
-      </div>
-      <div class="achievement unlocked">
-        <div class="ach-geo"></div>
-        <div class="ach-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><circle cx="18" cy="18" r="3"/></svg></div>
-        <div class="ach-unlocked-badge"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlocked</div>
-        <div class="ach-title">Metal Tier Unlocked</div>
-        <div class="ach-desc">Metal Collector tier grants access to exclusive early drops, limited restocks, and priority access to new LOTR releases.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATE PREVIEW -->
-<section class="cert-section">
-  <div class="wrap">
-    <div class="cert-layout">
-      <div class="cert-card">
-        <div class="cert-corner tl"></div>
-        <div class="cert-corner tr"></div>
-        <div class="cert-corner bl"></div>
-        <div class="cert-corner br"></div>
-        <img class="cert-logo" src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=120" alt="Next Level UK">
-        <div class="cert-issuer">Next Level UK Ltd - Authenticity Division</div>
-        <div class="cert-heading">Certificate of Authenticity</div>
-        <div class="cert-subtitle">Legendary Grade - Metal Collector Series</div>
-        <div class="cert-divider"></div>
-        <div class="cert-product">Lord of the Rings<br>Aragorn Anduril Metal Sword with Wall Plaque</div>
-        <div class="cert-serial">Serial No: NL-LOTR-2024-######</div>
-        <div class="cert-sig-row">
-          <div>
-            <div class="cert-sig">J. Whitfield</div>
-            <div class="cert-sig-label">Head of Authenticity - Next Level UK</div>
-          </div>
-          <div class="cert-seal">
-            <div class="cert-seal-text">BLADE<br>COUNCIL<br>CERTIFIED</div>
-          </div>
-        </div>
-      </div>
-      <div class="cert-desc">
-        <div class="sec-label-tag">What You Receive</div>
-        <div class="cert-desc-title">Your <em>Certificate</em><br>of Authenticity</div>
-        <div class="cert-desc-body">Every Anduril ships with a physical signed certificate confirming the sword's authenticity, unique serial number, and Legendary Grade status. Hand-signed by our Head of Authenticity and stamped with the official Blade Council seal. Display it framed alongside the sword or store it in the presentation box - it proves this is the real thing.</div>
-        <div class="cert-included">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Included with every order - no extra charge
-        </div>
-        <div class="cert-included" style="margin-top:6px;opacity:.5">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Unique serial number registered to your order
-        </div>
+        <div class="auth-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <div class="auth-title">Blunt Display Edge</div>
+        <div class="auth-desc">Every sword in our collection carries a deliberately blunt edge - fully safe to handle and display, built for collectors.</div>
       </div>
     </div>
   </div>
@@ -794,23 +987,12 @@ svg{display:inline-block;vertical-align:middle}
 <section class="prod-tabs-section">
   <div class="wrap">
     <div class="prod-tabs">
-      <button class="prod-tab active" onclick="switchTab(this,'desc')">Description</button>
-      <button class="prod-tab" onclick="switchTab(this,'specs')">Specifications</button>
+      <button class="prod-tab active" onclick="switchTab(this,'specs')">Specifications</button>
       <button class="prod-tab" onclick="switchTab(this,'reviews')">Reviews (64)</button>
     </div>
 
-    <!-- Description -->
-    <div class="prod-tab-content active" id="tab-desc">
-      <div class="prod-desc-body">
-        <p>Andúril - Flame of the West. Reforged from the shards of Narsil, the sword of Elendil, this is the blade that was broken and reforged to be worthy of the heir of Isildur. This is <strong>Aragorn's iconic weapon</strong> from The Lord of the Rings, now available as a full-scale metal replica.</p>
-        <p>Crafted from <strong>440 stainless steel</strong> with a hand-engraved blade featuring the Elvish runes: "Nányë Andúril i né Narsil i macil Elendilo. Lercuvanten i móli Mordoreo." (I am Andúril who was Narsil, the sword of Elendil. The slaves of Mordor shall flee from me.) The leather-wrapped grip and detailed pommel mirror the film prop with exceptional accuracy.</p>
-        <p>This is a <strong>blunt-edged display piece</strong> designed for collectors and enthusiasts. It is not designed or intended for combat use. The included hardwood wall plaque means it's ready to mount the moment it arrives - no additional hardware needed.</p>
-        <p>All metal sword purchases require proof of age (18+) prior to dispatch. Our team will contact you to confirm before shipping.</p>
-      </div>
-    </div>
-
     <!-- Specs -->
-    <div class="prod-tab-content" id="tab-specs">
+    <div class="prod-tab-content active" id="tab-specs">
       <table class="specs-table">
         <tr><td>Overall Length</td><td>129 cm</td></tr>
         <tr><td>Blade Length</td><td>100 cm</td></tr>
@@ -880,8 +1062,8 @@ svg{display:inline-block;vertical-align:middle}
       <div class="sec-label-stack">
         <div class="sec-label-tag">How It Works</div>
         <h2 class="sec-h2">Your Sword's <em>Journey</em></h2>
+        <div style="font-family:var(--fm);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:8px">Est. Delivery: 3-5 Business Days</div>
       </div>
-      <div style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green)">Est. Delivery: 3-5 Business Days</div>
     </div>
     <div class="delivery-steps">
       <div class="dt-step complete">
@@ -918,171 +1100,6 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </section>
 
-<!-- SCALE COMPARISON -->
-<section class="scale-section">
-  <div class="wrap">
-    <div class="sec-label-row">
-      <div class="sec-label-stack">
-        <div class="sec-label-tag">Size Reference</div>
-        <h2 class="sec-h2">How Big Is <em>129cm</em>?</h2>
-      </div>
-    </div>
-    <div class="scale-layout">
-      <div>
-        <div class="scale-visual">
-          <!-- 180cm Person -->
-          <div style="display:flex;flex-direction:column;align-items:center;gap:0;position:relative">
-            <div style="position:absolute;top:-26px;font-family:var(--fm);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,0,0,.35)">180cm person</div>
-            <svg width="52" height="260" viewBox="0 0 52 260" style="display:block">
-              <circle cx="26" cy="18" r="15" fill="rgba(0,0,0,.15)"/>
-              <rect x="22" y="32" width="8" height="10" rx="2" fill="rgba(0,0,0,.12)"/>
-              <path d="M10 42 Q26 38 42 42 L45 118 Q26 124 7 118 Z" fill="rgba(0,0,0,.13)"/>
-              <path d="M10 50 Q0 80 2 112" stroke="rgba(0,0,0,.15)" stroke-width="10" stroke-linecap="round" fill="none"/>
-              <path d="M42 50 Q52 80 50 112" stroke="rgba(0,0,0,.15)" stroke-width="10" stroke-linecap="round" fill="none"/>
-              <rect x="12" y="118" width="11" height="136" rx="5" fill="rgba(0,0,0,.13)"/>
-              <rect x="29" y="118" width="11" height="136" rx="5" fill="rgba(0,0,0,.13)"/>
-              <ellipse cx="17.5" cy="255" rx="9" ry="4" fill="rgba(0,0,0,.12)"/>
-              <ellipse cx="34.5" cy="255" rx="9" ry="4" fill="rgba(0,0,0,.12)"/>
-            </svg>
-          </div>
-          <!-- 129cm Sword -->
-          <div style="display:flex;flex-direction:column;align-items:center;gap:0;position:relative">
-            <div style="position:absolute;top:-26px;font-family:var(--fm);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--green)">129cm sword</div>
-            <svg width="36" height="186" viewBox="0 0 36 186" style="display:block">
-              <polygon points="18,0 22,18 18,24 14,18" fill="rgba(4,168,0,.85)"/>
-              <path d="M14 20 L15.5 128 L20.5 128 L22 20 Z" fill="rgba(4,168,0,.7)"/>
-              <line x1="17" y1="40" x2="19" y2="40" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
-              <line x1="16" y1="54" x2="20" y2="54" stroke="rgba(255,255,255,.28)" stroke-width="1.2"/>
-              <line x1="17" y1="68" x2="19" y2="68" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
-              <line x1="16" y1="82" x2="20" y2="82" stroke="rgba(255,255,255,.28)" stroke-width="1.2"/>
-              <rect x="1" y="126" width="34" height="8" rx="2" fill="rgba(4,168,0,.95)"/>
-              <rect x="14.5" y="134" width="7" height="30" rx="1" fill="rgba(4,168,0,.55)"/>
-              <line x1="14" y1="140" x2="22" y2="140" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
-              <line x1="14" y1="147" x2="22" y2="147" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
-              <line x1="14" y1="154" x2="22" y2="154" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
-              <ellipse cx="18" cy="170" rx="9" ry="8" fill="rgba(4,168,0,.8)"/>
-              <ellipse cx="18" cy="170" rx="5" ry="4" fill="rgba(4,168,0,.4)"/>
-            </svg>
-          </div>
-          <!-- 198cm Door -->
-          <div style="display:flex;flex-direction:column;align-items:center;gap:0;position:relative">
-            <div style="position:absolute;top:-26px;font-family:var(--fm);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:rgba(0,0,0,.35)">198cm door</div>
-            <svg width="90" height="286" viewBox="0 0 90 286" style="display:block">
-              <rect x="2" y="2" width="86" height="282" rx="1" fill="rgba(0,0,0,.05)" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
-              <rect x="11" y="14" width="30" height="36" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
-              <rect x="49" y="14" width="30" height="36" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
-              <rect x="11" y="58" width="30" height="100" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
-              <rect x="49" y="58" width="30" height="100" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
-              <rect x="11" y="168" width="30" height="40" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
-              <rect x="49" y="168" width="30" height="40" rx="1" fill="none" stroke="rgba(0,0,0,.1)" stroke-width="1.5"/>
-              <circle cx="70" cy="158" r="5" fill="rgba(0,0,0,.22)"/>
-            </svg>
-          </div>
-        </div>
-        <div style="text-align:center;font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.3);margin-top:10px">Life-size scale comparison</div>
-      </div>
-      <div class="scale-info">
-        <div class="sec-label-tag" style="margin-bottom:0">Full Theatrical Scale</div>
-        <div class="scale-stat"><div class="scale-stat-val"><em>129</em>cm</div><div class="scale-stat-lbl">Overall Length - sword tip to pommel</div></div>
-        <div class="scale-divider-h"></div>
-        <div class="scale-stat"><div class="scale-stat-val"><em>100</em>cm</div><div class="scale-stat-lbl">Blade Length - crossguard to tip</div></div>
-        <div class="scale-divider-h"></div>
-        <div class="scale-stat"><div class="scale-stat-val"><em>2.1</em>kg</div><div class="scale-stat-lbl">Weight - solid steel construction</div></div>
-        <div class="scale-divider-h"></div>
-        <div style="font-family:var(--fb);font-size:13.5px;color:var(--muted);line-height:1.7;padding-top:4px">The Anduril is a <strong>full theatrical-size replica</strong>. At 129cm it stands nearly to shoulder height. This is not a miniature - it will dominate any wall it hangs on.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT'S IN THE BOX -->
-<section class="box-section">
-  <!-- Geometric bg shape -->
-  <div style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden">
-    <svg style="position:absolute;bottom:0;left:0;width:100%;height:100%;opacity:1" viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 0 519 L 175 445 L 234 439 L 328 328 L 398 365 L 439 328 L 516 376 L 604 291 L 674 371 L 809 206 L 937 101 L 961 137 L 1014 64 L 1200 0 L 1200 600 L 0 600 Z" fill="#04A800"/>
-    </svg>
-  </div>
-  <div class="wrap">
-    <div class="sec-label-row">
-      <div class="sec-label-stack">
-        <div class="sec-label-tag">Included</div>
-        <h2 class="sec-h2">What's <em>In The Box</em></h2>
-      </div>
-    </div>
-    <div class="box-grid">
-      <div class="box-item">
-        <div class="box-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="M16 19l3 3M8 12l4-4"/></svg>
-        </div>
-        <div class="box-item-name">Full Metal Sword</div>
-        <div class="box-item-sub">440 Stainless Steel</div>
-      </div>
-      <div class="box-item">
-        <div class="box-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
-        </div>
-        <div class="box-item-name">Hardwood Wall Plaque</div>
-        <div class="box-item-sub">Display Mounting</div>
-      </div>
-      <div class="box-item">
-        <div class="box-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-        </div>
-        <div class="box-item-name">Certificate</div>
-        <div class="box-item-sub">Authenticity Card</div>
-      </div>
-      <div class="box-item">
-        <div class="box-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-        </div>
-        <div class="box-item-name">Premium Packaging</div>
-        <div class="box-item-sub">Gift-Ready Box</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMPLETE THE SET -->
-<section class="bundle-section">
-  <div class="wrap">
-    <div class="sec-label-row">
-      <div class="sec-label-stack">
-        <div class="sec-label-tag">Bundle &amp; Save</div>
-        <h2 class="sec-h2">Complete <em>The Set</em></h2>
-      </div>
-      <div class="bundle-save">&#9733; Save £30 when bundled</div>
-    </div>
-    <div class="bundle-layout">
-      <div class="bundle-products">
-        <div class="bundle-img">
-          <img src="https://nextleveluk.net/cdn/shop/files/lord-of-the-rings-sword-aragorn-anduril-sword-with-sheath-plaque-6586314_ffa92e86-aa1c-4eb5-b09d-9d39e40b2e21.jpg?v=1776425234&width=600" alt="Aragorn Anduril Metal Sword">
-        </div>
-        <div class="bundle-plus">+</div>
-        <div class="bundle-img" style="background:#060608;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px">
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="rgba(4,168,0,.65)" stroke-width="1.2"><path d="M5 8C5 4.69 8.13 2 12 2s7 2.69 7 6v6H5V8z"/><rect x="4" y="14" width="16" height="5" rx="1.5"/><path d="M8 14v5M16 14v5"/><path d="M3 16H1M23 16h-2"/></svg>
-          <div style="font-family:var(--fm);font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(4,168,0,.5);text-align:center;line-height:1.5">Aragorn<br>Display Helm</div>
-        </div>
-      </div>
-      <div class="bundle-info">
-        <div class="bundle-title">Anduril Sword <em>+</em><br>Aragorn Display Helm</div>
-        <div class="bundle-items-list">
-          <div class="bundle-item-row"><span class="bundle-item-dot"></span>Aragorn Anduril Metal Sword with Wall Plaque - £149.99</div>
-          <div class="bundle-item-row"><span class="bundle-item-dot"></span>Aragorn Full Metal Display Helm - £109.99</div>
-          <div class="bundle-item-row"><span class="bundle-item-dot"></span>Bundle discount applied at checkout - save £30</div>
-        </div>
-        <div class="bundle-price-row">
-          <div class="bundle-price">£229.99</div>
-          <div class="bundle-was">£259.98</div>
-        </div>
-        <button class="btn-bundle">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h2.5l2.5 9.5h10l3-7H6.5"/><rect x="8" y="18" width="2.5" height="2.5" fill="currentColor" stroke="none"/><rect x="14.5" y="18" width="2.5" height="2.5" fill="currentColor" stroke="none"/></svg>
-          Add Bundle to Bag - Save £30
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- RELATED PRODUCTS -->
 <section class="related-section">
@@ -1090,11 +1107,11 @@ svg{display:inline-block;vertical-align:middle}
     <div class="sec-label-row">
       <div class="sec-label-stack">
         <div class="sec-label-tag">You May Also Like</div>
-        <h2 class="sec-h2">More <em>Metal Swords</em></h2>
+        <h2 class="sec-h2">Shop More <em>Swords</em></h2>
+        <a href="swords-collection.html" style="display:flex;align-items:center;gap:8px;font-family:var(--fb);font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);transition:color .2s;padding-bottom:2px;margin-top:10px">
+          View All Swords <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
-      <a href="swords-collection.html" style="display:flex;align-items:center;gap:8px;font-family:var(--fb);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(0,0,0,.38);transition:color .2s;padding-bottom:2px">
-        View All Swords <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
     </div>
     <div class="related-grid">
       <div class="pc-wrap"><div class="pc">
@@ -1139,63 +1156,102 @@ svg{display:inline-block;vertical-align:middle}
   </div>
 </section>
 
-<!-- Q&A -->
-<section class="qa-section">
+<!-- CUSTOMER REVIEWS -->
+<section class="reviews-section">
   <div class="wrap">
-    <div class="sec-label-row">
+    <div class="sec-label-row" style="margin-bottom:44px">
       <div class="sec-label-stack">
-        <div class="sec-label-tag">Common Questions</div>
-        <h2 class="sec-h2">Collector <em>Q&amp;A</em></h2>
+        <div class="sec-label-tag">Verified Reviews</div>
+        <h2 class="sec-h2">What <em>Collectors</em> Say</h2>
+        <div class="reviews-meta" style="margin-top:14px">
+          <div class="rev-score-display">4.9</div>
+          <div>
+            <div class="rev-stars-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="rev-total-lbl">64 Verified Reviews</div>
+            <div class="rev-powered"><svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Powered by Loox</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="qa-list">
-      <div class="qa-item">
-        <div class="qa-q" onclick="toggleQA(this.parentElement)">
-          <div class="qa-q-text">Will the Elvish runes tarnish or fade over time?</div>
-          <div class="qa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+    <div class="reviews-showcase">
+      <div class="rv2">
+        <div class="rv2-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv2-title">Absolutely stunning - beyond expectations</div>
+        <div class="rv2-text">"The engraving on the blade is razor sharp detail. The wall plaque is solid hardwood. I've had it mounted in my study for 3 months and every single visitor asks about it."</div>
+        <div class="rv2-footer">
+          <div>
+            <div class="rv2-by">James T. - Birmingham</div>
+            <div class="rv2-verified"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          </div>
         </div>
-        <div class="qa-a"><div class="qa-a-inner">No. The runes are deep-etched directly into the 440 stainless steel - not painted or printed. This means they will not tarnish, fade, or wear away over time. The etch depth is the same grade used on premium commemorative blades.</div></div>
       </div>
-      <div class="qa-item">
-        <div class="qa-q" onclick="toggleQA(this.parentElement)">
-          <div class="qa-q-text">Does it come ready to hang, or do I need extra fittings?</div>
-          <div class="qa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+      <div class="rv2">
+        <div class="rv2-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv2-title">Film accurate - weight feels right</div>
+        <div class="rv2-text">"The 2.1kg weight is exactly what you'd expect from a full metal replica of this size. The leather grip is comfortable and the Elvish runes are genuinely deep-etched not printed."</div>
+        <div class="rv2-footer">
+          <div>
+            <div class="rv2-by">@lotr_collector_uk</div>
+            <div class="rv2-verified"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          </div>
         </div>
-        <div class="qa-a"><div class="qa-a-inner">Hang-ready straight out of the box. The hardwood wall plaque includes all mounting brackets and wall fixings. You need a screwdriver - nothing else. Takes about 5 minutes from unboxing to mounted on the wall.</div></div>
       </div>
-      <div class="qa-item">
-        <div class="qa-q" onclick="toggleQA(this.parentElement)">
-          <div class="qa-q-text">Is the wall plaque solid hardwood or MDF?</div>
-          <div class="qa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+      <div class="rv2">
+        <div class="rv2-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv2-title">Perfect gift - wrapped beautifully</div>
+        <div class="rv2-text">"Bought this as a 40th birthday gift for my partner. The packaging is premium and the sword itself is spectacular. Arrived in 2 days. He's obsessed with it."</div>
+        <div class="rv2-footer">
+          <div>
+            <div class="rv2-by">Sarah M. - London</div>
+            <div class="rv2-verified"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          </div>
         </div>
-        <div class="qa-a"><div class="qa-a-inner">Solid hardwood - not MDF or composite. The plaque is weight-rated to hold the full 2.1kg sword safely. You will feel the difference the moment you lift it out of the box.</div></div>
       </div>
-      <div class="qa-item">
-        <div class="qa-q" onclick="toggleQA(this.parentElement)">
-          <div class="qa-q-text">How does the 18+ ID verification work exactly?</div>
-          <div class="qa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+      <div class="rv2">
+        <div class="rv2-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv2-title">The runes catch the light - spectacular</div>
+        <div class="rv2-text">"Something I didn't expect - in certain lighting conditions the deep-etched runes catch the light and glow silver. My LOTR obsession is fully justified now."</div>
+        <div class="rv2-footer">
+          <div>
+            <div class="rv2-by">Mark D. - Edinburgh</div>
+            <div class="rv2-verified"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          </div>
         </div>
-        <div class="qa-a"><div class="qa-a-inner">After placing your order, our team emails you within 2 hours. Simply reply with a photo of your passport, driving licence, or any government-issued ID showing your date of birth. Once confirmed we pack and dispatch within 48 hours. Your ID is used solely for age verification and is never stored beyond that check.</div></div>
       </div>
-      <div class="qa-item">
-        <div class="qa-q" onclick="toggleQA(this.parentElement)">
-          <div class="qa-q-text">Is the blade sharp? Is it safe to handle and display around children?</div>
-          <div class="qa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+      <div class="rv2">
+        <div class="rv2-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv2-title">Mounted in 10 minutes, looks incredible</div>
+        <div class="rv2-text">"The wall plaque comes with all fittings included. I had it mounted above my fireplace in under 10 minutes. The contrast of the steel against the dark wood is spectacular."</div>
+        <div class="rv2-footer">
+          <div>
+            <div class="rv2-by">Chris P. - Manchester</div>
+            <div class="rv2-verified"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          </div>
         </div>
-        <div class="qa-a"><div class="qa-a-inner">Fully blunt edge. This is an ornamental display piece - completely safe to handle. The edge is deliberately finished to a rounded profile for collector safety. It is not a weapon and is sold strictly as a display replica. We do however recommend keeping all metal replicas out of reach of young children as standard practice.</div></div>
+      </div>
+      <div class="rv2">
+        <div class="rv2-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv2-title">Best purchase I've made in years</div>
+        <div class="rv2-text">"I've bought replica swords before from other sellers and nothing comes close to this quality. The 440 steel is solid, the leather grip genuine. This is proper collector grade."</div>
+        <div class="rv2-footer">
+          <div>
+            <div class="rv2-by">@sword_collector_89</div>
+            <div class="rv2-verified"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Purchase</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="qa-ask">
-      <input class="qa-ask-inp" type="text" placeholder="Have another question? Ask our team...">
-      <button class="qa-ask-btn">Ask <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    <div class="reviews-cta-row">
+      <button class="btn-rev-load">Load More Reviews <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <button class="btn-rev-write">Write a Review <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></button>
     </div>
   </div>
 </section>
 
 <!-- DIVIDER -->
 <div class="divider-l2d" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1440" height="120" fill="#F5F5F3"/>
-  <path fill="#e0e0dd" d="M 0 110 L 52 110 L 88 82 L 88 94 L 192 94 L 258 60 L 312 74 L 312 46 L 440 46 L 482 64 L 548 32 L 606 48 L 606 18 L 742 18 L 788 36 L 848 10 L 900 26 L 900 4 L 1068 4 L 1068 20 L 1148 2 L 1284 16 L 1388 0 L 1440 0 L 1440 120 L 0 120 Z"/>
+  <rect width="1440" height="120" fill="#000"/>
+  <path fill="#000" d="M 0 110 L 52 110 L 88 82 L 88 94 L 192 94 L 258 60 L 312 74 L 312 46 L 440 46 L 482 64 L 548 32 L 606 48 L 606 18 L 742 18 L 788 36 L 848 10 L 900 26 L 900 4 L 1068 4 L 1068 20 L 1148 2 L 1284 16 L 1388 0 L 1440 0 L 1440 120 L 0 120 Z"/>
   <polyline fill="none" stroke="rgba(4,168,0,0.6)" stroke-width="2" stroke-linejoin="miter" points="0,110 52,110 88,82 88,94 192,94 258,60 312,74 312,46 440,46 482,64 548,32 606,48 606,18 742,18 788,36 848,10 900,26 900,4 1068,4 1068,20 1148,2 1284,16 1388,0 1440,0"/>
   <polyline fill="none" stroke="rgba(4,168,0,0.15)" stroke-width="4" stroke-linejoin="miter" points="0,115 52,115 88,87 88,99 192,99 258,65 312,79 312,51 440,51 482,69 548,37 606,53 606,23 742,23 788,41 848,15 900,31 900,9 1068,9 1068,25 1148,7 1284,21 1388,5 1440,5"/>
 </svg></div>
@@ -1218,7 +1274,7 @@ svg{display:inline-block;vertical-align:middle}
   <div class="wrap">
     <div class="footer-in">
       <div>
-        <div class="fl-logo"><img src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=120" alt="Next Level UK"></div>
+        <div class="fl-logo"><img src="https://nextleveluk.net/cdn/shop/files/N-L-Logo-PNG-Shadow.png?v=1726354629&width=900" alt="Next Level UK"></div>
         <p class="fl-tag">The UK's premium destination for metal swords, lightsabers &amp; cosplay replicas. Family-owned since 2013.</p>
         <div class="fl-addr">Next Level UK Ltd<br>Registered in England &amp; Wales<br>VAT No. GB 123456789</div>
       </div>
@@ -1268,39 +1324,47 @@ svg{display:inline-block;vertical-align:middle}
         <a href="#" class="fbl">Cookie Policy</a>
       </div>
       <div class="pay-icons">
-        <div class="pay-ic">Visa</div><div class="pay-ic">Mastercard</div><div class="pay-ic">Amex</div><div class="pay-ic">PayPal</div><div class="pay-ic">Klarna</div><div class="pay-ic">Apple Pay</div>
+        <div class="pay-ic"><img src="pay-icons/visa.png" alt="Visa"></div>
+        <div class="pay-ic"><img src="pay-icons/mastercard.png" alt="Mastercard"></div>
+        <div class="pay-ic"><img src="pay-icons/amex.png" alt="American Express"></div>
+        <div class="pay-ic"><img src="pay-icons/paypal.png" alt="PayPal"></div>
+        <div class="pay-ic"><img src="pay-icons/apple-pay.png" alt="Apple Pay"></div>
+        <div class="pay-ic"><img src="pay-icons/google-pay.png" alt="Google Pay"></div>
+        <div class="pay-ic"><img src="pay-icons/shop-pay.png" alt="Shop Pay"></div>
+        <div class="pay-ic"><img src="pay-icons/discover.png" alt="Discover"></div>
+        <div class="pay-ic"><img src="pay-icons/jcb.png" alt="JCB"></div>
+        <div class="pay-ic"><img src="pay-icons/diners.png" alt="Diners Club"></div>
+        <div class="pay-ic"><img src="pay-icons/unionpay.png" alt="UnionPay"></div>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
+// Mobile burger
+const burger = document.getElementById('navBurger');
+const mobileMenu = document.getElementById('mobileMenu');
+if(burger && mobileMenu){
+  burger.addEventListener('click',()=>{
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';
+  });
+  mobileMenu.querySelectorAll('.mobile-menu-a').forEach(a=>{
+    a.addEventListener('click',()=>{
+      burger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow='';
+    });
+  });
+}
+
 // Gallery thumbnail switcher
 function setImg(thumb, url) {
   document.querySelectorAll('.g-thumb').forEach(t => t.classList.remove('active'));
   thumb.classList.add('active');
   document.getElementById('mainImgSrc').src = url;
 }
-
-// Q&A accordion
-function toggleQA(item) {
-  var wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.qa-item').forEach(function(i) { i.classList.remove('open'); });
-  if (!wasOpen) item.classList.add('open');
-}
-
-// Score bar animation on scroll
-(function() {
-  var card = document.getElementById('scoreCard');
-  if (!card) return;
-  var obs = new IntersectionObserver(function(entries) {
-    if (entries[0].isIntersecting) {
-      card.querySelectorAll('.score-bar-fill').forEach(function(b) { b.classList.add('animated'); });
-      obs.disconnect();
-    }
-  }, { threshold: 0.3 });
-  obs.observe(card);
-})();
 
 // Product tabs
 function switchTab(btn, key) {
